@@ -1,0 +1,5 @@
+.idea/
+*.pyc
+.coverage
+dist/
+draftkings_client.egg-info
