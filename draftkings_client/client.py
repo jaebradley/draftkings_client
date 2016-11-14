@@ -18,4 +18,4 @@ class Client:
 
         response.raise_for_status()
 
-        return ContestsResponseTranslator.translate(response=response)
+        return ContestsResponseTranslator.translate(response=response.json())

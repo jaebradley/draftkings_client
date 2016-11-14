@@ -79,10 +79,10 @@ class ContestResponseTranslator:
         if type(response['m']) is not int:
             raise TypeError('m is not an integer')
 
-        if type(response['a']) is not int:
+        if type(response['a']) is not int and type(response['a']) is not float:
             raise TypeError('a is not an integer')
 
-        if type(response['po']) is not int:
+        if type(response['po']) is not int and type(response['po']) is not float:
             raise TypeError('po is not an integer')
 
         id = response['id']
@@ -92,8 +92,8 @@ class ContestResponseTranslator:
         name = str(response['n'])
         total_entries = response['nt']
         maximum_entries = response['m']
-        entry_fee = response['a']
-        total_payout = response['po']
+        entry_fee = float(response['a'])
+        total_payout = float(response['po'])
 
         return Contest(contest_id=id, start_timestamp=start_timestamp, fantasy_player_points=fantasy_player_points,
                        sport=sport, name=name, is_guaranteed=is_guaranteed, is_starred=is_starred,

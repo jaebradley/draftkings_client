@@ -15,7 +15,7 @@ class ContestsResponseTranslator:
             raise TypeError('Missing Contests field')
 
         contests = []
-        for contest in response.contests:
+        for contest in response['Contests']:
             contests.append(ContestResponseTranslator.translate(response=contest))
 
         return contests
