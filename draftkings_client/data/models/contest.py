@@ -1,6 +1,25 @@
 class Contest:
     def __init__(self, contest_id, start_timestamp, fantasy_player_points, sport, name, is_guaranteed, is_starred,
                  is_head_to_head, is_double_up, is_fifty_fifty, total_entries, maximum_entries, entry_fee, total_payout):
+
+        if type(contest_id) is not int:
+            raise TypeError('contest id is not an int')
+
+        if type(start_timestamp) is not int:
+            raise TypeError('start timestamp is not an int')
+
+        if type(fantasy_player_points) is not int:
+            raise TypeError('fantasy player points is not an int')
+
+        if type(sport) is not int:
+            raise TypeError('sport is not an int')
+
+        if type(name) is not str:
+            raise TypeError('name is not a string')
+
+        if type(is_guaranteed) is not bool:
+            raise TypeError('is guaranteed is not a boolean')
+
         self.contest_id = contest_id
         self.start_timestamp = start_timestamp
         self.fantasy_player_points = fantasy_player_points
