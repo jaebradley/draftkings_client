@@ -1,6 +1,7 @@
 import requests
 
 from data.models.league import League
+from data.translators.contests_response_translator import ContestsResponseTranslator
 
 
 class Client:
@@ -17,4 +18,4 @@ class Client:
 
         response.raise_for_status()
 
-        return response
+        return ContestsResponseTranslator.translate(response=response.json())
