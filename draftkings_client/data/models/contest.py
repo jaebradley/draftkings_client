@@ -1,6 +1,7 @@
 class Contest:
     def __init__(self, contest_id, start_timestamp, fantasy_player_points, sport, name, is_guaranteed, is_starred,
-                 is_head_to_head, is_double_up, is_fifty_fifty, total_entries, maximum_entries, entry_fee, total_payout):
+                 is_head_to_head, is_double_up, is_fifty_fifty, total_entries, maximum_entries, entry_fee,
+                 total_payout, draft_group_id):
 
         if type(contest_id) is not int:
             raise TypeError('contest id is not an int')
@@ -34,3 +35,4 @@ class Contest:
         self.maximum_entries = maximum_entries
         self.entry_fee = entry_fee
         self.total_payout = total_payout
+        self.draft_group_id = draft_group_id

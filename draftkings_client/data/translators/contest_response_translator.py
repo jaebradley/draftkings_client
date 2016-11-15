@@ -58,6 +58,9 @@ class ContestResponseTranslator:
         if 'po' not in response:
             raise KeyError('missing po field')
 
+        if 'dg' not in response:
+            raise KeyError('missing dg field')
+
         if type(response['id']) is not int:
             raise TypeError('id is not an integer')
 
@@ -85,6 +88,9 @@ class ContestResponseTranslator:
         if type(response['po']) is not int and type(response['po']) is not float:
             raise TypeError('po is not an integer')
 
+        if type(response['dg']) is not int:
+            raise TypeError('dg is not an integer')
+
         id = response['id']
         start_timestamp = ContestResponseTranslator.translate_start_timestamp(timestamp=response['sd'])
         fantasy_player_points = response['fpp']
@@ -94,12 +100,13 @@ class ContestResponseTranslator:
         maximum_entries = response['m']
         entry_fee = float(response['a'])
         total_payout = float(response['po'])
+        draft_group_id = response['dg']
 
         return Contest(contest_id=id, start_timestamp=start_timestamp, fantasy_player_points=fantasy_player_points,
                        sport=sport, name=name, is_guaranteed=is_guaranteed, is_starred=is_starred,
                        is_head_to_head=is_head_to_head, is_double_up=is_double_up, is_fifty_fifty=is_fifty_fifty,
                        total_entries=total_entries, maximum_entries=maximum_entries, entry_fee=entry_fee,
-                       total_payout=total_payout)
+                       total_payout=total_payout, draft_group_id=draft_group_id)
 
     @staticmethod
     def translate_start_timestamp(timestamp):
