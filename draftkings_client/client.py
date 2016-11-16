@@ -2,6 +2,7 @@ import requests
 
 from data.models.league import League
 from data.translators.contests_response_translator import ContestsResponseTranslator
+from data.translators.available_players_translator import AvailablePlayersTranslator
 from draftkings_client.requests.url_builder import UrlBuilder
 
 
@@ -31,4 +32,4 @@ class Client:
 
         response.raise_for_status()
 
-        return response
+        return AvailablePlayersTranslator.translate(response=response)
