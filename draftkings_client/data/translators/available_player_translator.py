@@ -13,21 +13,21 @@ class AvailablePlayerTranslator:
 
         player_id = response['pid']
         team_series_id = response['id']
-        first_name = response['fn']
-        last_name = response['ln']
+        first_name = str(response['fn'])
+        last_name = str(response['ln'])
         jersey_number = response['jn']
-        position_name = response['pn']
+        position_name = str(response['pn'])
         position_id = response['posid']
-        draft_group_start_timestamp = response['dgst']
+        draft_group_start_timestamp = long(response['dgst'])
         team_id = response['tid']
         home_team_id = response['htid']
         away_team_id = response['atid']
-        home_team_abbreviation = response['htabbr']
-        away_team_abbreviation = response['atabbr']
+        home_team_abbreviation = str(response['htabbr'])
+        away_team_abbreviation = str(response['atabbr'])
         is_disabled_from_drafting = response['IsDisabledFromDrafting']
         exceptional_messages = response['ExceptionalMessages']
-        salary = response['s']
-        draftkings_points_per_contest = response['ppg']
+        salary = float(response['s'])
+        draftkings_points_per_contest = float(response['ppg'])
         opposition_rank = response['op']
 
         home_team = AvailablePlayerTeam(team_id=home_team_id, team_abbreviation=home_team_abbreviation)
