@@ -1,4 +1,5 @@
-from draftkings_client.data.models.available_player_match_up import AvailablePlayerMatchUp, AvailablePlayerTeam
+from draftkings_client.data.models.available_player_match_up import AvailablePlayerMatchUp
+
 
 class AvailablePlayer:
     def __init__(self, player_id, team_series_id, first_name, last_name, jersey_number, position,

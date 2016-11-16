@@ -23,11 +23,11 @@ class Client:
         return ContestsResponseTranslator.translate(response=response.json())
 
     @staticmethod
-    def get_player_list(draft_group_id):
-        if type(draft_group_id) is not int or type(draft_group_id) is not long:
+    def get_available_players(draft_group_id):
+        if type(draft_group_id) is not int and type(draft_group_id) is not long:
             raise TypeError('draft group id must be an integer or long')
 
-        response = requests.get(url=UrlBuilder.get_player_list_url(),
+        response = requests.get(url=UrlBuilder.get_available_players_url(),
                                 params={'draftGroupId', draft_group_id})
 
         response.raise_for_status()

@@ -123,7 +123,7 @@ class AvailablePlayerTranslator:
         if type(response['posid']) is not int:
             raise TypeError('posid field is not an int')
 
-        if type(response['dgst']) is not int or type(response['dgst']) is not long:
+        if type(response['dgst']) is not int and type(response['dgst']) is not long:
             raise TypeError('jn field is not an int')
 
         if type(response['tid']) is not int:
@@ -147,7 +147,7 @@ class AvailablePlayerTranslator:
         if type(response['ExceptionalMessages']) is not list:
             raise TypeError('ExceptionalMessages field is not a list')
 
-        if type(response['s']) is not int or type(response['s']) is not long or type(response['s']) is not float:
+        if type(response['s']) is not int and type(response['s']) is not long and type(response['s']) is not float:
             raise TypeError('s field is not an int or a float')
 
         if type(response['ppg']) is not str or type(response['ppg']) is not unicode:

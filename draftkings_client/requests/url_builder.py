@@ -2,7 +2,7 @@ class UrlBuilder:
 
     base_url = 'https://www.draftkings.com'
     contest_suffix = '/lobby/getcontests'
-    player_list_suffix = '/lineup/getavailableplayers'
+    get_available_players_suffix = '/lineup/getavailableplayers'
 
     def __init__(self):
         pass
@@ -13,5 +13,5 @@ class UrlBuilder:
         return UrlBuilder.base_url + UrlBuilder.contest_suffix
 
     @staticmethod
-    def get_player_list_url():
-        return UrlBuilder.base_url + UrlBuilder.player_list_suffix
+    def get_available_players_url():
+        return UrlBuilder.base_url + UrlBuilder.get_available_players_suffix
