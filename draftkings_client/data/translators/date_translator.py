@@ -4,4 +4,4 @@ class DateTranslator:
 
     @staticmethod
     def translate(date_string):
-        return int(date_string[6:-2])
+        return long(date_string[6:-2])

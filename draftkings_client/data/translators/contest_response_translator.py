@@ -96,7 +96,7 @@ class ContestResponseTranslator:
         start_timestamp = DateTranslator.translate(date_string=response['sd'])
         fantasy_player_points = response['fpp']
         sport = response['s']
-        name = str(response['n'])
+        name = unicode(response['n'])
         total_entries = response['nt']
         maximum_entries = response['m']
         entry_fee = float(response['a'])

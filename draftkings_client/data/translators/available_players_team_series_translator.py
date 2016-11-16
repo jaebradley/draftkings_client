@@ -18,7 +18,7 @@ class AvailablePlayersTeamSeriesTranslator:
             home_team_abbreviation = str(value['ht'])
             home_team_id = value['htid']
             away_team_abbreviation = str(value['at'])
-            away_team_id = value['at']
+            away_team_id = value['atid']
             start_timestamp = DateTranslator.translate(date_string=value['tz'])
             weather = str(value['wthr'])
 
@@ -55,23 +55,23 @@ class AvailablePlayersTeamSeriesTranslator:
 
     @staticmethod
     def validate_types(team_series_id, team_series_data):
-        if type(team_series_id) is not str or type(team_series_id) is not unicode:
+        if type(team_series_id) is not str and type(team_series_id) is not unicode:
             raise TypeError('key is not a string')
 
-        if type(team_series_data['ht']) is not str or type(team_series_data['ht']) is not unicode:
+        if type(team_series_data['ht']) is not str and type(team_series_data['ht']) is not unicode:
             raise TypeError('ht is not a string')
 
         if type(team_series_data['htid']) is not int:
             raise TypeError('htid is not an int')
 
-        if type(team_series_data['at']) is not str or type(team_series_data['at']) is not unicode:
+        if type(team_series_data['at']) is not str and type(team_series_data['at']) is not unicode:
             raise TypeError('at is not a string')
 
         if type(team_series_data['atid']) is not int:
             raise TypeError('atid is not an int')
 
-        if type(team_series_data['tz']) is not str or type(team_series_data['tz']) is not unicode:
+        if type(team_series_data['tz']) is not str and type(team_series_data['tz']) is not unicode:
             raise TypeError('tz is not a string')
 
-        if type(team_series_data['wthr']) is not str or type(team_series_data['wthr']) is not unicode:
+        if type(team_series_data['wthr']) is not str and type(team_series_data['wthr']) is not unicode:
             raise TypeError('wthr is not a string')

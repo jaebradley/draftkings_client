@@ -6,7 +6,7 @@ class Contest:
         if type(contest_id) is not int:
             raise TypeError('contest id is not an int')
 
-        if type(start_timestamp) is not int:
+        if type(start_timestamp) is not long:
             raise TypeError('start timestamp is not an int')
 
         if type(fantasy_player_points) is not int:
@@ -15,7 +15,7 @@ class Contest:
         if type(sport) is not int:
             raise TypeError('sport is not an int')
 
-        if type(name) is not str:
+        if type(name) is not unicode:
             raise TypeError('name is not a string')
 
         if type(is_guaranteed) is not bool:

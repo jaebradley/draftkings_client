@@ -12,7 +12,7 @@ class AvailablePlayerTranslator:
         AvailablePlayerTranslator.validate_expected_field_types(response=response)
 
         player_id = response['pid']
-        team_series_id = response['id']
+        team_series_id = response['tsid']
         first_name = str(response['fn'])
         last_name = str(response['ln'])
         jersey_number = response['jn']
@@ -28,7 +28,7 @@ class AvailablePlayerTranslator:
         exceptional_messages = response['ExceptionalMessages']
         salary = float(response['s'])
         draftkings_points_per_contest = float(response['ppg'])
-        opposition_rank = response['op']
+        opposition_rank = response['or']
 
         home_team = AvailablePlayerTeam(team_id=home_team_id, team_abbreviation=home_team_abbreviation)
         away_team = AvailablePlayerTeam(team_id=away_team_id, team_abbreviation=away_team_abbreviation)
@@ -108,16 +108,16 @@ class AvailablePlayerTranslator:
         if type(response['tsid']) is not int:
             raise TypeError('tsid field is not an int')
 
-        if type(response['fn']) is not str or type(response['fn']) is not unicode:
+        if type(response['fn']) is not str and type(response['fn']) is not unicode:
             raise TypeError('fn field is not a string')
 
-        if type(response['ln']) is not str or type(response['ln']) is not unicode:
+        if type(response['ln']) is not str and type(response['ln']) is not unicode:
             raise TypeError('ln field is not a string')
 
         if type(response['jn']) is not int:
             raise TypeError('jn field is not an int')
 
-        if type(response['pn']) is not str or type(response['pn']) is not unicode:
+        if type(response['pn']) is not str and type(response['pn']) is not unicode:
             raise TypeError('pn field is not a string')
 
         if type(response['posid']) is not int:
@@ -135,10 +135,10 @@ class AvailablePlayerTranslator:
         if type(response['atid']) is not int:
             raise TypeError('atid field is not an int')
 
-        if type(response['htabbr']) is not str or type(response['htabbr']) is not unicode:
+        if type(response['htabbr']) is not str and type(response['htabbr']) is not unicode:
             raise TypeError('htabbr field is not a string')
 
-        if type(response['atabbr']) is not str or type(response['atabbr']) is not unicode:
+        if type(response['atabbr']) is not str and type(response['atabbr']) is not unicode:
             raise TypeError('atabbr field is not a string')
 
         if type(response['IsDisabledFromDrafting']) is not bool:
@@ -150,7 +150,7 @@ class AvailablePlayerTranslator:
         if type(response['s']) is not int and type(response['s']) is not long and type(response['s']) is not float:
             raise TypeError('s field is not an int or a float')
 
-        if type(response['ppg']) is not str or type(response['ppg']) is not unicode:
+        if type(response['ppg']) is not str and type(response['ppg']) is not unicode:
             raise TypeError('ppg field is not a string')
 
         if type(response['or']) is not int:
