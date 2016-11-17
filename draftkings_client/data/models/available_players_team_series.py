@@ -12,7 +12,7 @@ class AvailablePlayersTeamSeries:
         if type(start_timestamp) is not long:
             raise TypeError('start timestamp is not a long')
 
-        if type(weather) is not str:
+        if type(weather) is not unicode:
             raise TypeError('weather is not a string')
 
         if type(sport_id) is not int:

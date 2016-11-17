@@ -8,19 +8,19 @@ class TestAvailablePlayerTranslator(TestCase):
     def test_player_response_translation(self):
         player_id = 214152
         team_series_id = 3704
-        first_name = 'LeBron'
-        last_name = 'James'
+        first_name = u'LeBron'
+        last_name = 'uJames'
         jersey_number = 23
-        position_name = 'SF/PF'
+        position_name = u'SF/PF'
         position_id = 27
         draft_group_start_timestamp = 1479254400000
         team_id = 5
         home_team_id = team_id
         away_team_id = 28
-        home_team_abbreviation = 'Cle'
-        away_team_abbreviation = 'Tor'
+        home_team_abbreviation = u'Cle'
+        away_team_abbreviation = u'Tor'
         is_disabled_from_drafting = False
-        exceptional_messages = ['Foo', 'Bar']
+        exceptional_messages = [u'Foo', u'Bar']
         salary = 10300
         points_per_game = 51.2
         opposition_rank = 20

@@ -8,26 +8,26 @@ from draftkings_client.data.models.available_player import AvailablePlayerTeam, 
 class TestAvailablePlayersTeamSeriesTranslator(TestCase):
     def test_translation(self):
         ts_1_id = 1
-        ts_1_id_formatted_value = str(ts_1_id)
-        ts_1_home_team_abbreviation = 'jae'
+        ts_1_id_formatted_value = unicode(ts_1_id)
+        ts_1_home_team_abbreviation = unicode('jae')
         ts_1_home_team_id = 2
         ts_1_away_team_id = 3
-        ts_1_away_team_abbreviation = 'bradley'
+        ts_1_away_team_abbreviation = unicode('bradley')
         ts_1_timestamp = long(4)
-        ts_1_formatted_timestamp = "/Date({})/".format(ts_1_timestamp)
-        ts_1_weather = 'sunny with a chance of meatballs'
+        ts_1_formatted_timestamp = unicode("/Date({})/".format(ts_1_timestamp))
+        ts_1_weather = unicode('sunny with a chance of meatballs')
         ts_1_sport_id = 11
         ts_1_status = 9
 
         ts_2_id = 5
-        ts_2_id_formatted_value = str(ts_2_id)
-        ts_2_home_team_abbreviation = 'jae'
+        ts_2_id_formatted_value = unicode(ts_2_id)
+        ts_2_home_team_abbreviation = unicode('jae')
         ts_2_home_team_id = 6
         ts_2_away_team_id = 7
-        ts_2_away_team_abbreviation = 'bradley'
+        ts_2_away_team_abbreviation = unicode('bradley')
         ts_2_timestamp = long(8)
-        ts_2_formatted_timestamp = "/Date({})/".format(ts_2_timestamp)
-        ts_2_weather = 'cloudy with a chance of meatballs'
+        ts_2_formatted_timestamp = unicode("/Date({})/".format(ts_2_timestamp))
+        ts_2_weather = unicode('cloudy with a chance of meatballs')
         ts_2_sport_id = 12
         ts_2_status = 10
 

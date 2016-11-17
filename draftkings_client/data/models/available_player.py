@@ -9,10 +9,10 @@ class AvailablePlayer:
         if type(team_series_id) is not int:
             raise TypeError('team series id field is not an int')
 
-        if type(first_name) is not str:
+        if type(first_name) is not unicode:
             raise TypeError('first name field is not a string')
 
-        if type(last_name) is not str:
+        if type(last_name) is not unicode:
             raise TypeError('last name field is not a string')
 
         if type(jersey_number) is not int:
@@ -79,7 +79,7 @@ class AvailablePlayerPosition:
         if type(position_id) is not int:
             raise TypeError('position id field is not an int')
 
-        if type(position_name) is not str:
+        if type(position_name) is not unicode:
             raise TypeError('position name field is not a string')
 
         self.position_id = position_id
@@ -129,7 +129,7 @@ class AvailablePlayerTeam:
         if type(team_id) is not int:
             raise TypeError('team id field is not an int')
 
-        if type(team_abbreviation) is not str:
+        if type(team_abbreviation) is not unicode:
             raise TypeError('team abbreviation field is not a string')
 
         self.team_id = team_id

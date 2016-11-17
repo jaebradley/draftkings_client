@@ -15,12 +15,12 @@ class AvailablePlayersTeamSeriesTranslator:
             AvailablePlayersTeamSeriesTranslator.validate_types(team_series_id=key, team_series_data=value)
 
             team_series_id = int(key)
-            home_team_abbreviation = str(value['ht'])
+            home_team_abbreviation = unicode(value['ht'])
             home_team_id = value['htid']
-            away_team_abbreviation = str(value['at'])
+            away_team_abbreviation = unicode(value['at'])
             away_team_id = value['atid']
             start_timestamp = DateTranslator.translate(date_string=value['tz'])
-            weather = str(value['wthr'])
+            weather = unicode(value['wthr'])
             sport_id = value['s']
             status = value['status']
 
