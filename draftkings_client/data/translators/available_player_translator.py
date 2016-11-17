@@ -1,5 +1,4 @@
-from draftkings_client.data.models.available_player import AvailablePlayer, AvailablePlayerPosition
-from draftkings_client.data.models.available_player_match_up import AvailablePlayerMatchUp, AvailablePlayerTeam
+from draftkings_client.data.models.available_player import AvailablePlayer, AvailablePlayerPosition, AvailablePlayerMatchUp, AvailablePlayerTeam
 
 
 class AvailablePlayerTranslator:
