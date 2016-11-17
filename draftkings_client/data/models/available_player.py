@@ -60,6 +60,19 @@ class AvailablePlayer:
         self.draftkings_points_per_game = draftkings_points_per_contest
         self.opposition_rank = opposition_rank
 
+    def __eq__(self, other):
+        if isinstance(other, self.__class__):
+            return self.__dict__ == other.__dict__
+        return NotImplemented
+
+    def __ne__(self, other):
+        if isinstance(other, self.__class__):
+            return not self.__eq__(other)
+        return NotImplemented
+
+    def __hash__(self):
+        return hash(tuple(sorted(self.__dict__.items())))
+
 
 class AvailablePlayerPosition:
     def __init__(self, position_id, position_name):
@@ -73,10 +86,17 @@ class AvailablePlayerPosition:
         self.position_name = position_name
 
     def __eq__(self, other):
-        if not isinstance(other, AvailablePlayerPosition):
-            return False
+        if isinstance(other, self.__class__):
+            return self.__dict__ == other.__dict__
+        return NotImplemented
 
-        return other.position_id == self.position_id and other.position_name == self.position_name
+    def __ne__(self, other):
+        if isinstance(other, self.__class__):
+            return not self.__eq__(other)
+        return NotImplemented
+
+    def __hash__(self):
+        return hash(tuple(sorted(self.__dict__.items())))
 
 
 class AvailablePlayerMatchUp:
@@ -91,10 +111,17 @@ class AvailablePlayerMatchUp:
         self.away_team = away_team
 
     def __eq__(self, other):
-        if not isinstance(other, AvailablePlayerMatchUp):
-            return False
+        if isinstance(other, self.__class__):
+            return self.__dict__ == other.__dict__
+        return NotImplemented
 
-        return other.home_team == self.home_team and other.away_team == self.away_team
+    def __ne__(self, other):
+        if isinstance(other, self.__class__):
+            return not self.__eq__(other)
+        return NotImplemented
+
+    def __hash__(self):
+        return hash(tuple(sorted(self.__dict__.items())))
 
 
 class AvailablePlayerTeam:
@@ -109,7 +136,14 @@ class AvailablePlayerTeam:
         self.team_abbreviation = team_abbreviation
 
     def __eq__(self, other):
-        if not isinstance(other, AvailablePlayerTeam):
-            return False
+        if isinstance(other, self.__class__):
+            return self.__dict__ == other.__dict__
+        return NotImplemented
 
-        return other.team_abbreviation == self.team_abbreviation and other.team_id == self.team_id
+    def __ne__(self, other):
+        if isinstance(other, self.__class__):
+            return not self.__eq__(other)
+        return NotImplemented
+
+    def __hash__(self):
+        return hash(tuple(sorted(self.__dict__.items())))
