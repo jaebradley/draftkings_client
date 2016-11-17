@@ -1,8 +1,8 @@
-from draftkings_client.data.models.available_player_match_up import AvailablePlayerMatchUp
+from draftkings_client.data.models.available_player import AvailablePlayerMatchUp
 
 
 class AvailablePlayersTeamSeries:
-    def __init__(self, team_series_id, match_up, start_timestamp, weather):
+    def __init__(self, team_series_id, match_up, start_timestamp, weather, sport_id, status):
         if type(team_series_id) is not int:
             raise TypeError('team series id is not an int')
 
@@ -15,10 +15,17 @@ class AvailablePlayersTeamSeries:
         if type(weather) is not str:
             raise TypeError('weather is not a string')
 
+        if type(sport_id) is not int:
+            raise TypeError('sport id is not an int')
+
+        if type(status) is not int:
+            raise TypeError('status is not an int')
+
         self.team_series_id = team_series_id
         self.match_up = match_up
         self.start_timestamp = start_timestamp
         self.weather = weather
+        self.status = status
 
     def __eq__(self, other):
         if isinstance(other, self.__class__):

@@ -1,6 +1,6 @@
 from draftkings_client.data.models.available_players_team_series import AvailablePlayersTeamSeries
+from draftkings_client.data.models.available_player import AvailablePlayerMatchUp, AvailablePlayerTeam
 from draftkings_client.data.translators.date_translator import DateTranslator
-from draftkings_client.data.models.available_player_match_up import AvailablePlayerMatchUp, AvailablePlayerTeam
 
 
 class AvailablePlayersTeamSeriesTranslator:
@@ -21,12 +21,15 @@ class AvailablePlayersTeamSeriesTranslator:
             away_team_id = value['atid']
             start_timestamp = DateTranslator.translate(date_string=value['tz'])
             weather = str(value['wthr'])
+            sport_id = value['s']
+            status = value['status']
 
             home_team = AvailablePlayerTeam(team_id=home_team_id, team_abbreviation=home_team_abbreviation)
             away_team = AvailablePlayerTeam(team_id=away_team_id, team_abbreviation=away_team_abbreviation)
             match_up = AvailablePlayerMatchUp(home_team=home_team, away_team=away_team)
             team_series = AvailablePlayersTeamSeries(team_series_id=team_series_id, match_up=match_up,
-                                                     start_timestamp=start_timestamp, weather=weather)
+                                                     start_timestamp=start_timestamp, weather=weather,
+                                                     sport_id=sport_id, status=status)
 
             team_series_list.append(team_series)
 
@@ -53,6 +56,12 @@ class AvailablePlayersTeamSeriesTranslator:
         if 'wthr' not in team_series_data:
             raise KeyError('missing wthr field')
 
+        if 's' not in team_series_data:
+            raise KeyError('missing s field')
+
+        if 'status' not in team_series_data:
+            raise KeyError('missing status field')
+
     @staticmethod
     def validate_types(team_series_id, team_series_data):
         if type(team_series_id) is not str and type(team_series_id) is not unicode:
@@ -75,3 +84,9 @@ class AvailablePlayersTeamSeriesTranslator:
 
         if type(team_series_data['wthr']) is not str and type(team_series_data['wthr']) is not unicode:
             raise TypeError('wthr is not a string')
+
+        if type(team_series_data['s']) is not int:
+            raise TypeError('s is not an int')
+
+        if type(team_series_data['status']) is not int:
+            raise TypeError('status is not an int')
