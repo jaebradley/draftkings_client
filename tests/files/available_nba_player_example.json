@@ -1,0 +1,31 @@
+{
+  "pid": 214152,
+  "pcode": 3704,
+  "tsid": 5479720,
+  "fn": "LeBron",
+  "ln": "James",
+  "fnu": "LeBron",
+  "lnu": "James",
+  "jn": 23,
+  "pn": "SF/PF",
+  "dgst": 1479254400000,
+  "tid": 5,
+  "htid": 5,
+  "atid": 28,
+  "htabbr": "Cle",
+  "atabbr": "Tor",
+  "posid": 27,
+  "slo": null,
+  "IsDisabledFromDrafting": false,
+  "ExceptionalMessages": [
+
+  ],
+  "s": 10300,
+  "ppg": "51.2",
+  "or": 20,
+  "swp": true,
+  "ipc": true,
+  "pp": 0,
+  "i": "",
+  "news": 2
+}

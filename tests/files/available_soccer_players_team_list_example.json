@@ -1,0 +1,86 @@
+{
+  "5473468": {
+    "ht": "CRY",
+    "htid": 40820,
+    "at": "MCI",
+    "atid": 40552,
+    "tz": "/Date(1479567600000)/",
+    "wthr": "partly-cloudy-day",
+    "dh": 0,
+    "s": 12,
+    "status": 1,
+    "lrdy": false
+  },
+  "5473471": {
+    "ht": "SOU",
+    "htid": 40818,
+    "at": "LIV",
+    "atid": 40817,
+    "tz": "/Date(1479567600000)/",
+    "wthr": "rain",
+    "dh": 0,
+    "s": 12,
+    "status": 1,
+    "lrdy": false
+  },
+  "5473474": {
+    "ht": "TOT",
+    "htid": 40813,
+    "at": "WHU",
+    "atid": 40819,
+    "tz": "/Date(1479576600000)/",
+    "wthr": "partly-cloudy-night",
+    "dh": 0,
+    "s": 12,
+    "status": 1,
+    "lrdy": false
+  },
+  "5473469": {
+    "ht": "EVE",
+    "htid": 40815,
+    "at": "SWA",
+    "atid": 40825,
+    "tz": "/Date(1479567600000)/",
+    "wthr": "partly-cloudy-day",
+    "dh": 0,
+    "s": 12,
+    "status": 1,
+    "lrdy": false
+  },
+  "5473475": {
+    "ht": "WAT",
+    "htid": 40824,
+    "at": "LEI",
+    "atid": 40816,
+    "tz": "/Date(1479567600000)/",
+    "wthr": "partly-cloudy-day",
+    "dh": 0,
+    "s": 12,
+    "status": 1,
+    "lrdy": false
+  },
+  "5473472": {
+    "ht": "STK",
+    "htid": 40827,
+    "at": "BOU",
+    "atid": 40826,
+    "tz": "/Date(1479567600000)/",
+    "wthr": "partly-cloudy-day",
+    "dh": 0,
+    "s": 12,
+    "status": 1,
+    "lrdy": false
+  },
+  "5473473": {
+    "ht": "SUN",
+    "htid": 40823,
+    "at": "HUL",
+    "atid": 43295,
+    "tz": "/Date(1479567600000)/",
+    "wthr": "partly-cloudy-day",
+    "dh": 0,
+    "s": 12,
+    "status": 1,
+    "lrdy": false
+  }
+}

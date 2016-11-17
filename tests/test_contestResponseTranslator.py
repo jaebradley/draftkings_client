@@ -7,7 +7,7 @@ from draftkings_client.data.translators.contest_response_translator import Conte
 
 class TestContestResponseTranslator(TestCase):
     def test_contest_response_translation(self):
-        with open(os.path.join(ROOT_DIRECTORY, 'tests/nba_contest_example.json')) as data_file:
+        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/nba_contest_example.json')) as data_file:
             data = json.load(data_file)
             translation = ContestResponseTranslator.translate(data)
             self.assertIsNotNone(translation)

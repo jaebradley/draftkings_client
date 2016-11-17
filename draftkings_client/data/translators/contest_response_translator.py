@@ -1,4 +1,5 @@
 from draftkings_client.data.models.contest import Contest
+from draftkings_client.data.translators.date_translator import DateTranslator
 
 
 class ContestResponseTranslator:
@@ -92,10 +93,10 @@ class ContestResponseTranslator:
             raise TypeError('dg is not an integer')
 
         id = response['id']
-        start_timestamp = ContestResponseTranslator.translate_start_timestamp(timestamp=response['sd'])
+        start_timestamp = DateTranslator.translate(date_string=response['sd'])
         fantasy_player_points = response['fpp']
         sport = response['s']
-        name = str(response['n'])
+        name = unicode(response['n'])
         total_entries = response['nt']
         maximum_entries = response['m']
         entry_fee = float(response['a'])
@@ -108,6 +109,3 @@ class ContestResponseTranslator:
                        total_entries=total_entries, maximum_entries=maximum_entries, entry_fee=entry_fee,
                        total_payout=total_payout, draft_group_id=draft_group_id)
 
-    @staticmethod
-    def translate_start_timestamp(timestamp):
-        return int(timestamp[6:-2])
