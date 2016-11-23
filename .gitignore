@@ -3,3 +3,4 @@
 .coverage
 dist/
 draftkings_client.egg-info
+.egg-info/
