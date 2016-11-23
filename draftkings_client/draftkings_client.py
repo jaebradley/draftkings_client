@@ -3,7 +3,7 @@ import requests
 from data.models.league import League
 from data.translators.available_players_translator import AvailablePlayersTranslator
 from data.translators.contests_response_translator import ContestsResponseTranslator
-from draftkings_client.data.utilities.url_builder import UrlBuilder
+from data.utilities.url_builder import UrlBuilder
 
 
 class DraftkingsClient:
