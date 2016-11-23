@@ -6,7 +6,7 @@ from data.translators.contests_response_translator import ContestsResponseTransl
 from data.utilities.url_builder import UrlBuilder
 
 
-class DraftkingsClient:
+class DraftKingsClient:
 
     def __init__(self):
         pass

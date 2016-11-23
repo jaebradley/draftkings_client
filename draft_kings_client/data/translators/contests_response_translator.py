@@ -1,4 +1,4 @@
-from draftkings_client.data.translators.contest_response_translator import ContestResponseTranslator
+from draft_kings_client.data.translators.contest_response_translator import ContestResponseTranslator
 
 
 class ContestsResponseTranslator:

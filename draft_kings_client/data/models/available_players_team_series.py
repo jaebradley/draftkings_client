@@ -1,4 +1,4 @@
-from draftkings_client.data.models.available_player import AvailablePlayerMatchUp
+from draft_kings_client.data.models.available_player import AvailablePlayerMatchUp
 
 
 class AvailablePlayersTeamSeries:

@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from draftkings_client.data.utilities.url_builder import UrlBuilder
+from draft_kings_client.data.utilities.url_builder import UrlBuilder
 
 
 class TestUrlBuilder(TestCase):

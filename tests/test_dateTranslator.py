@@ -1,5 +1,5 @@
 from unittest import TestCase
-from draftkings_client.data.translators.date_translator import DateTranslator
+from draft_kings_client.data.translators.date_translator import DateTranslator
 
 
 class TestDateTranslator(TestCase):
