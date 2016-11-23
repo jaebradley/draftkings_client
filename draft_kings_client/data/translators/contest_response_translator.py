@@ -1,5 +1,5 @@
-from draftkings_client.data.models.contest import Contest
-from draftkings_client.data.translators.date_translator import DateTranslator
+from draft_kings_client.data.models.contest import Contest
+from draft_kings_client.data.translators.date_translator import DateTranslator
 
 
 class ContestResponseTranslator:
