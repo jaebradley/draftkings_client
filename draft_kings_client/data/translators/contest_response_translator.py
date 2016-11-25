@@ -1,5 +1,6 @@
 from draft_kings_client.data.models.contest import Contest
 from draft_kings_client.data.translators.date_translator import DateTranslator
+from draft_kings_client.data.models.sport import Sport
 
 
 class ContestResponseTranslator:
@@ -95,7 +96,7 @@ class ContestResponseTranslator:
         id = response['id']
         start_timestamp = DateTranslator.translate(date_string=response['sd'])
         fantasy_player_points = response['fpp']
-        sport = response['s']
+        sport = Sport.from_id(sport_id=response['s'])
         name = unicode(response['n'])
         total_entries = response['nt']
         maximum_entries = response['m']
