@@ -1,5 +1,6 @@
 from draft_kings_client.data.models.sport import Sport
 
+
 class Contest:
     def __init__(self, contest_id, start_timestamp, fantasy_player_points, sport, name, is_guaranteed, is_starred,
                  is_head_to_head, is_double_up, is_fifty_fifty, total_entries, maximum_entries, entry_fee,
