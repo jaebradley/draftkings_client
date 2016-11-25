@@ -3,6 +3,7 @@ from unittest import TestCase
 from draft_kings_client.data.translators.available_players_team_series_translator import AvailablePlayersTeamSeriesTranslator
 from draft_kings_client.data.models.available_players_team_series import AvailablePlayersTeamSeries
 from draft_kings_client.data.models.available_player import AvailablePlayerTeam, AvailablePlayerMatchUp
+from draft_kings_client.data.models.sport import Sport
 
 
 class TestAvailablePlayersTeamSeriesTranslator(TestCase):
@@ -16,7 +17,7 @@ class TestAvailablePlayersTeamSeriesTranslator(TestCase):
         ts_1_timestamp = long(4)
         ts_1_formatted_timestamp = unicode("/Date({})/".format(ts_1_timestamp))
         ts_1_weather = unicode('sunny with a chance of meatballs')
-        ts_1_sport_id = 11
+        ts_1_sport_id = 1
         ts_1_status = 9
 
         ts_2_id = 5
@@ -44,14 +45,14 @@ class TestAvailablePlayersTeamSeriesTranslator(TestCase):
                                                             match_up=expected_team_series_1_match_up,
                                                             start_timestamp=ts_1_timestamp,
                                                             weather=ts_1_weather,
-                                                            sport=ts_1_sport_id,
+                                                            sport=Sport.from_id(sport_id=ts_1_sport_id),
                                                             status=ts_1_status)
 
         expected_team_series_2 = AvailablePlayersTeamSeries(team_series_id=ts_2_id,
                                                             match_up=expected_team_series_2_match_up,
                                                             start_timestamp=ts_2_timestamp,
                                                             weather=ts_2_weather,
-                                                            sport=ts_2_sport_id,
+                                                            sport=Sport.from_id(sport_id=ts_2_sport_id),
                                                             status=ts_2_status)
 
         response = {
