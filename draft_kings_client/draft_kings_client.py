@@ -1,6 +1,6 @@
 import requests
 
-from data.models.league import League
+from data.models.sport import Sport
 from data.translators.available_players_translator import AvailablePlayersTranslator
 from data.translators.contests_response_translator import ContestsResponseTranslator
 from data.utilities.url_builder import UrlBuilder
@@ -12,11 +12,11 @@ class DraftKingsClient:
         pass
 
     @staticmethod
-    def get_contests(league):
-        assert isinstance(league, League)
+    def get_contests(sport):
+        assert isinstance(sport, Sport)
 
         response = requests.get(url=UrlBuilder.get_contest_url(),
-                                params={'sport': league._value_})
+                                params={'sport': sport._value_})
 
         response.raise_for_status()
 
