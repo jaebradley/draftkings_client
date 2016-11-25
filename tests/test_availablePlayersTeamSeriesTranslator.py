@@ -44,14 +44,14 @@ class TestAvailablePlayersTeamSeriesTranslator(TestCase):
                                                             match_up=expected_team_series_1_match_up,
                                                             start_timestamp=ts_1_timestamp,
                                                             weather=ts_1_weather,
-                                                            sport_id=ts_1_sport_id,
+                                                            sport=ts_1_sport_id,
                                                             status=ts_1_status)
 
         expected_team_series_2 = AvailablePlayersTeamSeries(team_series_id=ts_2_id,
                                                             match_up=expected_team_series_2_match_up,
                                                             start_timestamp=ts_2_timestamp,
                                                             weather=ts_2_weather,
-                                                            sport_id=ts_2_sport_id,
+                                                            sport=ts_2_sport_id,
                                                             status=ts_2_status)
 
         response = {
