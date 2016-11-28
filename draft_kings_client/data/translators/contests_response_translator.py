@@ -9,13 +9,13 @@ class ContestsResponseTranslator:
     @staticmethod
     def translate(response):
         if 'SelectedSport' not in response:
-            raise TypeError('Missing SelectedSport field')
+            raise KeyError('Missing SelectedSport field')
 
         if 'Contests' not in response:
-            raise TypeError('Missing Contests field')
+            raise KeyError('Missing Contests field')
 
         if 'DraftGroups' not in response:
-            raise TypeError('Missing DraftGroups field')
+            raise KeyError('Missing DraftGroups field')
 
         contests = []
         for contest in response['Contests']:
