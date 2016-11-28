@@ -1,4 +1,6 @@
+from draft_kings_client.data.models.contests import Contests
 from draft_kings_client.data.translators.contest_response_translator import ContestResponseTranslator
+from draft_kings_client.data.translators.draft_groups_translator import DraftGroupsTranslator
 
 
 class ContestsResponseTranslator:
@@ -21,4 +23,6 @@ class ContestsResponseTranslator:
         for contest in response['Contests']:
             contests.append(ContestResponseTranslator.translate(response=contest))
 
-        return contests
+        groups = DraftGroupsTranslator.translate_groups(groups=response['DraftGroups'])
+
+        return Contests(contests=contests, draft_groups=groups)
