@@ -14,6 +14,9 @@ class ContestsResponseTranslator:
         if 'Contests' not in response:
             raise TypeError('Missing Contests field')
 
+        if 'DraftGroups' not in response:
+            raise TypeError('Missing DraftGroups field')
+
         contests = []
         for contest in response['Contests']:
             contests.append(ContestResponseTranslator.translate(response=contest))
