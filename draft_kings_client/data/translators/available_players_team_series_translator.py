@@ -13,7 +13,7 @@ class AvailablePlayersTeamSeriesTranslator:
         team_series_list = []
         for key, value in response.iteritems():
             AvailablePlayersTeamSeriesTranslator.validate(team_series_data=value)
-            
+
             team_series_id = int(key)
             home_team_abbreviation = unicode(value['ht'])
             home_team_id = value['htid']
