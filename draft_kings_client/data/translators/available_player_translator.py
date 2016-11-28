@@ -8,8 +8,7 @@ class AvailablePlayerTranslator:
     @staticmethod
     def translate(response):
         AvailablePlayerTranslator.validate_fields_exist(response=response)
-        AvailablePlayerTranslator.validate_expected_field_types(response=response)
-
+        
         player_id = response['pid']
         team_series_id = response['tsid']
         first_name = unicode(response['fn'])
@@ -98,60 +97,4 @@ class AvailablePlayerTranslator:
 
         if 'or' not in response:
             raise KeyError('missing or field')
-
-    @staticmethod
-    def validate_expected_field_types(response):
-        if type(response['pid']) is not int:
-            raise TypeError('pid field is not an int')
-
-        if type(response['tsid']) is not int:
-            raise TypeError('tsid field is not an int')
-
-        if type(response['fn']) is not str and type(response['fn']) is not unicode:
-            raise TypeError('fn field is not a string')
-
-        if type(response['ln']) is not str and type(response['ln']) is not unicode:
-            raise TypeError('ln field is not a string')
-
-        if type(response['jn']) is not int:
-            raise TypeError('jn field is not an int')
-
-        if type(response['pn']) is not str and type(response['pn']) is not unicode:
-            raise TypeError('pn field is not a string')
-
-        if type(response['posid']) is not int:
-            raise TypeError('posid field is not an int')
-
-        if type(response['dgst']) is not int and type(response['dgst']) is not long:
-            raise TypeError('jn field is not an int')
-
-        if type(response['tid']) is not int:
-            raise TypeError('tid field is not an int')
-
-        if type(response['htid']) is not int:
-            raise TypeError('htid field is not an int')
-
-        if type(response['atid']) is not int:
-            raise TypeError('atid field is not an int')
-
-        if type(response['htabbr']) is not str and type(response['htabbr']) is not unicode:
-            raise TypeError('htabbr field is not a string')
-
-        if type(response['atabbr']) is not str and type(response['atabbr']) is not unicode:
-            raise TypeError('atabbr field is not a string')
-
-        if type(response['IsDisabledFromDrafting']) is not bool:
-            raise TypeError('IsDisabledFromDrafting field is not a boolean')
-
-        if type(response['ExceptionalMessages']) is not list:
-            raise TypeError('ExceptionalMessages field is not a list')
-
-        if type(response['s']) is not int and type(response['s']) is not long and type(response['s']) is not float:
-            raise TypeError('s field is not an int or a float')
-
-        if type(response['ppg']) is not str and type(response['ppg']) is not unicode:
-            raise TypeError('ppg field is not a string')
-
-        if type(response['or']) is not int:
-            raise TypeError('or field is not an int')
 
