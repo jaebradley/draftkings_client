@@ -13,7 +13,6 @@ class AvailablePlayersTeamSeriesTranslator:
         team_series_list = []
         for key, value in response.iteritems():
             AvailablePlayersTeamSeriesTranslator.validate(team_series_data=value)
-            AvailablePlayersTeamSeriesTranslator.validate_types(team_series_id=key, team_series_data=value)
 
             team_series_id = int(key)
             home_team_abbreviation = unicode(value['ht'])
@@ -62,32 +61,3 @@ class AvailablePlayersTeamSeriesTranslator:
 
         if 'status' not in team_series_data:
             raise KeyError('missing status field')
-
-    @staticmethod
-    def validate_types(team_series_id, team_series_data):
-        if type(team_series_id) is not str and type(team_series_id) is not unicode:
-            raise TypeError('key is not a string')
-
-        if type(team_series_data['ht']) is not str and type(team_series_data['ht']) is not unicode:
-            raise TypeError('ht is not a string')
-
-        if type(team_series_data['htid']) is not int:
-            raise TypeError('htid is not an int')
-
-        if type(team_series_data['at']) is not str and type(team_series_data['at']) is not unicode:
-            raise TypeError('at is not a string')
-
-        if type(team_series_data['atid']) is not int:
-            raise TypeError('atid is not an int')
-
-        if type(team_series_data['tz']) is not str and type(team_series_data['tz']) is not unicode:
-            raise TypeError('tz is not a string')
-
-        if type(team_series_data['wthr']) is not str and type(team_series_data['wthr']) is not unicode:
-            raise TypeError('wthr is not a string')
-
-        if type(team_series_data['s']) is not int:
-            raise TypeError('s is not an int')
-
-        if type(team_series_data['status']) is not int:
-            raise TypeError('status is not an int')
