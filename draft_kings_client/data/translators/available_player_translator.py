@@ -8,7 +8,7 @@ class AvailablePlayerTranslator:
     @staticmethod
     def translate(response):
         AvailablePlayerTranslator.validate_fields_exist(response=response)
-        
+
         player_id = response['pid']
         team_series_id = response['tsid']
         first_name = unicode(response['fn'])
