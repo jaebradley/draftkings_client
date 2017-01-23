@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from draft_kings_client.data.models.available_player import AvailablePlayerPosition, MatchUp, AvailablePlayerTeam
+from draft_kings_client.data.models.available_player import AvailablePlayerPositionGroup, MatchUp, AvailablePlayerTeam
 from draft_kings_client.data.translators.available_player_translator import AvailablePlayerTranslator
 
 
@@ -56,7 +56,7 @@ class TestAvailablePlayerTranslator(TestCase):
         self.assertEqual(player.first_name, first_name)
         self.assertEqual(player.last_name, last_name)
         self.assertEqual(player.jersey_number, jersey_number)
-        self.assertEqual(player.position, AvailablePlayerPosition(position_id=position_id, position_name=position_name))
+        self.assertEqual(player.position, AvailablePlayerPositionGroup(position_group_id=position_id, positions=position_name))
         self.assertEqual(player.draft_group_start_timestamp, draft_group_start_timestamp)
         self.assertEqual(player.team_id, team_id)
         self.assertEqual(player.match_up, expected_match_up)

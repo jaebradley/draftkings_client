@@ -1,4 +1,4 @@
-from draft_kings_client.data.models.available_player import AvailablePlayer, AvailablePlayerPosition, MatchUp, AvailablePlayerTeam
+from draft_kings_client.data.models.available_player import AvailablePlayer, AvailablePlayerPositionGroup, MatchUp, AvailablePlayerTeam
 
 
 class AvailablePlayerTranslator:
@@ -31,7 +31,7 @@ class AvailablePlayerTranslator:
         home_team = AvailablePlayerTeam(team_id=home_team_id, team_abbreviation=home_team_abbreviation)
         away_team = AvailablePlayerTeam(team_id=away_team_id, team_abbreviation=away_team_abbreviation)
         match_up = MatchUp(home_team=home_team, away_team=away_team)
-        position = AvailablePlayerPosition(position_id=position_id, position_name=position_name)
+        position = AvailablePlayerPositionGroup(position_group_id=position_id, positions=position_name)
         available_player = AvailablePlayer(player_id=player_id, team_series_id=team_series_id, first_name=first_name,
                                            last_name=last_name, jersey_number=jersey_number, position=position,
                                            draft_group_start_timestamp=draft_group_start_timestamp, team_id=team_id,

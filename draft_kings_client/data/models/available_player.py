@@ -1,3 +1,5 @@
+from position import Position
+from sport import Sport
 from team import Team
 
 
@@ -21,7 +23,7 @@ class AvailablePlayer:
         if type(jersey_number) is not int:
             raise TypeError('jersey number field is not an int')
 
-        if not isinstance(position, AvailablePlayerPosition):
+        if not isinstance(position, AvailablePlayerPositionGroup):
             raise TypeError('position is not valid')
 
         if type(draft_group_start_timestamp) is not long:
@@ -77,16 +79,16 @@ class AvailablePlayer:
         return hash(tuple(sorted(self.__dict__.items())))
 
 
-class AvailablePlayerPosition:
-    def __init__(self, position_id, position_name):
-        if type(position_id) is not int:
-            raise TypeError('position id field is not an int')
+class AvailablePlayerPositionGroup:
+    def __init__(self, position_group_id, positions):
+        if type(position_group_id) is not int:
+            raise TypeError('position group id field is not an int')
 
-        if type(position_name) is not unicode:
-            raise TypeError('position name field is not a string')
+        if type(positions) is not list:
+            raise TypeError('position name field is not a list')
 
-        self.position_id = position_id
-        self.position_name = position_name
+        self.position_group_id = position_group_id
+        self.positions = positions
 
     def __eq__(self, other):
         if isinstance(other, self.__class__):
@@ -100,6 +102,17 @@ class AvailablePlayerPosition:
 
     def __hash__(self):
         return hash(tuple(sorted(self.__dict__.items())))
+
+    @staticmethod
+    def value_of(sport, position_group_id, position_group_name):
+        if not isinstance(sport, Sport):
+            raise TypeError('sport: %s is not a Sport', sport)
+
+        if not isinstance(position_group_name, basestring):
+            raise TypeError('position group name: %s is not a string', position_group_name)
+
+        positions = Position.get_positions(sport=sport, abbreviations=position_group_name.split('/'))
+        return AvailablePlayerPositionGroup(position_group_id=position_group_id, positions=positions)
 
 
 class MatchUp:
