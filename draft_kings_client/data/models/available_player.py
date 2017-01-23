@@ -4,7 +4,7 @@ from team import Team
 
 
 class AvailablePlayer:
-    def __init__(self, player_id, team_series_id, first_name, last_name, jersey_number, position,
+    def __init__(self, player_id, team_series_id, first_name, last_name, jersey_number, position_group,
                  draft_group_start_timestamp, team_id, match_up,
                  is_disabled_from_drafting, exceptional_messages, salary,
                  draftkings_points_per_contest, opposition_rank):
@@ -23,8 +23,8 @@ class AvailablePlayer:
         if type(jersey_number) is not int:
             raise TypeError('jersey number field is not an int')
 
-        if not isinstance(position, AvailablePlayerPositionGroup):
-            raise TypeError('position is not valid')
+        if not isinstance(position_group, AvailablePlayerPositionGroup):
+            raise TypeError('position group is not valid')
 
         if type(draft_group_start_timestamp) is not long:
             raise TypeError('draft group start timestamp field is not a long')
@@ -52,7 +52,7 @@ class AvailablePlayer:
 
         self.player_id = player_id
         self.team_series_id = team_series_id
-        self.position = position
+        self.position_group = position_group
         self.jersey_number = jersey_number
         self.last_name = last_name
         self.first_name = first_name
