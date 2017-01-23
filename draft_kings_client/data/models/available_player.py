@@ -108,7 +108,10 @@ class AvailablePlayerPositionGroup:
         if not isinstance(sport, Sport):
             raise TypeError('sport: %s is not a Sport', sport)
 
-        if not isinstance(position_group_name, basestring):
+        if type(position_group_id) is not int:
+            raise TypeError('position group id: %s is not an int', position_group_id)
+
+        if type(position_group_name) is not basestring:
             raise TypeError('position group name: %s is not a string', position_group_name)
 
         positions = Position.get_positions(sport=sport, abbreviations=position_group_name.split('/'))
