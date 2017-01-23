@@ -1,3 +1,6 @@
+from team import Team
+
+
 class AvailablePlayer:
     def __init__(self, player_id, team_series_id, first_name, last_name, jersey_number, position,
                  draft_group_start_timestamp, team_id, match_up,
@@ -27,7 +30,7 @@ class AvailablePlayer:
         if type(team_id) is not int:
             raise TypeError('team id field is not an int')
 
-        if not isinstance(match_up, AvailablePlayerMatchUp):
+        if not isinstance(match_up, MatchUp):
             raise TypeError('match up field is not valid')
 
         if type(is_disabled_from_drafting) is not bool:
@@ -99,41 +102,16 @@ class AvailablePlayerPosition:
         return hash(tuple(sorted(self.__dict__.items())))
 
 
-class AvailablePlayerMatchUp:
+class MatchUp:
     def __init__(self, home_team, away_team):
-        if not isinstance(home_team, AvailablePlayerTeam):
+        if not isinstance(home_team, Team):
             raise TypeError('home team is not a valid team')
 
-        if not isinstance(away_team, AvailablePlayerTeam):
+        if not isinstance(away_team, Team):
             raise TypeError('away team is not a valid team')
 
         self.home_team = home_team
         self.away_team = away_team
-
-    def __eq__(self, other):
-        if isinstance(other, self.__class__):
-            return self.__dict__ == other.__dict__
-        return NotImplemented
-
-    def __ne__(self, other):
-        if isinstance(other, self.__class__):
-            return not self.__eq__(other)
-        return NotImplemented
-
-    def __hash__(self):
-        return hash(tuple(sorted(self.__dict__.items())))
-
-
-class AvailablePlayerTeam:
-    def __init__(self, team_id, team_abbreviation):
-        if type(team_id) is not int:
-            raise TypeError('team id field is not an int')
-
-        if type(team_abbreviation) is not unicode:
-            raise TypeError('team abbreviation field is not a string')
-
-        self.team_id = team_id
-        self.team_abbreviation = team_abbreviation
 
     def __eq__(self, other):
         if isinstance(other, self.__class__):

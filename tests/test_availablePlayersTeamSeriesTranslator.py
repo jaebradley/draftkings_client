@@ -2,7 +2,7 @@ from unittest import TestCase
 
 from draft_kings_client.data.translators.available_players_team_series_translator import AvailablePlayersTeamSeriesTranslator
 from draft_kings_client.data.models.available_players_team_series import AvailablePlayersTeamSeries
-from draft_kings_client.data.models.available_player import AvailablePlayerTeam, AvailablePlayerMatchUp
+from draft_kings_client.data.models.available_player import AvailablePlayerTeam, MatchUp
 from draft_kings_client.data.models.sport import Sport
 
 
@@ -32,13 +32,13 @@ class TestAvailablePlayersTeamSeriesTranslator(TestCase):
         ts_2_sport_id = 12
         ts_2_status = 10
 
-        expected_team_series_1_match_up = AvailablePlayerMatchUp(home_team=AvailablePlayerTeam(team_id=ts_1_home_team_id,
-                                                                                               team_abbreviation=ts_1_home_team_abbreviation),
-                                                                 away_team=AvailablePlayerTeam(team_id=ts_1_away_team_id,
+        expected_team_series_1_match_up = MatchUp(home_team=AvailablePlayerTeam(team_id=ts_1_home_team_id,
+                                                                                team_abbreviation=ts_1_home_team_abbreviation),
+                                                  away_team=AvailablePlayerTeam(team_id=ts_1_away_team_id,
                                                                                                team_abbreviation=ts_1_away_team_abbreviation))
-        expected_team_series_2_match_up = AvailablePlayerMatchUp(home_team=AvailablePlayerTeam(team_id=ts_2_home_team_id,
-                                                                                               team_abbreviation=ts_2_home_team_abbreviation),
-                                                                 away_team=AvailablePlayerTeam(team_id=ts_2_away_team_id,
+        expected_team_series_2_match_up = MatchUp(home_team=AvailablePlayerTeam(team_id=ts_2_home_team_id,
+                                                                                team_abbreviation=ts_2_home_team_abbreviation),
+                                                  away_team=AvailablePlayerTeam(team_id=ts_2_away_team_id,
                                                                                                team_abbreviation=ts_2_away_team_abbreviation))
 
         expected_team_series_1 = AvailablePlayersTeamSeries(team_series_id=ts_1_id,

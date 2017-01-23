@@ -1,4 +1,4 @@
-from draft_kings_client.data.models.available_player import AvailablePlayerMatchUp
+from draft_kings_client.data.models.available_player import MatchUp
 from draft_kings_client.data.models.sport import Sport
 
 
@@ -7,7 +7,7 @@ class AvailablePlayersTeamSeries:
         if type(team_series_id) is not int:
             raise TypeError('team series id is not an int')
 
-        if not isinstance(match_up, AvailablePlayerMatchUp):
+        if not isinstance(match_up, MatchUp):
             raise TypeError('match up is not valid')
 
         if type(start_timestamp) is not long:

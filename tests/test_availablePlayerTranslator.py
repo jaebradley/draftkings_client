@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from draft_kings_client.data.models.available_player import AvailablePlayerPosition, AvailablePlayerMatchUp, AvailablePlayerTeam
+from draft_kings_client.data.models.available_player import AvailablePlayerPosition, MatchUp, AvailablePlayerTeam
 from draft_kings_client.data.translators.available_player_translator import AvailablePlayerTranslator
 
 
@@ -45,9 +45,9 @@ class TestAvailablePlayerTranslator(TestCase):
             "ppg": str(points_per_game),
             "or": opposition_rank,
         }
-        expected_match_up = AvailablePlayerMatchUp(home_team=AvailablePlayerTeam(team_id=home_team_id,
-                                                                                 team_abbreviation=home_team_abbreviation),
-                                                   away_team=AvailablePlayerTeam(team_id=away_team_id,
+        expected_match_up = MatchUp(home_team=AvailablePlayerTeam(team_id=home_team_id,
+                                                                  team_abbreviation=home_team_abbreviation),
+                                    away_team=AvailablePlayerTeam(team_id=away_team_id,
                                                                                  team_abbreviation=away_team_abbreviation))
         player = AvailablePlayerTranslator.translate(response)
         self.assertIsNotNone(player)
