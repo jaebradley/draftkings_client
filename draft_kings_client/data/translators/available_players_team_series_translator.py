@@ -1,7 +1,8 @@
+from draft_kings_client.data.models.available_player import MatchUp
 from draft_kings_client.data.models.available_players_team_series import AvailablePlayersTeamSeries
-from draft_kings_client.data.models.available_player import MatchUp, AvailablePlayerTeam
-from draft_kings_client.data.translators.date_translator import DateTranslator
 from draft_kings_client.data.models.sport import Sport
+from draft_kings_client.data.models.team import Team
+from draft_kings_client.data.translators.date_translator import DateTranslator
 
 
 class AvailablePlayersTeamSeriesTranslator:
@@ -15,17 +16,15 @@ class AvailablePlayersTeamSeriesTranslator:
             AvailablePlayersTeamSeriesTranslator.validate(team_series_data=value)
 
             team_series_id = int(key)
-            home_team_abbreviation = unicode(value['ht'])
             home_team_id = value['htid']
-            away_team_abbreviation = unicode(value['at'])
             away_team_id = value['atid']
             start_timestamp = DateTranslator.translate(date_string=value['tz'])
             weather = unicode(value['wthr'])
             sport = Sport.from_id(sport_id=value['s'])
             status = value['status']
 
-            home_team = AvailablePlayerTeam(team_id=home_team_id, team_abbreviation=home_team_abbreviation)
-            away_team = AvailablePlayerTeam(team_id=away_team_id, team_abbreviation=away_team_abbreviation)
+            home_team = Team.value_of(sport=sport, draft_kings_id=home_team_id)
+            away_team = Team.value_of(sport=sport, draft_kings_id=away_team_id)
             match_up = MatchUp(home_team=home_team, away_team=away_team)
             team_series = AvailablePlayersTeamSeries(team_series_id=team_series_id, match_up=match_up,
                                                      start_timestamp=start_timestamp, weather=weather,
