@@ -32,7 +32,7 @@ class Position(Enum):
 
     @staticmethod
     def get_positions(sport, abbreviations):
-        return [Position.value_of(sport=sport, abbreviations=abbreviation) for abbreviation in abbreviations]
+        return [Position.value_of(sport=sport, abbreviation=abbreviation) for abbreviation in abbreviations]
 
     @staticmethod
     def value_of(sport, abbreviation):
