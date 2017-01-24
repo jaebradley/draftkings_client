@@ -4,10 +4,9 @@ from team import Team
 
 
 class AvailablePlayer:
-    def __init__(self, player_id, team_series_id, first_name, last_name, jersey_number, position_group,
-                 draft_group_start_timestamp, team_id, match_up,
-                 is_disabled_from_drafting, exceptional_messages, salary,
-                 draftkings_points_per_contest, opposition_rank):
+    def __init__(self, player_id, first_name, last_name, jersey_number, position_group, draft_group_start_timestamp,
+                 team, match_up, is_disabled_from_drafting, exceptional_messages, salary, draftkings_points_per_contest,
+                 opposition_rank):
         if type(player_id) is not int:
             raise TypeError('player id field is not an int')
 
@@ -119,7 +118,10 @@ class AvailablePlayerPositionGroup:
 
 
 class MatchUp:
-    def __init__(self, home_team, away_team):
+    def __init__(self, match_up_id, home_team, away_team):
+        if not type(match_up_id) is int:
+            raise TypeError('match up id: %s is not a number', match_up_id)
+
         if not isinstance(home_team, Team):
             raise TypeError('home team is not a valid team')
 
