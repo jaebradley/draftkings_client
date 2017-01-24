@@ -6,7 +6,7 @@ from team import Team
 
 
 class AvailablePlayer:
-    def __init__(self, player_id, first_name, last_name, jersey_number, position_group, draft_group_start_timestamp,
+    def __init__(self, player_id, first_name, last_name, jersey_number, position_group, draft_group_start_time,
                  team, match_up, is_disabled_from_drafting, exceptional_messages, salary, draftkings_points_per_contest,
                  opposition_rank):
         if type(player_id) is not int:
@@ -24,7 +24,7 @@ class AvailablePlayer:
         if not isinstance(position_group, AvailablePlayerPositionGroup):
             raise TypeError('position group is not valid')
 
-        if type(draft_group_start_timestamp) is not datetime:
+        if type(draft_group_start_time) is not datetime:
             raise TypeError('draft group start timestamp field is not a datetime')
 
         if not isinstance(team, Team):
@@ -53,7 +53,7 @@ class AvailablePlayer:
         self.jersey_number = jersey_number
         self.last_name = last_name
         self.first_name = first_name
-        self.draft_group_start_timestamp = draft_group_start_timestamp
+        self.draft_group_start_timestamp = draft_group_start_time
         self.team = team
         self.match_up = match_up
         self.is_disabled_from_drafting = is_disabled_from_drafting
