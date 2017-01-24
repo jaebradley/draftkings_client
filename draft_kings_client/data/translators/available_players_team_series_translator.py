@@ -52,8 +52,5 @@ class AvailablePlayersTeamSeriesTranslator:
         if 'wthr' not in team_series_data:
             raise KeyError('missing wthr field')
 
-        if 's' not in team_series_data:
-            raise KeyError('missing s field')
-
         if 'status' not in team_series_data:
             raise KeyError('missing status field')
