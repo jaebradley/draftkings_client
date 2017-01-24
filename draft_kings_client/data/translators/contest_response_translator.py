@@ -1,6 +1,6 @@
 from draft_kings_client.data.models.contest import Contest
 from draft_kings_client.data.models.sport import Sport
-from draft_kings_client.data.translators.date_translator import DateTranslator
+from draft_kings_client.data.translators.date_time_translator import DateTimeTranslator
 
 
 class ContestResponseTranslator:
@@ -64,7 +64,7 @@ class ContestResponseTranslator:
             raise KeyError('missing dg field')
 
         id = response['id']
-        start_timestamp = DateTranslator.translate(date_string=response['sd'])
+        start_timestamp = DateTimeTranslator.translate(date_string=response['sd'])
         fantasy_player_points = response['fpp']
         sport = Sport.from_id(sport_id=response['s'])
         name = unicode(response['n'])

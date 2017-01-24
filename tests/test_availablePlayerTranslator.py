@@ -1,5 +1,8 @@
 from unittest import TestCase
 
+from datetime import datetime
+import pytz
+
 from draft_kings_client.data.models.team import Team
 from draft_kings_client.data.models.position import Position
 from draft_kings_client.data.models.available_player import AvailablePlayerPositionGroup, MatchUp
@@ -16,6 +19,7 @@ class TestAvailablePlayerTranslator(TestCase):
         position_name = u'SF/PF'
         position_group_id = 27
         draft_group_start_timestamp = 1479254400000
+        draft_group_start_datetime = datetime.fromtimestamp(timestamp=draft_group_start_timestamp / 1000, tz=pytz.utc)
         team_id = 5
         team = Team.cleveland_cavaliers
         home_team_id = team_id
@@ -59,7 +63,7 @@ class TestAvailablePlayerTranslator(TestCase):
         self.assertEqual(player.jersey_number, jersey_number)
         self.assertEqual(player.position_group, AvailablePlayerPositionGroup(
                 position_group_id=position_group_id, positions=[Position.small_forward, Position.power_forward]))
-        self.assertEqual(player.draft_group_start_timestamp, draft_group_start_timestamp)
+        self.assertEqual(player.draft_group_start_timestamp, draft_group_start_datetime)
         self.assertEqual(player.team, team)
         self.assertEqual(player.match_up, expected_match_up)
         self.assertEqual(player.is_disabled_from_drafting, is_disabled_from_drafting)

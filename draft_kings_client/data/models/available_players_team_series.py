@@ -1,5 +1,6 @@
+from datetime import datetime
+
 from draft_kings_client.data.models.available_player import MatchUp
-from draft_kings_client.data.models.sport import Sport
 
 
 class AvailablePlayersTeamSeries:
@@ -7,8 +8,8 @@ class AvailablePlayersTeamSeries:
         if not isinstance(match_up, MatchUp):
             raise TypeError('match up is not valid')
 
-        if type(start_timestamp) is not long:
-            raise TypeError('start timestamp is not a long')
+        if type(start_timestamp) is not datetime:
+            raise TypeError('start timestamp is not a datetime')
 
         if type(weather) is not unicode:
             raise TypeError('weather is not a string')

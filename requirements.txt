@@ -6,3 +6,4 @@ PyYAML==3.12
 requests==2.10.0
 sh==1.11
 six==1.10.0
+pytz==2016.10
