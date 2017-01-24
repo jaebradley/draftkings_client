@@ -1,9 +1,8 @@
 from unittest import TestCase
 
-from draft_kings_client.data.translators.available_players_team_series_translator import AvailablePlayersTeamSeriesTranslator
+from draft_kings_client.data.models.available_player import Team, MatchUp
 from draft_kings_client.data.models.available_players_team_series import AvailablePlayersTeamSeries
-from draft_kings_client.data.models.available_player import AvailablePlayerTeam, AvailablePlayerMatchUp
-from draft_kings_client.data.models.sport import Sport
+from draft_kings_client.data.translators.available_players_team_series_translator import AvailablePlayersTeamSeriesTranslator
 
 
 class TestAvailablePlayersTeamSeriesTranslator(TestCase):
@@ -11,8 +10,8 @@ class TestAvailablePlayersTeamSeriesTranslator(TestCase):
         ts_1_id = 1
         ts_1_id_formatted_value = unicode(ts_1_id)
         ts_1_home_team_abbreviation = unicode('jae')
-        ts_1_home_team_id = 2
-        ts_1_away_team_id = 3
+        ts_1_home_team_id = Team.atlanta_hawks.value['id']
+        ts_1_away_team_id = Team.boston_celtics.value['id']
         ts_1_away_team_abbreviation = unicode('bradley')
         ts_1_timestamp = long(4)
         ts_1_formatted_timestamp = unicode("/Date({})/".format(ts_1_timestamp))
@@ -23,8 +22,8 @@ class TestAvailablePlayersTeamSeriesTranslator(TestCase):
         ts_2_id = 5
         ts_2_id_formatted_value = unicode(ts_2_id)
         ts_2_home_team_abbreviation = unicode('jae')
-        ts_2_home_team_id = 6
-        ts_2_away_team_id = 7
+        ts_2_home_team_id = Team.brooklyn_nets.value['id']
+        ts_2_away_team_id = Team.cleveland_cavaliers.value['id']
         ts_2_away_team_abbreviation = unicode('bradley')
         ts_2_timestamp = long(8)
         ts_2_formatted_timestamp = unicode("/Date({})/".format(ts_2_timestamp))
@@ -32,27 +31,21 @@ class TestAvailablePlayersTeamSeriesTranslator(TestCase):
         ts_2_sport_id = 12
         ts_2_status = 10
 
-        expected_team_series_1_match_up = AvailablePlayerMatchUp(home_team=AvailablePlayerTeam(team_id=ts_1_home_team_id,
-                                                                                               team_abbreviation=ts_1_home_team_abbreviation),
-                                                                 away_team=AvailablePlayerTeam(team_id=ts_1_away_team_id,
-                                                                                               team_abbreviation=ts_1_away_team_abbreviation))
-        expected_team_series_2_match_up = AvailablePlayerMatchUp(home_team=AvailablePlayerTeam(team_id=ts_2_home_team_id,
-                                                                                               team_abbreviation=ts_2_home_team_abbreviation),
-                                                                 away_team=AvailablePlayerTeam(team_id=ts_2_away_team_id,
-                                                                                               team_abbreviation=ts_2_away_team_abbreviation))
+        expected_team_series_1_match_up = MatchUp(home_team=Team.value_of(draft_kings_id=ts_1_home_team_id),
+                                                  away_team=Team.value_of(draft_kings_id=ts_1_away_team_id),
+                                                  match_up_id=ts_1_id)
+        expected_team_series_2_match_up = MatchUp(home_team=Team.value_of(draft_kings_id=ts_2_home_team_id),
+                                                  away_team=Team.value_of(draft_kings_id=ts_2_away_team_id),
+                                                  match_up_id=ts_2_id)
 
-        expected_team_series_1 = AvailablePlayersTeamSeries(team_series_id=ts_1_id,
-                                                            match_up=expected_team_series_1_match_up,
+        expected_team_series_1 = AvailablePlayersTeamSeries(match_up=expected_team_series_1_match_up,
                                                             start_timestamp=ts_1_timestamp,
                                                             weather=ts_1_weather,
-                                                            sport=Sport.from_id(sport_id=ts_1_sport_id),
                                                             status=ts_1_status)
 
-        expected_team_series_2 = AvailablePlayersTeamSeries(team_series_id=ts_2_id,
-                                                            match_up=expected_team_series_2_match_up,
+        expected_team_series_2 = AvailablePlayersTeamSeries(match_up=expected_team_series_2_match_up,
                                                             start_timestamp=ts_2_timestamp,
                                                             weather=ts_2_weather,
-                                                            sport=Sport.from_id(sport_id=ts_2_sport_id),
                                                             status=ts_2_status)
 
         response = {

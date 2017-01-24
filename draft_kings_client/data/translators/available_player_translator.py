@@ -1,4 +1,5 @@
-from draft_kings_client.data.models.available_player import AvailablePlayer, AvailablePlayerPosition, AvailablePlayerMatchUp, AvailablePlayerTeam
+from draft_kings_client.data.models.available_player import AvailablePlayer, AvailablePlayerPositionGroup, MatchUp, Team
+from draft_kings_client.data.models.position import Position
 
 
 class AvailablePlayerTranslator:
@@ -14,27 +15,28 @@ class AvailablePlayerTranslator:
         first_name = unicode(response['fn'])
         last_name = unicode(response['ln'])
         jersey_number = response['jn']
-        position_name = unicode(response['pn'])
-        position_id = response['posid']
+        position_group_name = unicode(response['pn'])
+        position_group_id = response['posid']
         draft_group_start_timestamp = long(response['dgst'])
         team_id = response['tid']
+        team = Team.value_of(draft_kings_id=team_id)
         home_team_id = response['htid']
         away_team_id = response['atid']
-        home_team_abbreviation = unicode(response['htabbr'])
-        away_team_abbreviation = unicode(response['atabbr'])
         is_disabled_from_drafting = response['IsDisabledFromDrafting']
         exceptional_messages = response['ExceptionalMessages']
         salary = float(response['s'])
         draftkings_points_per_contest = float(response['ppg'])
         opposition_rank = response['or']
 
-        home_team = AvailablePlayerTeam(team_id=home_team_id, team_abbreviation=home_team_abbreviation)
-        away_team = AvailablePlayerTeam(team_id=away_team_id, team_abbreviation=away_team_abbreviation)
-        match_up = AvailablePlayerMatchUp(home_team=home_team, away_team=away_team)
-        position = AvailablePlayerPosition(position_id=position_id, position_name=position_name)
-        available_player = AvailablePlayer(player_id=player_id, team_series_id=team_series_id, first_name=first_name,
-                                           last_name=last_name, jersey_number=jersey_number, position=position,
-                                           draft_group_start_timestamp=draft_group_start_timestamp, team_id=team_id,
+        home_team = Team.value_of(draft_kings_id=home_team_id)
+        away_team = Team.value_of(draft_kings_id=away_team_id)
+        match_up = MatchUp(match_up_id=team_series_id, home_team=home_team, away_team=away_team)
+        position_group = AvailablePlayerPositionGroup(position_group_id=position_group_id,
+                                                positions=Position.get_positions_from_position_group_name(sport=team.value['sport'],
+                                                                                                          position_group_name=position_group_name))
+        available_player = AvailablePlayer(player_id=player_id, first_name=first_name, last_name=last_name,
+                                           jersey_number=jersey_number, position_group=position_group,
+                                           draft_group_start_timestamp=draft_group_start_timestamp, team=team,
                                            match_up=match_up, is_disabled_from_drafting=is_disabled_from_drafting,
                                            exceptional_messages=exceptional_messages, salary=salary,
                                            draftkings_points_per_contest=draftkings_points_per_contest,
@@ -73,12 +75,6 @@ class AvailablePlayerTranslator:
 
         if 'atid' not in response:
             raise KeyError('missing atid field')
-
-        if 'htabbr' not in response:
-            raise KeyError('missing htabbr field')
-
-        if 'atabbr' not in response:
-            raise KeyError('missing atabbr field')
 
         if 'posid' not in response:
             raise KeyError('missing posid field')

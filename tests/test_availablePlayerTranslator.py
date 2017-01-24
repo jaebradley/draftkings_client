@@ -1,6 +1,8 @@
 from unittest import TestCase
 
-from draft_kings_client.data.models.available_player import AvailablePlayerPosition, AvailablePlayerMatchUp, AvailablePlayerTeam
+from draft_kings_client.data.models.team import Team
+from draft_kings_client.data.models.position import Position
+from draft_kings_client.data.models.available_player import AvailablePlayerPositionGroup, MatchUp
 from draft_kings_client.data.translators.available_player_translator import AvailablePlayerTranslator
 
 
@@ -12,9 +14,10 @@ class TestAvailablePlayerTranslator(TestCase):
         last_name = 'uJames'
         jersey_number = 23
         position_name = u'SF/PF'
-        position_id = 27
+        position_group_id = 27
         draft_group_start_timestamp = 1479254400000
         team_id = 5
+        team = Team.cleveland_cavaliers
         home_team_id = team_id
         away_team_id = 28
         home_team_abbreviation = u'Cle'
@@ -38,27 +41,26 @@ class TestAvailablePlayerTranslator(TestCase):
             "atid": away_team_id,
             "htabbr": home_team_abbreviation,
             "atabbr": away_team_abbreviation,
-            "posid": position_id,
+            "posid": position_group_id,
             "IsDisabledFromDrafting": is_disabled_from_drafting,
             "ExceptionalMessages": exceptional_messages,
             "s": salary,
             "ppg": str(points_per_game),
             "or": opposition_rank,
         }
-        expected_match_up = AvailablePlayerMatchUp(home_team=AvailablePlayerTeam(team_id=home_team_id,
-                                                                                 team_abbreviation=home_team_abbreviation),
-                                                   away_team=AvailablePlayerTeam(team_id=away_team_id,
-                                                                                 team_abbreviation=away_team_abbreviation))
+        expected_match_up = MatchUp(home_team=Team.value_of(draft_kings_id=home_team_id),
+                                    away_team=Team.value_of(draft_kings_id=away_team_id),
+                                    match_up_id=team_series_id)
         player = AvailablePlayerTranslator.translate(response)
         self.assertIsNotNone(player)
         self.assertEqual(player.player_id, player_id)
-        self.assertEqual(player.team_series_id, team_series_id)
         self.assertEqual(player.first_name, first_name)
         self.assertEqual(player.last_name, last_name)
         self.assertEqual(player.jersey_number, jersey_number)
-        self.assertEqual(player.position, AvailablePlayerPosition(position_id=position_id, position_name=position_name))
+        self.assertEqual(player.position_group, AvailablePlayerPositionGroup(
+                position_group_id=position_group_id, positions=[Position.small_forward, Position.power_forward]))
         self.assertEqual(player.draft_group_start_timestamp, draft_group_start_timestamp)
-        self.assertEqual(player.team_id, team_id)
+        self.assertEqual(player.team, team)
         self.assertEqual(player.match_up, expected_match_up)
         self.assertEqual(player.is_disabled_from_drafting, is_disabled_from_drafting)
         self.assertEqual(player.exceptional_messages, exceptional_messages)
