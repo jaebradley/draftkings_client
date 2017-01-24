@@ -17,7 +17,7 @@ class TestAvailablePlayersTeamSeriesTranslator(TestCase):
         ts_1_away_team_id = Team.boston_celtics.value['id']
         ts_1_away_team_abbreviation = unicode('bradley')
         ts_1_timestamp = long(4)
-        ts_1_datetime = datetime.fromtimestamp(timestamp=ts_1_timestamp, tz=pytz.utc)
+        ts_1_datetime = datetime.fromtimestamp(timestamp=ts_1_timestamp / 1e3, tz=pytz.utc)
         ts_1_formatted_timestamp = unicode("/Date({})/".format(ts_1_timestamp))
         ts_1_weather = unicode('sunny with a chance of meatballs')
         ts_1_sport_id = 1
@@ -30,7 +30,7 @@ class TestAvailablePlayersTeamSeriesTranslator(TestCase):
         ts_2_away_team_id = Team.cleveland_cavaliers.value['id']
         ts_2_away_team_abbreviation = unicode('bradley')
         ts_2_timestamp = long(8)
-        ts_2_datetime = datetime.fromtimestamp(timestamp=ts_2_timestamp, tz=pytz.utc)
+        ts_2_datetime = datetime.fromtimestamp(timestamp=ts_2_timestamp / 1e3, tz=pytz.utc)
         ts_2_formatted_timestamp = unicode("/Date({})/".format(ts_2_timestamp))
         ts_2_weather = unicode('cloudy with a chance of meatballs')
         ts_2_sport_id = 12

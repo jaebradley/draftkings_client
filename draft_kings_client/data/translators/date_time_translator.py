@@ -8,4 +8,4 @@ class DateTimeTranslator:
 
     @staticmethod
     def translate(date_string):
-        return datetime.fromtimestamp(timestamp=long(date_string[6:-2]), tz=pytz.utc)
+        return datetime.fromtimestamp(timestamp=long(date_string[6:-2]) / 1e3, tz=pytz.utc)

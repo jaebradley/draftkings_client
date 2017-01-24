@@ -1,6 +1,6 @@
 from draft_kings_client.data.models.contest import Contest
 from draft_kings_client.data.models.sport import Sport
-from draft_kings_client.data.translators.date_translator import DateTimeTranslator
+from draft_kings_client.data.translators.date_time_translator import DateTimeTranslator
 
 
 class ContestResponseTranslator:

@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from position import Position
 from sport import Sport
 from team import Team
@@ -22,8 +24,8 @@ class AvailablePlayer:
         if not isinstance(position_group, AvailablePlayerPositionGroup):
             raise TypeError('position group is not valid')
 
-        if type(draft_group_start_timestamp) is not long:
-            raise TypeError('draft group start timestamp field is not a long')
+        if type(draft_group_start_timestamp) is not datetime:
+            raise TypeError('draft group start timestamp field is not a datetime')
 
         if not isinstance(team, Team):
             raise TypeError('team field is not valid')

@@ -1,3 +1,6 @@
+from datetime import datetime
+import pytz
+
 from draft_kings_client.data.models.available_player import AvailablePlayer, AvailablePlayerPositionGroup, MatchUp, Team
 from draft_kings_client.data.models.position import Position
 
@@ -17,7 +20,7 @@ class AvailablePlayerTranslator:
         jersey_number = response['jn']
         position_group_name = unicode(response['pn'])
         position_group_id = response['posid']
-        draft_group_start_timestamp = long(response['dgst'])
+        draft_group_start_timestamp = datetime.fromtimestamp(timestamp=response['dgst'] / 1e3, tz=pytz.utc)
         team_id = response['tid']
         team = Team.value_of(draft_kings_id=team_id)
         home_team_id = response['htid']

@@ -1,7 +1,7 @@
 from draft_kings_client.data.models.available_player import MatchUp
 from draft_kings_client.data.models.available_players_team_series import AvailablePlayersTeamSeries
 from draft_kings_client.data.models.team import Team
-from draft_kings_client.data.translators.date_translator import DateTimeTranslator
+from draft_kings_client.data.translators.date_time_translator import DateTimeTranslator
 
 
 class AvailablePlayersTeamSeriesTranslator:

@@ -19,7 +19,7 @@ class TestAvailablePlayerTranslator(TestCase):
         position_name = u'SF/PF'
         position_group_id = 27
         draft_group_start_timestamp = 1479254400000
-        draft_group_start_datetime = datetime.fromtimestamp(timestamp=draft_group_start_timestamp, tz=pytz.utc)
+        draft_group_start_datetime = datetime.fromtimestamp(timestamp=draft_group_start_timestamp / 1000, tz=pytz.utc)
         team_id = 5
         team = Team.cleveland_cavaliers
         home_team_id = team_id
