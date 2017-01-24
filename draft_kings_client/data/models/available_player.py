@@ -25,6 +25,9 @@ class AvailablePlayer:
         if type(draft_group_start_timestamp) is not long:
             raise TypeError('draft group start timestamp field is not a long')
 
+        if not isinstance(team, Team):
+            raise TypeError('team field is not valid')
+
         if not isinstance(match_up, MatchUp):
             raise TypeError('match up field is not valid')
 
