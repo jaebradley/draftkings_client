@@ -10,9 +10,6 @@ class AvailablePlayer:
         if type(player_id) is not int:
             raise TypeError('player id field is not an int')
 
-        if type(team_series_id) is not int:
-            raise TypeError('team series id field is not an int')
-
         if type(first_name) is not unicode:
             raise TypeError('first name field is not a string')
 
@@ -27,9 +24,6 @@ class AvailablePlayer:
 
         if type(draft_group_start_timestamp) is not long:
             raise TypeError('draft group start timestamp field is not a long')
-
-        if type(team_id) is not int:
-            raise TypeError('team id field is not an int')
 
         if not isinstance(match_up, MatchUp):
             raise TypeError('match up field is not valid')
@@ -50,13 +44,12 @@ class AvailablePlayer:
             raise TypeError('opposition rank field is not an int')
 
         self.player_id = player_id
-        self.team_series_id = team_series_id
         self.position_group = position_group
         self.jersey_number = jersey_number
         self.last_name = last_name
         self.first_name = first_name
         self.draft_group_start_timestamp = draft_group_start_timestamp
-        self.team_id = team_id
+        self.team = team
         self.match_up = match_up
         self.is_disabled_from_drafting = is_disabled_from_drafting
         self.exceptional_messages = exceptional_messages
@@ -128,6 +121,7 @@ class MatchUp:
         if not isinstance(away_team, Team):
             raise TypeError('away team is not a valid team')
 
+        self.match_up_id = match_up_id
         self.home_team = home_team
         self.away_team = away_team
 
