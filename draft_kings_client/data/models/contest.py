@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from draft_kings_client.data.models.sport import Sport
 
 
@@ -9,8 +11,8 @@ class Contest:
         if type(contest_id) is not int:
             raise TypeError('contest id is not an int')
 
-        if type(start_timestamp) is not long:
-            raise TypeError('start timestamp is not an int')
+        if type(start_timestamp) is not datetime:
+            raise TypeError('start timestamp is not a datetime')
 
         if type(fantasy_player_points) is not int:
             raise TypeError('fantasy player points is not an int')

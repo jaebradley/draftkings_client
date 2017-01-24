@@ -2,7 +2,7 @@ from datetime import datetime
 import pytz
 
 
-class DateTranslator:
+class DateTimeTranslator:
     def __init__(self):
         pass
 
