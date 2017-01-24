@@ -1,5 +1,8 @@
 from unittest import TestCase
 
+from datetime import datetime
+import pytz
+
 from draft_kings_client.data.models.available_player import Team, MatchUp
 from draft_kings_client.data.models.available_players_team_series import AvailablePlayersTeamSeries
 from draft_kings_client.data.translators.available_players_team_series_translator import AvailablePlayersTeamSeriesTranslator
@@ -14,6 +17,7 @@ class TestAvailablePlayersTeamSeriesTranslator(TestCase):
         ts_1_away_team_id = Team.boston_celtics.value['id']
         ts_1_away_team_abbreviation = unicode('bradley')
         ts_1_timestamp = long(4)
+        ts_1_datetime = datetime.fromtimestamp(timestamp=ts_1_timestamp, tz=pytz.utc)
         ts_1_formatted_timestamp = unicode("/Date({})/".format(ts_1_timestamp))
         ts_1_weather = unicode('sunny with a chance of meatballs')
         ts_1_sport_id = 1
@@ -26,6 +30,7 @@ class TestAvailablePlayersTeamSeriesTranslator(TestCase):
         ts_2_away_team_id = Team.cleveland_cavaliers.value['id']
         ts_2_away_team_abbreviation = unicode('bradley')
         ts_2_timestamp = long(8)
+        ts_2_datetime = datetime.fromtimestamp(timestamp=ts_2_timestamp, tz=pytz.utc)
         ts_2_formatted_timestamp = unicode("/Date({})/".format(ts_2_timestamp))
         ts_2_weather = unicode('cloudy with a chance of meatballs')
         ts_2_sport_id = 12
@@ -39,12 +44,12 @@ class TestAvailablePlayersTeamSeriesTranslator(TestCase):
                                                   match_up_id=ts_2_id)
 
         expected_team_series_1 = AvailablePlayersTeamSeries(match_up=expected_team_series_1_match_up,
-                                                            start_timestamp=ts_1_timestamp,
+                                                            start_timestamp=ts_1_datetime,
                                                             weather=ts_1_weather,
                                                             status=ts_1_status)
 
         expected_team_series_2 = AvailablePlayersTeamSeries(match_up=expected_team_series_2_match_up,
-                                                            start_timestamp=ts_2_timestamp,
+                                                            start_timestamp=ts_2_datetime,
                                                             weather=ts_2_weather,
                                                             status=ts_2_status)
 
