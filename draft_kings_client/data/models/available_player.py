@@ -74,10 +74,10 @@ class AvailablePlayer:
 class AvailablePlayerPositionGroup:
     def __init__(self, position_group_id, positions):
         if type(position_group_id) is not int:
-            raise TypeError('position group id field is not an int')
+            raise TypeError('position group id: %s is not an int', position_group_id)
 
         if type(positions) is not list:
-            raise TypeError('position name field is not a list')
+            raise TypeError('positions field: %s is not a list', positions)
 
         self.position_group_id = position_group_id
         self.positions = positions
