@@ -6,7 +6,7 @@ class AvailablePlayerTranslator:
         pass
 
     @staticmethod
-    def translate(sport, response):
+    def translate(response):
         AvailablePlayerTranslator.validate_fields_exist(response=response)
 
         player_id = response['pid']
@@ -18,7 +18,7 @@ class AvailablePlayerTranslator:
         position_id = response['posid']
         draft_group_start_timestamp = long(response['dgst'])
         team_id = response['tid']
-        team = Team.value_of(sport=sport, draft_kings_id=team_id)
+        team = Team.value_of(draft_kings_id=team_id)
         home_team_id = response['htid']
         away_team_id = response['atid']
         is_disabled_from_drafting = response['IsDisabledFromDrafting']
@@ -27,8 +27,8 @@ class AvailablePlayerTranslator:
         draftkings_points_per_contest = float(response['ppg'])
         opposition_rank = response['or']
 
-        home_team = Team.value_of(sport=sport, draft_kings_id=home_team_id)
-        away_team = Team.value_of(sport=sport, draft_kings_id=away_team_id)
+        home_team = Team.value_of(draft_kings_id=home_team_id)
+        away_team = Team.value_of(draft_kings_id=away_team_id)
         match_up = MatchUp(match_up_id=team_series_id, home_team=home_team, away_team=away_team)
         position = AvailablePlayerPositionGroup(position_group_id=position_id, positions=position_name)
         available_player = AvailablePlayer(player_id=player_id, first_name=first_name, last_name=last_name,

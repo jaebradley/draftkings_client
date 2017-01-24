@@ -126,12 +126,11 @@ class Team(Enum):
     }
 
     @staticmethod
-    def value_of(sport, draft_kings_id):
-        assert isinstance(sport, Sport)
+    def value_of(draft_kings_id):
         assert isinstance(draft_kings_id, int)
 
         for team in Team:
-            if team.value['sport'] == sport and team.value['id'] == draft_kings_id:
+            if team.value['id'] == draft_kings_id:
                 return team
 
-        raise ValueError('Unable to identify team for sport: %s and id: %s', sport, draft_kings_id)
+        raise ValueError('Unable to identify team for id: %s', draft_kings_id)
