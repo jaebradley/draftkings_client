@@ -3,10 +3,7 @@ from draft_kings_client.data.models.sport import Sport
 
 
 class AvailablePlayersTeamSeries:
-    def __init__(self, team_series_id, match_up, start_timestamp, weather, sport, status):
-        if type(team_series_id) is not int:
-            raise TypeError('team series id is not an int')
-
+    def __init__(self, match_up, start_timestamp, weather, status):
         if not isinstance(match_up, MatchUp):
             raise TypeError('match up is not valid')
 
@@ -16,13 +13,9 @@ class AvailablePlayersTeamSeries:
         if type(weather) is not unicode:
             raise TypeError('weather is not a string')
 
-        if not isinstance(sport, Sport):
-            raise TypeError('sport is not valid')
-
         if type(status) is not int:
             raise TypeError('status is not an int')
 
-        self.team_series_id = team_series_id
         self.match_up = match_up
         self.start_timestamp = start_timestamp
         self.weather = weather

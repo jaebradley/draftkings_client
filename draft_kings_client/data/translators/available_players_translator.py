@@ -1,6 +1,6 @@
+from draft_kings_client.data.models.available_players import AvailablePlayers
 from draft_kings_client.data.translators.available_player_translator import AvailablePlayerTranslator
 from draft_kings_client.data.translators.available_players_team_series_translator import AvailablePlayersTeamSeriesTranslator
-from draft_kings_client.data.models.available_players import AvailablePlayers
 
 
 class AvailablePlayersTranslator:

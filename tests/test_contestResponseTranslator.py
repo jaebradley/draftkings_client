@@ -1,8 +1,9 @@
 import json
 import os
 from unittest import TestCase
-from tests.config import ROOT_DIRECTORY
+
 from draft_kings_client.data.translators.contest_response_translator import ContestResponseTranslator
+from tests.config import ROOT_DIRECTORY
 
 
 class TestContestResponseTranslator(TestCase):

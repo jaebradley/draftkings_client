@@ -1,6 +1,5 @@
 from draft_kings_client.data.models.available_player import MatchUp
 from draft_kings_client.data.models.available_players_team_series import AvailablePlayersTeamSeries
-from draft_kings_client.data.models.sport import Sport
 from draft_kings_client.data.models.team import Team
 from draft_kings_client.data.translators.date_translator import DateTranslator
 
@@ -20,15 +19,13 @@ class AvailablePlayersTeamSeriesTranslator:
             away_team_id = value['atid']
             start_timestamp = DateTranslator.translate(date_string=value['tz'])
             weather = unicode(value['wthr'])
-            sport = Sport.from_id(sport_id=value['s'])
             status = value['status']
 
-            home_team = Team.value_of(sport=sport, draft_kings_id=home_team_id)
-            away_team = Team.value_of(sport=sport, draft_kings_id=away_team_id)
-            match_up = MatchUp(home_team=home_team, away_team=away_team)
-            team_series = AvailablePlayersTeamSeries(team_series_id=team_series_id, match_up=match_up,
-                                                     start_timestamp=start_timestamp, weather=weather,
-                                                     sport=sport, status=status)
+            home_team = Team.value_of(draft_kings_id=home_team_id)
+            away_team = Team.value_of(draft_kings_id=away_team_id)
+            match_up = MatchUp(match_up_id=team_series_id, home_team=home_team, away_team=away_team)
+            team_series = AvailablePlayersTeamSeries(match_up=match_up, start_timestamp=start_timestamp,
+                                                     weather=weather, status=status)
 
             team_series_list.append(team_series)
 

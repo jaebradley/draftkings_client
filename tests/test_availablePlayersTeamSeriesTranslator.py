@@ -1,9 +1,9 @@
 from unittest import TestCase
 
-from draft_kings_client.data.translators.available_players_team_series_translator import AvailablePlayersTeamSeriesTranslator
-from draft_kings_client.data.models.available_players_team_series import AvailablePlayersTeamSeries
 from draft_kings_client.data.models.available_player import AvailablePlayerTeam, MatchUp
+from draft_kings_client.data.models.available_players_team_series import AvailablePlayersTeamSeries
 from draft_kings_client.data.models.sport import Sport
+from draft_kings_client.data.translators.available_players_team_series_translator import AvailablePlayersTeamSeriesTranslator
 
 
 class TestAvailablePlayersTeamSeriesTranslator(TestCase):
