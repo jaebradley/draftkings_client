@@ -31,6 +31,10 @@ class Position(Enum):
     }
 
     @staticmethod
+    def get_positions_from_position_group_name(sport, position_group_name):
+        return Position.get_positions(sport=sport, abbreviations=position_group_name.split('/'))
+
+    @staticmethod
     def get_positions(sport, abbreviations):
         return [Position.value_of(sport=sport, abbreviation=abbreviation) for abbreviation in abbreviations]
 
