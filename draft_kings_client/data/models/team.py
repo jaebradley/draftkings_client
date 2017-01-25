@@ -30,11 +30,11 @@ class Team(Enum):
     }
     dallas_mavericks = {
         'sport': Sport.nba,
-        'id': 684
+        'id': 6
     }
     denver_nuggets = {
         'sport': Sport.nba,
-        'id': 685
+        'id': 7
     }
     detroit_pistons = {
         'sport': Sport.nba,
@@ -62,7 +62,7 @@ class Team(Enum):
     }
     memphis_grizzlies = {
         'sport': Sport.nba,
-        'id': 692
+        'id': 29
     }
     miami_heat = {
         'sport': Sport.nba,
@@ -94,7 +94,7 @@ class Team(Enum):
     }
     philadelphia_76ers = {
         'sport': Sport.nba,
-        'id': 701
+        'id': 20
     }
     phoenix_suns = {
         'sport': Sport.nba,
