@@ -10,7 +10,7 @@ class Team(Enum):
     }
     boston_celtics = {
         'sport': Sport.nba,
-        'id': 680
+        'id': 2
     }
     brooklyn_nets = {
         'sport': Sport.nba,
