@@ -98,7 +98,7 @@ class Team(Enum):
     }
     phoenix_suns = {
         'sport': Sport.nba,
-        'id': 702
+        'id': 21
     }
     portland_trail_blazers = {
         'sport': Sport.nba,
