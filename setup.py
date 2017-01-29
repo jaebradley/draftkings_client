@@ -4,7 +4,7 @@ setup(
   name = 'draft_kings',
   packages = find_packages(exclude=['tests*']),
   install_requires=['requests', 'enum34'],
-  version = '0.7',
+  version = '0.6',
   description = 'A DraftKings client',
   author = 'Jae Bradley',
   author_email = 'jae.b.bradley@gmail.com',

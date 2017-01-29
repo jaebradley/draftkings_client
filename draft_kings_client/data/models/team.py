@@ -54,7 +54,7 @@ class Team(Enum):
     }
     los_angeles_clippers = {
         'sport': Sport.nba,
-        'id': 19
+        'id': 690
     }
     los_angeles_lakers = {
         'sport': Sport.nba,
