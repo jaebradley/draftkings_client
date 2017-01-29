@@ -90,7 +90,7 @@ class Team(Enum):
     }
     orlando_magic = {
         'sport': Sport.nba,
-        'id': 700
+        'id': 19
     }
     philadelphia_76ers = {
         'sport': Sport.nba,
