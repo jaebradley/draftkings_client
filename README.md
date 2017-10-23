@@ -67,12 +67,12 @@ I will do my best to add it to the returned objects.
 
 ## API
 
-### Get Contests for a League
+### Get Contests for a Sport
 ```python
 from draftkings_client import DraftKingsClient, Sport
 
 // Gets current NBA contests
-return DraftKingsClient.get_contests(league=League.nba)
+DraftKingsClient.get_contests(sport=Sport.nba)
 ```
 
 ### Get Available Players for a Draft Group
