@@ -11,7 +11,7 @@ with relevant metadata.
 Unfortunately, because these APIs are not designed for public consumption, 
 the responses can be difficult to interpret. 
 
-For example, here's example contest json:
+For example, here's JSON returned for NBA contests for a given day:
 
 ```json
 {
@@ -67,11 +67,6 @@ I will do my best to add it to the returned objects.
 
 ## API
 
-### Get Contest for a League
-
-
-## Usage
-
 ### Get Contests for a League
 ```python
 from draftkings_client import DraftKingsClient, Sport
@@ -89,9 +84,9 @@ from draftkings_client import DraftKingsClient
 return DraftKingsClient.get_available_players(draft_group_id=1)
 ```
 
-## Example Response From DraftKings
+## Example Responses From DraftKings
 
-### Contests
+### Get Contests for the NBA
 ```json
 {
   "SelectedSport": 4,
@@ -173,7 +168,7 @@ return DraftKingsClient.get_available_players(draft_group_id=1)
 }
 ```
 
-### Available Players
+### Get Available Players for a Contest
 ```json
 {
   "playerList": [
