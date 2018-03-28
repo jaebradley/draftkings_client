@@ -51,3 +51,12 @@ class DraftKingsClient:
         response.raise_for_status()
 
         return response.json()
+
+    @staticmethod
+    def get_contest_details(contest_id):
+        response = requests.get(url=UrlBuilder.get_contest_details_url(contest_id),
+                                params={'format': 'json'})
+
+        response.raise_for_status()
+
+        return response.json()
