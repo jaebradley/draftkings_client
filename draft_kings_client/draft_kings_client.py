@@ -60,3 +60,12 @@ class DraftKingsClient:
         response.raise_for_status()
 
         return response.json()
+
+    @staticmethod
+    def get_draftables(draft_group_id):
+        response = requests.get(url=UrlBuilder.get_draftables_url(draft_group_id),
+                                params={'format': 'json'})
+
+        response.raise_for_status()
+
+        return response.json()

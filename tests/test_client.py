@@ -24,3 +24,7 @@ class TestClient(TestCase):
     def test_get_contest_details(self):
         response = DraftKingsClient.get_contest_details(contest_id=54639629)
         self.assertIsNotNone(response)
+
+    def test_get_draftables(self):
+        response = DraftKingsClient.get_draftables(draft_group_id=18186)
+        self.assertIsNotNone(response)

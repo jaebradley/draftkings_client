@@ -31,3 +31,7 @@ class UrlBuilder:
     @staticmethod
     def get_contest_details_url(contest_id):
         return UrlBuilder.base_api_url + UrlBuilder.get_contest_details_suffix + str(contest_id)
+
+    @staticmethod
+    def get_draftables_url(draft_group_id):
+        return UrlBuilder.base_api_url + UrlBuilder.get_draft_group_suffix + 'draftgroups/' + str(draft_group_id) + '/draftables'
