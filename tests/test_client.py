@@ -17,4 +17,7 @@ class TestClient(TestCase):
         response = DraftKingsClient.get_draft_group_details(draft_group_id=11513)
         self.assertIsNotNone(response)
 
+    def test_get_countries(self):
+        response = DraftKingsClient.get_countries()
+        self.assertIsNotNone(response)
 

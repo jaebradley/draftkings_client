@@ -42,3 +42,12 @@ class DraftKingsClient:
         response.raise_for_status()
 
         return response.json()
+
+    @staticmethod
+    def get_countries(include_unlicensed=True):
+        response = requests.get(url=UrlBuilder.get_countries_url(),
+                                params={'format': 'json', 'includeUnlicensed': include_unlicensed})
+
+        response.raise_for_status()
+
+        return response.json()

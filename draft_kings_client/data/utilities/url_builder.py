@@ -5,6 +5,7 @@ class UrlBuilder:
     contest_suffix = '/lobby/getcontests'
     get_available_players_suffix = '/lineup/getavailableplayers'
     get_draft_group_suffix = '/draftgroups/v1/'
+    get_countries_suffix = '/addresses/v1/countries'
 
     def __init__(self):
         pass
@@ -21,3 +22,7 @@ class UrlBuilder:
     @staticmethod
     def get_draft_group_url(draft_group_id):
         return UrlBuilder.base_api_url + UrlBuilder.get_draft_group_suffix + str(draft_group_id)
+
+    @staticmethod
+    def get_countries_url():
+        return UrlBuilder.base_api_url + UrlBuilder.get_countries_suffix
