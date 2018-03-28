@@ -29,6 +29,10 @@ class UrlBuilder:
         return UrlBuilder.base_api_url + UrlBuilder.get_countries_suffix
 
     @staticmethod
+    def get_regions_url(country_code):
+        return UrlBuilder.base_api_url + UrlBuilder.get_countries_suffix + '/' + country_code + '/regions'
+
+    @staticmethod
     def get_contest_details_url(contest_id):
         return UrlBuilder.base_api_url + UrlBuilder.get_contest_details_suffix + str(contest_id)
 

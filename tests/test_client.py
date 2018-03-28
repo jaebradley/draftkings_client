@@ -21,6 +21,10 @@ class TestClient(TestCase):
         response = DraftKingsClient.get_countries()
         self.assertIsNotNone(response)
 
+    def test_get_regions(self):
+        response = DraftKingsClient.get_regions(country_code='US')
+        self.assertIsNotNone(response)
+
     def test_get_contest_details(self):
         response = DraftKingsClient.get_contest_details(contest_id=54639629)
         self.assertIsNotNone(response)
