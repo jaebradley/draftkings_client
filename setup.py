@@ -11,5 +11,8 @@ setup(
   url='https://github.com/jaebradley/draftkings_client',
   download_url='https://github.com/jaebradley/draftkings_client/tarball/0.2',
   keywords=['sports', 'dfs', 'draftkings'],
-  classifiers=[],
+  classifiers=[
+    'Development Status :: 3 - Alpha',
+    'Programming Language :: Python :: 2.7',
+  ],
 )
