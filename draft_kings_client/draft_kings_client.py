@@ -33,3 +33,12 @@ class DraftKingsClient:
         response.raise_for_status()
 
         return AvailablePlayersTranslator.translate(response=response.json())
+
+    @staticmethod
+    def get_draft_group_details(draft_group_id):
+        response = requests.get(url=UrlBuilder.get_draft_group_url(draft_group_id),
+                                params={'format': 'json'})
+
+        response.raise_for_status()
+
+        return response.json()

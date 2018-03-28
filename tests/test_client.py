@@ -12,3 +12,9 @@ class TestClient(TestCase):
     def test_get_available_players(self):
         result = DraftKingsClient.get_available_players(draft_group_id=11513)
         self.assertIsNotNone(result)
+
+    def test_get_draft_group_details(self):
+        response = DraftKingsClient.get_draft_group_details(draft_group_id=11513)
+        self.assertIsNotNone(response)
+
+
