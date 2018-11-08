@@ -20,7 +20,7 @@ class Contest:
         if not isinstance(sport, Sport):
             raise TypeError('sport is not valid')
 
-        if type(name) is not unicode:
+        if type(name) is not str:
             raise TypeError('name is not a string')
 
         if type(is_guaranteed) is not bool:

@@ -15,12 +15,12 @@ class AvailablePlayerTranslator:
 
         player_id = response['pid']
         team_series_id = response['tsid']
-        first_name = unicode(response['fn'])
-        last_name = unicode(response['ln'])
+        first_name = str(response['fn'])
+        last_name = str(response['ln'])
         jersey_number = response['jn']
-        position_group_name = unicode(response['pn'])
+        position_group_name = str(response['pn'])
         position_group_id = response['posid']
-        draft_group_start_time = datetime.fromtimestamp(timestamp=response['dgst'] / 1e3, tz=pytz.utc)
+        draft_group_start_time = datetime.fromtimestamp(response['dgst'] / 1e3, tz=pytz.utc)
         team_id = response['tid']
         team = Team.value_of(draft_kings_id=team_id)
         home_team_id = response['htid']

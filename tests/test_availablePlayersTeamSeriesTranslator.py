@@ -11,28 +11,28 @@ from draft_kings_client.data.translators.available_players_team_series_translato
 class TestAvailablePlayersTeamSeriesTranslator(TestCase):
     def test_translation(self):
         ts_1_id = 1
-        ts_1_id_formatted_value = unicode(ts_1_id)
-        ts_1_home_team_abbreviation = unicode('jae')
+        ts_1_id_formatted_value = str(ts_1_id)
+        ts_1_home_team_abbreviation = str('jae')
         ts_1_home_team_id = Team.atlanta_hawks.value['id']
         ts_1_away_team_id = Team.boston_celtics.value['id']
-        ts_1_away_team_abbreviation = unicode('bradley')
-        ts_1_timestamp = long(4)
-        ts_1_datetime = datetime.fromtimestamp(timestamp=ts_1_timestamp / 1e3, tz=pytz.utc)
-        ts_1_formatted_timestamp = unicode("/Date({})/".format(ts_1_timestamp))
-        ts_1_weather = unicode('sunny with a chance of meatballs')
+        ts_1_away_team_abbreviation = str('bradley')
+        ts_1_timestamp = int(4)
+        ts_1_datetime = datetime.fromtimestamp(ts_1_timestamp / 1e3, tz=pytz.utc)
+        ts_1_formatted_timestamp = str("/Date({})/".format(ts_1_timestamp))
+        ts_1_weather = str('sunny with a chance of meatballs')
         ts_1_sport_id = 1
         ts_1_status = 9
 
         ts_2_id = 5
-        ts_2_id_formatted_value = unicode(ts_2_id)
-        ts_2_home_team_abbreviation = unicode('jae')
+        ts_2_id_formatted_value = str(ts_2_id)
+        ts_2_home_team_abbreviation = str('jae')
         ts_2_home_team_id = Team.brooklyn_nets.value['id']
         ts_2_away_team_id = Team.cleveland_cavaliers.value['id']
-        ts_2_away_team_abbreviation = unicode('bradley')
-        ts_2_timestamp = long(8)
-        ts_2_datetime = datetime.fromtimestamp(timestamp=ts_2_timestamp / 1e3, tz=pytz.utc)
-        ts_2_formatted_timestamp = unicode("/Date({})/".format(ts_2_timestamp))
-        ts_2_weather = unicode('cloudy with a chance of meatballs')
+        ts_2_away_team_abbreviation = str('bradley')
+        ts_2_timestamp = int(8)
+        ts_2_datetime = datetime.fromtimestamp(ts_2_timestamp / 1e3, tz=pytz.utc)
+        ts_2_formatted_timestamp = str("/Date({})/".format(ts_2_timestamp))
+        ts_2_weather = str('cloudy with a chance of meatballs')
         ts_2_sport_id = 12
         ts_2_status = 10
 

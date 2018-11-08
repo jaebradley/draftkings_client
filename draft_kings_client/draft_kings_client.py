@@ -1,9 +1,9 @@
 import requests
 
-from data.models.sport import Sport
-from data.translators.available_players_translator import AvailablePlayersTranslator
-from data.translators.contests_response_translator import ContestsResponseTranslator
-from data.utilities.url_builder import UrlBuilder
+from draft_kings_client.data.models.sport import Sport
+from draft_kings_client.data.translators.available_players_translator import AvailablePlayersTranslator
+from draft_kings_client.data.translators.contests_response_translator import ContestsResponseTranslator
+from draft_kings_client.data.utilities.url_builder import UrlBuilder
 
 
 class DraftKingsClient:
