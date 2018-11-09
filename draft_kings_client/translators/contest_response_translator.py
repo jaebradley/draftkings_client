@@ -6,10 +6,16 @@ sport_ids = {
     1: Sport.NFL,
     3: Sport.NHL,
     4: Sport.NBA,
+    5: Sport.COLLEGE_FOOTBALL,
+    6: Sport.COLLEGE_BASKETBALL,
+    9: Sport.MIXED_MARTIAL_ARTS,
     10: Sport.NASCAR,
+    11: Sport.LEAGUE_OF_LEGENDS,
     12: Sport.SOCCER,
     13: Sport.GOLF,
     14: Sport.CFL,
+    15: Sport.EUROLEAGUE_BASKETBALL,
+    16: Sport.TENNIS,
 }
 
 
