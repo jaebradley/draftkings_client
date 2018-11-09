@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from draft_kings_client.data.models.sport import Sport
+from draft_kings_client.data import Sport
 
 
 class Contest:

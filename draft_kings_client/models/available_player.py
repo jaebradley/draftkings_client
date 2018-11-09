@@ -1,8 +1,8 @@
 from datetime import datetime
 
-from draft_kings_client.data.models.position import Position
-from draft_kings_client.data.models.sport import Sport
-from draft_kings_client.data.models.team import Team
+from draft_kings_client.data import Position
+from draft_kings_client.data import Sport
+from draft_kings_client.data import Team
 
 
 class AvailablePlayer:

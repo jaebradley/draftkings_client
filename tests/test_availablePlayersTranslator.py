@@ -1,7 +1,7 @@
 from unittest import TestCase
 
-from draft_kings_client.data.models.available_players import AvailablePlayers
-from draft_kings_client.data.translators.available_players_translator import AvailablePlayersTranslator
+from draft_kings_client.models.available_players import AvailablePlayers
+from draft_kings_client.translators.available_players_translator import AvailablePlayersTranslator
 
 
 class TestAvailablePlayersTranslator(TestCase):

@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from draft_kings_client.data.models.sport import Sport
+from draft_kings_client.data import Sport
 from draft_kings_client.draft_kings_client import DraftKingsClient
 
 

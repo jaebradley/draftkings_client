@@ -1,4 +1,4 @@
-from draft_kings_client.data.models.draft_group import DraftGroup
+from draft_kings_client.models.draft_group import DraftGroup
 
 
 class DraftGroupsTranslator:

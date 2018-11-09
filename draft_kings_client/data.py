@@ -1,6 +1,83 @@
 from enum import Enum
 
-from draft_kings_client.data.models.sport import Sport
+
+class Sport(Enum):
+    nfl = "nfl"
+    nhl = "nhl"
+    nba = "nba"
+    nascar = "nas"
+    soccer = "soc"
+    golf = "golf"
+    cfl = "cfl"
+
+    def get_id(self):
+        return draft_kings_sport_ids.get(self)
+
+    @staticmethod
+    def from_id(sport_id):
+        for key, value in draft_kings_sport_ids.items():
+            if sport_id == value:
+                return key
+
+        raise ReferenceError('unknown sport id')
+
+
+draft_kings_sport_ids = {
+    Sport.nfl: 1,
+    Sport.nhl: 3,
+    Sport.nba: 4,
+    Sport.nascar: 10,
+    Sport.soccer: 12,
+    Sport.golf: 13,
+    Sport.cfl: 14
+}
+
+
+class Position(Enum):
+    point_guard = {
+        'sport': Sport.nba,
+        'abbreviation': 'PG',
+        'name': 'Point Guard'
+    }
+    shooting_guard = {
+        'sport': Sport.nba,
+        'abbreviation': 'SG',
+        'name': 'Shooting Guard'
+    }
+    small_forward = {
+        'sport': Sport.nba,
+        'abbreviation': 'SF',
+        'name': 'Small Forward'
+    }
+    power_forward = {
+        'sport': Sport.nba,
+        'abbreviation': 'PF',
+        'name': 'Power Forward'
+    }
+    center = {
+        'sport': Sport.nba,
+        'abbreviation': 'C',
+        'name': 'Center'
+    }
+
+    @staticmethod
+    def get_positions_from_position_group_name(sport, position_group_name):
+        return Position.get_positions(sport=sport, abbreviations=position_group_name.split('/'))
+
+    @staticmethod
+    def get_positions(sport, abbreviations):
+        return [Position.value_of(sport=sport, abbreviation=abbreviation) for abbreviation in abbreviations]
+
+    @staticmethod
+    def value_of(sport, abbreviation):
+        assert isinstance(sport, Sport)
+        assert isinstance(abbreviation, str)
+
+        for position in Position:
+            if position.value['sport'] == sport and position.value['abbreviation'] == abbreviation:
+                return position
+
+        raise ValueError('Unable to identify position for sport: %s and abbreviation: %s', sport, abbreviation)
 
 
 class Team(Enum):

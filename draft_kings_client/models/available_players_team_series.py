@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from draft_kings_client.data.models.available_player import MatchUp
+from draft_kings_client.models.available_player import MatchUp
 
 
 class AvailablePlayersTeamSeries:

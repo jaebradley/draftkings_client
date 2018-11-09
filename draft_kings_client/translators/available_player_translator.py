@@ -1,8 +1,8 @@
 from datetime import datetime
 import pytz
 
-from draft_kings_client.data.models.available_player import AvailablePlayer, AvailablePlayerPositionGroup, MatchUp, Team
-from draft_kings_client.data.models.position import Position
+from draft_kings_client.models.available_player import AvailablePlayer, AvailablePlayerPositionGroup, MatchUp, Team
+from draft_kings_client.data import Position
 
 
 class AvailablePlayerTranslator:

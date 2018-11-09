@@ -1,8 +1,8 @@
 import requests
 
-from draft_kings_client.data.models.sport import Sport
-from draft_kings_client.data.translators.available_players_translator import AvailablePlayersTranslator
-from draft_kings_client.data.translators.contests_response_translator import ContestsResponseTranslator
+from draft_kings_client.data import Sport
+from draft_kings_client.translators.available_players_translator import AvailablePlayersTranslator
+from draft_kings_client.translators.contests_response_translator import ContestsResponseTranslator
 from draft_kings_client import urls
 
 

@@ -3,9 +3,9 @@ from unittest import TestCase
 from datetime import datetime
 import pytz
 
-from draft_kings_client.data.models.available_player import Team, MatchUp
-from draft_kings_client.data.models.available_players_team_series import AvailablePlayersTeamSeries
-from draft_kings_client.data.translators.available_players_team_series_translator import AvailablePlayersTeamSeriesTranslator
+from draft_kings_client.models.available_player import Team, MatchUp
+from draft_kings_client.models.available_players_team_series import AvailablePlayersTeamSeries
+from draft_kings_client.translators.available_players_team_series_translator import AvailablePlayersTeamSeriesTranslator
 
 
 class TestAvailablePlayersTeamSeriesTranslator(TestCase):

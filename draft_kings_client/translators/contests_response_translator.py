@@ -1,6 +1,6 @@
-from draft_kings_client.data.models.contests import Contests
-from draft_kings_client.data.translators.contest_response_translator import ContestResponseTranslator
-from draft_kings_client.data.translators.draft_groups_translator import DraftGroupsTranslator
+from draft_kings_client.models.contests import Contests
+from draft_kings_client.translators.contest_response_translator import ContestResponseTranslator
+from draft_kings_client.translators.draft_groups_translator import DraftGroupsTranslator
 
 
 class ContestsResponseTranslator:

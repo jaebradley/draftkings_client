@@ -2,7 +2,7 @@ from unittest import TestCase
 from datetime import datetime
 import pytz
 
-from draft_kings_client.data.translators.date_time_translator import DateTimeTranslator
+from draft_kings_client.translators.date_time_translator import DateTimeTranslator
 
 
 class TestDateTimeTranslator(TestCase):
