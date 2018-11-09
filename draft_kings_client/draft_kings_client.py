@@ -5,6 +5,21 @@ from draft_kings_client.translators.available_players_translator import Availabl
 from draft_kings_client.translators.contests_response_translator import ContestsResponseTranslator
 from draft_kings_client import urls
 
+sport_parameter_value = {
+    Sport.NFL: "NFL",
+    Sport.NHL: "NHL",
+    Sport.NBA: "NBA",
+    Sport.CFL: "CFL",
+    Sport.COLLEGE_FOOTBALL: "CFB",
+    Sport.MIXED_MARTIAL_ARTS: "MMA",
+    Sport.NASCAR: "NAS",
+    Sport.SOCCER: "SOC",
+    Sport.EUROLEAGUE_BASKETBALL: "EL",
+    Sport.MLB: "MLB",
+    Sport.TENNIS: "TEN",
+    Sport.LEAGUE_OF_LEGENDS: "LOL",
+}
+
 
 class DraftKingsClient:
 
@@ -16,7 +31,7 @@ class DraftKingsClient:
         assert isinstance(sport, Sport)
 
         response = requests.get(url=urls.CONTESTS_URL,
-                                params={'sport': sport._value_})
+                                params={'sport': sport_parameter_value[sport]})
 
         response.raise_for_status()
 
@@ -24,7 +39,7 @@ class DraftKingsClient:
 
     @staticmethod
     def get_available_players(draft_group_id):
-        if type(draft_group_id) is not int and type(draft_group_id) is not long:
+        if type(draft_group_id) is not int and type(draft_group_id) is not int:
             raise TypeError('draft group id must be an integer or long')
 
         response = requests.get(url=urls.AVAILABLE_PLAYERS_URL,

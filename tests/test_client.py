@@ -6,7 +6,7 @@ from draft_kings_client.draft_kings_client import DraftKingsClient
 
 class TestClient(TestCase):
     def test_get_contests(self):
-        result = DraftKingsClient.get_contests(Sport.nba)
+        result = DraftKingsClient.get_contests(Sport.NBA)
         self.assertIsNotNone(result)
 
     def test_get_available_players(self):

@@ -2,6 +2,16 @@ from draft_kings_client.models.contest import Contest
 from draft_kings_client.data import Sport
 from draft_kings_client.translators.date_time_translator import DateTimeTranslator
 
+sport_ids = {
+    1: Sport.NFL,
+    3: Sport.NHL,
+    4: Sport.NBA,
+    10: Sport.NASCAR,
+    12: Sport.SOCCER,
+    13: Sport.GOLF,
+    14: Sport.CFL,
+}
+
 
 class ContestResponseTranslator:
 
@@ -66,7 +76,7 @@ class ContestResponseTranslator:
         id = response['id']
         start_timestamp = DateTimeTranslator.translate(date_string=response['sd'])
         fantasy_player_points = response['fpp']
-        sport = Sport.from_id(sport_id=response['s'])
+        sport = sport_ids[response['s']]
         name = str(response['n'])
         total_entries = response['nt']
         maximum_entries = response['m']
