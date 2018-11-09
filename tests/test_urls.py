@@ -24,4 +24,4 @@ class TestUrls(TestCase):
         self.assertEqual(contest_url("jaebaebae"), "https://api.draftkings.com/contests/v1/contests/jaebaebae")
 
     def test_draftables_url(self):
-        self.assertEqual(draftables_url("jaebaebae"), "https://api.draftkings.com/draftgroups/v1/jaebaebae/draftables")
+        self.assertEqual(draftables_url("jaebaebae"), "https://api.draftkings.com/draftgroups/v1/draftgroups/jaebaebae/draftables")
