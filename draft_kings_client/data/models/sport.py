@@ -15,7 +15,7 @@ class Sport(Enum):
 
     @staticmethod
     def from_id(sport_id):
-        for key, value in draft_kings_sport_ids.iteritems():
+        for key, value in draft_kings_sport_ids.items():
             if sport_id == value:
                 return key
 

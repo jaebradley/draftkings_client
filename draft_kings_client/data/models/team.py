@@ -1,6 +1,6 @@
 from enum import Enum
 
-from sport import Sport
+from draft_kings_client.data.models.sport import Sport
 
 
 class Team(Enum):

@@ -11,7 +11,7 @@ class AvailablePlayersTeamSeries:
         if type(start_timestamp) is not datetime:
             raise TypeError('start timestamp is not a datetime')
 
-        if type(weather) is not unicode:
+        if type(weather) is not str:
             raise TypeError('weather is not a string')
 
         if type(status) is not int:

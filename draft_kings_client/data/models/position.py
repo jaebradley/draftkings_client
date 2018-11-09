@@ -1,6 +1,6 @@
 from enum import Enum
 
-from sport import Sport
+from draft_kings_client.data.models.sport import Sport
 
 
 class Position(Enum):
@@ -41,7 +41,7 @@ class Position(Enum):
     @staticmethod
     def value_of(sport, abbreviation):
         assert isinstance(sport, Sport)
-        assert isinstance(abbreviation, basestring)
+        assert isinstance(abbreviation, str)
 
         for position in Position:
             if position.value['sport'] == sport and position.value['abbreviation'] == abbreviation:

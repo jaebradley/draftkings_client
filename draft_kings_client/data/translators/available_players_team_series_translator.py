@@ -11,14 +11,14 @@ class AvailablePlayersTeamSeriesTranslator:
     @staticmethod
     def translate(response):
         team_series_list = []
-        for key, value in response.iteritems():
+        for key, value in response.items():
             AvailablePlayersTeamSeriesTranslator.validate(team_series_data=value)
 
             team_series_id = int(key)
             home_team_id = value['htid']
             away_team_id = value['atid']
             start_timestamp = DateTimeTranslator.translate(date_string=value['tz'])
-            weather = unicode(value['wthr'])
+            weather = str(value['wthr'])
             status = value['status']
 
             home_team = Team.value_of(draft_kings_id=home_team_id)

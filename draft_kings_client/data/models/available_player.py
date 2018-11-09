@@ -1,8 +1,8 @@
 from datetime import datetime
 
-from position import Position
-from sport import Sport
-from team import Team
+from draft_kings_client.data.models.position import Position
+from draft_kings_client.data.models.sport import Sport
+from draft_kings_client.data.models.team import Team
 
 
 class AvailablePlayer:
@@ -12,10 +12,10 @@ class AvailablePlayer:
         if type(player_id) is not int:
             raise TypeError('player id field is not an int')
 
-        if type(first_name) is not unicode:
+        if type(first_name) is not str:
             raise TypeError('first name field is not a string')
 
-        if type(last_name) is not unicode:
+        if type(last_name) is not str:
             raise TypeError('last name field is not a string')
 
         if type(jersey_number) is not int:
@@ -108,7 +108,7 @@ class AvailablePlayerPositionGroup:
         if type(position_group_id) is not int:
             raise TypeError('position group id: %s is not an int', position_group_id)
 
-        if type(position_group_name) is not basestring:
+        if type(position_group_name) is not str:
             raise TypeError('position group name: %s is not a string', position_group_name)
 
         positions = Position.get_positions(sport=sport, abbreviations=position_group_name.split('/'))
