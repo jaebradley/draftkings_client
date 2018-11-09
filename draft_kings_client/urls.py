@@ -36,4 +36,8 @@ def contest_url(contest_id):
 
 
 def draftables_url(draft_group_id):
-    return "{draft_group_url}/draftgroups/draftables".format(draft_group_url=draft_group_url(draft_group_id))
+    return "{API_BASE_URL}{DRAFTGROUPS_PATH}draftgroups/{draft_group_id}/draftables".format(
+        API_BASE_URL=API_BASE_URL,
+        DRAFTGROUPS_PATH=DRAFTGROUPS_PATH,
+        draft_group_id=draft_group_id
+    )

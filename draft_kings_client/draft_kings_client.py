@@ -45,7 +45,7 @@ class DraftKingsClient:
 
     @staticmethod
     def get_countries(include_unlicensed=True):
-        response = requests.get(url=urls.COUNTRIES_PATH,
+        response = requests.get(url=urls.COUNTRIES_URL,
                                 params={'format': 'json', 'includeUnlicensed': include_unlicensed})
 
         response.raise_for_status()
