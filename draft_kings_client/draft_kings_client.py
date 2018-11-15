@@ -1,8 +1,7 @@
 import requests
 
 from draft_kings_client.data import Sport
-from draft_kings_client.translators.available_players_translator import AvailablePlayersTranslator
-from draft_kings_client.translators.contests_response_translator import ContestsResponseTranslator
+from draft_kings_client.response_translators import translate_players, translate_contests
 from draft_kings_client import urls
 
 sport_parameter_value = {
@@ -35,7 +34,7 @@ class DraftKingsClient:
 
         response.raise_for_status()
 
-        return ContestsResponseTranslator.translate(response=response.json())
+        return translate_contests(response=response.json())
 
     @staticmethod
     def get_available_players(draft_group_id):
@@ -47,7 +46,7 @@ class DraftKingsClient:
 
         response.raise_for_status()
 
-        return AvailablePlayersTranslator.translate(response=response.json())
+        return translate_players(response=response.json())
 
     @staticmethod
     def get_draft_group_details(draft_group_id):

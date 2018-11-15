@@ -2,10 +2,6 @@ from datetime import datetime
 import pytz
 
 
-class DateTimeTranslator:
-    def __init__(self):
-        pass
+def translate(formatted_datetime):
+    return datetime.fromtimestamp(int(formatted_datetime[6:-2]) / 1e3, tz=pytz.utc)
 
-    @staticmethod
-    def translate(date_string):
-        return datetime.fromtimestamp(int(date_string[6:-2]) / 1e3, tz=pytz.utc)

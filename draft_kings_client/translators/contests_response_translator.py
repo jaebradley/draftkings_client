@@ -1,28 +1,9 @@
-from draft_kings_client.models.contests import Contests
-from draft_kings_client.translators.contest_response_translator import ContestResponseTranslator
-from draft_kings_client.translators.draft_groups_translator import DraftGroupsTranslator
+from draft_kings_client.translators.contest_response_translator import translate as translate_contest
+from draft_kings_client.translators.draft_groups_translator import translate as translate_draft_groups
 
 
-class ContestsResponseTranslator:
-
-    def __init__(self):
-        pass
-
-    @staticmethod
-    def translate(response):
-        if 'SelectedSport' not in response:
-            raise KeyError('Missing SelectedSport field')
-
-        if 'Contests' not in response:
-            raise KeyError('Missing Contests field')
-
-        if 'DraftGroups' not in response:
-            raise KeyError('Missing DraftGroups field')
-
-        contests = []
-        for contest in response['Contests']:
-            contests.append(ContestResponseTranslator.translate(response=contest))
-
-        groups = DraftGroupsTranslator.translate_groups(groups=response['DraftGroups'])
-
-        return Contests(contests=contests, draft_groups=groups)
+def translate(response):
+    return {
+        "contests": [translate_contest(contest) for contest in response["Contests"]],
+        "groups": [translate_draft_groups(response["DraftGroups"])],
+    }
