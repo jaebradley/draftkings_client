@@ -6,10 +6,6 @@ from draft_kings_client.client import contests, available_players, draft_group_d
 
 
 class TestClient(TestCase):
-    def test_get_contests(self):
-        result = contests(Sport.NBA)
-        self.assertIsNotNone(result)
-
     def test_get_available_players(self):
         result = available_players(draft_group_id=11513)
         self.assertIsNotNone(result)

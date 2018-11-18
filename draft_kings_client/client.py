@@ -17,6 +17,8 @@ sports = {
     Sport.MLB: "MLB",
     Sport.TENNIS: "TEN",
     Sport.LEAGUE_OF_LEGENDS: "LOL",
+    Sport.GOLF: "GOLF",
+    Sport.COLLEGE_BASKETBALL: "CBB"
 }
 
 
