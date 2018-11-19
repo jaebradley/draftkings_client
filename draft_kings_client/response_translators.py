@@ -161,3 +161,15 @@ def translate_draft_group(response):
         "leagues": translate_leagues(response["draftGroup"]["leagues"]) if "leagues" in response["draftGroup"] else [],
         "games": translate_games(response["draftGroup"]["games"]) if "games" in response["draftGroup"] else [],
     }
+
+
+def translate_regions(response):
+    return [
+        {
+            "country_code": default_to_none(region, "countryCode"),
+            "code": default_to_none(region, "regionCode"),
+            "iso_code": default_to_none(region, "isoRegionCode"),
+            "name": default_to_none(region, "name"),
+        }
+        for region in response["regions"]
+    ]
