@@ -5,6 +5,10 @@ import pytz
 from draft_kings_client.translators.date_time_translator import translate as translate_datetime
 
 
+def default_to_none(values, key):
+    return values[key] if key in values else None
+
+
 def translate_player(response):
     return {
         "id": response["pid"],
@@ -106,3 +110,54 @@ def translate_countries(response):
         }
         for country in response["countries"]
     ]
+
+
+def translate_leagues(leagues):
+    return [
+        {
+            "id": default_to_none(league, "leagueId"),
+            "name": default_to_none(league, "leagueName"),
+            "abbreviation": default_to_none(league, "leagueAbbreviation"),
+        }
+        for league in leagues
+    ]
+
+
+def translate_games(games):
+    return [
+        {
+            "id": default_to_none(game, "gameId"),
+            "away_team_id": default_to_none(game, "awayTeamId"),
+            "home_team_id": default_to_none(game, "homeTeamId"),
+            "starts_at": default_to_none(game, "startDate"),
+            "location": default_to_none(game, "location"),
+            "sport": default_to_none(game, "sport"),
+            "status": default_to_none(game, "status"),
+            "description": default_to_none(game, "description"),
+            "home_team_score": default_to_none(game["sportSpecificData"], "homeTeamScore"),
+            "away_team_score": default_to_none(game["sportSpecificData"], "awayTeamScore"),
+            "period": default_to_none(game["sportSpecificData"], "period"),
+            "time_remaining": default_to_none(game["sportSpecificData"], "timeRemaining"),
+            "league": default_to_none(game, "league"),
+        }
+        for game in games
+    ]
+
+
+def translate_draft_group(response):
+    return {
+        "id": default_to_none(response["draftGroup"], "draftGroupId"),
+        "contest": {
+            "type_id": default_to_none(response["draftGroup"]["contestType"], "contestTypeId"),
+            "game_type": default_to_none(response["draftGroup"]["contestType"], "gameType"),
+        },
+        "sport_id": default_to_none(response["draftGroup"], "sportId"),
+        "startTime": {
+            "type": default_to_none(response["draftGroup"], "startTimeType"),
+            "minimum": default_to_none(response["draftGroup"], "minStartTime"),
+            "maximum": default_to_none(response["draftGroup"], "maxStartTime"),
+        },
+        "state": default_to_none(response["draftGroup"], "draftGroupState"),
+        "leagues": translate_leagues(response["draftGroup"]["leagues"]) if "leagues" in response["draftGroup"] else [],
+        "games": translate_games(response["draftGroup"]["games"]) if "games" in response["draftGroup"] else [],
+    }

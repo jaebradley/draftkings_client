@@ -1,7 +1,7 @@
 import requests
 
 from draft_kings_client.data import Sport
-from draft_kings_client.response_translators import translate_players, translate_contests, translate_countries
+from draft_kings_client.response_translators import translate_players, translate_contests, translate_countries, translate_draft_group
 from draft_kings_client import urls
 
 sports = {
@@ -46,7 +46,7 @@ def draft_group_details(draft_group_id):
 
     response.raise_for_status()
 
-    return response.json()
+    return translate_draft_group(response.json())
 
 
 def countries():
