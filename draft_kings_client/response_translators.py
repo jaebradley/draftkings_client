@@ -94,3 +94,15 @@ def translate_draft_groups(groups):
         }
         for group in groups
     ]
+
+
+def translate_countries(response):
+    return [
+        {
+            "id": country["countryId"],
+            "code": country["countryCode"],
+            "name": country["name"],
+            "licensed": country["isLicensed"],
+        }
+        for country in response["countries"]
+    ]

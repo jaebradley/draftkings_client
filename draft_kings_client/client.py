@@ -1,7 +1,7 @@
 import requests
 
 from draft_kings_client.data import Sport
-from draft_kings_client.response_translators import translate_players, translate_contests
+from draft_kings_client.response_translators import translate_players, translate_contests, translate_countries
 from draft_kings_client import urls
 
 sports = {
@@ -55,7 +55,7 @@ def countries():
 
     response.raise_for_status()
 
-    return response.json()
+    return translate_countries(response.json())
 
 
 def regions(country_code):

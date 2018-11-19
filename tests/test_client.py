@@ -14,10 +14,6 @@ class TestClient(TestCase):
         response = draft_group_details(draft_group_id=11513)
         self.assertIsNotNone(response)
 
-    def test_get_countries(self):
-        response = countries()
-        self.assertIsNotNone(response)
-
     def test_get_regions(self):
         response = regions(country_code='US')
         self.assertIsNotNone(response)
