@@ -4,11 +4,13 @@ from draft_kings_client import client
 
 
 class TestClientRegions(TestCase):
-    def test_american_regions(self):
+    def test_american_regions_is_not_none(self):
         regions = client.regions("US")
         self.assertIsNotNone(regions)
+
+    def test_american_regions_exist(self):
+        regions = client.regions("US")
         self.assertGreater(len(regions), 0)
-        self.assertEqual(len(regions), 61)
 
     def test_first_american_region(self):
         regions = client.regions("US")
@@ -18,12 +20,18 @@ class TestClientRegions(TestCase):
         self.assertEqual(first_region["iso_code"], "US-AL")
         self.assertEqual(first_region["name"], "Alabama")
 
-    def test_british_regions(self):
+    def test_british_regions_is_not_none(self):
         regions = client.regions("GB")
         self.assertIsNotNone(regions)
+
+    def test_british_regions_exist(self):
+        regions = client.regions("GB")
         self.assertGreater(len(regions), 0)
 
-    def test_canadian_regions(self):
+    def test_canadian_regions_is_not_none(self):
         regions = client.regions("CA")
         self.assertIsNotNone(regions)
+
+    def test_canadian_regions_exist(self):
+        regions = client.regions("CA")
         self.assertGreater(len(regions), 0)

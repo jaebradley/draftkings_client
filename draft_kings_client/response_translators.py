@@ -1,47 +1,40 @@
-from datetime import datetime
-
-import pytz
-
 from draft_kings_client.translators.date_time_translator import translate as translate_datetime
-
-
-def default_to_none(values, key):
-    return values[key] if key in values else None
+from draft_kings_client.utilities import dig, translate_datetime
 
 
 def translate_player(response):
     return {
-        "id": response["pid"],
+        "id": dig(response, "pid"),
         "draft": {
-            "starts_at": datetime.fromtimestamp(response["dgst"] / 1e3, tz=pytz.utc),
-            "draftable": bool(response["IsDisabledFromDrafting"]) is False,
-            "salary": float(response["s"]),
-            "exceptional_messages": response["ExceptionalMessages"],
+            "starts_at": dig(response, "dgst", transformer=translate_datetime),
+            "draftable": dig(response, "IsDisabledFromDrafting", transformer=lambda value: value is False, fallback=False),
+            "salary": dig(response, "s", transformer=float),
+            "exceptional_messages": dig(response, "ExceptionalMessages"),
         },
-        "first_name": response["fn"],
-        "jersey_number": response["jn"],
-        "last_name": response["ln"],
+        "first_name": dig(response, "fn"),
+        "jersey_number": dig(response, "jn"),
+        "last_name": dig(response, "ln"),
         "match_up": {
-            "id": response["tsid"],
-            "away_team_id": response["atid"],
-            "home_team_id": response["htid"],
-            "opposition_rank": response["or"],
+            "id": dig(response, "tsid"),
+            "away_team_id": dig(response, "atid"),
+            "home_team_id": dig(response, "htid"),
+            "opposition_rank": dig(response, "or"),
         },
-        "points_per_contest": float(response["ppg"]),
+        "points_per_contest": dig(response, "ppg", transformer=float),
         "position": {
-            "id": response["posid"],
-            "name": response["pn"],
+            "id": dig(response, "posid"),
+            "name": dig(response, "pn"),
         },
-        "team_id": response["tid"],
+        "team_id": dig(response, "tid"),
     }
 
 
 def translate_players(response):
     return {
-        "players": [translate_player(response=player) for player in response["playerList"]],
+        "players": [translate_player(response=player) for player in response.get("playerList", [])],
         "team_series_list": [
             translate_player_team_series_details(team_series_id=team_series_id, details=details)
-            for team_series_id, details in response["teamList"].items()
+            for team_series_id, details in response.get("teamList", []).items()
         ]
     }
 
@@ -49,52 +42,52 @@ def translate_players(response):
 def translate_player_team_series_details(team_series_id, details):
     return {
         "id":  team_series_id,
-        "away_team_id": details["atid"],
-        "home_team_id": details["htid"],
-        "starts_at": translate_datetime(formatted_datetime=details["tz"]),
-        "status": details["status"],
-        "weather": details["wthr"],
+        "away_team_id": dig(details, "atid"),
+        "home_team_id": dig(details, "htid"),
+        "starts_at": dig(details, "tz", transformer=translate_datetime),
+        "status": dig(details, "status"),
+        "weather": dig(details, "wthr"),
     }
 
 
 def translate_contest(response):
     return {
-        "id": response["id"],
-        "double_up": True if "IsDoubleUp" in response["attr"] else False,
-        "draft_group_id": response["dg"],
+        "id": dig(response, "id"),
+        "double_up": "IsDoubleUp" in response.get("attr", {}),
+        "draft_group_id": dig(response, "dg"),
         "entries": {
-            "maximum": response["m"],
-            "fee": float(response["a"]),
-            "total": response["nt"],
+            "maximum": dig(response, "m"),
+            "fee": dig(response, "a", transformer=float),
+            "total": dig(response, "nt"),
         },
-        "fantasy_player_points": response["fpp"],
-        "fifty_fifty": True if "IsFiftyfifty" in response["attr"] else False,
-        "guaranteed": True if "IsGuaranteed" in response["attr"] else False,
-        "head_to_head": True if "IsH2h" in response["attr"] else False,
-        "name": response["n"],
-        "payout": float(response["po"]),
-        "sport_id": response["s"],
-        "starred": True if "IsStarred" in response["attr"] else False,
-        "starts_at": translate_datetime(formatted_datetime=response["sd"]),
+        "fantasy_player_points": dig(response, "fpp"),
+        "fifty_fifty": "IsFiftyFifty" in response.get("attr", {}),
+        "guaranteed": "IsGuaranteed" in response.get("attr", {}),
+        "head_to_head": "IsH2h" in response.get("attr", {}),
+        "name": dig(response, "n"),
+        "payout": dig(response, "po", transformer=float),
+        "sport_id": dig(response, "s"),
+        "starred": "IsStarred" in response.get("attr", {}),
+        "starts_at": dig(response, "sd", transformer=translate_datetime),
     }
 
 
 def translate_contests(response):
     return {
-        "contests": [translate_contest(contest) for contest in response["Contests"]],
-        "groups": [translate_draft_groups(response["DraftGroups"])],
+        "contests": [translate_contest(contest) for contest in response.get("Contests", [])],
+        "groups": [translate_draft_groups(response.get("DraftGroups", {}))],
     }
 
 
 def translate_draft_groups(groups):
     return [
         {
-            "id": group["DraftGroupId"],
-            "series_id": group["DraftGroupSeriesId"],
-            "contest_type_id": group["ContestTypeId"],
-            "sport_id": group["Sport"],
-            "starts_at": group["StartDate"],
-            "games_count": group["GameCount"]
+            "id": dig(group, "DraftGroupId"),
+            "series_id": dig(group, "DraftGroupSeriesId"),
+            "contest_type_id": dig(group, "ContestTypeId"),
+            "sport_id": dig(group, "Sport"),
+            "starts_at": dig(group, "StartDate"),
+            "games_count": dig(group, "GameCount"),
         }
         for group in groups
     ]
@@ -103,10 +96,10 @@ def translate_draft_groups(groups):
 def translate_countries(response):
     return [
         {
-            "id": country["countryId"],
-            "code": country["countryCode"],
-            "name": country["name"],
-            "licensed": country["isLicensed"],
+            "id": dig(country, "countryId"),
+            "code": dig(country, "countryCode"),
+            "name": dig(country, "name"),
+            "licensed": dig(country, "isLicensed"),
         }
         for country in response["countries"]
     ]
@@ -115,9 +108,9 @@ def translate_countries(response):
 def translate_leagues(leagues):
     return [
         {
-            "id": default_to_none(league, "leagueId"),
-            "name": default_to_none(league, "leagueName"),
-            "abbreviation": default_to_none(league, "leagueAbbreviation"),
+            "id": dig(league, "leagueId"),
+            "name": dig(league, "leagueName"),
+            "abbreviation": dig(league, "leagueAbbreviation"),
         }
         for league in leagues
     ]
@@ -126,19 +119,19 @@ def translate_leagues(leagues):
 def translate_games(games):
     return [
         {
-            "id": default_to_none(game, "gameId"),
-            "away_team_id": default_to_none(game, "awayTeamId"),
-            "home_team_id": default_to_none(game, "homeTeamId"),
-            "starts_at": default_to_none(game, "startDate"),
-            "location": default_to_none(game, "location"),
-            "sport": default_to_none(game, "sport"),
-            "status": default_to_none(game, "status"),
-            "description": default_to_none(game, "description"),
-            "home_team_score": default_to_none(game["sportSpecificData"], "homeTeamScore"),
-            "away_team_score": default_to_none(game["sportSpecificData"], "awayTeamScore"),
-            "period": default_to_none(game["sportSpecificData"], "period"),
-            "time_remaining": default_to_none(game["sportSpecificData"], "timeRemaining"),
-            "league": default_to_none(game, "league"),
+            "id": dig(game, "gameId"),
+            "away_team_id": dig(game, "awayTeamId"),
+            "home_team_id": dig(game, "homeTeamId"),
+            "starts_at": dig(game, "startDate"),
+            "location": dig(game, "location"),
+            "sport": dig(game, "sport"),
+            "status": dig(game, "status"),
+            "description": dig(game, "description"),
+            "home_team_score": dig(game, "sportSpecificData", "homeTeamScore"),
+            "away_team_score": dig(game, "sportSpecificData", "awayTeamScore"),
+            "period": dig(game, "sportSpecificData", "period"),
+            "time_remaining": dig(game, "sportSpecificData", "timeRemaining"),
+            "league": dig(game, "league"),
         }
         for game in games
     ]
@@ -146,30 +139,30 @@ def translate_games(games):
 
 def translate_draft_group(response):
     return {
-        "id": default_to_none(response["draftGroup"], "draftGroupId"),
+        "id": dig(response, "draftGroup", "draftGroupId"),
         "contest": {
-            "type_id": default_to_none(response["draftGroup"]["contestType"], "contestTypeId"),
-            "game_type": default_to_none(response["draftGroup"]["contestType"], "gameType"),
+            "type_id": dig(response, "draftGroup", "contestType", "contestTypeId"),
+            "game_type": dig(response, "draftGroup", "contestType", "gameType"),
         },
-        "sport_id": default_to_none(response["draftGroup"], "sportId"),
+        "sport_id": dig(response, "draftGroup", "sportId"),
         "startTime": {
-            "type": default_to_none(response["draftGroup"], "startTimeType"),
-            "minimum": default_to_none(response["draftGroup"], "minStartTime"),
-            "maximum": default_to_none(response["draftGroup"], "maxStartTime"),
+            "type": dig(response, "draftGroup", "startTimeType"),
+            "minimum": dig(response, "draftGroup", "minStartTime"),
+            "maximum": dig(response, "draftGroup", "maxStartTime"),
         },
-        "state": default_to_none(response["draftGroup"], "draftGroupState"),
-        "leagues": translate_leagues(response["draftGroup"]["leagues"]) if "leagues" in response["draftGroup"] else [],
-        "games": translate_games(response["draftGroup"]["games"]) if "games" in response["draftGroup"] else [],
+        "state": dig(response, "draftGroup", "draftGroupState"),
+        "leagues": dig(response, "draftGroup", "leagues", fallback=[]),
+        "games": dig(response, "draftGroup", "games", fallback=[]),
     }
 
 
 def translate_regions(response):
     return [
         {
-            "country_code": default_to_none(region, "countryCode"),
-            "code": default_to_none(region, "regionCode"),
-            "iso_code": default_to_none(region, "isoRegionCode"),
-            "name": default_to_none(region, "name"),
+            "country_code": dig(region, "countryCode"),
+            "code": dig(region, "regionCode"),
+            "iso_code": dig(region, "isoRegionCode"),
+            "name": dig(region, "name"),
         }
         for region in response["regions"]
     ]
