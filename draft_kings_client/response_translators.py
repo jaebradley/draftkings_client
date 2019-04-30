@@ -1,5 +1,5 @@
 from draft_kings_client.translators.date_time_translator import translate as translate_datetime
-from draft_kings_client.utilities import dig, translate_datetime
+from draft_kings_client.utilities import dig, translate_datetime, from_unix_milliseconds_to_datetime
 from draft_kings_client.data import SPORT_ID_TO_SPORT
 
 
@@ -7,7 +7,7 @@ def translate_player(response):
     return {
         "id": dig(response, "pid"),
         "draft": {
-            "starts_at": dig(response, "dgst", transformer=translate_datetime),
+            "starts_at": dig(response, "dgst", transformer=from_unix_milliseconds_to_datetime),
             "draftable": dig(response, "IsDisabledFromDrafting", transformer=lambda value: value is False, fallback=False),
             "salary": dig(response, "s", transformer=float),
             "exceptional_messages": dig(response, "ExceptionalMessages"),
@@ -42,11 +42,11 @@ def translate_players(response):
 
 def translate_player_team_series_details(team_series_id, details):
     return {
-        "id":  team_series_id,
+        "id":  int(team_series_id),
         "away_team_id": dig(details, "atid"),
         "home_team_id": dig(details, "htid"),
         "starts_at": dig(details, "tz", transformer=translate_datetime),
-        "status": dig(details, "status"),
+        "status_id": dig(details, "status"),
         "weather": dig(details, "wthr"),
     }
 
