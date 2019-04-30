@@ -1,5 +1,6 @@
 from draft_kings_client.translators.date_time_translator import translate as translate_datetime
 from draft_kings_client.utilities import dig, translate_datetime
+from draft_kings_client.data import SPORT_ID_TO_SPORT
 
 
 def translate_player(response):
@@ -66,7 +67,7 @@ def translate_contest(response):
         "head_to_head": "IsH2h" in response.get("attr", {}),
         "name": dig(response, "n"),
         "payout": dig(response, "po", transformer=float),
-        "sport_id": dig(response, "s"),
+        "sport": SPORT_ID_TO_SPORT.get(dig(response, "s")),
         "starred": "IsStarred" in response.get("attr", {}),
         "starts_at": dig(response, "sd", transformer=translate_datetime),
     }

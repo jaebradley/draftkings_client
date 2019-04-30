@@ -1,5 +1,5 @@
 from draft_kings_client.utilities import remap_keys, translate_datetime
-from draft_kings_client.client import sports
+from draft_kings_client.client import SPORT_TO_CONTESTS_QUERY_PARAMETER
 
 KEY_MAPPING = {
     "id": "DraftGroupId",
@@ -12,7 +12,7 @@ KEY_MAPPING = {
 def translate_group(group):
     translated_data = remap_keys(group, KEY_MAPPING)
     translated_data["starts_at"] = translate_datetime(group["StartDate"]) if "StartDate" in group else None
-    translated_data["sport"] = sports.get(group["Sport"]) if "sport" in group else None
+    translated_data["sport"] = SPORT_TO_CONTESTS_QUERY_PARAMETER.get(group["Sport"]) if "sport" in group else None
     return translated_data
 
 

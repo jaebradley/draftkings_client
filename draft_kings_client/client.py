@@ -6,7 +6,10 @@ from draft_kings_client.response_translators import translate_players, translate
     translate_draft_group, translate_regions
 from draft_kings_client.translators.draftables_translator import translate_draftables
 
-sports = {
+"""
+The API takes a sport query parameter that's different than then sports API endpoint
+"""
+SPORT_TO_CONTESTS_QUERY_PARAMETER = {
     Sport.NFL: "NFL",
     Sport.NHL: "NHL",
     Sport.NBA: "NBA",
@@ -26,7 +29,7 @@ sports = {
 
 def contests(sport):
     response = requests.get(url=urls.CONTESTS_URL,
-                            params={'sport': sports[sport]})
+                            params={'sport': SPORT_TO_CONTESTS_QUERY_PARAMETER[sport]})
 
     response.raise_for_status()
 
