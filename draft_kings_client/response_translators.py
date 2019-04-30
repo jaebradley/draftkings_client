@@ -1,3 +1,5 @@
+from dateutil.parser import parse as parse_datetime
+
 from draft_kings_client.translators.date_time_translator import translate as translate_datetime
 from draft_kings_client.utilities import dig, translate_datetime, from_unix_milliseconds_to_datetime
 from draft_kings_client.data import SPORT_ID_TO_SPORT
@@ -138,6 +140,27 @@ def translate_games(games):
     ]
 
 
+def translate_draft_group_league(league):
+    return {
+        "id": dig(league, "leagueId"),
+        "name": dig(league, "leagueName"),
+        "abbreviation": dig(league, "leagueAbbreviation"),
+    }
+
+
+def translate_draft_group_game(game):
+    return {
+        "id": dig(game, "gameId"),
+        "away_team_id": dig(game, "awayTeamId"),
+        "home_team_id": dig(game, "homeTeamId"),
+        "start_time": dig(game, "startDate", transformer=parse_datetime),
+        "status": dig(game, "status"),
+        "location": dig(game, "location"),
+        "description": dig(game, "description"),
+        "name": dig(game, "name")
+    }
+
+
 def translate_draft_group(response):
     return {
         "id": dig(response, "draftGroup", "draftGroupId"),
@@ -145,15 +168,21 @@ def translate_draft_group(response):
             "type_id": dig(response, "draftGroup", "contestType", "contestTypeId"),
             "game_type": dig(response, "draftGroup", "contestType", "gameType"),
         },
-        "sport_id": dig(response, "draftGroup", "sportId"),
-        "startTime": {
+        "sport": SPORT_ID_TO_SPORT.get(dig(response, "draftGroup", "sportId")),
+        "start_time": {
             "type": dig(response, "draftGroup", "startTimeType"),
-            "minimum": dig(response, "draftGroup", "minStartTime"),
-            "maximum": dig(response, "draftGroup", "maxStartTime"),
+            "minimum": dig(response, "draftGroup", "minStartTime", transformer=parse_datetime),
+            "maximum": dig(response, "draftGroup", "maxStartTime", transformer=parse_datetime),
         },
         "state": dig(response, "draftGroup", "draftGroupState"),
-        "leagues": dig(response, "draftGroup", "leagues", fallback=[]),
-        "games": dig(response, "draftGroup", "games", fallback=[]),
+        "leagues": [
+            translate_draft_group_league(league)
+            for league in dig(response, "draftGroup", "leagues", fallback=[])
+        ],
+        "games": [
+            translate_draft_group_game(game)
+            for game in dig(response, "draftGroup", "games", fallback=[])
+        ],
     }
 
 
