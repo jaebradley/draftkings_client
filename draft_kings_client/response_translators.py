@@ -196,3 +196,78 @@ def translate_regions(response):
         }
         for region in response["regions"]
     ]
+
+
+def translate_draftable_players(draftable):
+    return {
+        "id": dig(draftable, "draftableId"),
+        "player_id": dig(draftable, "playerId"),
+        "position": dig(draftable, "position"),
+        "roster_slot_id": dig(draftable, "rosterSlotId"),
+        "salary": dig(draftable, "salary"),
+        "swappable": dig(draftable, "isSwappable"),
+        "disabled": dig(draftable, "isDisabled"),
+        "news_status": dig(draftable, "newsStatus"),
+        "team_id": dig(draftable, "teamId"),
+        "team_abbreviation": dig(draftable, "teamAbbreviation"),
+        "draft_alerts": dig(draftable, "draftAlerts"),
+        "names": {
+            "first": dig(draftable, "firstName"),
+            "last": dig(draftable, "lastName"),
+            "display": dig(draftable, "displayName"),
+            "short": dig(draftable, "shortName"),
+        },
+        "images": {
+            "full": dig(draftable, "playerImageFull"),
+            "50": dig(draftable, "playerImage50"),
+            "65": dig(draftable, "playerImage65"),
+            "160": dig(draftable, "playerImage160"),
+        },
+        "competition": {
+            "id": dig(draftable, "competition", "competitionId"),
+            "name": dig(draftable, "competition", "name"),
+            "starts_at": dig(draftable, "competition", "startTime"),
+        },
+    }
+
+
+def translate_draftable_competition(competition):
+    return {
+        "id": dig(competition, "competitionId"),
+        "name": dig(competition, "name"),
+        "starts_at": dig(competition, "startTime"),
+        "sport": SPORT_ID_TO_SPORT.get(dig(competition, "sport")),
+        "venue": dig(competition, "venue"),
+        "starting_lineups_available": dig(competition, "startingLineupsAvailable"),
+        "depth_charts_available": dig(competition, "depthChartsAvailable"),
+        "state": dig(competition, "competitionState"),
+        "home_team": {
+            "id": dig(competition, "homeTeam", "teamId"),
+            "name": dig(competition, "homeTeam", "teamName"),
+            "abbreviation": dig(competition, "homeTeam", "abbreviation"),
+            "city": dig(competition, "homeTeam", "city"),
+        },
+        "away_team": {
+            "id": dig(competition, "awayTeam", "teamId"),
+            "name": dig(competition, "awayTeam", "teamName"),
+            "abbreviation": dig(competition, "awayTeam", "abbreviation"),
+            "city": dig(competition, "awayTeam", "city"),
+        },
+        "weather": {
+            "type": dig(competition, "weather", "icon"),
+            "dome": dig(competition, "weather", "isDome"),
+        }
+    }
+
+
+def translate_draftables(response):
+    return {
+        "draftables": [
+            translate_draftable_players(draftable)
+            for draftable in response.get("draftables", [])
+        ],
+        "competitions": [
+            translate_draftable_competition(competition)
+            for competition in response.get("competitions", [])
+        ]
+    }

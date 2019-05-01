@@ -3,8 +3,7 @@ import requests
 from draft_kings_client import urls
 from draft_kings_client.data import Sport
 from draft_kings_client.response_translators import translate_players, translate_contests, translate_countries, \
-    translate_draft_group, translate_regions
-from draft_kings_client.translators.draftables_translator import translate_draftables
+    translate_draft_group, translate_regions, translate_draftables
 
 """
 The API takes a sport query parameter that's different than then sports API endpoint
@@ -70,15 +69,6 @@ def regions(country_code):
     response.raise_for_status()
 
     return translate_regions(response.json())
-
-
-def contest_details(contest_id):
-    response = requests.get(url=urls.contest_url(contest_id),
-                            params={'format': 'json'})
-
-    response.raise_for_status()
-
-    return response.json()
 
 
 def draftables(draft_group_id):
