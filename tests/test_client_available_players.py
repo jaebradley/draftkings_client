@@ -73,7 +73,7 @@ class TestClient(TestCase):
         self.assertEqual(big_koro["match_up"]["away_team_id"], 62492)
         self.assertEqual(big_koro["match_up"]["home_team_id"], 156847)
         self.assertIsNone(big_koro["match_up"]["opposition_rank"])
-        self.assertEqual(big_koro["points_per_contest"], 0.0)
+        self.assertEqual(big_koro["points_per_contest"], 35.4)
         self.assertEqual(big_koro["position"]["id"], 155)
         self.assertEqual(big_koro["position"]["name"], "ADC")
         self.assertEqual(big_koro["team_id"], 62492)

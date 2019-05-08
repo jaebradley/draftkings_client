@@ -1,6 +1,9 @@
 from unittest import TestCase
 
-from draft_kings_client.utilities import remap_keys, dig
+import pytz
+from datetime import datetime
+
+from draft_kings_client.utilities import remap_keys, dig, translate_datetime
 
 
 class TestRemapKeys(TestCase):
@@ -62,4 +65,11 @@ class TestGet(TestCase):
 
     def test_returns_nested_value(self):
         self.assertEqual(dig({"foo": {"bar": "baz"}}, "foo", "bar"), "baz")
+
+
+class TestTranslateDatetime(TestCase):
+    def test_translate_datetime_string(self):
+        timestamp = translate_datetime("/Date(1479258000000)/")
+        self.assertIsNotNone(timestamp)
+        self.assertEqual(timestamp, datetime.fromtimestamp(1479258000000 / 1e3, tz=pytz.utc))
 

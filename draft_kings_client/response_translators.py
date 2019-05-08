@@ -1,6 +1,5 @@
 from dateutil.parser import parse as parse_datetime
 
-from draft_kings_client.translators.date_time_translator import translate as translate_datetime
 from draft_kings_client.utilities import dig, translate_datetime, from_unix_milliseconds_to_datetime
 from draft_kings_client.data import SPORT_ID_TO_SPORT
 
