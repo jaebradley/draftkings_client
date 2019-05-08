@@ -15,7 +15,7 @@ class TestClientCountries(TestCase):
     def test_county_keys_exist(self):
         response = client.countries()
         for country in response:
-            self.assertEqual(
+            self.assertCountEqual(
                 list(country.keys()),
                 [
                     "id",
