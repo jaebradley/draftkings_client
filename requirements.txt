@@ -14,4 +14,4 @@ pytz==2018.7
 requests==2.20.0
 six==1.11.0
 urllib3==1.24.1
-python-dateutil=2.8.0
+python-dateutil==2.8.0
