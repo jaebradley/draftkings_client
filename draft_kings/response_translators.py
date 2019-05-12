@@ -1,7 +1,7 @@
 from dateutil.parser import parse as parse_datetime
 
-from draft_kings_client.utilities import dig, translate_datetime, from_unix_milliseconds_to_datetime
-from draft_kings_client.data import SPORT_ID_TO_SPORT
+from draft_kings.utilities import dig, translate_formatted_datetime, from_unix_milliseconds_to_datetime
+from draft_kings.data import SPORT_ID_TO_SPORT
 
 
 def translate_player(response):
@@ -46,7 +46,7 @@ def translate_player_team_series_details(team_series_id, details):
         "id":  int(team_series_id),
         "away_team_id": dig(details, "atid"),
         "home_team_id": dig(details, "htid"),
-        "starts_at": dig(details, "tz", transformer=translate_datetime),
+        "starts_at": dig(details, "tz", transformer=translate_formatted_datetime),
         "status_id": dig(details, "status"),
         "weather": dig(details, "wthr"),
     }
@@ -70,7 +70,7 @@ def translate_contest(response):
         "payout": dig(response, "po", transformer=float),
         "sport": SPORT_ID_TO_SPORT.get(dig(response, "s")),
         "starred": "IsStarred" in response.get("attr", {}),
-        "starts_at": dig(response, "sd", transformer=translate_datetime),
+        "starts_at": dig(response, "sd", transformer=translate_formatted_datetime),
     }
 
 

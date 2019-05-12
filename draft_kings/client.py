@@ -1,8 +1,8 @@
 import requests
 
-from draft_kings_client import urls
-from draft_kings_client.data import Sport
-from draft_kings_client.response_translators import translate_players, translate_contests, translate_countries, \
+from draft_kings import urls
+from draft_kings.data import Sport
+from draft_kings.response_translators import translate_players, translate_contests, translate_countries, \
     translate_draft_group, translate_regions, translate_draftables
 
 """

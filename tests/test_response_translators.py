@@ -2,7 +2,7 @@ import json
 import os
 from unittest import TestCase
 
-from draft_kings_client.response_translators import translate_contests, translate_contest
+from draft_kings.response_translators import translate_contests, translate_contest
 from tests.config import ROOT_DIRECTORY
 
 
