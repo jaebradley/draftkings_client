@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from draft_kings_client.urls import CONTESTS_URL, AVAILABLE_PLAYERS_URL, COUNTRIES_URL, draft_group_url, regions_url, \
+from draft_kings.urls import CONTESTS_URL, AVAILABLE_PLAYERS_URL, COUNTRIES_URL, draft_group_url, regions_url, \
     contest_url, draftables_url
 
 

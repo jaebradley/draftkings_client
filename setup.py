@@ -19,7 +19,7 @@ setuptools.setup(
         "requests==2.20.0",
         "pytz==2018.7",
         "python-dateutil==2.8.0",
-        "urllib3==1.25.2",
+        "urllib3==1.24.3",
     ],
     classifiers=[
         "Programming Language :: Python :: 3",

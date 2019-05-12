@@ -6,17 +6,11 @@ def identity(value):
     return value
 
 
-def remap_keys(data, key_mapping):
-    return {
-        value: data.get(key) for key, value in key_mapping.items()
-    }
-
-
 def from_unix_milliseconds_to_datetime(unix_milliseconds):
     return datetime.fromtimestamp(unix_milliseconds / 1e3, tz=pytz.UTC)
 
 
-def translate_datetime(formatted_datetime):
+def translate_formatted_datetime(formatted_datetime):
     return datetime.fromtimestamp(int(formatted_datetime[6:-2]) / 1e3, tz=pytz.utc)
 
 

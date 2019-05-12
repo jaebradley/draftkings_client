@@ -16,25 +16,25 @@ with relevant metadata.
 ### Get Contests for a Sport
 
 ```python
-from draftkings_client import DraftKingsClient, Sport
+from draft_kings.client import contests, Sport
 
-DraftKingsClient.get_contests(sport=Sport.nba)
+contests(sport=Sport.nba)
 ```
 
 ### Get Available Players for a Draft Group
 
 ```python
-from draftkings_client import DraftKingsClient
+from draft_kings.client import available_players
 
-return DraftKingsClient.get_available_players(draft_group_id=1)
+return available_players(draft_group_id=1)
 ```
 
 ### Get Draft Group Details
 
 ```python
-from draftkings_client import DraftKingsClient
+from draft_kings.client import draft_group_details
 
-return DraftKingsClient.get_draft_group_details(draft_group_id=1)
+return draft_group_details(draft_group_id=1)
 ```
 
 ### Get Countries
@@ -42,9 +42,9 @@ return DraftKingsClient.get_draft_group_details(draft_group_id=1)
 Get all country information that DraftKings uses to make country-specific requests
 
 ```python
-from draftkings_client import DraftKingsClient
+from draft_kings.client import countries
 
-return DraftKingsClient.get_countries(include_unlicensed=True)
+return countries()
 ```
 
 ### Get Regions
@@ -52,25 +52,18 @@ return DraftKingsClient.get_countries(include_unlicensed=True)
 Get all region information for the specified country code that DraftKings uses to make region-specific requests
 
 ```python
-from draftkings_client import DraftKingsClient
+from draft_kings.client import regions
 
-return DraftKingsClient.get_regions(country_code='US')
+return regions(country_code='US')
 ```
 
-### Get Contest Details
-
-```python
-from draftkings_client import DraftKingsClient
-
-return DraftKingsClient.get_contest_details(contest_id=1)
-```
 
 ### Get Draftables
 
-Get all draftable competitors
+Get all draftable players
 
 ```python
-from draftkings_client import DraftKingsClient
+from draft_kings.client import draftables
 
-return DraftKingsClient.get_draftables(draft_group_id=1)
+return draftables(draft_group_id=1)
 ```

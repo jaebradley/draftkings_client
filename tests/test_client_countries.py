@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from draft_kings_client import client
+from draft_kings import client
 
 
 class TestClientCountries(TestCase):
