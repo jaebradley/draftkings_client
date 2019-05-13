@@ -1,10 +1,12 @@
 language: python
 python:
-  - "2.7"
-# command to install dependencies
-install: "pip install -r requirements.txt"
-# command to run tests
+  - "3.6"
+  - "3.6-dev"
+  - "3.7-dev"
+install:
+  - pip install -r requirements.txt
 script:
-- nosetests --with-coverage # Add me to run nose with coverage
+  - pip install -e .
+  - pytest --cov=./
 after_success:
-  - coveralls
+  - codecov
