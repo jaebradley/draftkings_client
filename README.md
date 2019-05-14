@@ -1,5 +1,9 @@
 # DraftKings Python Client
 
+[![Build Status](https://travis-ci.org/jaebradley/draftkings_client.svg?branch=master)](https://travis-ci.org/jaebradley/draftkings_client)
+[![codecov](https://codecov.io/gh/jaebradley/draftkings_client/branch/master/graph/badge.svg)](https://codecov.io/gh/jaebradley/draftkings_client)
+![PyPI](https://img.shields.io/pypi/v/draft_kings.svg)
+
 ## Introduction
 DraftKings does not have a public API with documentation.
 
@@ -8,8 +12,14 @@ DraftKings - data like NFL contests, or players available for a
 "Draft Group" (e.g. all NBA games starting at 7 PM EST tonight), along
 with relevant metadata.
 
+As DraftKings makes no guarantees about it's public API, this client makes no guarantees that existing API methods
+will work consistently.
+
 ## Install using PyPi
-`pip install draft_kings`
+
+```bash
+pip install draft_kings
+```
 
 ## API
 
@@ -26,7 +36,7 @@ contests(sport=Sport.nba)
 ```python
 from draft_kings.client import available_players
 
-return available_players(draft_group_id=1)
+available_players(draft_group_id=1)
 ```
 
 ### Get Draft Group Details
@@ -34,7 +44,7 @@ return available_players(draft_group_id=1)
 ```python
 from draft_kings.client import draft_group_details
 
-return draft_group_details(draft_group_id=1)
+draft_group_details(draft_group_id=1)
 ```
 
 ### Get Countries
@@ -44,7 +54,7 @@ Get all country information that DraftKings uses to make country-specific reques
 ```python
 from draft_kings.client import countries
 
-return countries()
+countries()
 ```
 
 ### Get Regions
@@ -54,7 +64,7 @@ Get all region information for the specified country code that DraftKings uses t
 ```python
 from draft_kings.client import regions
 
-return regions(country_code='US')
+regions(country_code='US')
 ```
 
 
@@ -65,5 +75,5 @@ Get all draftable players
 ```python
 from draft_kings.client import draftables
 
-return draftables(draft_group_id=1)
+draftables(draft_group_id=1)
 ```
