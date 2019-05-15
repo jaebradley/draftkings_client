@@ -1,7 +1,7 @@
 from unittest import TestCase
 
 from draft_kings.client import available_players, draft_group_details, draftables, regions, contests, countries
-from draft_kings.client import Sport
+from draft_kings.data import Sport
 
 
 class TestClient(TestCase):
