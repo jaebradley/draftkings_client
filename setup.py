@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="draft_kings",
-    version="2.0.0",
+    version="2.0.1",
     author="Jae Bradley",
     author_email="jae.b.bradley@gmail.com",
     license="MIT",

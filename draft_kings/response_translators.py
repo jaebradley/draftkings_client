@@ -1,7 +1,29 @@
 from dateutil.parser import parse as parse_datetime
 
 from draft_kings.utilities import dig, translate_formatted_datetime, from_unix_milliseconds_to_datetime
-from draft_kings.data import SPORT_ID_TO_SPORT
+from draft_kings.data import SPORT_ID_TO_SPORT, Sport
+
+"""
+The API takes a sport query parameter that's different than then sports API endpoint
+"""
+SPORT_TO_CONTESTS_ABBREVIATION = {
+    Sport.NFL: "NFL",
+    Sport.NHL: "NHL",
+    Sport.NBA: "NBA",
+    Sport.CFL: "CFL",
+    Sport.COLLEGE_FOOTBALL: "CFB",
+    Sport.MIXED_MARTIAL_ARTS: "MMA",
+    Sport.NASCAR: "NAS",
+    Sport.SOCCER: "SOC",
+    Sport.EUROLEAGUE_BASKETBALL: "EL",
+    Sport.MLB: "MLB",
+    Sport.TENNIS: "TEN",
+    Sport.LEAGUE_OF_LEGENDS: "LOL",
+    Sport.GOLF: "GOLF",
+    Sport.COLLEGE_BASKETBALL: "CBB"
+}
+
+CONTEST_SPORT_ABBREVIATIONS_TO_SPORTS = {v: k for k, v in SPORT_TO_CONTESTS_ABBREVIATION.items()}
 
 
 def translate_player(response):
@@ -76,23 +98,27 @@ def translate_contest(response):
 
 def translate_contests(response):
     return {
-        "contests": [translate_contest(contest) for contest in response.get("Contests", [])],
-        "groups": [translate_draft_groups(response.get("DraftGroups", {}))],
+        "contests": [
+            translate_contest(contest)
+            for contest in response.get("Contests", [])
+        ],
+        "groups": [
+            translate_contest_draft_group(draft_group)
+            for draft_group in response.get("DraftGroups", [])
+        ],
     }
 
 
-def translate_draft_groups(groups):
-    return [
-        {
-            "id": dig(group, "DraftGroupId"),
-            "series_id": dig(group, "DraftGroupSeriesId"),
-            "contest_type_id": dig(group, "ContestTypeId"),
-            "sport_id": dig(group, "Sport"),
-            "starts_at": dig(group, "StartDate"),
-            "games_count": dig(group, "GameCount"),
-        }
-        for group in groups
-    ]
+def translate_contest_draft_group(draft_group):
+    return {
+        "id": dig(draft_group, "DraftGroupId"),
+        "series_id": dig(draft_group, "DraftGroupSeriesId"),
+        "contest_type_id": dig(draft_group, "ContestTypeId"),
+        "sport_id": dig(draft_group, "Sport"),
+        "sport": CONTEST_SPORT_ABBREVIATIONS_TO_SPORTS.get(dig(draft_group, "Sport")),
+        "starts_at": dig(draft_group, "StartDate", transformer=parse_datetime),
+        "games_count": dig(draft_group, "GameCount"),
+    }
 
 
 def translate_countries(response):
