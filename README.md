@@ -26,7 +26,7 @@ pip install draft_kings
 ### Get Contests for a Sport
 
 ```python
-from draft_kings import Sport
+from draft_kings.data import Sport
 from draft_kings.client import contests
 
 contests(sport=Sport.NBA)
