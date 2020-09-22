@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "draft_kings"
+version = "2.0.2"
+description = "A Basketball Reference client that generates data by scraping the website"
+authors = ["Jae Bradley <jae.b.bradley@gmail.com>"]
+maintainers = ["Jae Bradley <jae.b.bradley@gmail.com>"]
+license = "MIT"
+keywords = ["Daily Fantasy Sports", "DraftKings"]
+classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Operating System :: OS Independent"]
+repository = "https://github.com/jaebradley/draftkings_client"
+homepage = "https://jaebradley.github.io/draftkings_client"
+readme = "README.md"
+exclude = ["tests", "docs"]
+
+[tool.poetry.dependencies]
+python = "^3.5"
+requests = "==2.20.0"
+pytz = "==2018.7"
+python-dateutil = "==2.8.0"
+urllib3 = "==1.24.3"
+
+[tool.poetry.dev-dependencies]
+codecov = "^2.1.7"
+pytest = "^3.10.0"
+pytest-cov = "^2.6.8"
+coverage = "^4.5.1"
+
+[tool.poetry.urls]
+issues = "https://github.com/jaebradley/draftkings_client/issues"
+pull_requests = "https://github.com/jaebradley/draftkings_client/pull_requests"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

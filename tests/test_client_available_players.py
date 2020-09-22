@@ -84,5 +84,5 @@ class TestClient(TestCase):
         self.assertEqual(team_series["away_team_id"], 62492)
         self.assertEqual(team_series["home_team_id"], 156847)
         self.assertEqual(team_series["starts_at"], datetime.datetime(2019, 5, 1, 9, 0, 0, tzinfo=pytz.UTC))
-        self.assertEqual(team_series["status_id"], 'Final')
+        self.assertEqual(team_series["status_id"], "Final")
         self.assertIsNone(team_series["weather"])
