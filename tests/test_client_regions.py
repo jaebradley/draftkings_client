@@ -35,3 +35,16 @@ class TestClientRegions(TestCase):
     def test_canadian_regions_exist(self):
         regions = client.regions("CA")
         self.assertGreater(len(regions), 0)
+
+    def test_region_keys_exist_for_us(self):
+        result = client.regions("US")
+        for region in result:
+            self.assertCountEqual(
+                list(region.keys()),
+                [
+                    "country_code",
+                    "code",
+                    "iso_code",
+                    "name",
+                ]
+            )

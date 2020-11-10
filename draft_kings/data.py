@@ -71,3 +71,36 @@ class CountryData:
 
     def __str__(self):
         return "Country {name}".format(name=self.name)
+
+
+class RegionData:
+    def __init__(self, country_code, code, iso_code, name):
+        self.country_code = country_code
+        self.code = code
+        self.iso_code = iso_code
+        self.name = name
+
+    def asdict(self):
+        return {
+            "country_code": self.country_code,
+            "code": self.code,
+            "iso_code": self.iso_code,
+            "name": self.name
+        }
+
+    def __eq__(self, other):
+        """Overrides the default implementation"""
+        if isinstance(other, RegionData):
+            return self.country_code == other.country_code \
+                   and self.code == other.code \
+                   and self.iso_code == other.iso_code \
+                   and self.name == other.name
+        return False
+
+    def __repr__(self):
+        return "Region country code: {country_code} | code: {code} | ISO code: {iso_code} | name: {name}".format(
+            country_code=self.country_code, code=self.code, iso_code=self.iso_code, name=self.name
+        )
+
+    def __str__(self):
+        return "Region {name}".format(name=self.name)

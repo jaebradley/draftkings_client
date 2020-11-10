@@ -2,8 +2,8 @@ import json
 import os
 from unittest import TestCase
 
-from draft_kings.response.decoders import CountriesDecoder
-from draft_kings.data import CountryData
+from draft_kings.response.decoders import CountriesDecoder, RegionsDecoder
+from draft_kings.data import CountryData, RegionData
 from tests.config import ROOT_DIRECTORY
 
 
@@ -32,3 +32,19 @@ class TestCountryDecoder(TestCase):
         )
 
 
+class TestUSRegionsDecoder(TestCase):
+    def setUp(self) -> None:
+        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/us_regions.json')) as data_file:
+            self.data = json.load(data_file, cls=RegionsDecoder)
+
+    def test_exists(self):
+        self.assertIsNotNone(self.data)
+
+    def test_has_more_than_one_element(self):
+        self.assertGreater(len(self.data), 0)
+
+    def test_first_element_is_same(self):
+        self.assertEqual(
+            RegionData("US", "AL", "US-AL", "Alabama"),
+            self.data[0]
+        )
