@@ -1,0 +1,377 @@
+{
+  "regions": [
+    {
+      "countryCode": "US",
+      "regionCode": "AL",
+      "isoRegionCode": "US-AL",
+      "name": "Alabama"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "AK",
+      "isoRegionCode": "US-AK",
+      "name": "Alaska"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "AS",
+      "isoRegionCode": "US-AS",
+      "name": "American Samoa"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "AZ",
+      "isoRegionCode": "US-AZ",
+      "name": "Arizona"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "AR",
+      "isoRegionCode": "US-AR",
+      "name": "Arkansas"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "AA",
+      "isoRegionCode": "US-AA",
+      "name": "Armed Forces - Americas"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "AE",
+      "isoRegionCode": "US-AE",
+      "name": "Armed Forces - Europe"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "AP",
+      "isoRegionCode": "US-AP",
+      "name": "Armed Forces - Pacific"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "CA",
+      "isoRegionCode": "US-CA",
+      "name": "California"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "CO",
+      "isoRegionCode": "US-CO",
+      "name": "Colorado"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "CT",
+      "isoRegionCode": "US-CT",
+      "name": "Connecticut"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "DE",
+      "isoRegionCode": "US-DE",
+      "name": "Delaware"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "DC",
+      "isoRegionCode": "US-DC",
+      "name": "District of Columbia"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "FM",
+      "isoRegionCode": "US-FM",
+      "name": "Federated States of Micronesia"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "FL",
+      "isoRegionCode": "US-FL",
+      "name": "Florida"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "GA",
+      "isoRegionCode": "US-GA",
+      "name": "Georgia"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "GU",
+      "isoRegionCode": "US-GU",
+      "name": "Guam"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "HI",
+      "isoRegionCode": "US-HI",
+      "name": "Hawaii"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "ID",
+      "isoRegionCode": "US-ID",
+      "name": "Idaho"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "IL",
+      "isoRegionCode": "US-IL",
+      "name": "Illinois"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "IN",
+      "isoRegionCode": "US-IN",
+      "name": "Indiana"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "IA",
+      "isoRegionCode": "US-IA",
+      "name": "Iowa"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "KS",
+      "isoRegionCode": "US-KS",
+      "name": "Kansas"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "KY",
+      "isoRegionCode": "US-KY",
+      "name": "Kentucky"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "LA",
+      "isoRegionCode": "US-LA",
+      "name": "Louisiana"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "ME",
+      "isoRegionCode": "US-ME",
+      "name": "Maine"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "MH",
+      "isoRegionCode": "US-MH",
+      "name": "Marshall Islands"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "MD",
+      "isoRegionCode": "US-MD",
+      "name": "Maryland"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "MA",
+      "isoRegionCode": "US-MA",
+      "name": "Massachusetts"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "MI",
+      "isoRegionCode": "US-MI",
+      "name": "Michigan"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "MN",
+      "isoRegionCode": "US-MN",
+      "name": "Minnesota"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "MS",
+      "isoRegionCode": "US-MS",
+      "name": "Mississippi"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "MO",
+      "isoRegionCode": "US-MO",
+      "name": "Missouri"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "MT",
+      "isoRegionCode": "US-MT",
+      "name": "Montana"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "NE",
+      "isoRegionCode": "US-NE",
+      "name": "Nebraska"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "NV",
+      "isoRegionCode": "US-NV",
+      "name": "Nevada"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "NH",
+      "isoRegionCode": "US-NH",
+      "name": "New Hampshire"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "NJ",
+      "isoRegionCode": "US-NJ",
+      "name": "New Jersey"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "NM",
+      "isoRegionCode": "US-NM",
+      "name": "New Mexico"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "NY",
+      "isoRegionCode": "US-NY",
+      "name": "New York"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "NC",
+      "isoRegionCode": "US-NC",
+      "name": "North Carolina"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "ND",
+      "isoRegionCode": "US-ND",
+      "name": "North Dakota"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "MP",
+      "isoRegionCode": "US-MP",
+      "name": "Northern Mariana Islands"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "OH",
+      "isoRegionCode": "US-OH",
+      "name": "Ohio"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "OK",
+      "isoRegionCode": "US-OK",
+      "name": "Oklahoma"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "OR",
+      "isoRegionCode": "US-OR",
+      "name": "Oregon"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "PW",
+      "isoRegionCode": "US-PW",
+      "name": "Palau"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "PA",
+      "isoRegionCode": "US-PA",
+      "name": "Pennsylvania"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "PR",
+      "isoRegionCode": "US-PR",
+      "name": "Puerto Rico"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "RI",
+      "isoRegionCode": "US-RI",
+      "name": "Rhode Island"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "SC",
+      "isoRegionCode": "US-SC",
+      "name": "South Carolina"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "SD",
+      "isoRegionCode": "US-SD",
+      "name": "South Dakota"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "TN",
+      "isoRegionCode": "US-TN",
+      "name": "Tennessee"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "TX",
+      "isoRegionCode": "US-TX",
+      "name": "Texas"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "UT",
+      "isoRegionCode": "US-UT",
+      "name": "Utah"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "VT",
+      "isoRegionCode": "US-VT",
+      "name": "Vermont"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "VI",
+      "isoRegionCode": "US-VI",
+      "name": "Virgin Islands"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "VA",
+      "isoRegionCode": "US-VA",
+      "name": "Virginia"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "WA",
+      "isoRegionCode": "US-WA",
+      "name": "Washington"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "WV",
+      "isoRegionCode": "US-WV",
+      "name": "West Virginia"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "WI",
+      "isoRegionCode": "US-WI",
+      "name": "Wisconsin"
+    },
+    {
+      "countryCode": "US",
+      "regionCode": "WY",
+      "isoRegionCode": "US-WY",
+      "name": "Wyoming"
+    }
+  ],
+  "note": null
+}

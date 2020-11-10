@@ -25,20 +25,19 @@ class URLBuilder:
     def build_countries_url(self):
         return "{API_BASE_URL}/addresses/v1/countries".format(API_BASE_URL=self.api_base_path)
 
+    def build_regions_url(self, country_code):
+        return "{API_BASE_URL}/addresses/v1/countries/{country_code}/regions".format(
+            API_BASE_URL=self.api_base_path,
+            COUNTRIES_PATH=COUNTRIES_PATH,
+            country_code=country_code,
+        )
+
 
 def draft_group_url(draft_group_id):
     return "{API_BASE_URL}{DRAFTGROUPS_PATH}{draft_group_id}".format(
         API_BASE_URL=API_BASE_URL,
         DRAFTGROUPS_PATH=DRAFTGROUPS_PATH,
         draft_group_id=draft_group_id
-    )
-
-
-def regions_url(country_code):
-    return "{API_BASE_URL}{COUNTRIES_PATH}{country_code}/regions".format(
-        API_BASE_URL=API_BASE_URL,
-        COUNTRIES_PATH=COUNTRIES_PATH,
-        country_code=country_code,
     )
 
 

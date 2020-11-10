@@ -13,3 +13,11 @@ class HTTPClient:
 
         return response
 
+    def regions(self, country_code):
+        response = requests.get(url=self.url_builder.build_regions_url(country_code=country_code),
+                                params={'format': 'json'})
+
+        response.raise_for_status()
+
+        return response
+
