@@ -1,7 +1,7 @@
 from unittest import TestCase
 
 from draft_kings.urls import CONTESTS_URL, AVAILABLE_PLAYERS_URL, COUNTRIES_URL, draft_group_url, regions_url, \
-    contest_url, draftables_url
+    contest_url, draftables_url, URLBuilder
 
 
 class TestUrls(TestCase):
@@ -18,10 +18,20 @@ class TestUrls(TestCase):
         self.assertEqual(draft_group_url("jaebaebae"), "https://api.draftkings.com/draftgroups/v1/jaebaebae")
 
     def test_regions_url(self):
-        self.assertEqual(regions_url("jaebaebae"), "https://api.draftkings.com/addresses/v1/countries/jaebaebae/regions")
+        self.assertEqual(regions_url("jaebaebae"),
+                         "https://api.draftkings.com/addresses/v1/countries/jaebaebae/regions")
 
     def test_contest_url(self):
         self.assertEqual(contest_url("jaebaebae"), "https://api.draftkings.com/contests/v1/contests/jaebaebae")
 
     def test_draftables_url(self):
-        self.assertEqual(draftables_url("jaebaebae"), "https://api.draftkings.com/draftgroups/v1/draftgroups/jaebaebae/draftables")
+        self.assertEqual(draftables_url("jaebaebae"),
+                         "https://api.draftkings.com/draftgroups/v1/draftgroups/jaebaebae/draftables")
+
+
+class TestURLBuilder(TestCase):
+    def setUp(self) -> None:
+        self.builder = URLBuilder()
+
+    def test_build_countries_url(self):
+        self.assertEqual("https://api.draftkings.com/addresses/v1/countries", self.builder.build_countries_url())

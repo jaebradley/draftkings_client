@@ -38,3 +38,36 @@ SPORT_ID_TO_SPORT = {
     16: Sport.TENNIS,
     17: Sport.ARENA_FOOTBALL_LEAGUE,
 }
+
+
+class CountryData:
+    def __init__(self, country_id, code, name, licensed):
+        self.country_id = country_id
+        self.code = code
+        self.name = name
+        self.licensed = licensed
+
+    def asdict(self):
+        return {
+            "id": self.country_id,
+            "code": self.code,
+            "name": self.name,
+            "licensed": self.licensed
+        }
+
+    def __eq__(self, other):
+        """Overrides the default implementation"""
+        if isinstance(other, CountryData):
+            return self.country_id == other.country_id \
+                and self.code == other.code \
+                and self.name == other.name \
+                and self.licensed == other.licensed
+        return False
+
+    def __repr__(self):
+        return "Country id: {id} | code: {code} | name: {name} | licensed: {licensed}".format(
+            id=self.country_id, code=self.code, name=self.name, licensed=self.licensed
+        )
+
+    def __str__(self):
+        return "Country {name}".format(name=self.name)

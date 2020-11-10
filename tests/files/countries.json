@@ -1,0 +1,59 @@
+{
+  "countries": [
+    {
+      "countryId": 1,
+      "countryCode": "US",
+      "name": "United States",
+      "isLicensed": true
+    },
+    {
+      "countryId": 14,
+      "countryCode": "AU",
+      "name": "Australia",
+      "isLicensed": true
+    },
+    {
+      "countryId": 15,
+      "countryCode": "AT",
+      "name": "Austria",
+      "isLicensed": true
+    },
+    {
+      "countryId": 2,
+      "countryCode": "CA",
+      "name": "Canada",
+      "isLicensed": true
+    },
+    {
+      "countryId": 4,
+      "countryCode": "DE",
+      "name": "Germany",
+      "isLicensed": true
+    },
+    {
+      "countryId": 89,
+      "countryCode": "IE",
+      "name": "Ireland",
+      "isLicensed": true
+    },
+    {
+      "countryId": 117,
+      "countryCode": "MT",
+      "name": "Malta",
+      "isLicensed": true
+    },
+    {
+      "countryId": 132,
+      "countryCode": "NL",
+      "name": "Netherlands",
+      "isLicensed": true
+    },
+    {
+      "countryId": 3,
+      "countryCode": "GB",
+      "name": "United Kingdom",
+      "isLicensed": true
+    }
+  ],
+  "note": "Success"
+}
