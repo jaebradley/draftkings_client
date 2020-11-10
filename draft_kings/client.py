@@ -1,8 +1,13 @@
+import json
+
 import requests
 
 from draft_kings import urls
-from draft_kings.response_translators import translate_players, translate_contests, translate_countries, \
-    translate_draft_group, translate_regions, translate_draftables, SPORT_TO_CONTESTS_ABBREVIATION
+from draft_kings.http_client import HTTPClient
+from draft_kings.response.decoders import CountriesDecoder
+from draft_kings.response_translators import translate_players, translate_contests, translate_draft_group, \
+    translate_regions, translate_draftables, SPORT_TO_CONTESTS_ABBREVIATION
+from draft_kings.urls import URLBuilder
 
 
 def contests(sport):
@@ -33,12 +38,9 @@ def draft_group_details(draft_group_id):
 
 
 def countries():
-    response = requests.get(url=urls.COUNTRIES_URL,
-                            params={'format': 'json'})
-
-    response.raise_for_status()
-
-    return translate_countries(response.json())
+    response = HTTPClient(url_builder=URLBuilder()).countries()
+    data = json.loads(response.text, cls=CountriesDecoder)
+    return list(map(lambda country_data: country_data.asdict(), data))
 
 
 def regions(country_code):

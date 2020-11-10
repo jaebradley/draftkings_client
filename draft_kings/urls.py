@@ -11,6 +11,21 @@ AVAILABLE_PLAYERS_URL = BASE_URL + AVAILABLE_PLAYERS_PATH
 COUNTRIES_URL = API_BASE_URL + COUNTRIES_PATH
 
 
+class URLBuilder:
+    def __init__(self, base_path=BASE_URL, api_base_path=API_BASE_URL):
+        self.base_path = base_path
+        self.api_base_path = api_base_path
+
+    def build_draft_group_url(self, draft_group_id):
+        return "{API_BASE_URL}/draftgroups/v1/{draft_group_id}".format(
+            API_BASE_URL=self.api_base_path,
+            draft_group_id=draft_group_id
+        )
+
+    def build_countries_url(self):
+        return "{API_BASE_URL}/addresses/v1/countries".format(API_BASE_URL=self.api_base_path)
+
+
 def draft_group_url(draft_group_id):
     return "{API_BASE_URL}{DRAFTGROUPS_PATH}{draft_group_id}".format(
         API_BASE_URL=API_BASE_URL,
