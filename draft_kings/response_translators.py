@@ -124,29 +124,6 @@ def translate_contest_draft_group(draft_group):
     }
 
 
-def translate_countries(response):
-    return [
-        {
-            "id": dig(country, "countryId"),
-            "code": dig(country, "countryCode"),
-            "name": dig(country, "name"),
-            "licensed": dig(country, "isLicensed"),
-        }
-        for country in response["countries"]
-    ]
-
-
-def translate_leagues(leagues):
-    return [
-        {
-            "id": dig(league, "leagueId"),
-            "name": dig(league, "leagueName"),
-            "abbreviation": dig(league, "leagueAbbreviation"),
-        }
-        for league in leagues
-    ]
-
-
 def translate_games(games):
     return [
         {
@@ -212,18 +189,6 @@ def translate_draft_group(response):
             for game in dig(response, "draftGroup", "games", fallback=[])
         ],
     }
-
-
-def translate_regions(response):
-    return [
-        {
-            "country_code": dig(region, "countryCode"),
-            "code": dig(region, "regionCode"),
-            "iso_code": dig(region, "isoRegionCode"),
-            "name": dig(region, "name"),
-        }
-        for region in response["regions"]
-    ]
 
 
 def translate_draftable_players(draftable):
