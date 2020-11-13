@@ -39,6 +39,25 @@ SPORT_ID_TO_SPORT = {
     17: Sport.ARENA_FOOTBALL_LEAGUE,
 }
 
+SPORT_TO_CONTESTS_ABBREVIATION = {
+    Sport.NFL: "NFL",
+    Sport.NHL: "NHL",
+    Sport.NBA: "NBA",
+    Sport.CFL: "CFL",
+    Sport.COLLEGE_FOOTBALL: "CFB",
+    Sport.MIXED_MARTIAL_ARTS: "MMA",
+    Sport.NASCAR: "NAS",
+    Sport.SOCCER: "SOC",
+    Sport.EUROLEAGUE_BASKETBALL: "EL",
+    Sport.MLB: "MLB",
+    Sport.TENNIS: "TEN",
+    Sport.LEAGUE_OF_LEGENDS: "LOL",
+    Sport.GOLF: "GOLF",
+    Sport.COLLEGE_BASKETBALL: "CBB"
+}
+
+CONTEST_SPORT_ABBREVIATIONS_TO_SPORTS = {v: k for k, v in SPORT_TO_CONTESTS_ABBREVIATION.items()}
+
 
 class CountryData:
     def __init__(self, country_id, code, name, licensed):

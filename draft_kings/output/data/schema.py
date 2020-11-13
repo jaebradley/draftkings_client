@@ -2,7 +2,7 @@ from marshmallow import Schema, fields, post_dump
 from marshmallow_enum import EnumField
 
 from draft_kings.data import Sport
-from draft_kings.output.data.objects import ContestDraftGroup
+from draft_kings.output.data.objects import ContestDraftGroup, ContestEntryDetails, Contest, ContestsDetails
 
 
 class ContestEntryDetailsSchema(Schema):
@@ -15,31 +15,27 @@ class ContestDraftGroupSchema(Schema):
     draft_group_id = fields.Integer()
     series_id = fields.Integer()
     contest_type_id = fields.Integer()
-    sport = EnumField(Sport)
+    sport = EnumField(Sport, by_value=True)
     starts_at = fields.Str()
     games_count = fields.Integer()
 
-    @post_dump
-    def make_contest_draft_group(self, data, many, **kwargs):
-        return ContestDraftGroup(**data)
-
 
 class ContestSchema(Schema):
-    id = fields.Integer()
-    double_up = fields.Bool()
+    contest_id = fields.Integer()
     draft_group_id = fields.Integer()
-    entries = fields.Nested(ContestEntryDetailsSchema())
+    entry_details = fields.Nested(ContestEntryDetailsSchema())
     fantasy_player_points = fields.Number()
-    fifty_fifty = fields.Bool()
-    guaranteed = fields.Bool()
-    head_to_head = fields.Bool()
+    is_double_up = fields.Bool()
+    is_fifty_fifty = fields.Bool()
+    is_guaranteed = fields.Bool()
+    is_head_to_head = fields.Bool()
+    is_starred = fields.Bool()
     name = fields.Str()
     payout = fields.Number()
-    sport = EnumField(Sport)
-    starred = fields.Bool()
-    starts_at = fields.DateTime()
+    sport = fields.Str()
+    starts_at = fields.Str()
 
 
 class ContestsDetailsSchema(Schema):
-    contests = fields.List(fields.Nested(ContestSchema()))
-    groups = fields.List(fields.Nested(ContestDraftGroupSchema()))
+    contests = fields.List(fields.Nested(ContestSchema()), default=[])
+    groups = fields.List(fields.Nested(ContestDraftGroupSchema()), default=[])
