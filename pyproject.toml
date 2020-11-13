@@ -18,6 +18,8 @@ requests = "==2.20.0"
 pytz = "==2018.7"
 python-dateutil = "==2.8.0"
 urllib3 = "==1.24.3"
+marshmallow = "^3.9.1"
+marshmallow-enum = "^1.5.1"
 
 [tool.poetry.dev-dependencies]
 codecov = "^2.1.7"
