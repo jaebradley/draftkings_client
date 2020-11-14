@@ -31,10 +31,8 @@ jobs:
           poetry_version: 1.0.9
           args: install
       - name: Test
-        uses: abatilo/actions-poetry@v1.5.0
-        with:
-          python_version: ${{ matrix.python-version }}
-          poetry_version: 1.0.9
-          args: run python -m coverage run -m unittest discover
+        args: run python -m coverage run -m unittest discover
       - name: Upload Coverage To Codecov
         uses: codecov/codecov-action@v1
+      - name: Lint
+        run: pylint -j 4 draft_kings tests
