@@ -32,6 +32,9 @@ class URLBuilder:
             country_code=country_code,
         )
 
+    def build_contests_url(self):
+        return "{BASE_URL}/lobby/getcontests".format(BASE_URL=self.base_path)
+
 
 def draft_group_url(draft_group_id):
     return "{API_BASE_URL}{DRAFTGROUPS_PATH}{draft_group_id}".format(

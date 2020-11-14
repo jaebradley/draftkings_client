@@ -1,7 +1,8 @@
-from typing import Optional
+from datetime import datetime
+from typing import Optional, List
 
 
-class ContestAttribute:
+class ContestTypeAttributes:
     def __init__(self, is_double_up: Optional[bool], is_fifty_fifty: Optional[bool], is_guaranteed: Optional[bool], is_h2h: Optional[bool], is_starred: Optional[bool]):
         self.is_double_up = is_double_up
         self.is_fifty_fifty = is_fifty_fifty
@@ -11,7 +12,7 @@ class ContestAttribute:
 
 
 class Contest:
-    def __init__(self, contest_id, draft_group_id, entry_maximum, entry_fee, entry_total, fantasy_player_points, name, payout, sport_id, starts_at, attributes):
+    def __init__(self, contest_id: Optional[int], draft_group_id: Optional[int], entry_maximum: Optional[float], entry_fee: Optional[float], entry_total: Optional[float], fantasy_player_points: Optional[float], name: Optional[str], payout: Optional[float], sport_id: Optional[int], starts_at: Optional[str], attributes: ContestTypeAttributes):
         self.contest_id = contest_id
         self.draft_group_id = draft_group_id
         self.entry_maximum = entry_maximum
@@ -26,7 +27,7 @@ class Contest:
 
 
 class DraftGroup:
-    def __init__(self, draft_group_id, draft_group_series_id, contest_type_id, sport, start_date, game_count):
+    def __init__(self, draft_group_id: Optional[int], draft_group_series_id: Optional[int], contest_type_id: Optional[int], sport: Optional[str], start_date: Optional[datetime], game_count: Optional[int]):
         self.draft_group_id = draft_group_id
         self.draft_group_series_id = draft_group_series_id
         self.contest_type_id = contest_type_id
@@ -36,6 +37,6 @@ class DraftGroup:
 
 
 class Contests:
-    def __init__(self, contests, draft_groups):
+    def __init__(self, contests: List[Contest], draft_groups: List[DraftGroup]):
         self.contests = contests
         self.draft_groups = draft_groups
