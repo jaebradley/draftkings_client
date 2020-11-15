@@ -2,7 +2,7 @@ from typing import List, Callable
 
 from draft_kings.data import SPORT_ID_TO_SPORT, CONTEST_SPORT_ABBREVIATIONS_TO_SPORTS
 from draft_kings.output.objects import ContestDraftGroup, ContestEntryDetails, Contest, ContestsDetails
-from draft_kings.response.objects import Contests as ContestsResponse, DraftGroup as DraftGroupResponseObject, \
+from draft_kings.response.objects.contests import Contests as ContestsResponse, DraftGroup as DraftGroupResponseObject, \
     Contest as ContestResponseObject
 from draft_kings.utilities import translate_formatted_datetime
 

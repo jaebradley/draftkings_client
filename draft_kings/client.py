@@ -9,7 +9,7 @@ from draft_kings.output.objects import ContestsDetails
 from draft_kings.output.transformers import ContestsDetailsResponseTransformer, ContestsResponseTransformer, \
     transform_contest, transform_draft_group, DraftGroupsTransformer
 from draft_kings.response.decoders import CountriesDecoder, RegionsDecoder
-from draft_kings.response.schema import ContestsSchema
+from draft_kings.response.schema.contests import ContestsSchema
 from draft_kings.response_translators import translate_players, translate_draft_group, \
     translate_draftables
 from draft_kings.urls import URLBuilder
