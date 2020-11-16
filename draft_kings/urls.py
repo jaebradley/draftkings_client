@@ -35,6 +35,9 @@ class URLBuilder:
     def build_contests_url(self):
         return "{BASE_URL}/lobby/getcontests".format(BASE_URL=self.base_path)
 
+    def build_available_players_url(self):
+        return "{BASE_URL}/lineup/getavailableplayers".format(BASE_URL=self.base_path)
+
 
 def draft_group_url(draft_group_id):
     return "{API_BASE_URL}{DRAFTGROUPS_PATH}{draft_group_id}".format(

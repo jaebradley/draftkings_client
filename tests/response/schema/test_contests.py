@@ -1,9 +1,9 @@
 import os
 from unittest import TestCase
 
-from draft_kings.response.schema import ContestsSchema
-from draft_kings.output.transformers import ContestsDetailsResponseTransformer, ContestsResponseTransformer, transform_contest, transform_draft_group, DraftGroupsTransformer
-from draft_kings.output.schema import ContestsDetailsSchema
+from draft_kings.response.schema.contests import ContestsSchema
+from draft_kings.output.transformers.contests import ContestsDetailsResponseTransformer, ContestsResponseTransformer, transform_contest, transform_draft_group, DraftGroupsTransformer
+from draft_kings.output.schema.contests import ContestsDetailsSchema
 from tests.config import ROOT_DIRECTORY
 
 
