@@ -1,6 +1,6 @@
 from marshmallow import Schema, fields, EXCLUDE, post_load
 
-from draft_kings.response.objects.players import PlayerTeamSeries, PlayerDetail, PlayersDetails
+from draft_kings.response.objects.players import PlayerTeamSeries, PlayerDetails, PlayersDetails
 from draft_kings.response.schema.fields import DictField
 
 
@@ -10,7 +10,7 @@ class TeamSeriesSchema(Schema):
 
     atid = fields.Integer(attribute="away_team_id", missing=None)
     htid = fields.Int(attribute="home_team_id", missing=None)
-    status = fields.Integer(attribute="status_id", missing=None)
+    status = fields.Str(attribute="status", missing=None)
     tz = fields.Str(attribute="starts_at", missing=None)
     wthr = fields.Str(attribute="weather", missing=None)
 
@@ -44,7 +44,7 @@ class PlayerSchema(Schema):
 
     @post_load
     def make_player_detail(self, data, **kwargs):
-        return PlayerDetail(**data)
+        return PlayerDetails(**data)
 
 
 class PlayersDetailsSchema(Schema):

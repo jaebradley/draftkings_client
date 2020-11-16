@@ -1,9 +1,9 @@
 class PlayerTeamSeries:
-    def __init__(self, away_team_id, home_team_id, starts_at, status_id, weather):
+    def __init__(self, away_team_id, home_team_id, starts_at, status, weather):
         self.away_team_id = away_team_id
         self.home_team_id = home_team_id
         self.starts_at = starts_at
-        self.status_id = status_id
+        self.status = status
         self.weather = weather
 
     def __eq__(self, other):
@@ -11,13 +11,13 @@ class PlayerTeamSeries:
             return self.away_team_id == other.away_team_id \
                 and self.home_team_id == other.home_team_id \
                 and self.starts_at == other.starts_at \
-                and self.status_id == other.status_id \
+                and self.status == other.status_id \
                 and self.weather == other.weather
 
         return False
 
 
-class PlayerDetail:
+class PlayerDetails:
     def __init__(self, away_team_id, draft_group_start_time, exceptional_messages, first_name, home_team_id, is_disabled_from_drafting,
                  jersey_number, last_name, opposition_rank, player_id, position_id, position_name, points_per_game,
                  salary, team_id, team_series_id):

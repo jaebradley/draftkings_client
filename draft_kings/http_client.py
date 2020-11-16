@@ -33,3 +33,10 @@ class HTTPClient:
 
         return response
 
+    def available_players(self, draft_group_id: int) -> Response:
+        response = requests.get(url=self.url_builder.build_available_players_url(),
+                                params={'draftGroupId': draft_group_id})
+
+        response.raise_for_status()
+
+        return response
