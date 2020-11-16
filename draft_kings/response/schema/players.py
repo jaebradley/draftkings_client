@@ -1,6 +1,6 @@
 from marshmallow import Schema, fields, EXCLUDE, post_load
 
-from draft_kings.response.objects.players import PlayerTeamSeries, PlayerDetails, PlayersDetails
+from draft_kings.response.objects.players import TeamSeries, PlayerDetails, PlayersDetails
 from draft_kings.response.schema.fields import DictField
 
 
@@ -16,7 +16,7 @@ class TeamSeriesSchema(Schema):
 
     @post_load
     def make_team_series(self, data, **kwargs):
-        return PlayerTeamSeries(**data)
+        return TeamSeries(**data)
 
 
 class PlayerSchema(Schema):

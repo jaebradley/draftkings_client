@@ -1,7 +1,7 @@
 import os
 from unittest import TestCase
 
-from draft_kings.response.objects.players import PlayerTeamSeries, PlayerDetails
+from draft_kings.response.objects.players import TeamSeries, PlayerDetails
 from draft_kings.response.schema.players import PlayersDetailsSchema
 from tests.config import ROOT_DIRECTORY
 
@@ -29,8 +29,8 @@ class TestSoccerPlayers(TestCase):
 
     def crystal_palace_and_manchester_city_team_series_details(self):
         self.assertEqual(
-            PlayerTeamSeries(away_team_id=40522, home_team_id=40820, starts_at="/Date(1479567600000)/",
-                             status=1, weather="partly-cloudy-day"),
+            TeamSeries(away_team_id=40522, home_team_id=40820, starts_at="/Date(1479567600000)/",
+                       status=1, weather="partly-cloudy-day"),
             self.data.team_series["5473468"]
         )
 
@@ -39,8 +39,8 @@ class TestSoccerPlayers(TestCase):
 
     def southampton_and_liverpool_team_series_details(self):
         self.assertEqual(
-            PlayerTeamSeries(away_team_id=40817, home_team_id=40818, starts_at="/Date(1479567600000)/",
-                             status=1, weather="rain"),
+            TeamSeries(away_team_id=40817, home_team_id=40818, starts_at="/Date(1479567600000)/",
+                       status=1, weather="rain"),
             self.data.team_series["5473471"]
         )
 
@@ -49,8 +49,8 @@ class TestSoccerPlayers(TestCase):
 
     def test_tottenham_and_west_ham_united_team_series_details(self):
         self.assertEqual(
-            PlayerTeamSeries(away_team_id=40819, home_team_id=40813, starts_at="/Date(1479576600000)/",
-                             status=1, weather="partly-cloudy-night"),
+            TeamSeries(away_team_id=40819, home_team_id=40813, starts_at="/Date(1479576600000)/",
+                       status=1, weather="partly-cloudy-night"),
             self.data.team_series["5473474"]
         )
 
@@ -59,8 +59,8 @@ class TestSoccerPlayers(TestCase):
 
     def test_everton_and_swansea_team_series_details(self):
         self.assertEqual(
-            PlayerTeamSeries(away_team_id=40825, home_team_id=40815, starts_at="/Date(1479567600000)/",
-                             status=1, weather="partly-cloudy-day"),
+            TeamSeries(away_team_id=40825, home_team_id=40815, starts_at="/Date(1479567600000)/",
+                       status=1, weather="partly-cloudy-day"),
             self.data.team_series["5473469"]
         )
 
@@ -69,8 +69,8 @@ class TestSoccerPlayers(TestCase):
 
     def test_watford_and_leicester_team_series_details(self):
         self.assertEqual(
-            PlayerTeamSeries(away_team_id=40816, home_team_id=40824, starts_at="/Date(1479567600000)/",
-                             status=1, weather="partly-cloudy-day"),
+            TeamSeries(away_team_id=40816, home_team_id=40824, starts_at="/Date(1479567600000)/",
+                       status=1, weather="partly-cloudy-day"),
             self.data.team_series["5473475"]
         )
 
@@ -79,8 +79,8 @@ class TestSoccerPlayers(TestCase):
 
     def test_stoke_and_bournemouth_team_series_details(self):
         self.assertEqual(
-            PlayerTeamSeries(away_team_id=40826, home_team_id=40827, starts_at="/Date(1479567600000)/",
-                             status=1, weather="partly-cloudy-day"),
+            TeamSeries(away_team_id=40826, home_team_id=40827, starts_at="/Date(1479567600000)/",
+                       status=1, weather="partly-cloudy-day"),
             self.data.team_series["5473472"]
         )
 
@@ -89,7 +89,7 @@ class TestSoccerPlayers(TestCase):
 
     def test_hull_and_sunderland_team_series_details(self):
         self.assertEqual(
-            PlayerTeamSeries(away_team_id=43295, home_team_id=40823, starts_at="/Date(1479567600000)/",
-                             status=1, weather="partly-cloudy-day"),
+            TeamSeries(away_team_id=43295, home_team_id=40823, starts_at="/Date(1479567600000)/",
+                       status=1, weather="partly-cloudy-day"),
             self.data.team_series["5473473"],
         )

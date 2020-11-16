@@ -1,5 +1,10 @@
+from datetime import datetime
+from typing import Optional, Dict, List
+
+
 class TeamSeries:
-    def __init__(self, away_team_id, home_team_id, starts_at, status, team_series_id, weather_description):
+    def __init__(self, away_team_id: Optional[int], home_team_id: Optional[int], starts_at: Optional[datetime],
+                 status: Optional[str], team_series_id: Optional[int], weather_description: Optional[str]):
         self.away_team_id = away_team_id
         self.home_team_id = home_team_id
         self.starts_at = starts_at
@@ -20,7 +25,8 @@ class TeamSeries:
 
 
 class DraftDetails:
-    def __init__(self, exceptional_messages, is_draftable, salary, starts_at):
+    def __init__(self, exceptional_messages: List[str], is_draftable: Optional[bool], salary: Optional[float],
+                 starts_at: Optional[datetime]):
         self.exceptional_messages = exceptional_messages
         self.is_draftable = is_draftable
         self.salary = salary
@@ -37,7 +43,8 @@ class DraftDetails:
 
 
 class PlayerTeamSeriesDetails:
-    def __init__(self, away_team_id, home_team_id, opposition_rank, team_series_id):
+    def __init__(self, away_team_id: Optional[int], home_team_id: Optional[int], opposition_rank: Optional[int],
+                 team_series_id: Optional[int]):
         self.away_team_id = away_team_id
         self.home_team_id = home_team_id
         self.opposition_rank = opposition_rank
@@ -54,7 +61,7 @@ class PlayerTeamSeriesDetails:
 
 
 class PlayerPosition:
-    def __init__(self, name, position_id):
+    def __init__(self, name: Optional[str], position_id: Optional[int]):
         self.name = name
         self.position_id = position_id
 
@@ -67,8 +74,9 @@ class PlayerPosition:
 
 
 class Player:
-    def __init__(self, draft_details, first_name, jersey_number, last_name, player_id, points_per_game, position,
-                 team_id, team_series):
+    def __init__(self, draft_details: DraftDetails, first_name: Optional[str], jersey_number: Optional[int],
+                 last_name: Optional[str], player_id: Optional[int], points_per_game: Optional[float],
+                 position: PlayerPosition, team_id: Optional[int], team_series: PlayerTeamSeriesDetails):
         self.draft_details = draft_details
         self.first_name = first_name
         self.jersey_number = jersey_number
@@ -95,7 +103,7 @@ class Player:
 
 
 class PlayersDetails:
-    def __init__(self, players, team_series):
+    def __init__(self, players: List[Player], team_series: Dict[str, TeamSeries]):
         self.players = players
         self.team_series = team_series
 

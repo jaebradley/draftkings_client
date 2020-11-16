@@ -2,12 +2,12 @@ from typing import Callable, Optional
 
 from draft_kings.output.objects.players import TeamSeries, PlayersDetails, DraftDetails, PlayerTeamSeriesDetails, \
     PlayerPosition, Player
-from draft_kings.response.objects.players import PlayerTeamSeries, PlayersDetails as ResponsePlayersDetails, \
-    PlayerDetails as ResponsePlayerDetails
+from draft_kings.response.objects.players import TeamSeries as ResponsePlayerTeamSeries, PlayersDetails as \
+    ResponsePlayersDetails, PlayerDetails as ResponsePlayerDetails
 from draft_kings.utilities import translate_formatted_datetime, from_unix_milliseconds_to_datetime
 
 
-def transform_team_series(team_series_id: Optional[int], team_series_response: PlayerTeamSeries) -> TeamSeries:
+def transform_team_series(team_series_id: Optional[int], team_series_response: ResponsePlayerTeamSeries) -> TeamSeries:
     return TeamSeries(
         away_team_id=team_series_response.away_team_id,
         home_team_id=team_series_response.home_team_id,
@@ -66,7 +66,7 @@ class PlayerDetailsTransformer:
 
 
 class PlayersDetailsTransformer:
-    def __init__(self, team_series_transformer: Callable[[Optional[int], PlayerTeamSeries], TeamSeries],
+    def __init__(self, team_series_transformer: Callable[[Optional[int], ResponsePlayerTeamSeries], TeamSeries],
                  player_details_transformer: PlayerDetailsTransformer):
         self.team_series_transformer = team_series_transformer
         self.player_details_transformer = player_details_transformer

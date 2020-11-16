@@ -1,5 +1,9 @@
-class PlayerTeamSeries:
-    def __init__(self, away_team_id, home_team_id, starts_at, status, weather):
+from typing import Optional, Dict, List
+
+
+class TeamSeries:
+    def __init__(self, away_team_id: Optional[int], home_team_id: Optional[int], starts_at: Optional[str],
+                 status: Optional[str], weather: Optional[str]):
         self.away_team_id = away_team_id
         self.home_team_id = home_team_id
         self.starts_at = starts_at
@@ -18,9 +22,12 @@ class PlayerTeamSeries:
 
 
 class PlayerDetails:
-    def __init__(self, away_team_id, draft_group_start_time, exceptional_messages, first_name, home_team_id, is_disabled_from_drafting,
-                 jersey_number, last_name, opposition_rank, player_id, position_id, position_name, points_per_game,
-                 salary, team_id, team_series_id):
+    def __init__(self, away_team_id: Optional[int], draft_group_start_time: Optional[int],
+                 exceptional_messages: List[str], first_name: Optional[str], home_team_id: Optional[int],
+                 is_disabled_from_drafting: Optional[bool], jersey_number: Optional[int], last_name: Optional[str],
+                 opposition_rank: Optional[int], player_id: Optional[int], position_id: Optional[int],
+                 position_name: Optional[str], points_per_game: Optional[str], salary: Optional[float],
+                 team_id: Optional[int], team_series_id: Optional[int]):
         self.away_team_id = away_team_id
         self.draft_group_start_time = draft_group_start_time
         self.exceptional_messages = exceptional_messages
@@ -61,7 +68,7 @@ class PlayerDetails:
 
 
 class PlayersDetails:
-    def __init__(self, players, team_series):
+    def __init__(self, players: List[PlayerDetails], team_series: Dict[str, TeamSeries]):
         self.players = players
         self.team_series = team_series
 
