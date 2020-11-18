@@ -1,6 +1,9 @@
+from typing import Callable
+
 from dateutil.parser import parse as parse_datetime
 
-from draft_kings.output.objects.draft_group import ContestDetails, StartsAtDetails, LeagueDetails, GameDetails, \
+from draft_kings.data import Sport
+from draft_kings.output.objects.draft_group import ContestDetails, StartTimeDetails, LeagueDetails, GameDetails, \
     DraftGroupDetails
 from draft_kings.response.objects.draft_group import ContestType as ResponseContestType, League as ResponseLeague, \
     Game as ResponseGame, DraftGroup as ResponseDraftGroup
@@ -18,10 +21,12 @@ def transform_league(response_league: ResponseLeague) -> LeagueDetails:
     )
 
 
-def transform_draft_group_starts_at(response_draft_group: ResponseDraftGroup) -> StartsAtDetails:
-    return StartsAtDetails(
-        maximum=parse_datetime(response_draft_group.max_start_time),
-        minimum=parse_datetime(response_draft_group.min_start_time),
+def transform_draft_group_starts_at(response_draft_group: ResponseDraftGroup) -> StartTimeDetails:
+    return StartTimeDetails(
+        maximum=parse_datetime(response_draft_group.max_start_time)
+        if response_draft_group.max_start_time is not None else None,
+        minimum=parse_datetime(response_draft_group.min_start_time)
+        if response_draft_group.min_start_time is not None else None,
         type_description=response_draft_group.start_time_type,
     )
 
@@ -40,10 +45,15 @@ def transform_game(response_game: ResponseGame) -> GameDetails:
 
 
 class DraftGroupDetailsTransformer:
-    def __init__(self, game_transformer, league_transformer, contest_transformer, starts_at_transformer) -> None:
+    def __init__(self, contest_transformer: Callable[[ResponseContestType], ContestDetails],
+                 game_transformer: Callable[[ResponseGame], GameDetails],
+                 league_transformer: Callable[[ResponseLeague], LeagueDetails],
+                 sport_id_transformer: Callable[[int], Sport],
+                 starts_at_transformer: Callable[[ResponseDraftGroup], StartTimeDetails]) -> None:
+        self.contest_transformer = contest_transformer
         self.game_transformer = game_transformer
         self.league_transformer = league_transformer
-        self.contest_transformer = contest_transformer
+        self.sport_id_transformer = sport_id_transformer
         self.starts_at_transformer = starts_at_transformer
 
     def transform(self, draft_group: ResponseDraftGroup) -> DraftGroupDetails:
@@ -52,7 +62,7 @@ class DraftGroupDetailsTransformer:
             draft_group_id=draft_group.draft_group_id,
             games=[self.game_transformer(game) for game in draft_group.games],
             leagues=[self.league_transformer(league) for league in draft_group.leagues],
-            sport=draft_group.sport_id,
+            sport=self.sport_id_transformer(draft_group.sport_id),
             starts_at=self.starts_at_transformer(draft_group),
             state=draft_group.draft_group_state
         )

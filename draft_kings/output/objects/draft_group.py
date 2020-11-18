@@ -1,6 +1,8 @@
 from datetime import datetime
 from typing import Optional, List
 
+from draft_kings.data import Sport
+
 
 class ContestDetails:
     def __init__(self, game_type: Optional[str], type_id: Optional[int]) -> None:
@@ -15,7 +17,7 @@ class ContestDetails:
         return False
 
 
-class StartsAtDetails:
+class StartTimeDetails:
     def __init__(self, maximum: Optional[datetime], minimum: Optional[datetime],
                  type_description: Optional[str]) -> None:
         self.maximum = maximum
@@ -75,24 +77,24 @@ class GameDetails:
 
 class DraftGroupDetails:
     def __init__(self, contest_details: ContestDetails, draft_group_id: Optional[int], games: List[GameDetails],
-                 leagues: List[LeagueDetails], sport: Optional[str], starts_at: StartsAtDetails,
+                 leagues: List[LeagueDetails], sport: Optional[Sport], starts_at: StartTimeDetails,
                  state: Optional[str]) -> None:
         self.contest_details = contest_details
         self.draft_group_id = draft_group_id
         self.games = games
         self.leagues = leagues
         self.sport = sport
-        self.starts_at = starts_at
+        self.start_time_details = starts_at
         self.state = state
 
     def __eq__(self, other):
         if type(self) is type(other):
             return self.contest_details == other.contest_details \
-                and self.draft_group_id == other.draft_group_id \
-                and self.games == other.games \
-                and self.leagues == other.leagues \
-                and self.sport == other.sport \
-                and self.starts_at == other.starts_at \
-                and self.state == other.state
+               and self.draft_group_id == other.draft_group_id \
+               and self.games == other.games \
+               and self.leagues == other.leagues \
+               and self.sport == other.sport \
+               and self.start_time_details == other.start_time \
+               and self.state == other.state
 
         return False

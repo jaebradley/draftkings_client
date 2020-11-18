@@ -15,6 +15,7 @@ from draft_kings.output.transformers.draft_group import transform_contest as tra
     transform_game, transform_league, DraftGroupDetailsTransformer
 from draft_kings.output.transformers.players import transform_team_series, transform_draft_details, \
     transform_player_position, transform_player_team_series_details, PlayerDetailsTransformer, PlayersDetailsTransformer
+from draft_kings.output.transformers.sports import transform_sport_id
 from draft_kings.response.decoders import CountriesDecoder, RegionsDecoder
 from draft_kings.response.schema.contests import ContestsSchema
 from draft_kings.response.schema.draft_group import DraftGroupResponseSchema
@@ -61,6 +62,7 @@ def draft_group_details(draft_group_id) -> DraftGroupDetails:
         contest_transformer=transform_draft_group_contest,
         game_transformer=transform_game,
         league_transformer=transform_league,
+        sport_id_transformer=transform_sport_id,
         starts_at_transformer=transform_draft_group_starts_at
     ).transform(draft_group=deserialized_response.draft_group)
 
