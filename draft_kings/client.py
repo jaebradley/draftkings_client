@@ -6,16 +6,21 @@ from draft_kings import urls
 from draft_kings.data import Sport
 from draft_kings.http_client import HTTPClient
 from draft_kings.output.objects.contests import ContestsDetails
+from draft_kings.output.objects.draft_group import DraftGroupDetails
 from draft_kings.output.objects.players import PlayersDetails
 from draft_kings.output.transformers.contests import ContestsDetailsResponseTransformer, ContestsResponseTransformer, \
     transform_contest, transform_draft_group, DraftGroupsTransformer
+from draft_kings.output.transformers.draft_group import transform_contest as transform_draft_group_contest, \
+    transform_draft_group_starts_at, \
+    transform_game, transform_league, DraftGroupDetailsTransformer
 from draft_kings.output.transformers.players import transform_team_series, transform_draft_details, \
     transform_player_position, transform_player_team_series_details, PlayerDetailsTransformer, PlayersDetailsTransformer
+from draft_kings.output.transformers.sports import transform_sport_id
 from draft_kings.response.decoders import CountriesDecoder, RegionsDecoder
 from draft_kings.response.schema.contests import ContestsSchema
+from draft_kings.response.schema.draft_group import DraftGroupResponseSchema
 from draft_kings.response.schema.players import PlayersDetailsSchema
-from draft_kings.response_translators import translate_draft_group, \
-    translate_draftables
+from draft_kings.response_translators import translate_draftables
 from draft_kings.urls import URLBuilder
 
 
@@ -47,13 +52,19 @@ def available_players(draft_group_id: int) -> PlayersDetails:
     ).transform(deserialized_response)
 
 
-def draft_group_details(draft_group_id):
-    response = requests.get(url=urls.draft_group_url(draft_group_id),
-                            params={'format': 'json'})
+def draft_group_details(draft_group_id) -> DraftGroupDetails:
+    response = HTTPClient(url_builder=URLBuilder()).draft_group_details(draft_group_id=draft_group_id)
 
-    response.raise_for_status()
+    schema = DraftGroupResponseSchema()
+    deserialized_response = schema.loads(response.text)
 
-    return translate_draft_group(response.json())
+    return DraftGroupDetailsTransformer(
+        contest_transformer=transform_draft_group_contest,
+        game_transformer=transform_game,
+        league_transformer=transform_league,
+        sport_id_transformer=transform_sport_id,
+        starts_at_transformer=transform_draft_group_starts_at
+    ).transform(draft_group=deserialized_response.draft_group)
 
 
 def countries():

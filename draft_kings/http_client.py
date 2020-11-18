@@ -40,3 +40,10 @@ class HTTPClient:
         response.raise_for_status()
 
         return response
+
+    def draft_group_details(self, draft_group_id: int) -> Response:
+        response = requests.get(url=self.url_builder.build_draft_group_url(draft_group_id=draft_group_id))
+
+        response.raise_for_status()
+
+        return response
