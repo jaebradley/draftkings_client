@@ -40,6 +40,7 @@ class PlayerSchema(Schema):
     rosterSlotId = fields.Int(attribute="roster_slot_id", missing=None)
     salary = fields.Float(attribute="salary", missing=None)
     shortName = fields.Str(attribute="short_name", missing=None)
+    teamAbbreviation = fields.Str(attribute="team_abbreviation", missing=None)
     teamId = fields.Int(attribute="team_id", missing=None)
 
     @post_load
@@ -87,7 +88,7 @@ class CompetitionSchema(Schema):
     startingLineupsAvailable = fields.Bool(attribute="are_starting_lineups_available", missing=None)
     startTime = fields.Str(attribute="start_time", missing=None)
     venue = fields.Str(attribute="venue", missing=None)
-    weather = fields.Nested(CompetitionWeatherSchema, attribute="weather", required=True)
+    weather = fields.Nested(CompetitionWeatherSchema, attribute="weather", missing=None)
 
     @post_load
     def make_competition(self, data, **kwargs):

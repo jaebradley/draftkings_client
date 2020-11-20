@@ -38,6 +38,12 @@ class URLBuilder:
     def build_available_players_url(self):
         return "{BASE_URL}/lineup/getavailableplayers".format(BASE_URL=self.base_path)
 
+    def build_draftables_url(self, draft_group_id: int) -> str:
+        return "{API_BASE_URL}/draftgroups/v1/draftgroups/{draft_group_id}/draftables".format(
+            API_BASE_URL=API_BASE_URL,
+            draft_group_id=draft_group_id
+        )
+
 
 def draft_group_url(draft_group_id):
     return "{API_BASE_URL}{DRAFTGROUPS_PATH}{draft_group_id}".format(

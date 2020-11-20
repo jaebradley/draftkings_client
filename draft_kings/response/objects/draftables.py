@@ -23,7 +23,7 @@ class Player:
                  news_status: Optional[str], player_id: Optional[int], player_image_full: Optional[str],
                  player_image_50: Optional[str], player_image_65: Optional[str], player_image_160: Optional[str],
                  position: Optional[str], roster_slot_id: Optional[int], salary: Optional[float],
-                 short_name: Optional[str], team_id: Optional[int]) -> None:
+                 short_name: Optional[str], team_abbreviation: Optional[str], team_id: Optional[int]) -> None:
         self.competition = competition
         self.display_name = display_name
         self.draftable_id = draftable_id
@@ -42,6 +42,7 @@ class Player:
         self.roster_slot_id = roster_slot_id
         self.salary = salary
         self.short_name = short_name
+        self.team_abbreviation = team_abbreviation
         self.team_id = team_id
 
     def __eq__(self, other) -> bool:
@@ -64,6 +65,7 @@ class Player:
                 and self.roster_slot_id == other.roster_slot_id \
                 and self.salary == other.salary \
                 and self.short_name == other.short_name \
+                and self.team_abbreviation == other.team_abbreviation \
                 and self.team_id == other.team_id
 
         return False
@@ -104,7 +106,7 @@ class Competition:
     def __init__(self, are_depth_charts_available: Optional[bool], are_starting_lineups_available: Optional[bool],
                  away_team: CompetitionTeam, competition_id: Optional[int], competition_state: Optional[str],
                  home_team: CompetitionTeam, name: Optional[str], sport: Optional[str], start_time: Optional[str],
-                 venue: Optional[str], weather: CompetitionWeather) -> None:
+                 venue: Optional[str], weather: Optional[CompetitionWeather]) -> None:
         self.are_depth_charts_available = are_depth_charts_available
         self.are_starting_lineups_available = are_starting_lineups_available
         self.away_team = away_team
