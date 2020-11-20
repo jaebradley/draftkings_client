@@ -1,8 +1,5 @@
 import json
 
-import requests
-
-from draft_kings import urls
 from draft_kings.data import Sport
 from draft_kings.http_client import HTTPClient
 from draft_kings.output.objects.contests import ContestsDetails
@@ -21,6 +18,12 @@ from draft_kings.response.schema.contests import ContestsSchema
 from draft_kings.response.schema.draft_group import DraftGroupResponseSchema
 from draft_kings.response.schema.players import PlayersDetailsSchema
 from draft_kings.response_translators import translate_draftables
+from draft_kings.response.schema.draftables import DraftablesSchema
+from draft_kings.output.objects.draftables import Draftables
+from draft_kings.output.transformers.draftables import transform_competition_team_details, \
+    transform_competition_weather_details, transform_player_competition_details, transform_player_image_details, \
+    transform_player_name_details, transform_player_team_details, PlayerTransformer, CompetitionTransformer, \
+    DraftablesTransformer
 from draft_kings.urls import URLBuilder
 
 
@@ -79,10 +82,21 @@ def regions(country_code):
     return list(map(lambda region_data: region_data.asdict(), data))
 
 
-def draftables(draft_group_id):
-    response = requests.get(url=urls.draftables_url(draft_group_id),
-                            params={'format': 'json'})
+def draftables(draft_group_id: int) -> Draftables:
+    response = HTTPClient(url_builder=URLBuilder()).draftables(draft_group_id=draft_group_id)
 
-    response.raise_for_status()
+    schema = DraftablesSchema()
+    deserialized_response = schema.loads(response.text)
 
-    return translate_draftables(response.json())
+    return DraftablesTransformer(
+        competition_transformer=CompetitionTransformer(
+            team_details_transformer=transform_competition_team_details,
+            weather_details_transformer=transform_competition_weather_details,
+        ),
+        player_transformer=PlayerTransformer(
+            competition_details_transformer=transform_player_competition_details,
+            name_details_transformer=transform_player_name_details,
+            image_details_transformer=transform_player_image_details,
+            team_details_transformer=transform_player_team_details,
+        )
+    ).transform(response_draftables=deserialized_response)

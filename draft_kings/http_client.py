@@ -47,3 +47,11 @@ class HTTPClient:
         response.raise_for_status()
 
         return response
+
+    def draftables(self, draft_group_id: int) -> Response:
+        response = requests.get(url=self.url_builder.build_draftables_url(draft_group_id=draft_group_id))
+
+        response.raise_for_status()
+
+        return response
+

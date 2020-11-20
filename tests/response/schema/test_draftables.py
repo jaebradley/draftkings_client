@@ -79,3 +79,12 @@ class TestUpcomingNFLDraftables(TestCase):
             self.data.draftables[0]
         )
 
+
+class TestHistoricalGolfDraftables(TestCase):
+    def setUp(self) -> None:
+        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/historical_golf_draftables.json')) as data_file:
+            self.schema = DraftablesSchema()
+            self.data = self.schema.loads(data_file.read())
+
+    def test_deserialization(self) -> None:
+        self.assertIsNotNone(self.data)
