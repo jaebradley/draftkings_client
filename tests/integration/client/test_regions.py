@@ -3,7 +3,7 @@ from unittest import TestCase
 from draft_kings import client
 
 
-class TestClientRegions(TestCase):
+class TestRegions(TestCase):
     def test_american_regions_is_not_none(self):
         regions = client.regions("US")
         self.assertIsNotNone(regions)

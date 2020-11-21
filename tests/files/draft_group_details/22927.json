@@ -1,0 +1,66 @@
+{
+  "draftGroup": {
+    "draftGroupId": 22927,
+    "contestType": {
+      "contestTypeId": 96,
+      "sport": "NFL",
+      "gameType": "SalaryCap"
+    },
+    "sportId": 1,
+    "startTimeSuffix": " (KC vs LAR)",
+    "startTimeType": "Normal",
+    "minStartTime": "2018-11-20T01:15:00.0000000Z",
+    "maxStartTime": "2018-11-20T01:15:00.0000000Z",
+    "draftGroupState": "Historical",
+    "allowUgc": true,
+    "leagues": [
+      {
+        "leagueId": 1,
+        "leagueName": "National Football League",
+        "leagueAbbreviation": "NFL"
+      }
+    ],
+    "games": [
+      {
+        "gameId": 5523451,
+        "awayTeamId": 339,
+        "homeTeamId": 343,
+        "startDate": "2018-11-20T01:15:00.0000000Z",
+        "location": "Los Angeles Memorial Coliseum",
+        "timeRemainingStatus": "Final",
+        "sport": "NFL",
+        "status": "Final",
+        "description": "KC @ LAR",
+        "sportSpecificData": {
+          "quarter": "4",
+          "timeRemaining": "Final",
+          "homeTeamScore": "54",
+          "awayTeamScore": "51"
+        },
+        "league": "NFL",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 1,
+            "value": "https://yz34j.app.goo.gl/?link=http://tunein.com/radio/Kansas-City-Chiefs-at-Los-Angeles-Rams-Nov-19-2018-p1130642/&apn=tunein.player&isi=418987775&ibi=com.tunein.TuneInRadio&utm_source=gamefeed&utm_c"
+          },
+          {
+            "typeId": 8,
+            "value": "4"
+          },
+          {
+            "typeId": 9,
+            "value": "Final"
+          }
+        ]
+      }
+    ],
+    "gameTypeId": 96,
+    "allTags": [
+      "Featured"
+    ]
+  },
+  "responseStatus": {},
+  "errorStatus": {}
+}

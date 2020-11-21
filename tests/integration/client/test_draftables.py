@@ -3,7 +3,7 @@ from unittest import TestCase
 from draft_kings import client
 
 
-class TestClientDraftables(TestCase):
+class TestDraftables(TestCase):
     def test_nba_draftables(self):
         draftables = client.draftables(draft_group_id=11513)
         self.assertIsNotNone(draftables)

@@ -1,0 +1,112 @@
+{
+  "draftGroup": {
+    "draftGroupId": 22916,
+    "contestType": {
+      "contestTypeId": 72,
+      "sport": "EL",
+      "gameType": "SalaryCap",
+      "allowLateSwap": true
+    },
+    "sportId": 15,
+    "startTimeType": "Normal",
+    "minStartTime": "2018-11-20T17:00:00.0000000Z",
+    "maxStartTime": "2018-11-20T20:00:00.0000000Z",
+    "draftGroupState": "Historical",
+    "allowUgc": true,
+    "leagues": [
+      {
+        "leagueId": 56,
+        "leagueName": "EuroLeague",
+        "leagueAbbreviation": "EL"
+      }
+    ],
+    "games": [
+      {
+        "gameId": 5540036,
+        "awayTeamId": 66079,
+        "homeTeamId": 66076,
+        "startDate": "2018-11-20T17:00:00.0000000Z",
+        "timeRemainingStatus": "ScoresOfficial",
+        "sport": "EL",
+        "status": "ScoresOfficial",
+        "description": "MTA @ EFS",
+        "sportSpecificData": {
+          "homeTeamScore": "90",
+          "awayTeamScore": "77",
+          "period": "0",
+          "timeRemaining": "ScoresOfficial"
+        },
+        "league": "EL",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": []
+      },
+      {
+        "gameId": 5540037,
+        "awayTeamId": 100090,
+        "homeTeamId": 66085,
+        "startDate": "2018-11-20T18:00:00.0000000Z",
+        "timeRemainingStatus": "ScoresOfficial",
+        "sport": "EL",
+        "status": "ScoresOfficial",
+        "description": "DTI @ FBD",
+        "sportSpecificData": {
+          "homeTeamScore": "100",
+          "awayTeamScore": "79",
+          "period": "0",
+          "timeRemaining": "ScoresOfficial"
+        },
+        "league": "EL",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": []
+      },
+      {
+        "gameId": 5540038,
+        "awayTeamId": 66082,
+        "homeTeamId": 100091,
+        "startDate": "2018-11-20T19:30:00.0000000Z",
+        "timeRemainingStatus": "ScoresOfficial",
+        "sport": "EL",
+        "status": "ScoresOfficial",
+        "description": "OLY @ BAY",
+        "sportSpecificData": {
+          "homeTeamScore": "62",
+          "awayTeamScore": "72",
+          "period": "0",
+          "timeRemaining": "ScoresOfficial"
+        },
+        "league": "EL",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": []
+      },
+      {
+        "gameId": 5540039,
+        "awayTeamId": 100092,
+        "homeTeamId": 66077,
+        "startDate": "2018-11-20T20:00:00.0000000Z",
+        "timeRemainingStatus": "ScoresOfficial",
+        "sport": "EL",
+        "status": "ScoresOfficial",
+        "description": "HGC @ RMB",
+        "sportSpecificData": {
+          "homeTeamScore": "89",
+          "awayTeamScore": "76",
+          "period": "0",
+          "timeRemaining": "ScoresOfficial"
+        },
+        "league": "EL",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": []
+      }
+    ],
+    "gameTypeId": 72,
+    "allTags": [
+      "Featured"
+    ]
+  },
+  "responseStatus": {},
+  "errorStatus": {}
+}
