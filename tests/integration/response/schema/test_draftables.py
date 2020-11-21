@@ -73,6 +73,7 @@ class TestUpcomingNFLDraftables(TestCase):
                     name="KC @ LAR",
                     start_time="2018-11-20T01:15:00.0000000Z",
                 ),
+                team_abbreviation="LAR",
                 team_id=343,
                 draft_alerts=[]
             ),

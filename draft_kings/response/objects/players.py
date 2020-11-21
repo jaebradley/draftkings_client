@@ -15,7 +15,7 @@ class TeamSeries:
             return self.away_team_id == other.away_team_id \
                 and self.home_team_id == other.home_team_id \
                 and self.starts_at == other.starts_at \
-                and self.status == other.status_id \
+                and self.status == other.status \
                 and self.weather == other.weather
 
         return False
