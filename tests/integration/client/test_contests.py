@@ -1,7 +1,7 @@
 from unittest import TestCase
 
-from draft_kings.data import Sport
 from draft_kings import client
+from draft_kings.data import Sport
 
 
 class TestContests(TestCase):

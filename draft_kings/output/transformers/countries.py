@@ -1,7 +1,7 @@
-from typing import List, Callable
+from typing import Callable
 
-from draft_kings.response.objects.countries import Country as ResponseCountry, Countries as ResponseCountries
 from draft_kings.output.objects.countries import Country, Countries
+from draft_kings.response.objects.countries import Country as ResponseCountry
 
 
 def transform_country(response_country: ResponseCountry) -> Country:
