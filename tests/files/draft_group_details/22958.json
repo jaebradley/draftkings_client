@@ -1,0 +1,109 @@
+{
+  "draftGroup": {
+    "draftGroupId": 22958,
+    "contestType": {
+      "contestTypeId": 98,
+      "sport": "CBB",
+      "gameType": "SalaryCap",
+      "allowLateSwap": true
+    },
+    "sportId": 6,
+    "startTimeSuffix": " (Early)",
+    "startTimeType": "Day",
+    "minStartTime": "2018-11-19T16:00:00.0000000Z",
+    "maxStartTime": "2018-11-19T19:30:00.0000000Z",
+    "draftGroupState": "Historical",
+    "allowUgc": true,
+    "leagues": [
+      {
+        "leagueId": 6,
+        "leagueName": "College Basketball",
+        "leagueAbbreviation": "CBB"
+      }
+    ],
+    "games": [
+      {
+        "gameId": 5560242,
+        "awayTeamId": 1299,
+        "homeTeamId": 1715,
+        "startDate": "2018-11-19T19:30:00.0000000Z",
+        "location": "Lahaina Civic Center",
+        "timeRemainingStatus": "ScoresOfficial",
+        "sport": "CBB",
+        "status": "ScoresOfficial",
+        "description": "AUB @ XAV",
+        "sportSpecificData": {
+          "homeTeamScore": "79",
+          "awayTeamScore": "88",
+          "period": "0",
+          "timeRemaining": "ScoresOfficial"
+        },
+        "league": "CBB",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 2,
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "gameId": 5561084,
+        "awayTeamId": 1281,
+        "homeTeamId": 1355,
+        "startDate": "2018-11-19T16:00:00.0000000Z",
+        "location": "John Gray Gymnasium",
+        "timeRemainingStatus": "ScoresOfficial",
+        "sport": "CBB",
+        "status": "ScoresOfficial",
+        "description": "AKR @ CLEM",
+        "sportSpecificData": {
+          "homeTeamScore": "72",
+          "awayTeamScore": "69",
+          "period": "0",
+          "timeRemaining": "ScoresOfficial"
+        },
+        "league": "CBB",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 2,
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "gameId": 5561085,
+        "awayTeamId": 1420,
+        "homeTeamId": 1445,
+        "startDate": "2018-11-19T17:30:00.0000000Z",
+        "location": "John Gray Gymnasium",
+        "timeRemainingStatus": "ScoresOfficial",
+        "sport": "CBB",
+        "status": "ScoresOfficial",
+        "description": "UGA @ ILLST",
+        "sportSpecificData": {
+          "homeTeamScore": "68",
+          "awayTeamScore": "80",
+          "period": "0",
+          "timeRemaining": "ScoresOfficial"
+        },
+        "league": "CBB",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 2,
+            "value": "1"
+          }
+        ]
+      }
+    ],
+    "gameTypeId": 98,
+    "allTags": []
+  },
+  "responseStatus": {},
+  "errorStatus": {}
+}

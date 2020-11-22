@@ -1,0 +1,106 @@
+{
+  "draftGroup": {
+    "draftGroupId": 22855,
+    "contestType": {
+      "contestTypeId": 30,
+      "sport": "SOC",
+      "gameType": "SalaryCap",
+      "allowLateSwap": true
+    },
+    "sportId": 12,
+    "startTimeSuffix": " (UEFA NL)",
+    "startTimeType": "Normal",
+    "minStartTime": "2018-11-19T19:45:00.0000000Z",
+    "maxStartTime": "2018-11-19T19:45:00.0000000Z",
+    "draftGroupState": "Historical",
+    "allowUgc": true,
+    "leagues": [
+      {
+        "leagueId": 67,
+        "leagueName": "UEFA Nations League",
+        "leagueAbbreviation": "UEFA NL"
+      }
+    ],
+    "games": [
+      {
+        "gameId": 5557833,
+        "awayTeamId": 49209,
+        "homeTeamId": 45578,
+        "startDate": "2018-11-19T19:45:00.0000000Z",
+        "location": "VELTINS-Arena",
+        "timeRemainingStatus": "FullTime",
+        "sport": "SOC",
+        "status": "FullTime",
+        "description": "NED @ GER",
+        "sportSpecificData": {
+          "timeRemaining": "FullTime",
+          "homeTeamScore": "2",
+          "awayTeamScore": "2"
+        },
+        "league": "UEFA NL",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 2,
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "gameId": 5557834,
+        "awayTeamId": 45588,
+        "homeTeamId": 45584,
+        "startDate": "2018-11-19T19:45:00.0000000Z",
+        "location": "Eden Arena",
+        "timeRemainingStatus": "FullTime",
+        "sport": "SOC",
+        "status": "FullTime",
+        "description": "SVK @ CZE",
+        "sportSpecificData": {
+          "timeRemaining": "FullTime",
+          "homeTeamScore": "1",
+          "awayTeamScore": "0"
+        },
+        "league": "UEFA NL",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 2,
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "gameId": 5557835,
+        "awayTeamId": 45574,
+        "homeTeamId": 49210,
+        "startDate": "2018-11-19T19:45:00.0000000Z",
+        "location": "Ceres Park",
+        "timeRemainingStatus": "FullTime",
+        "sport": "SOC",
+        "status": "FullTime",
+        "description": "IRL @ DEN",
+        "sportSpecificData": {
+          "timeRemaining": "FullTime",
+          "homeTeamScore": "0",
+          "awayTeamScore": "0"
+        },
+        "league": "UEFA NL",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 2,
+            "value": "1"
+          }
+        ]
+      }
+    ],
+    "gameTypeId": 5,
+    "allTags": []
+  },
+  "responseStatus": {},
+  "errorStatus": {}
+}

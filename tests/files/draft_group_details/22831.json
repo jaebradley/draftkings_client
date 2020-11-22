@@ -1,0 +1,207 @@
+{
+  "draftGroup": {
+    "draftGroupId": 22831,
+    "contestType": {
+      "contestTypeId": 30,
+      "sport": "SOC",
+      "gameType": "SalaryCap",
+      "allowLateSwap": true
+    },
+    "sportId": 12,
+    "startTimeSuffix": " (EPL)",
+    "startTimeType": "Normal",
+    "minStartTime": "2018-11-24T15:00:00.0000000Z",
+    "maxStartTime": "2018-11-24T17:30:00.0000000Z",
+    "draftGroupState": "Historical",
+    "allowUgc": true,
+    "leagues": [
+      {
+        "leagueId": 19,
+        "leagueName": "English Premier League",
+        "leagueAbbreviation": "EPL"
+      }
+    ],
+    "games": [
+      {
+        "gameId": 5527118,
+        "awayTeamId": 40816,
+        "homeTeamId": 53563,
+        "startDate": "2018-11-24T15:00:00.0000000Z",
+        "location": "Amex Stadium",
+        "timeRemainingStatus": "FullTime",
+        "sport": "SOC",
+        "status": "FullTime",
+        "description": "LEI @ BHA",
+        "sportSpecificData": {
+          "timeRemaining": "FullTime",
+          "homeTeamScore": "1",
+          "awayTeamScore": "1"
+        },
+        "league": "EPL",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 2,
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "gameId": 5527120,
+        "awayTeamId": 53600,
+        "homeTeamId": 40815,
+        "startDate": "2018-11-24T15:00:00.0000000Z",
+        "location": "Goodison Park",
+        "timeRemainingStatus": "FullTime",
+        "sport": "SOC",
+        "status": "FullTime",
+        "description": "CAR @ EVE",
+        "sportSpecificData": {
+          "timeRemaining": "FullTime",
+          "homeTeamScore": "1",
+          "awayTeamScore": "0"
+        },
+        "league": "EPL",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 2,
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "gameId": 5527121,
+        "awayTeamId": 40818,
+        "homeTeamId": 53577,
+        "startDate": "2018-11-24T15:00:00.0000000Z",
+        "timeRemainingStatus": "FullTime",
+        "sport": "SOC",
+        "status": "FullTime",
+        "description": "SOU @ FUL",
+        "sportSpecificData": {
+          "timeRemaining": "FullTime",
+          "homeTeamScore": "3",
+          "awayTeamScore": "2"
+        },
+        "league": "EPL",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 2,
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "gameId": 5527122,
+        "awayTeamId": 40820,
+        "homeTeamId": 40549,
+        "startDate": "2018-11-24T15:00:00.0000000Z",
+        "location": "Old Trafford",
+        "timeRemainingStatus": "FullTime",
+        "sport": "SOC",
+        "status": "FullTime",
+        "description": "CRY @ MU",
+        "sportSpecificData": {
+          "timeRemaining": "FullTime",
+          "homeTeamScore": "0",
+          "awayTeamScore": "0"
+        },
+        "league": "EPL",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 2,
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "gameId": 5527123,
+        "awayTeamId": 40551,
+        "homeTeamId": 40813,
+        "startDate": "2018-11-24T17:30:00.0000000Z",
+        "location": "Wembley",
+        "timeRemainingStatus": "FullTime",
+        "sport": "SOC",
+        "status": "FullTime",
+        "description": "CHE @ TOT",
+        "sportSpecificData": {
+          "timeRemaining": "FullTime",
+          "homeTeamScore": "3",
+          "awayTeamScore": "1"
+        },
+        "league": "EPL",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 2,
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "gameId": 5527124,
+        "awayTeamId": 40817,
+        "homeTeamId": 40824,
+        "startDate": "2018-11-24T15:00:00.0000000Z",
+        "location": "Vicarage Road",
+        "timeRemainingStatus": "FullTime",
+        "sport": "SOC",
+        "status": "FullTime",
+        "description": "LIV @ WAT",
+        "sportSpecificData": {
+          "timeRemaining": "FullTime",
+          "homeTeamScore": "0",
+          "awayTeamScore": "3"
+        },
+        "league": "EPL",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 2,
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "gameId": 5527125,
+        "awayTeamId": 40552,
+        "homeTeamId": 40819,
+        "startDate": "2018-11-24T15:00:00.0000000Z",
+        "location": "Olympic Stadium",
+        "timeRemainingStatus": "FullTime",
+        "sport": "SOC",
+        "status": "FullTime",
+        "description": "MCI @ WHU",
+        "sportSpecificData": {
+          "timeRemaining": "FullTime",
+          "homeTeamScore": "0",
+          "awayTeamScore": "4"
+        },
+        "league": "EPL",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 2,
+            "value": "1"
+          }
+        ]
+      }
+    ],
+    "gameTypeId": 5,
+    "allTags": [
+      "Featured"
+    ]
+  },
+  "responseStatus": {},
+  "errorStatus": {}
+}

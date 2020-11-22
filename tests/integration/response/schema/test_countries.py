@@ -6,7 +6,7 @@ from draft_kings.response.schema.countries import CountriesSchema
 from tests.config import ROOT_DIRECTORY
 
 
-class TestUpcomingNFLDraftables(TestCase):
+class TestCountries(TestCase):
     def setUp(self) -> None:
         with open(os.path.join(ROOT_DIRECTORY, 'tests/files/countries.json')) as data_file:
             self.schema = CountriesSchema()

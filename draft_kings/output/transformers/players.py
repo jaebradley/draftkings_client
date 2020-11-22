@@ -58,7 +58,7 @@ class PlayerDetailsTransformer:
             jersey_number=player_details.jersey_number,
             last_name=player_details.last_name,
             player_id=player_details.player_id,
-            points_per_game=player_details.points_per_game,
+            points_per_game=float(player_details.points_per_game),
             position=self.player_position_transformer(player_details),
             team_id=player_details.team_id,
             team_series=self.player_team_series_details_transformer(player_details)

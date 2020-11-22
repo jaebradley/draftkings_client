@@ -52,8 +52,12 @@ class PlayersDetailsSchema(Schema):
         unknown = EXCLUDE
 
     playerList = fields.List(fields.Nested(PlayerSchema, missing={}), attribute="players", missing=[])
-    teamList = DictField(fields.Str(required=True), fields.Nested(TeamSeriesSchema, missing={}), missing={},
-                         attribute="team_series")
+    teamList = DictField(
+        fields.Str(required=True),
+        fields.Nested(TeamSeriesSchema, required=True),
+        required=True,
+        attribute="team_series"
+    )
 
     @post_load
     def make_players_details(self, data, **kwargs):

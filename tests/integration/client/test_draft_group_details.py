@@ -3,7 +3,7 @@ from unittest import TestCase
 from draft_kings import client
 
 
-class TestClientDraftGroupDetails(TestCase):
+class TestDraftGroupDetails(TestCase):
     def test_nba_draft_group_details(self):
         # Draft Group from 2016-11-16
         details = client.draft_group_details(draft_group_id=11513)

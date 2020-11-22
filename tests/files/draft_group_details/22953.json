@@ -1,0 +1,266 @@
+{
+  "draftGroup": {
+    "draftGroupId": 22953,
+    "contestType": {
+      "contestTypeId": 18,
+      "sport": "NHL",
+      "gameType": "SalaryCap",
+      "allowLateSwap": true
+    },
+    "sportId": 3,
+    "startTimeType": "Normal",
+    "minStartTime": "2018-11-20T00:00:00.0000000Z",
+    "maxStartTime": "2018-11-20T03:00:00.0000000Z",
+    "draftGroupState": "Historical",
+    "allowUgc": true,
+    "leagues": [
+      {
+        "leagueId": 3,
+        "leagueName": "National Hockey League",
+        "leagueAbbreviation": "NHL"
+      }
+    ],
+    "games": [
+      {
+        "gameId": 5530271,
+        "awayTeamId": 4982,
+        "homeTeamId": 4974,
+        "startDate": "2018-11-20T00:00:00.0000000Z",
+        "location": "Air Canada Centre",
+        "timeRemainingStatus": "ScoresOfficial",
+        "sport": "NHL",
+        "status": "ScoresOfficial",
+        "description": "CLS @ TOR",
+        "sportSpecificData": {
+          "homeTeamScore": "4",
+          "awayTeamScore": "2",
+          "period": "0",
+          "timeRemaining": "ScoresOfficial"
+        },
+        "league": "NHL",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 1,
+            "value": "https://yz34j.app.goo.gl/?link=http://tunein.com/radio/Columbus-Blue-Jackets-at-Toronto-Maple-Leafs-Nov-19-2018-p1155307/&apn=tunein.player&isi=418987775&ibi=com.tunein.TuneInRadio&utm_source=gamefeed"
+          }
+        ]
+      },
+      {
+        "gameId": 5530274,
+        "awayTeamId": 4962,
+        "homeTeamId": 4966,
+        "startDate": "2018-11-20T00:00:00.0000000Z",
+        "location": "Madison Square Garden",
+        "timeRemainingStatus": "ScoresOfficial",
+        "sport": "NHL",
+        "status": "ScoresOfficial",
+        "description": "DAL @ NYR",
+        "sportSpecificData": {
+          "homeTeamScore": "2",
+          "awayTeamScore": "1",
+          "period": "0",
+          "timeRemaining": "ScoresOfficial"
+        },
+        "league": "NHL",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 1,
+            "value": "https://yz34j.app.goo.gl/?link=http://tunein.com/radio/Dallas-Stars-at-New-York-Rangers-Nov-19-2018-p1155306/&apn=tunein.player&isi=418987775&ibi=com.tunein.TuneInRadio&utm_source=gamefeed&utm_campaig"
+          }
+        ]
+      },
+      {
+        "gameId": 5530277,
+        "awayTeamId": 4955,
+        "homeTeamId": 4969,
+        "startDate": "2018-11-20T00:00:00.0000000Z",
+        "location": "CONSOL Energy Center",
+        "timeRemainingStatus": "ScoresOfficial",
+        "sport": "NHL",
+        "status": "ScoresOfficial",
+        "description": "BUF @ PIT",
+        "sportSpecificData": {
+          "homeTeamScore": "4",
+          "awayTeamScore": "5",
+          "period": "0",
+          "timeRemaining": "ScoresOfficial"
+        },
+        "league": "NHL",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 1,
+            "value": "https://yz34j.app.goo.gl/?link=http://tunein.com/radio/Buffalo-Sabres-at-Pittsburgh-Penguins-Nov-19-2018-p1155308/&apn=tunein.player&isi=418987775&ibi=com.tunein.TuneInRadio&utm_source=gamefeed&utm_ca"
+          }
+        ]
+      },
+      {
+        "gameId": 5530280,
+        "awayTeamId": 4976,
+        "homeTeamId": 4963,
+        "startDate": "2018-11-20T00:30:00.0000000Z",
+        "location": "Bell Centre",
+        "timeRemainingStatus": "ScoresOfficial",
+        "sport": "NHL",
+        "status": "ScoresOfficial",
+        "description": "WAS @ MON",
+        "sportSpecificData": {
+          "homeTeamScore": "4",
+          "awayTeamScore": "5",
+          "period": "0",
+          "timeRemaining": "ScoresOfficial"
+        },
+        "league": "NHL",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 1,
+            "value": "https://yz34j.app.goo.gl/?link=http://tunein.com/radio/Washington-Capitals-at-Montreal-Canadiens-Nov-19-2018-p1155309/&apn=tunein.player&isi=418987775&ibi=com.tunein.TuneInRadio&utm_source=gamefeed&ut"
+          }
+        ]
+      },
+      {
+        "gameId": 5530283,
+        "awayTeamId": 4979,
+        "homeTeamId": 4967,
+        "startDate": "2018-11-20T00:30:00.0000000Z",
+        "location": "Canadian Tire Centre",
+        "timeRemainingStatus": "ScoresOfficial",
+        "sport": "NHL",
+        "status": "ScoresOfficial",
+        "description": "FLA @ OTT",
+        "sportSpecificData": {
+          "homeTeamScore": "5",
+          "awayTeamScore": "7",
+          "period": "0",
+          "timeRemaining": "ScoresOfficial"
+        },
+        "league": "NHL",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 1,
+            "value": "https://yz34j.app.goo.gl/?link=http://tunein.com/radio/Florida-Panthers-at-Ottawa-Senators-Nov-19-2018-p1155310/&apn=tunein.player&isi=418987775&ibi=com.tunein.TuneInRadio&utm_source=gamefeed&utm_camp"
+          }
+        ]
+      },
+      {
+        "gameId": 5530286,
+        "awayTeamId": 4961,
+        "homeTeamId": 4972,
+        "startDate": "2018-11-20T01:00:00.0000000Z",
+        "location": "Scottrade Center",
+        "timeRemainingStatus": "ScoresOfficial",
+        "sport": "NHL",
+        "status": "ScoresOfficial",
+        "description": "LA @ STL",
+        "sportSpecificData": {
+          "homeTeamScore": "0",
+          "awayTeamScore": "2",
+          "period": "0",
+          "timeRemaining": "ScoresOfficial"
+        },
+        "league": "NHL",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 1,
+            "value": "https://yz34j.app.goo.gl/?link=http://tunein.com/radio/Los-Angeles-Kings-at-St-Louis-Blues-Nov-19-2018-p1155312/&apn=tunein.player&isi=418987775&ibi=com.tunein.TuneInRadio&utm_source=gamefeed&utm_camp"
+          }
+        ]
+      },
+      {
+        "gameId": 5530288,
+        "awayTeamId": 4973,
+        "homeTeamId": 4980,
+        "startDate": "2018-11-20T01:00:00.0000000Z",
+        "location": "Bridgestone Arena",
+        "timeRemainingStatus": "ScoresOfficial",
+        "sport": "NHL",
+        "status": "ScoresOfficial",
+        "description": "TB @ NSH",
+        "sportSpecificData": {
+          "homeTeamScore": "3",
+          "awayTeamScore": "2",
+          "period": "0",
+          "timeRemaining": "ScoresOfficial"
+        },
+        "league": "NHL",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 1,
+            "value": "https://yz34j.app.goo.gl/?link=http://tunein.com/radio/Tampa-Bay-Lightning-at-Nashville-Predators-Nov-19-2018-p1155311/&apn=tunein.player&isi=418987775&ibi=com.tunein.TuneInRadio&utm_source=gamefeed&u"
+          }
+        ]
+      },
+      {
+        "gameId": 5530291,
+        "awayTeamId": 58462,
+        "homeTeamId": 4956,
+        "startDate": "2018-11-20T02:00:00.0000000Z",
+        "location": "Scotiabank Saddledome",
+        "timeRemainingStatus": "ScoresOfficial",
+        "sport": "NHL",
+        "status": "ScoresOfficial",
+        "description": "VGK @ CGY",
+        "sportSpecificData": {
+          "homeTeamScore": "7",
+          "awayTeamScore": "2",
+          "period": "0",
+          "timeRemaining": "ScoresOfficial"
+        },
+        "league": "NHL",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 1,
+            "value": "https://yz34j.app.goo.gl/?link=http://tunein.com/radio/Las-Vegas-Golden-Knights-at-Calgary-Flames-Nov-19-2018-p1155313/&apn=tunein.player&isi=418987775&ibi=com.tunein.TuneInRadio&utm_source=gamefeed&u"
+          }
+        ]
+      },
+      {
+        "gameId": 5530293,
+        "awayTeamId": 4981,
+        "homeTeamId": 4975,
+        "startDate": "2018-11-20T03:00:00.0000000Z",
+        "location": "Rogers Arena",
+        "timeRemainingStatus": "ScoresOfficial",
+        "sport": "NHL",
+        "status": "ScoresOfficial",
+        "description": "WPG @ VAN",
+        "sportSpecificData": {
+          "homeTeamScore": "3",
+          "awayTeamScore": "6",
+          "period": "0",
+          "timeRemaining": "ScoresOfficial"
+        },
+        "league": "NHL",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 1,
+            "value": "https://yz34j.app.goo.gl/?link=http://tunein.com/radio/Winnipeg-Jets-at-Vancouver-Canucks-Nov-20-2018-p1155314/&apn=tunein.player&isi=418987775&ibi=com.tunein.TuneInRadio&utm_source=gamefeed&utm_campa"
+          }
+        ]
+      }
+    ],
+    "gameTypeId": 4,
+    "allTags": [
+      "Featured"
+    ]
+  },
+  "responseStatus": {},
+  "errorStatus": {}
+}

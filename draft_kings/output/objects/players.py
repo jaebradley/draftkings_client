@@ -17,9 +17,9 @@ class TeamSeries:
             return self.away_team_id == other.away_team_id \
                    and self.home_team_id == other.home_team_id \
                    and self.starts_at == other.starts_at \
-                   and self.status == other.status_id \
+                   and self.status == other.status \
                    and self.team_series_id == other.team_series_id \
-                   and self.weather_description == other.weather
+                   and self.weather_description == other.weather_description
 
         return False
 
@@ -68,7 +68,7 @@ class PlayerPosition:
     def __eq__(self, other):
         if type(other) is type(self):
             return self.position_id == other.position_id \
-                   and self.name == other.position_name
+                   and self.name == other.name
 
         return False
 

@@ -1,25 +1,6 @@
 from unittest import TestCase
 
-from draft_kings.urls import CONTESTS_URL, AVAILABLE_PLAYERS_URL, draft_group_url, contest_url, draftables_url, \
-    URLBuilder
-
-
-class TestUrls(TestCase):
-    def test_contests_url(self):
-        self.assertEqual(CONTESTS_URL, "https://www.draftkings.com/lobby/getcontests")
-
-    def test_available_players_url(self):
-        self.assertEqual(AVAILABLE_PLAYERS_URL, "https://www.draftkings.com/lineup/getavailableplayers")
-
-    def test_draft_group_url(self):
-        self.assertEqual(draft_group_url("jaebaebae"), "https://api.draftkings.com/draftgroups/v1/jaebaebae")
-
-    def test_contest_url(self):
-        self.assertEqual(contest_url("jaebaebae"), "https://api.draftkings.com/contests/v1/contests/jaebaebae")
-
-    def test_draftables_url(self):
-        self.assertEqual(draftables_url("jaebaebae"),
-                         "https://api.draftkings.com/draftgroups/v1/draftgroups/jaebaebae/draftables")
+from draft_kings.urls import URLBuilder
 
 
 class TestURLBuilder(TestCase):
@@ -34,3 +15,17 @@ class TestURLBuilder(TestCase):
             "https://api.draftkings.com/addresses/v1/countries/example/regions",
             self.builder.build_regions_url(country_code="example")
         )
+
+    def test_contests_url(self):
+        self.assertEqual("https://www.draftkings.com/lobby/getcontests", self.builder.build_contests_url())
+
+    def test_available_players_url(self):
+        self.assertEqual("https://www.draftkings.com/lineup/getavailableplayers", self.builder.build_available_players_url())
+
+    def test_draft_group_url(self):
+        self.assertEqual("https://api.draftkings.com/draftgroups/v1/jaebaebae", self.builder.build_draft_group_url(
+            draft_group_id="jaebaebae"))
+
+    def test_draftables_url(self):
+        self.assertEqual("https://api.draftkings.com/draftgroups/v1/draftgroups/jaebaebae/draftables",
+                         self.builder.build_draftables_url("jaebaebae"))
