@@ -1,11 +1,10 @@
-import json
-
 from draft_kings.data import Sport
 from draft_kings.http_client import HTTPClient
 from draft_kings.output.objects.contests import ContestsDetails
 from draft_kings.output.objects.draft_group import DraftGroupDetails
 from draft_kings.output.objects.draftables import Draftables
 from draft_kings.output.objects.players import PlayersDetails
+from draft_kings.output.objects.regions import Regions
 from draft_kings.output.transformers.contests import ContestsDetailsResponseTransformer, ContestsResponseTransformer, \
     transform_contest, transform_draft_group, DraftGroupsTransformer
 from draft_kings.output.transformers.countries import CountriesTransformer, transform_country
@@ -18,8 +17,8 @@ from draft_kings.output.transformers.draftables import transform_competition_tea
     DraftablesTransformer
 from draft_kings.output.transformers.players import transform_team_series, transform_draft_details, \
     transform_player_position, transform_player_team_series_details, PlayerDetailsTransformer, PlayersDetailsTransformer
+from draft_kings.output.transformers.regions import RegionsTransformer, transform_region
 from draft_kings.output.transformers.sports import transform_sport_id
-from draft_kings.response.decoders import RegionsDecoder
 from draft_kings.response.objects.countries import Countries
 from draft_kings.response.schema.contests import ContestsSchema
 from draft_kings.response.schema.countries import CountriesSchema
@@ -27,8 +26,6 @@ from draft_kings.response.schema.draft_group import DraftGroupResponseSchema
 from draft_kings.response.schema.draftables import DraftablesSchema
 from draft_kings.response.schema.players import PlayersDetailsSchema
 from draft_kings.response.schema.regions import RegionsSchema
-from draft_kings.output.transformers.regions import RegionsTransformer, transform_region
-from draft_kings.output.objects.regions import Regions
 from draft_kings.urls import URLBuilder
 
 
