@@ -1,0 +1,1355 @@
+{
+  "regions": [
+    {
+      "countryCode": "GB",
+      "regionCode": "ABE",
+      "isoRegionCode": "GB-ABE",
+      "name": "Aberdeen City"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "ABD",
+      "isoRegionCode": "GB-ABD",
+      "name": "Aberdeenshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "ANS",
+      "isoRegionCode": "GB-ANS",
+      "name": "Angus"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "ANN",
+      "isoRegionCode": "GB-ANN",
+      "name": "Antrim and Newtownabbey"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "AND",
+      "isoRegionCode": "GB-AND",
+      "name": "Ards and North Down"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "AGB",
+      "isoRegionCode": "GB-AGB",
+      "name": "Argyll and Bute"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "ABC",
+      "isoRegionCode": "GB-ABC",
+      "name": "Armagh, Banbridge and Craigavon"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "BDG",
+      "isoRegionCode": "GB-BDG",
+      "name": "Barking and Dagenham"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "BNE",
+      "isoRegionCode": "GB-BNE",
+      "name": "Barnet"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "BNS",
+      "isoRegionCode": "GB-BNS",
+      "name": "Barnsley"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "BAS",
+      "isoRegionCode": "GB-BAS",
+      "name": "Bath and North East Somerset"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "BDF",
+      "isoRegionCode": "GB-BDF",
+      "name": "Bedford"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "BFS",
+      "isoRegionCode": "GB-BFS",
+      "name": "Belfast"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "BEX",
+      "isoRegionCode": "GB-BEX",
+      "name": "Bexley"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "BIR",
+      "isoRegionCode": "GB-BIR",
+      "name": "Birmingham"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "BBD",
+      "isoRegionCode": "GB-BBD",
+      "name": "Blackburn with Darwen"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "BPL",
+      "isoRegionCode": "GB-BPL",
+      "name": "Blackpool"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "BGW",
+      "isoRegionCode": "GB-BGW",
+      "name": "Blaenau Gwent"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "BOL",
+      "isoRegionCode": "GB-BOL",
+      "name": "Bolton"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "BMH",
+      "isoRegionCode": "GB-BMH",
+      "name": "Bournemouth"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "BRC",
+      "isoRegionCode": "GB-BRC",
+      "name": "Bracknell Forest"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "BRD",
+      "isoRegionCode": "GB-BRD",
+      "name": "Bradford"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "BEN",
+      "isoRegionCode": "GB-BEN",
+      "name": "Brent"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "BGE",
+      "isoRegionCode": "GB-BGE",
+      "name": "Bridgend"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "BNH",
+      "isoRegionCode": "GB-BNH",
+      "name": "Brighton and Hove"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "BST",
+      "isoRegionCode": "GB-BST",
+      "name": "Bristol, City of"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "BRY",
+      "isoRegionCode": "GB-BRY",
+      "name": "Bromley"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "BKM",
+      "isoRegionCode": "GB-BKM",
+      "name": "Buckinghamshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "BUR",
+      "isoRegionCode": "GB-BUR",
+      "name": "Bury"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "CAY",
+      "isoRegionCode": "GB-CAY",
+      "name": "Caerphilly"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "CLD",
+      "isoRegionCode": "GB-CLD",
+      "name": "Calderdale"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "CAM",
+      "isoRegionCode": "GB-CAM",
+      "name": "Cambridgeshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "CMD",
+      "isoRegionCode": "GB-CMD",
+      "name": "Camden"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "CRF",
+      "isoRegionCode": "GB-CRF",
+      "name": "Cardiff"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "CMN",
+      "isoRegionCode": "GB-CMN",
+      "name": "Carmarthenshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "CCG",
+      "isoRegionCode": "GB-CCG",
+      "name": "Causeway Coast and Glens"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "CBF",
+      "isoRegionCode": "GB-CBF",
+      "name": "Central Bedfordshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "CGN",
+      "isoRegionCode": "GB-CGN",
+      "name": "Ceredigion"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "CHE",
+      "isoRegionCode": "GB-CHE",
+      "name": "Cheshire East"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "CHW",
+      "isoRegionCode": "GB-CHW",
+      "name": "Cheshire West and Chester"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "CLK",
+      "isoRegionCode": "GB-CLK",
+      "name": "Clackmannanshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "CWY",
+      "isoRegionCode": "GB-CWY",
+      "name": "Conwy"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "CON",
+      "isoRegionCode": "GB-CON",
+      "name": "Cornwall"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "COV",
+      "isoRegionCode": "GB-COV",
+      "name": "Coventry"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "CRY",
+      "isoRegionCode": "GB-CRY",
+      "name": "Croydon"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "CMA",
+      "isoRegionCode": "GB-CMA",
+      "name": "Cumbria"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "DAL",
+      "isoRegionCode": "GB-DAL",
+      "name": "Darlington"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "DEN",
+      "isoRegionCode": "GB-DEN",
+      "name": "Denbighshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "DER",
+      "isoRegionCode": "GB-DER",
+      "name": "Derby"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "DBY",
+      "isoRegionCode": "GB-DBY",
+      "name": "Derbyshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "DRS",
+      "isoRegionCode": "GB-DRS",
+      "name": "Derry and Strabane"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "DEV",
+      "isoRegionCode": "GB-DEV",
+      "name": "Devon"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "DNC",
+      "isoRegionCode": "GB-DNC",
+      "name": "Doncaster"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "DOR",
+      "isoRegionCode": "GB-DOR",
+      "name": "Dorset"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "DUD",
+      "isoRegionCode": "GB-DUD",
+      "name": "Dudley"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "DGY",
+      "isoRegionCode": "GB-DGY",
+      "name": "Dumfries and Galloway"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "DND",
+      "isoRegionCode": "GB-DND",
+      "name": "Dundee City"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "DUR",
+      "isoRegionCode": "GB-DUR",
+      "name": "Durham, County"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "EAL",
+      "isoRegionCode": "GB-EAL",
+      "name": "Ealing"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "EAY",
+      "isoRegionCode": "GB-EAY",
+      "name": "East Ayrshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "EDU",
+      "isoRegionCode": "GB-EDU",
+      "name": "East Dunbartonshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "ELN",
+      "isoRegionCode": "GB-ELN",
+      "name": "East Lothian"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "ERW",
+      "isoRegionCode": "GB-ERW",
+      "name": "East Renfrewshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "ERY",
+      "isoRegionCode": "GB-ERY",
+      "name": "East Riding of Yorkshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "ESX",
+      "isoRegionCode": "GB-ESX",
+      "name": "East Sussex"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "EDH",
+      "isoRegionCode": "GB-EDH",
+      "name": "Edinburgh, City of"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "ELS",
+      "isoRegionCode": "GB-ELS",
+      "name": "Eilean Siar"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "ENF",
+      "isoRegionCode": "GB-ENF",
+      "name": "Enfield"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "ENG",
+      "isoRegionCode": "GB-ENG",
+      "name": "England"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "EAW",
+      "isoRegionCode": "GB-EAW",
+      "name": "England and Wales"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "ESS",
+      "isoRegionCode": "GB-ESS",
+      "name": "Essex"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "FAL",
+      "isoRegionCode": "GB-FAL",
+      "name": "Falkirk"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "FMO",
+      "isoRegionCode": "GB-FMO",
+      "name": "Fermanagh and Omagh"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "FIF",
+      "isoRegionCode": "GB-FIF",
+      "name": "Fife"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "FLN",
+      "isoRegionCode": "GB-FLN",
+      "name": "Flintshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "GAT",
+      "isoRegionCode": "GB-GAT",
+      "name": "Gateshead"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "GLG",
+      "isoRegionCode": "GB-GLG",
+      "name": "Glasgow City"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "GLS",
+      "isoRegionCode": "GB-GLS",
+      "name": "Gloucestershire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "GBN",
+      "isoRegionCode": "GB-GBN",
+      "name": "Great Britain"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "GRE",
+      "isoRegionCode": "GB-GRE",
+      "name": "Greenwich"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "GWN",
+      "isoRegionCode": "GB-GWN",
+      "name": "Gwynedd"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "HCK",
+      "isoRegionCode": "GB-HCK",
+      "name": "Hackney"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "HAL",
+      "isoRegionCode": "GB-HAL",
+      "name": "Halton"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "HMF",
+      "isoRegionCode": "GB-HMF",
+      "name": "Hammersmith and Fulham"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "HAM",
+      "isoRegionCode": "GB-HAM",
+      "name": "Hampshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "HRY",
+      "isoRegionCode": "GB-HRY",
+      "name": "Haringey"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "HRW",
+      "isoRegionCode": "GB-HRW",
+      "name": "Harrow"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "HPL",
+      "isoRegionCode": "GB-HPL",
+      "name": "Hartlepool"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "HAV",
+      "isoRegionCode": "GB-HAV",
+      "name": "Havering"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "HEF",
+      "isoRegionCode": "GB-HEF",
+      "name": "Herefordshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "HRT",
+      "isoRegionCode": "GB-HRT",
+      "name": "Hertfordshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "HLD",
+      "isoRegionCode": "GB-HLD",
+      "name": "Highland"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "HIL",
+      "isoRegionCode": "GB-HIL",
+      "name": "Hillingdon"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "HNS",
+      "isoRegionCode": "GB-HNS",
+      "name": "Hounslow"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "IVC",
+      "isoRegionCode": "GB-IVC",
+      "name": "Inverclyde"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "AGY",
+      "isoRegionCode": "GB-AGY",
+      "name": "Isle of Anglesey"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "IOW",
+      "isoRegionCode": "GB-IOW",
+      "name": "Isle of Wight"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "IOS",
+      "isoRegionCode": "GB-IOS",
+      "name": "Isles of Scilly"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "ISL",
+      "isoRegionCode": "GB-ISL",
+      "name": "Islington"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "KEC",
+      "isoRegionCode": "GB-KEC",
+      "name": "Kensington and Chelsea"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "KEN",
+      "isoRegionCode": "GB-KEN",
+      "name": "Kent"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "KHL",
+      "isoRegionCode": "GB-KHL",
+      "name": "Kingston upon Hull"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "KTT",
+      "isoRegionCode": "GB-KTT",
+      "name": "Kingston upon Thames"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "KIR",
+      "isoRegionCode": "GB-KIR",
+      "name": "Kirklees"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "KWL",
+      "isoRegionCode": "GB-KWL",
+      "name": "Knowsley"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "LBH",
+      "isoRegionCode": "GB-LBH",
+      "name": "Lambeth"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "LAN",
+      "isoRegionCode": "GB-LAN",
+      "name": "Lancashire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "LDS",
+      "isoRegionCode": "GB-LDS",
+      "name": "Leeds"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "LCE",
+      "isoRegionCode": "GB-LCE",
+      "name": "Leicester"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "LEC",
+      "isoRegionCode": "GB-LEC",
+      "name": "Leicestershire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "LEW",
+      "isoRegionCode": "GB-LEW",
+      "name": "Lewisham"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "LIN",
+      "isoRegionCode": "GB-LIN",
+      "name": "Lincolnshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "LBC",
+      "isoRegionCode": "GB-LBC",
+      "name": "Lisburn and Castlereagh"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "LIV",
+      "isoRegionCode": "GB-LIV",
+      "name": "Liverpool"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "LND",
+      "isoRegionCode": "GB-LND",
+      "name": "London, City of"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "LUT",
+      "isoRegionCode": "GB-LUT",
+      "name": "Luton"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "MAN",
+      "isoRegionCode": "GB-MAN",
+      "name": "Manchester"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "MDW",
+      "isoRegionCode": "GB-MDW",
+      "name": "Medway"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "MTY",
+      "isoRegionCode": "GB-MTY",
+      "name": "Merthyr Tydfil"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "MRT",
+      "isoRegionCode": "GB-MRT",
+      "name": "Merton"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "MEA",
+      "isoRegionCode": "GB-MEA",
+      "name": "Mid and East Antrim"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "MUL",
+      "isoRegionCode": "GB-MUL",
+      "name": "Mid Ulster"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "MDB",
+      "isoRegionCode": "GB-MDB",
+      "name": "Middlesbrough"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "MLN",
+      "isoRegionCode": "GB-MLN",
+      "name": "Midlothian"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "MIK",
+      "isoRegionCode": "GB-MIK",
+      "name": "Milton Keynes"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "MON",
+      "isoRegionCode": "GB-MON",
+      "name": "Monmouthshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "MRY",
+      "isoRegionCode": "GB-MRY",
+      "name": "Moray"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "NTL",
+      "isoRegionCode": "GB-NTL",
+      "name": "Neath Port Talbot"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "NET",
+      "isoRegionCode": "GB-NET",
+      "name": "Newcastle upon Tyne"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "NWM",
+      "isoRegionCode": "GB-NWM",
+      "name": "Newham"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "NWP",
+      "isoRegionCode": "GB-NWP",
+      "name": "Newport"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "NMD",
+      "isoRegionCode": "GB-NMD",
+      "name": "Newry, Mourne and Down"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "NFK",
+      "isoRegionCode": "GB-NFK",
+      "name": "Norfolk"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "NAY",
+      "isoRegionCode": "GB-NAY",
+      "name": "North Ayrshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "NEL",
+      "isoRegionCode": "GB-NEL",
+      "name": "North East Lincolnshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "NLK",
+      "isoRegionCode": "GB-NLK",
+      "name": "North Lanarkshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "NLN",
+      "isoRegionCode": "GB-NLN",
+      "name": "North Lincolnshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "NSM",
+      "isoRegionCode": "GB-NSM",
+      "name": "North Somerset"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "NTY",
+      "isoRegionCode": "GB-NTY",
+      "name": "North Tyneside"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "NYK",
+      "isoRegionCode": "GB-NYK",
+      "name": "North Yorkshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "NTH",
+      "isoRegionCode": "GB-NTH",
+      "name": "Northamptonshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "NIR",
+      "isoRegionCode": "GB-NIR",
+      "name": "Northern Ireland"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "NBL",
+      "isoRegionCode": "GB-NBL",
+      "name": "Northumberland"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "NGM",
+      "isoRegionCode": "GB-NGM",
+      "name": "Nottingham"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "NTT",
+      "isoRegionCode": "GB-NTT",
+      "name": "Nottinghamshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "OLD",
+      "isoRegionCode": "GB-OLD",
+      "name": "Oldham"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "ORK",
+      "isoRegionCode": "GB-ORK",
+      "name": "Orkney Islands"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "OXF",
+      "isoRegionCode": "GB-OXF",
+      "name": "Oxfordshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "PEM",
+      "isoRegionCode": "GB-PEM",
+      "name": "Pembrokeshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "PKN",
+      "isoRegionCode": "GB-PKN",
+      "name": "Perth and Kinross"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "PTE",
+      "isoRegionCode": "GB-PTE",
+      "name": "Peterborough"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "PLY",
+      "isoRegionCode": "GB-PLY",
+      "name": "Plymouth"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "POL",
+      "isoRegionCode": "GB-POL",
+      "name": "Poole"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "POR",
+      "isoRegionCode": "GB-POR",
+      "name": "Portsmouth"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "POW",
+      "isoRegionCode": "GB-POW",
+      "name": "Powys"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "RDG",
+      "isoRegionCode": "GB-RDG",
+      "name": "Reading"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "RDB",
+      "isoRegionCode": "GB-RDB",
+      "name": "Redbridge"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "RCC",
+      "isoRegionCode": "GB-RCC",
+      "name": "Redcar and Cleveland"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "RFW",
+      "isoRegionCode": "GB-RFW",
+      "name": "Renfrewshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "RCT",
+      "isoRegionCode": "GB-RCT",
+      "name": "Rhondda, Cynon, Taff"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "RIC",
+      "isoRegionCode": "GB-RIC",
+      "name": "Richmond upon Thames"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "RCH",
+      "isoRegionCode": "GB-RCH",
+      "name": "Rochdale"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "ROT",
+      "isoRegionCode": "GB-ROT",
+      "name": "Rotherham"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "RUT",
+      "isoRegionCode": "GB-RUT",
+      "name": "Rutland"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "SLF",
+      "isoRegionCode": "GB-SLF",
+      "name": "Salford"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "SAW",
+      "isoRegionCode": "GB-SAW",
+      "name": "Sandwell"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "SCT",
+      "isoRegionCode": "GB-SCT",
+      "name": "Scotland"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "SCB",
+      "isoRegionCode": "GB-SCB",
+      "name": "Scottish Borders, The"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "SFT",
+      "isoRegionCode": "GB-SFT",
+      "name": "Sefton"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "SHF",
+      "isoRegionCode": "GB-SHF",
+      "name": "Sheffield"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "ZET",
+      "isoRegionCode": "GB-ZET",
+      "name": "Shetland Islands"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "SHR",
+      "isoRegionCode": "GB-SHR",
+      "name": "Shropshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "SLG",
+      "isoRegionCode": "GB-SLG",
+      "name": "Slough"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "SOL",
+      "isoRegionCode": "GB-SOL",
+      "name": "Solihull"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "SOM",
+      "isoRegionCode": "GB-SOM",
+      "name": "Somerset"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "SAY",
+      "isoRegionCode": "GB-SAY",
+      "name": "South Ayrshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "SGC",
+      "isoRegionCode": "GB-SGC",
+      "name": "South Gloucestershire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "SLK",
+      "isoRegionCode": "GB-SLK",
+      "name": "South Lanarkshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "STY",
+      "isoRegionCode": "GB-STY",
+      "name": "South Tyneside"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "STH",
+      "isoRegionCode": "GB-STH",
+      "name": "Southampton"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "SOS",
+      "isoRegionCode": "GB-SOS",
+      "name": "Southend-on-Sea"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "SWK",
+      "isoRegionCode": "GB-SWK",
+      "name": "Southwark"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "SHN",
+      "isoRegionCode": "GB-SHN",
+      "name": "St. Helens"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "STS",
+      "isoRegionCode": "GB-STS",
+      "name": "Staffordshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "STG",
+      "isoRegionCode": "GB-STG",
+      "name": "Stirling"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "SKP",
+      "isoRegionCode": "GB-SKP",
+      "name": "Stockport"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "STT",
+      "isoRegionCode": "GB-STT",
+      "name": "Stockton-on-Tees"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "STE",
+      "isoRegionCode": "GB-STE",
+      "name": "Stoke-on-Trent"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "SFK",
+      "isoRegionCode": "GB-SFK",
+      "name": "Suffolk"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "SND",
+      "isoRegionCode": "GB-SND",
+      "name": "Sunderland"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "SRY",
+      "isoRegionCode": "GB-SRY",
+      "name": "Surrey"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "STN",
+      "isoRegionCode": "GB-STN",
+      "name": "Sutton"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "SWA",
+      "isoRegionCode": "GB-SWA",
+      "name": "Swansea"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "SWD",
+      "isoRegionCode": "GB-SWD",
+      "name": "Swindon"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "TAM",
+      "isoRegionCode": "GB-TAM",
+      "name": "Tameside"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "TFW",
+      "isoRegionCode": "GB-TFW",
+      "name": "Telford and Wrekin"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "THR",
+      "isoRegionCode": "GB-THR",
+      "name": "Thurrock"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "TOB",
+      "isoRegionCode": "GB-TOB",
+      "name": "Torbay"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "TOF",
+      "isoRegionCode": "GB-TOF",
+      "name": "Torfaen"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "TWH",
+      "isoRegionCode": "GB-TWH",
+      "name": "Tower Hamlets"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "TRF",
+      "isoRegionCode": "GB-TRF",
+      "name": "Trafford"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "UKM",
+      "isoRegionCode": "GB-UKM",
+      "name": "United Kingdom"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "UK",
+      "isoRegionCode": "UK-UK",
+      "name": "United Kingdom (Obs)"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "VGL",
+      "isoRegionCode": "GB-VGL",
+      "name": "Vale of Glamorgan, The"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "WKF",
+      "isoRegionCode": "GB-WKF",
+      "name": "Wakefield"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "WLS",
+      "isoRegionCode": "GB-WLS",
+      "name": "Wales"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "WLL",
+      "isoRegionCode": "GB-WLL",
+      "name": "Walsall"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "WFT",
+      "isoRegionCode": "GB-WFT",
+      "name": "Waltham Forest"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "WND",
+      "isoRegionCode": "GB-WND",
+      "name": "Wandsworth"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "WRT",
+      "isoRegionCode": "GB-WRT",
+      "name": "Warrington"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "WAR",
+      "isoRegionCode": "GB-WAR",
+      "name": "Warwickshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "WBK",
+      "isoRegionCode": "GB-WBK",
+      "name": "West Berkshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "WDU",
+      "isoRegionCode": "GB-WDU",
+      "name": "West Dunbartonshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "WLN",
+      "isoRegionCode": "GB-WLN",
+      "name": "West Lothian"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "WSX",
+      "isoRegionCode": "GB-WSX",
+      "name": "West Sussex"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "WSM",
+      "isoRegionCode": "GB-WSM",
+      "name": "Westminster"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "WGN",
+      "isoRegionCode": "GB-WGN",
+      "name": "Wigan"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "WIL",
+      "isoRegionCode": "GB-WIL",
+      "name": "Wiltshire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "WNM",
+      "isoRegionCode": "GB-WNM",
+      "name": "Windsor and Maidenhead"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "WRL",
+      "isoRegionCode": "GB-WRL",
+      "name": "Wirral"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "WOK",
+      "isoRegionCode": "GB-WOK",
+      "name": "Wokingham"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "WLV",
+      "isoRegionCode": "GB-WLV",
+      "name": "Wolverhampton"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "WOR",
+      "isoRegionCode": "GB-WOR",
+      "name": "Worcestershire"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "WRX",
+      "isoRegionCode": "GB-WRX",
+      "name": "Wrexham"
+    },
+    {
+      "countryCode": "GB",
+      "regionCode": "YOR",
+      "isoRegionCode": "GB-YOR",
+      "name": "York"
+    }
+  ],
+  "note": null
+}
