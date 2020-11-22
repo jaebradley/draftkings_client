@@ -26,7 +26,7 @@ from draft_kings.response.schema.draft_group import DraftGroupResponseSchema
 from draft_kings.response.schema.draftables import DraftablesSchema
 from draft_kings.response.schema.players import PlayersDetailsSchema
 from draft_kings.response.schema.regions import RegionsSchema
-from draft_kings.urls import URLBuilder
+from draft_kings.url_builder import URLBuilder
 
 
 def contests(sport: Sport) -> ContestsDetails:
