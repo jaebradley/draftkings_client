@@ -26,6 +26,9 @@ from draft_kings.response.schema.countries import CountriesSchema
 from draft_kings.response.schema.draft_group import DraftGroupResponseSchema
 from draft_kings.response.schema.draftables import DraftablesSchema
 from draft_kings.response.schema.players import PlayersDetailsSchema
+from draft_kings.response.schema.regions import RegionsSchema
+from draft_kings.output.transformers.regions import RegionsTransformer, transform_region
+from draft_kings.output.objects.regions import Regions
 from draft_kings.urls import URLBuilder
 
 
@@ -79,10 +82,11 @@ def countries() -> Countries:
     return CountriesTransformer(country_transformer=transform_country).transform(deserialized_response)
 
 
-def regions(country_code):
+def regions(country_code: str) -> Regions:
     response = HTTPClient(url_builder=URLBuilder()).regions(country_code=country_code)
-    data = json.loads(response.text, cls=RegionsDecoder)
-    return list(map(lambda region_data: region_data.asdict(), data))
+    schema = RegionsSchema()
+    deserialized_response = schema.loads(response.text)
+    return RegionsTransformer(region_transformer=transform_region).transform(deserialized_response)
 
 
 def draftables(draft_group_id: int) -> Draftables:
