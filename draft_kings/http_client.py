@@ -2,7 +2,7 @@ import requests
 from requests.models import Response
 
 from draft_kings.data import Sport, SPORT_TO_CONTESTS_ABBREVIATION
-from draft_kings.urls import URLBuilder
+from draft_kings.url_builder import URLBuilder
 
 
 class HTTPClient:
