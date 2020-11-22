@@ -29,13 +29,11 @@ jobs:
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}-${{ hashFiles('**/pyproject.toml') }}
-      - name: Install Dependencies
+      - name: Test
         uses: abatilo/actions-poetry@v1.5.0
         with:
           python_version: ${{ matrix.python-version }}
           poetry_version: 1.0.9
-          args: install
-      - name: Test
-        run: python -m coverage run -m unittest discover
+          args: run python -m coverage run -m unittest discover
       - name: Upload Coverage To Codecov
         uses: codecov/codecov-action@v1
