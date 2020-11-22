@@ -1,7 +1,7 @@
 import os
 from unittest import TestCase
 
-from draft_kings.response.objects.draftables import Draftables, Competition, Player, PlayerCompetitionDetails, \
+from draft_kings.response.objects.draftables import Competition, Player, PlayerCompetitionDetails, \
     CompetitionWeather, CompetitionTeam
 from draft_kings.response.schema.draftables import DraftablesSchema
 from tests.config import ROOT_DIRECTORY
@@ -9,7 +9,7 @@ from tests.config import ROOT_DIRECTORY
 
 class TestUpcomingNFLDraftables(TestCase):
     def setUp(self) -> None:
-        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/upcoming_nfl_draftables.json')) as data_file:
+        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/draftables/upcoming_nfl_draftables.json')) as data_file:
             self.schema = DraftablesSchema()
             self.data = self.schema.loads(data_file.read())
 
@@ -83,7 +83,7 @@ class TestUpcomingNFLDraftables(TestCase):
 
 class TestHistoricalGolfDraftables(TestCase):
     def setUp(self) -> None:
-        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/historical_golf_draftables.json')) as data_file:
+        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/draftables/historical_golf_draftables.json')) as data_file:
             self.schema = DraftablesSchema()
             self.data = self.schema.loads(data_file.read())
 

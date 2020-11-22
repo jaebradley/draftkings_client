@@ -8,7 +8,8 @@ from tests.config import ROOT_DIRECTORY
 
 class TestUpcomingGolfDraftGroup(TestCase):
     def setUp(self) -> None:
-        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/upcoming_golf_draft_group_response.json')) as data_file:
+        with open(os.path.join(ROOT_DIRECTORY,
+                               'tests/files/draft_group_details/upcoming_golf_draft_group_response.json')) as data_file:
             self.schema = DraftGroupResponseSchema()
             self.data = self.schema.loads(data_file.read())
 
@@ -68,7 +69,9 @@ class TestUpcomingGolfDraftGroup(TestCase):
 
 class TestHistoricalGolfDraftGroup(TestCase):
     def setUp(self) -> None:
-        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/historical_golf_draft_group_response.json')) as data_file:
+        with open(os.path.join(ROOT_DIRECTORY,
+                               'tests/files/draft_group_details/historical_golf_draft_group_response.json')) as \
+                data_file:
             self.schema = DraftGroupResponseSchema()
             self.data = self.schema.loads(data_file.read())
 
@@ -129,7 +132,8 @@ class TestHistoricalGolfDraftGroup(TestCase):
 class TestUpcomingNFLDraftGroup(TestCase):
     def setUp(self) -> None:
         with open(os.path.join(ROOT_DIRECTORY,
-                               'tests/files/upcoming_monday_night_nfl_game_draft_group.json')) as data_file:
+                               'tests/files/draft_group_details/upcoming_monday_night_nfl_game_draft_group.json')) as \
+                data_file:
             self.schema = DraftGroupResponseSchema()
             self.data = self.schema.loads(data_file.read())
 
@@ -189,7 +193,8 @@ class TestUpcomingNFLDraftGroup(TestCase):
 
 class TestHistoricalNFLDraftGroup(TestCase):
     def setUp(self) -> None:
-        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/historical_monday_night_nfl_game_draft_group.json')) \
+        with open(os.path.join(ROOT_DIRECTORY,
+                               'tests/files/draft_group_details/historical_monday_night_nfl_game_draft_group.json')) \
                 as data_file:
             self.schema = DraftGroupResponseSchema()
             self.data = self.schema.loads(data_file.read())

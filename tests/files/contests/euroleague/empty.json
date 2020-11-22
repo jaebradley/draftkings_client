@@ -1,0 +1,25 @@
+{
+  "SelectedSport": "EL",
+  "SelectedSportId": null,
+  "Contests": [],
+  "DraftGroups": [],
+  "GameSets": [],
+  "GameTypes": [],
+  "MarketingOffers": [
+    "\n\n<a href=\"/offer/acceptoffer?h=%2Fleagues%2Fhome\"  data-offer-id=\"4954\" data-offer-name=\"Leagues EL RND\" data-offer-zone=\"RaptorElLobbyLeft\">\n    <div class=\"marquee\">\n        <div class=\"rollover\">\n            <div class=\"rollover-inner\" >\n                <div>Introducing Leagues</div><br /><span>A new way to play with your friends!</span>\n                <span class=\"cta-link\">Learn More <span class=\"icon-chevron\"></span></span>\n            </div>\n        </div>\n        <img src=\"https://s3.amazonaws.com/dkstatic/cms-zones/marquee-leagues-336x28.png\" />\n    </div>\n</a>\n\n",
+    "\n\n<a href=\"/offer/acceptoffer?h=https%3A%2F%2Fsecure.draftkings.com%2Fapp%2Findex.html%23%2Fdeposit%3F_k%3De59e0d\"  data-offer-id=\"8732\" data-offer-name=\"Deposit Offer \" data-offer-zone=\"RaptorElLobbyMiddle\">\n    <div class=\"marquee\">\n        <div class=\"rollover\">\n            <div class=\"rollover-inner\" >\n                <div>Free Entry! </div><br /><span>Deposit now for a free entry into a paid contest </span>\n                <span class=\"cta-link\">Make a Deposit Now <span class=\"icon-chevron\"></span></span>\n            </div>\n        </div>\n        <img src=\"https://s3.amazonaws.com/dkstatic/cms-zones/freeentrymarquee-1.png\" />\n    </div>\n</a>\n\n",
+    "\n\n<a href=\"/offer/acceptoffer?h=https%3A%2F%2Fwww.draftkings.com%2Fmissions\"  data-offer-id=\"4952\" data-offer-name=\"Missions EL RND\" data-offer-zone=\"RaptorElLobbyRight\">\n    <div class=\"marquee\">\n        <div class=\"rollover\">\n            <div class=\"rollover-inner\" >\n                <div>Missions</div><br /><span> Win Prizes and Rack Up Crowns</span>\n                <span class=\"cta-link\">Claim Now <span class=\"icon-chevron\"></span></span>\n            </div>\n        </div>\n        <img src=\"https://s3.amazonaws.com/dkstatic/cms-zones/217-general-mission-marquee-336x28.png\" />\n    </div>\n</a>\n\n"
+  ],
+  "DirectChallengeModal": null,
+  "DepositTransaction": null,
+  "ShowRafLink": false,
+  "PrizeRedemptionModel": null,
+  "PrizeRedemptionPop": false,
+  "UseRaptorHeadToHead": false,
+  "UseJSWebLobbyModals": false,
+  "SportMenuItems": null,
+  "UserGeoLocation": null,
+  "ShowAds": true,
+  "IsVip": null,
+  "AdsEnabled": false
+}

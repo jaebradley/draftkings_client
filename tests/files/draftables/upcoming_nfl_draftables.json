@@ -1,0 +1,4003 @@
+{
+    "draftables": [
+        {
+            "draftableId": 11647232,
+            "firstName": "Todd",
+            "lastName": "Gurley II",
+            "displayName": "Todd Gurley II",
+            "shortName": "T. Gurley II",
+            "playerId": 694641,
+            "position": "RB",
+            "rosterSlotId": 511,
+            "salary": 17700,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/694641.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/694641.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/694641.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/694641.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "30.1",
+                    "sortValue": "30.1"
+                },
+                {
+                    "id": -2,
+                    "value": "31st",
+                    "sortValue": "31",
+                    "quality": "High"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "694641-5523451"
+        },
+        {
+            "draftableId": 11647233,
+            "firstName": "Patrick",
+            "lastName": "Mahomes",
+            "displayName": "Patrick Mahomes",
+            "shortName": "P. Mahomes",
+            "playerId": 839031,
+            "position": "QB",
+            "rosterSlotId": 511,
+            "salary": 16800,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/839031.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/839031.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/839031.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/839031.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "29.5",
+                    "sortValue": "29.5"
+                },
+                {
+                    "id": -2,
+                    "value": "18th",
+                    "sortValue": "18",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "839031-5523451"
+        },
+        {
+            "draftableId": 11647234,
+            "firstName": "Tyreek",
+            "lastName": "Hill",
+            "displayName": "Tyreek Hill",
+            "shortName": "T. Hill",
+            "playerId": 823156,
+            "position": "WR",
+            "rosterSlotId": 511,
+            "salary": 15000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/823156.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/823156.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/823156.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/823156.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "22.1",
+                    "sortValue": "22.1"
+                },
+                {
+                    "id": -2,
+                    "value": "18th",
+                    "sortValue": "18",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "823156-5523451"
+        },
+        {
+            "draftableId": 11647235,
+            "firstName": "Jared",
+            "lastName": "Goff",
+            "displayName": "Jared Goff",
+            "shortName": "J. Goff",
+            "playerId": 727837,
+            "position": "QB",
+            "rosterSlotId": 511,
+            "salary": 14400,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/727837.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/727837.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/727837.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/727837.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "24.0",
+                    "sortValue": "24.0"
+                },
+                {
+                    "id": -2,
+                    "value": "19th",
+                    "sortValue": "19",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "727837-5523451"
+        },
+        {
+            "draftableId": 11647236,
+            "firstName": "Kareem",
+            "lastName": "Hunt",
+            "displayName": "Kareem Hunt",
+            "shortName": "K. Hunt",
+            "playerId": 746613,
+            "position": "RB",
+            "rosterSlotId": 511,
+            "salary": 13200,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/746613.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/746613.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/746613.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/746613.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "21.6",
+                    "sortValue": "21.6"
+                },
+                {
+                    "id": -2,
+                    "value": "10th",
+                    "sortValue": "10",
+                    "quality": "Low"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "746613-5523451"
+        },
+        {
+            "draftableId": 11647237,
+            "firstName": "Robert",
+            "lastName": "Woods",
+            "displayName": "Robert Woods",
+            "shortName": "R. Woods",
+            "playerId": 555693,
+            "position": "WR",
+            "rosterSlotId": 511,
+            "salary": 12000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/555693.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/555693.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/555693.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/555693.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "17.6",
+                    "sortValue": "17.6"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "555693-5523451"
+        },
+        {
+            "draftableId": 11647196,
+            "firstName": "Todd",
+            "lastName": "Gurley II",
+            "displayName": "Todd Gurley II",
+            "shortName": "T. Gurley II",
+            "playerId": 694641,
+            "position": "RB",
+            "rosterSlotId": 512,
+            "salary": 11800,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/694641.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/694641.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/694641.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/694641.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "30.1",
+                    "sortValue": "30.1"
+                },
+                {
+                    "id": -2,
+                    "value": "31st",
+                    "sortValue": "31",
+                    "quality": "High"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "694641-5523451"
+        },
+        {
+            "draftableId": 11647238,
+            "firstName": "Brandin",
+            "lastName": "Cooks",
+            "displayName": "Brandin Cooks",
+            "shortName": "B. Cooks",
+            "playerId": 607864,
+            "position": "WR",
+            "rosterSlotId": 511,
+            "salary": 11700,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/607864.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/607864.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/607864.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/607864.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "17.7",
+                    "sortValue": "17.7"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "607864-5523451"
+        },
+        {
+            "draftableId": 11647197,
+            "firstName": "Patrick",
+            "lastName": "Mahomes",
+            "displayName": "Patrick Mahomes",
+            "shortName": "P. Mahomes",
+            "playerId": 839031,
+            "position": "QB",
+            "rosterSlotId": 512,
+            "salary": 11200,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/839031.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/839031.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/839031.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/839031.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "29.5",
+                    "sortValue": "29.5"
+                },
+                {
+                    "id": -2,
+                    "value": "18th",
+                    "sortValue": "18",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "839031-5523451"
+        },
+        {
+            "draftableId": 11647239,
+            "firstName": "Travis",
+            "lastName": "Kelce",
+            "displayName": "Travis Kelce",
+            "shortName": "T. Kelce",
+            "playerId": 448240,
+            "position": "TE",
+            "rosterSlotId": 511,
+            "salary": 11100,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/448240.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/448240.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/448240.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/448240.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "18.1",
+                    "sortValue": "18.1"
+                },
+                {
+                    "id": -2,
+                    "value": "17th",
+                    "sortValue": "17",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "448240-5523451"
+        },
+        {
+            "draftableId": 11647198,
+            "firstName": "Tyreek",
+            "lastName": "Hill",
+            "displayName": "Tyreek Hill",
+            "shortName": "T. Hill",
+            "playerId": 823156,
+            "position": "WR",
+            "rosterSlotId": 512,
+            "salary": 10000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/823156.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/823156.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/823156.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/823156.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "22.1",
+                    "sortValue": "22.1"
+                },
+                {
+                    "id": -2,
+                    "value": "18th",
+                    "sortValue": "18",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "823156-5523451"
+        },
+        {
+            "draftableId": 11647199,
+            "firstName": "Jared",
+            "lastName": "Goff",
+            "displayName": "Jared Goff",
+            "shortName": "J. Goff",
+            "playerId": 727837,
+            "position": "QB",
+            "rosterSlotId": 512,
+            "salary": 9600,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/727837.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/727837.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/727837.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/727837.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "24.0",
+                    "sortValue": "24.0"
+                },
+                {
+                    "id": -2,
+                    "value": "19th",
+                    "sortValue": "19",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "727837-5523451"
+        },
+        {
+            "draftableId": 11647240,
+            "firstName": "Chad",
+            "lastName": "Henne",
+            "displayName": "Chad Henne",
+            "shortName": "C. Henne",
+            "playerId": 264851,
+            "position": "QB",
+            "rosterSlotId": 511,
+            "salary": 9000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/264851.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/264851.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/264851.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/264851.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": -2,
+                    "value": "18th",
+                    "sortValue": "18",
+                    "quality": "Medium"
+                },
+                {
+                    "id": 90,
+                    "value": "-",
+                    "sortValue": ""
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "264851-5523451"
+        },
+        {
+            "draftableId": 11647241,
+            "firstName": "Sean",
+            "lastName": "Mannion",
+            "displayName": "Sean Mannion",
+            "shortName": "S. Mannion",
+            "playerId": 557860,
+            "position": "QB",
+            "rosterSlotId": 511,
+            "salary": 9000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/557860.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/557860.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/557860.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/557860.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "0.1",
+                    "sortValue": "0.1"
+                },
+                {
+                    "id": -2,
+                    "value": "19th",
+                    "sortValue": "19",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "557860-5523451"
+        },
+        {
+            "draftableId": 11647200,
+            "firstName": "Kareem",
+            "lastName": "Hunt",
+            "displayName": "Kareem Hunt",
+            "shortName": "K. Hunt",
+            "playerId": 746613,
+            "position": "RB",
+            "rosterSlotId": 512,
+            "salary": 8800,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/746613.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/746613.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/746613.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/746613.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "21.6",
+                    "sortValue": "21.6"
+                },
+                {
+                    "id": -2,
+                    "value": "10th",
+                    "sortValue": "10",
+                    "quality": "Low"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "746613-5523451"
+        },
+        {
+            "draftableId": 11647242,
+            "firstName": "Sammy",
+            "lastName": "Watkins",
+            "displayName": "Sammy Watkins",
+            "shortName": "S. Watkins",
+            "playerId": 602118,
+            "position": "WR",
+            "rosterSlotId": 511,
+            "salary": 8400,
+            "status": "Q",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/602118.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/602118.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/602118.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/602118.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "13.3",
+                    "sortValue": "13.3"
+                },
+                {
+                    "id": -2,
+                    "value": "18th",
+                    "sortValue": "18",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "602118-5523451"
+        },
+        {
+            "draftableId": 11647201,
+            "firstName": "Robert",
+            "lastName": "Woods",
+            "displayName": "Robert Woods",
+            "shortName": "R. Woods",
+            "playerId": 555693,
+            "position": "WR",
+            "rosterSlotId": 512,
+            "salary": 8000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/555693.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/555693.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/555693.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/555693.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "17.6",
+                    "sortValue": "17.6"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "555693-5523451"
+        },
+        {
+            "draftableId": 11647202,
+            "firstName": "Brandin",
+            "lastName": "Cooks",
+            "displayName": "Brandin Cooks",
+            "shortName": "B. Cooks",
+            "playerId": 607864,
+            "position": "WR",
+            "rosterSlotId": 512,
+            "salary": 7800,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/607864.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/607864.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/607864.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/607864.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "17.7",
+                    "sortValue": "17.7"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "607864-5523451"
+        },
+        {
+            "draftableId": 11647203,
+            "firstName": "Travis",
+            "lastName": "Kelce",
+            "displayName": "Travis Kelce",
+            "shortName": "T. Kelce",
+            "playerId": 448240,
+            "position": "TE",
+            "rosterSlotId": 512,
+            "salary": 7400,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/448240.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/448240.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/448240.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/448240.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "18.1",
+                    "sortValue": "18.1"
+                },
+                {
+                    "id": -2,
+                    "value": "17th",
+                    "sortValue": "17",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "448240-5523451"
+        },
+        {
+            "draftableId": 11647243,
+            "firstName": "Josh",
+            "lastName": "Reynolds",
+            "displayName": "Josh Reynolds",
+            "shortName": "J. Reynolds",
+            "playerId": 822367,
+            "position": "WR",
+            "rosterSlotId": 511,
+            "salary": 7200,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/822367.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/822367.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/822367.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/822367.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "3.0",
+                    "sortValue": "3.0"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "822367-5523451"
+        },
+        {
+            "draftableId": 11647204,
+            "firstName": "Chad",
+            "lastName": "Henne",
+            "displayName": "Chad Henne",
+            "shortName": "C. Henne",
+            "playerId": 264851,
+            "position": "QB",
+            "rosterSlotId": 512,
+            "salary": 6000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/264851.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/264851.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/264851.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/264851.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": -2,
+                    "value": "18th",
+                    "sortValue": "18",
+                    "quality": "Medium"
+                },
+                {
+                    "id": 90,
+                    "value": "-",
+                    "sortValue": ""
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "264851-5523451"
+        },
+        {
+            "draftableId": 11647205,
+            "firstName": "Sean",
+            "lastName": "Mannion",
+            "displayName": "Sean Mannion",
+            "shortName": "S. Mannion",
+            "playerId": 557860,
+            "position": "QB",
+            "rosterSlotId": 512,
+            "salary": 6000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/557860.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/557860.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/557860.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/557860.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "0.1",
+                    "sortValue": "0.1"
+                },
+                {
+                    "id": -2,
+                    "value": "19th",
+                    "sortValue": "19",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "557860-5523451"
+        },
+        {
+            "draftableId": 11647206,
+            "firstName": "Sammy",
+            "lastName": "Watkins",
+            "displayName": "Sammy Watkins",
+            "shortName": "S. Watkins",
+            "playerId": 602118,
+            "position": "WR",
+            "rosterSlotId": 512,
+            "salary": 5600,
+            "status": "Q",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/602118.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/602118.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/602118.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/602118.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "13.3",
+                    "sortValue": "13.3"
+                },
+                {
+                    "id": -2,
+                    "value": "18th",
+                    "sortValue": "18",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "602118-5523451"
+        },
+        {
+            "draftableId": 11647244,
+            "firstName": "Greg",
+            "lastName": "Zuerlein",
+            "displayName": "Greg Zuerlein",
+            "shortName": "G. Zuerlein",
+            "playerId": 558684,
+            "position": "K",
+            "rosterSlotId": 511,
+            "salary": 5100,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/558684.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/558684.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/558684.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/558684.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "12.2",
+                    "sortValue": "12.2"
+                },
+                {
+                    "id": -2,
+                    "value": "8th",
+                    "sortValue": "8",
+                    "quality": "Low"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "558684-5523451"
+        },
+        {
+            "draftableId": 11647207,
+            "firstName": "Josh",
+            "lastName": "Reynolds",
+            "displayName": "Josh Reynolds",
+            "shortName": "J. Reynolds",
+            "playerId": 822367,
+            "position": "WR",
+            "rosterSlotId": 512,
+            "salary": 4800,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/822367.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/822367.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/822367.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/822367.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "3.0",
+                    "sortValue": "3.0"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "822367-5523451"
+        },
+        {
+            "draftableId": 11647245,
+            "firstName": "Harrison",
+            "lastName": "Butker",
+            "displayName": "Harrison Butker",
+            "shortName": "H. Butker",
+            "playerId": 748560,
+            "position": "K",
+            "rosterSlotId": 511,
+            "salary": 4800,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/748560.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/748560.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/748560.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/748560.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "9.5",
+                    "sortValue": "9.5"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "748560-5523451"
+        },
+        {
+            "draftableId": 11647246,
+            "firstName": "Gerald",
+            "lastName": "Everett",
+            "displayName": "Gerald Everett",
+            "shortName": "G. Everett",
+            "playerId": 838487,
+            "position": "TE",
+            "rosterSlotId": 511,
+            "salary": 3600,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/838487.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/838487.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/838487.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/838487.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "3.9",
+                    "sortValue": "3.9"
+                },
+                {
+                    "id": -2,
+                    "value": "25th",
+                    "sortValue": "25",
+                    "quality": "High"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "838487-5523451"
+        },
+        {
+            "draftableId": 11647208,
+            "firstName": "Greg",
+            "lastName": "Zuerlein",
+            "displayName": "Greg Zuerlein",
+            "shortName": "G. Zuerlein",
+            "playerId": 558684,
+            "position": "K",
+            "rosterSlotId": 512,
+            "salary": 3400,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/558684.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/558684.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/558684.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/558684.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "12.2",
+                    "sortValue": "12.2"
+                },
+                {
+                    "id": -2,
+                    "value": "8th",
+                    "sortValue": "8",
+                    "quality": "Low"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "558684-5523451"
+        },
+        {
+            "draftableId": 11647247,
+            "firstName": "Tyler",
+            "lastName": "Higbee",
+            "displayName": "Tyler Higbee",
+            "shortName": "T. Higbee",
+            "playerId": 604176,
+            "position": "TE",
+            "rosterSlotId": 511,
+            "salary": 3300,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/604176.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/604176.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/604176.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/604176.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "3.7",
+                    "sortValue": "3.7"
+                },
+                {
+                    "id": -2,
+                    "value": "25th",
+                    "sortValue": "25",
+                    "quality": "High"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "604176-5523451"
+        },
+        {
+            "draftableId": 11647209,
+            "firstName": "Harrison",
+            "lastName": "Butker",
+            "displayName": "Harrison Butker",
+            "shortName": "H. Butker",
+            "playerId": 748560,
+            "position": "K",
+            "rosterSlotId": 512,
+            "salary": 3200,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/748560.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/748560.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/748560.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/748560.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "9.5",
+                    "sortValue": "9.5"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "748560-5523451"
+        },
+        {
+            "draftableId": 11647248,
+            "firstName": "Rams",
+            "lastName": "",
+            "displayName": "Rams ",
+            "shortName": "Rams",
+            "playerId": 343,
+            "position": "DST",
+            "rosterSlotId": 511,
+            "salary": 3000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/343.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/343.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/343.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/343.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "8.8",
+                    "sortValue": "8.8"
+                },
+                {
+                    "id": -2,
+                    "value": "2nd",
+                    "sortValue": "2",
+                    "quality": "Low"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "343-5523451"
+        },
+        {
+            "draftableId": 11647249,
+            "firstName": "Chiefs",
+            "lastName": "",
+            "displayName": "Chiefs ",
+            "shortName": "Chiefs",
+            "playerId": 339,
+            "position": "DST",
+            "rosterSlotId": 511,
+            "salary": 2700,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/339.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/339.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/339.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/339.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "7.8",
+                    "sortValue": "7.8"
+                },
+                {
+                    "id": -2,
+                    "value": "3rd",
+                    "sortValue": "3",
+                    "quality": "Low"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "339-5523451"
+        },
+        {
+            "draftableId": 11647210,
+            "firstName": "Gerald",
+            "lastName": "Everett",
+            "displayName": "Gerald Everett",
+            "shortName": "G. Everett",
+            "playerId": 838487,
+            "position": "TE",
+            "rosterSlotId": 512,
+            "salary": 2400,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/838487.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/838487.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/838487.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/838487.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "3.9",
+                    "sortValue": "3.9"
+                },
+                {
+                    "id": -2,
+                    "value": "25th",
+                    "sortValue": "25",
+                    "quality": "High"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "838487-5523451"
+        },
+        {
+            "draftableId": 11647250,
+            "firstName": "Spencer",
+            "lastName": "Ware",
+            "displayName": "Spencer Ware",
+            "shortName": "S. Ware",
+            "playerId": 540526,
+            "position": "RB",
+            "rosterSlotId": 511,
+            "salary": 2400,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/540526.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/540526.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/540526.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/540526.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "4.9",
+                    "sortValue": "4.9"
+                },
+                {
+                    "id": -2,
+                    "value": "10th",
+                    "sortValue": "10",
+                    "quality": "Low"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "540526-5523451"
+        },
+        {
+            "draftableId": 11647211,
+            "firstName": "Tyler",
+            "lastName": "Higbee",
+            "displayName": "Tyler Higbee",
+            "shortName": "T. Higbee",
+            "playerId": 604176,
+            "position": "TE",
+            "rosterSlotId": 512,
+            "salary": 2200,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/604176.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/604176.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/604176.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/604176.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "3.7",
+                    "sortValue": "3.7"
+                },
+                {
+                    "id": -2,
+                    "value": "25th",
+                    "sortValue": "25",
+                    "quality": "High"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "604176-5523451"
+        },
+        {
+            "draftableId": 11647212,
+            "firstName": "Rams",
+            "lastName": "",
+            "displayName": "Rams ",
+            "shortName": "Rams",
+            "playerId": 343,
+            "position": "DST",
+            "rosterSlotId": 512,
+            "salary": 2000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/343.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/343.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/343.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/343.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "8.8",
+                    "sortValue": "8.8"
+                },
+                {
+                    "id": -2,
+                    "value": "2nd",
+                    "sortValue": "2",
+                    "quality": "Low"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "343-5523451"
+        },
+        {
+            "draftableId": 11647213,
+            "firstName": "Chiefs",
+            "lastName": "",
+            "displayName": "Chiefs ",
+            "shortName": "Chiefs",
+            "playerId": 339,
+            "position": "DST",
+            "rosterSlotId": 512,
+            "salary": 1800,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/339.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/339.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/339.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/339.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "7.8",
+                    "sortValue": "7.8"
+                },
+                {
+                    "id": -2,
+                    "value": "3rd",
+                    "sortValue": "3",
+                    "quality": "Low"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "339-5523451"
+        },
+        {
+            "draftableId": 11647251,
+            "firstName": "Chris",
+            "lastName": "Conley",
+            "displayName": "Chris Conley",
+            "shortName": "C. Conley",
+            "playerId": 591801,
+            "position": "WR",
+            "rosterSlotId": 511,
+            "salary": 1800,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/591801.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/591801.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/591801.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/591801.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "4.1",
+                    "sortValue": "4.1"
+                },
+                {
+                    "id": -2,
+                    "value": "18th",
+                    "sortValue": "18",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "591801-5523451"
+        },
+        {
+            "draftableId": 11647214,
+            "firstName": "Spencer",
+            "lastName": "Ware",
+            "displayName": "Spencer Ware",
+            "shortName": "S. Ware",
+            "playerId": 540526,
+            "position": "RB",
+            "rosterSlotId": 512,
+            "salary": 1600,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/540526.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/540526.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/540526.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/540526.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "4.9",
+                    "sortValue": "4.9"
+                },
+                {
+                    "id": -2,
+                    "value": "10th",
+                    "sortValue": "10",
+                    "quality": "Low"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "540526-5523451"
+        },
+        {
+            "draftableId": 11647252,
+            "firstName": "Malcolm",
+            "lastName": "Brown",
+            "displayName": "Malcolm Brown",
+            "shortName": "M. Brown",
+            "playerId": 604724,
+            "position": "RB",
+            "rosterSlotId": 511,
+            "salary": 1500,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/604724.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/604724.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/604724.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/604724.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "3.7",
+                    "sortValue": "3.7"
+                },
+                {
+                    "id": -2,
+                    "value": "31st",
+                    "sortValue": "31",
+                    "quality": "High"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "604724-5523451"
+        },
+        {
+            "draftableId": 11647253,
+            "firstName": "Demarcus",
+            "lastName": "Robinson",
+            "displayName": "Demarcus Robinson",
+            "shortName": "D. Robinson",
+            "playerId": 727279,
+            "position": "WR",
+            "rosterSlotId": 511,
+            "salary": 1500,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/727279.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/727279.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/727279.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/727279.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "2.4",
+                    "sortValue": "2.4"
+                },
+                {
+                    "id": -2,
+                    "value": "18th",
+                    "sortValue": "18",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "727279-5523451"
+        },
+        {
+            "draftableId": 11647215,
+            "firstName": "Chris",
+            "lastName": "Conley",
+            "displayName": "Chris Conley",
+            "shortName": "C. Conley",
+            "playerId": 591801,
+            "position": "WR",
+            "rosterSlotId": 512,
+            "salary": 1200,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/591801.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/591801.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/591801.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/591801.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "4.1",
+                    "sortValue": "4.1"
+                },
+                {
+                    "id": -2,
+                    "value": "18th",
+                    "sortValue": "18",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "591801-5523451"
+        },
+        {
+            "draftableId": 11647254,
+            "firstName": "John",
+            "lastName": "Kelly",
+            "displayName": "John Kelly",
+            "shortName": "J. Kelly",
+            "playerId": 879766,
+            "position": "RB",
+            "rosterSlotId": 511,
+            "salary": 1200,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/879766.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/879766.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/879766.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/879766.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": -2,
+                    "value": "31st",
+                    "sortValue": "31",
+                    "quality": "High"
+                },
+                {
+                    "id": 90,
+                    "value": "-",
+                    "sortValue": ""
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "879766-5523451"
+        },
+        {
+            "draftableId": 11647216,
+            "firstName": "Malcolm",
+            "lastName": "Brown",
+            "displayName": "Malcolm Brown",
+            "shortName": "M. Brown",
+            "playerId": 604724,
+            "position": "RB",
+            "rosterSlotId": 512,
+            "salary": 1000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/604724.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/604724.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/604724.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/604724.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "3.7",
+                    "sortValue": "3.7"
+                },
+                {
+                    "id": -2,
+                    "value": "31st",
+                    "sortValue": "31",
+                    "quality": "High"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "604724-5523451"
+        },
+        {
+            "draftableId": 11647217,
+            "firstName": "Demarcus",
+            "lastName": "Robinson",
+            "displayName": "Demarcus Robinson",
+            "shortName": "D. Robinson",
+            "playerId": 727279,
+            "position": "WR",
+            "rosterSlotId": 512,
+            "salary": 1000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/727279.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/727279.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/727279.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/727279.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "2.4",
+                    "sortValue": "2.4"
+                },
+                {
+                    "id": -2,
+                    "value": "18th",
+                    "sortValue": "18",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "727279-5523451"
+        },
+        {
+            "draftableId": 11647255,
+            "firstName": "Demetrius",
+            "lastName": "Harris",
+            "displayName": "Demetrius Harris",
+            "shortName": "D. Harris",
+            "playerId": 602269,
+            "position": "TE",
+            "rosterSlotId": 511,
+            "salary": 900,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/602269.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/602269.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/602269.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/602269.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "2.9",
+                    "sortValue": "2.9"
+                },
+                {
+                    "id": -2,
+                    "value": "17th",
+                    "sortValue": "17",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "602269-5523451"
+        },
+        {
+            "draftableId": 11647218,
+            "firstName": "John",
+            "lastName": "Kelly",
+            "displayName": "John Kelly",
+            "shortName": "J. Kelly",
+            "playerId": 879766,
+            "position": "RB",
+            "rosterSlotId": 512,
+            "salary": 800,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/879766.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/879766.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/879766.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/879766.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": -2,
+                    "value": "31st",
+                    "sortValue": "31",
+                    "quality": "High"
+                },
+                {
+                    "id": 90,
+                    "value": "-",
+                    "sortValue": ""
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "879766-5523451"
+        },
+        {
+            "draftableId": 11647219,
+            "firstName": "Demetrius",
+            "lastName": "Harris",
+            "displayName": "Demetrius Harris",
+            "shortName": "D. Harris",
+            "playerId": 602269,
+            "position": "TE",
+            "rosterSlotId": 512,
+            "salary": 600,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/602269.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/602269.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/602269.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/602269.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "2.9",
+                    "sortValue": "2.9"
+                },
+                {
+                    "id": -2,
+                    "value": "17th",
+                    "sortValue": "17",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "602269-5523451"
+        },
+        {
+            "draftableId": 11647256,
+            "firstName": "Johnny",
+            "lastName": "Mundt",
+            "displayName": "Johnny Mundt",
+            "shortName": "J. Mundt",
+            "playerId": 740704,
+            "position": "TE",
+            "rosterSlotId": 511,
+            "salary": 600,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/740704.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/740704.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/740704.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/740704.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "0.0",
+                    "sortValue": "0.0"
+                },
+                {
+                    "id": -2,
+                    "value": "25th",
+                    "sortValue": "25",
+                    "quality": "High"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "740704-5523451"
+        },
+        {
+            "draftableId": 11647220,
+            "firstName": "Johnny",
+            "lastName": "Mundt",
+            "displayName": "Johnny Mundt",
+            "shortName": "J. Mundt",
+            "playerId": 740704,
+            "position": "TE",
+            "rosterSlotId": 512,
+            "salary": 400,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/740704.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/740704.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/740704.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/740704.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "0.0",
+                    "sortValue": "0.0"
+                },
+                {
+                    "id": -2,
+                    "value": "25th",
+                    "sortValue": "25",
+                    "quality": "High"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "740704-5523451"
+        },
+        {
+            "draftableId": 11647257,
+            "firstName": "Cooper",
+            "lastName": "Kupp",
+            "displayName": "Cooper Kupp",
+            "shortName": "C. Kupp",
+            "playerId": 698227,
+            "position": "WR",
+            "rosterSlotId": 511,
+            "salary": 300,
+            "status": "O",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/698227.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/698227.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/698227.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/698227.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "17.3",
+                    "sortValue": "17.3"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "698227-5523451"
+        },
+        {
+            "draftableId": 11647258,
+            "firstName": "Anthony",
+            "lastName": "Sherman",
+            "displayName": "Anthony Sherman",
+            "shortName": "A. Sherman",
+            "playerId": 400947,
+            "position": "RB",
+            "rosterSlotId": 511,
+            "salary": 300,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/400947.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/400947.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/400947.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/400947.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "2.0",
+                    "sortValue": "2.0"
+                },
+                {
+                    "id": -2,
+                    "value": "10th",
+                    "sortValue": "10",
+                    "quality": "Low"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "400947-5523451"
+        },
+        {
+            "draftableId": 11647259,
+            "firstName": "Damien",
+            "lastName": "Williams",
+            "displayName": "Damien Williams",
+            "shortName": "D. Williams",
+            "playerId": 691283,
+            "position": "RB",
+            "rosterSlotId": 511,
+            "salary": 300,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/691283.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/691283.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/691283.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/691283.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "0.5",
+                    "sortValue": "0.5"
+                },
+                {
+                    "id": -2,
+                    "value": "10th",
+                    "sortValue": "10",
+                    "quality": "Low"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "691283-5523451"
+        },
+        {
+            "draftableId": 11647260,
+            "firstName": "Darrel",
+            "lastName": "Williams",
+            "displayName": "Darrel Williams",
+            "shortName": "D. Williams",
+            "playerId": 822038,
+            "position": "RB",
+            "rosterSlotId": 511,
+            "salary": 300,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/822038.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/822038.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/822038.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/822038.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "0.0",
+                    "sortValue": "0.0"
+                },
+                {
+                    "id": -2,
+                    "value": "10th",
+                    "sortValue": "10",
+                    "quality": "Low"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "822038-5523451"
+        },
+        {
+            "draftableId": 11647261,
+            "firstName": "Marcus",
+            "lastName": "Kemp",
+            "displayName": "Marcus Kemp",
+            "shortName": "M. Kemp",
+            "playerId": 746243,
+            "position": "WR",
+            "rosterSlotId": 511,
+            "salary": 300,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/746243.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/746243.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/746243.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/746243.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "0.2",
+                    "sortValue": "0.2"
+                },
+                {
+                    "id": -2,
+                    "value": "18th",
+                    "sortValue": "18",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "746243-5523451"
+        },
+        {
+            "draftableId": 11647262,
+            "firstName": "James",
+            "lastName": "Winchester",
+            "displayName": "James Winchester",
+            "shortName": "J. Winchester",
+            "playerId": 472623,
+            "position": "TE",
+            "rosterSlotId": 511,
+            "salary": 300,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/472623.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/472623.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/472623.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/472623.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "0.0",
+                    "sortValue": "0.0"
+                },
+                {
+                    "id": -2,
+                    "value": "17th",
+                    "sortValue": "17",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "472623-5523451"
+        },
+        {
+            "draftableId": 11647263,
+            "firstName": "Deon",
+            "lastName": "Yelder",
+            "displayName": "Deon Yelder",
+            "shortName": "D. Yelder",
+            "playerId": 750702,
+            "position": "TE",
+            "rosterSlotId": 511,
+            "salary": 300,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/750702.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/750702.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/750702.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/750702.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "0.0",
+                    "sortValue": "0.0"
+                },
+                {
+                    "id": -2,
+                    "value": "17th",
+                    "sortValue": "17",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "750702-5523451"
+        },
+        {
+            "draftableId": 11647264,
+            "firstName": "Justin",
+            "lastName": "Davis",
+            "displayName": "Justin Davis",
+            "shortName": "J. Davis",
+            "playerId": 727852,
+            "position": "RB",
+            "rosterSlotId": 511,
+            "salary": 300,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/727852.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/727852.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/727852.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/727852.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "0.0",
+                    "sortValue": "0.0"
+                },
+                {
+                    "id": -2,
+                    "value": "31st",
+                    "sortValue": "31",
+                    "quality": "High"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "727852-5523451"
+        },
+        {
+            "draftableId": 11647265,
+            "firstName": "KhaDarel",
+            "lastName": "Hodge",
+            "displayName": "KhaDarel Hodge",
+            "shortName": "K. Hodge",
+            "playerId": 757521,
+            "position": "WR",
+            "rosterSlotId": 511,
+            "salary": 300,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/757521.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/757521.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/757521.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/757521.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "0.3",
+                    "sortValue": "0.3"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "757521-5523451"
+        },
+        {
+            "draftableId": 11647266,
+            "firstName": "Nick",
+            "lastName": "Williams",
+            "displayName": "Nick Williams",
+            "shortName": "N. Williams",
+            "playerId": 511823,
+            "position": "WR",
+            "rosterSlotId": 511,
+            "salary": 300,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/511823.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/511823.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/511823.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/511823.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "0.9",
+                    "sortValue": "0.9"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "511823-5523451"
+        },
+        {
+            "draftableId": 11647267,
+            "firstName": "JoJo",
+            "lastName": "Natson Jr.",
+            "displayName": "JoJo Natson Jr.",
+            "shortName": "J. Natson Jr.",
+            "playerId": 693276,
+            "position": "WR",
+            "rosterSlotId": 511,
+            "salary": 300,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/693276.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/693276.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/693276.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/693276.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "0.0",
+                    "sortValue": "0.0"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "693276-5523451"
+        },
+        {
+            "draftableId": 11647221,
+            "firstName": "Cooper",
+            "lastName": "Kupp",
+            "displayName": "Cooper Kupp",
+            "shortName": "C. Kupp",
+            "playerId": 698227,
+            "position": "WR",
+            "rosterSlotId": 512,
+            "salary": 200,
+            "status": "O",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/698227.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/698227.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/698227.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/698227.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "17.3",
+                    "sortValue": "17.3"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "698227-5523451"
+        },
+        {
+            "draftableId": 11647222,
+            "firstName": "Anthony",
+            "lastName": "Sherman",
+            "displayName": "Anthony Sherman",
+            "shortName": "A. Sherman",
+            "playerId": 400947,
+            "position": "RB",
+            "rosterSlotId": 512,
+            "salary": 200,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/400947.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/400947.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/400947.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/400947.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "2.0",
+                    "sortValue": "2.0"
+                },
+                {
+                    "id": -2,
+                    "value": "10th",
+                    "sortValue": "10",
+                    "quality": "Low"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "400947-5523451"
+        },
+        {
+            "draftableId": 11647223,
+            "firstName": "Damien",
+            "lastName": "Williams",
+            "displayName": "Damien Williams",
+            "shortName": "D. Williams",
+            "playerId": 691283,
+            "position": "RB",
+            "rosterSlotId": 512,
+            "salary": 200,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/691283.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/691283.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/691283.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/691283.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "0.5",
+                    "sortValue": "0.5"
+                },
+                {
+                    "id": -2,
+                    "value": "10th",
+                    "sortValue": "10",
+                    "quality": "Low"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "691283-5523451"
+        },
+        {
+            "draftableId": 11647224,
+            "firstName": "Darrel",
+            "lastName": "Williams",
+            "displayName": "Darrel Williams",
+            "shortName": "D. Williams",
+            "playerId": 822038,
+            "position": "RB",
+            "rosterSlotId": 512,
+            "salary": 200,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/822038.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/822038.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/822038.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/822038.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "0.0",
+                    "sortValue": "0.0"
+                },
+                {
+                    "id": -2,
+                    "value": "10th",
+                    "sortValue": "10",
+                    "quality": "Low"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "822038-5523451"
+        },
+        {
+            "draftableId": 11647225,
+            "firstName": "Marcus",
+            "lastName": "Kemp",
+            "displayName": "Marcus Kemp",
+            "shortName": "M. Kemp",
+            "playerId": 746243,
+            "position": "WR",
+            "rosterSlotId": 512,
+            "salary": 200,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/746243.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/746243.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/746243.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/746243.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "0.2",
+                    "sortValue": "0.2"
+                },
+                {
+                    "id": -2,
+                    "value": "18th",
+                    "sortValue": "18",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "746243-5523451"
+        },
+        {
+            "draftableId": 11647226,
+            "firstName": "James",
+            "lastName": "Winchester",
+            "displayName": "James Winchester",
+            "shortName": "J. Winchester",
+            "playerId": 472623,
+            "position": "TE",
+            "rosterSlotId": 512,
+            "salary": 200,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/472623.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/472623.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/472623.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/472623.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "0.0",
+                    "sortValue": "0.0"
+                },
+                {
+                    "id": -2,
+                    "value": "17th",
+                    "sortValue": "17",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "472623-5523451"
+        },
+        {
+            "draftableId": 11647227,
+            "firstName": "Deon",
+            "lastName": "Yelder",
+            "displayName": "Deon Yelder",
+            "shortName": "D. Yelder",
+            "playerId": 750702,
+            "position": "TE",
+            "rosterSlotId": 512,
+            "salary": 200,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/750702.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/750702.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/750702.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/750702.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR"
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "0.0",
+                    "sortValue": "0.0"
+                },
+                {
+                    "id": -2,
+                    "value": "17th",
+                    "sortValue": "17",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 339,
+            "teamAbbreviation": "KC",
+            "draftAlerts": [],
+            "playerGameHash": "750702-5523451"
+        },
+        {
+            "draftableId": 11647228,
+            "firstName": "Justin",
+            "lastName": "Davis",
+            "displayName": "Justin Davis",
+            "shortName": "J. Davis",
+            "playerId": 727852,
+            "position": "RB",
+            "rosterSlotId": 512,
+            "salary": 200,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/727852.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/727852.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/727852.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/727852.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "0.0",
+                    "sortValue": "0.0"
+                },
+                {
+                    "id": -2,
+                    "value": "31st",
+                    "sortValue": "31",
+                    "quality": "High"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "727852-5523451"
+        },
+        {
+            "draftableId": 11647229,
+            "firstName": "KhaDarel",
+            "lastName": "Hodge",
+            "displayName": "KhaDarel Hodge",
+            "shortName": "K. Hodge",
+            "playerId": 757521,
+            "position": "WR",
+            "rosterSlotId": 512,
+            "salary": 200,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/757521.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/757521.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/757521.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/757521.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "0.3",
+                    "sortValue": "0.3"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "757521-5523451"
+        },
+        {
+            "draftableId": 11647230,
+            "firstName": "Nick",
+            "lastName": "Williams",
+            "displayName": "Nick Williams",
+            "shortName": "N. Williams",
+            "playerId": 511823,
+            "position": "WR",
+            "rosterSlotId": 512,
+            "salary": 200,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/511823.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/511823.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/511823.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/511823.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "0.9",
+                    "sortValue": "0.9"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "511823-5523451"
+        },
+        {
+            "draftableId": 11647231,
+            "firstName": "JoJo",
+            "lastName": "Natson Jr.",
+            "displayName": "JoJo Natson Jr.",
+            "shortName": "J. Natson Jr.",
+            "playerId": 693276,
+            "position": "WR",
+            "rosterSlotId": 512,
+            "salary": 200,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImageFull": "https://d327rxwuxd0q0c.cloudfront.net/nfl/players/693276.png",
+            "playerImage50": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_50/693276.png",
+            "playerImage65": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_65/693276.png",
+            "playerImage160": "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/693276.png",
+            "competition": {
+                "competitionId": 5523451,
+                "name": "KC @ LAR",
+                "nameDisplay": [
+                    {
+                        "value": "KC"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "LAR",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2018-11-20T01:15:00.0000000Z"
+            },
+            "draftStatAttributes": [
+                {
+                    "id": 90,
+                    "value": "0.0",
+                    "sortValue": "0.0"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [],
+            "playerGameAttributes": [],
+            "teamId": 343,
+            "teamAbbreviation": "LAR",
+            "draftAlerts": [],
+            "playerGameHash": "693276-5523451"
+        }
+    ],
+    "competitions": [
+        {
+            "competitionId": 5523451,
+            "sport": "NFL",
+            "homeTeam": {
+                "teamId": 343,
+                "teamName": "Rams",
+                "abbreviation": "LAR",
+                "city": "Los Angeles"
+            },
+            "awayTeam": {
+                "teamId": 339,
+                "teamName": "Chiefs",
+                "abbreviation": "KC",
+                "city": "Kansas City"
+            },
+            "startTime": "2018-11-20T01:15:00.0000000Z",
+            "name": "KC @ LAR",
+            "venue": "Los Angeles Memorial Coliseum",
+            "weather": {
+                "icon": "partly-cloudy-night",
+                "isDome": false
+            },
+            "startingLineupsAvailable": false,
+            "depthChartsAvailable": true,
+            "competitionState": "Upcoming"
+        }
+    ],
+    "draftAlerts": [],
+    "draftStats": [
+        {
+            "id": 90,
+            "abbr": "FPPG",
+            "name": "Fantasy Points Per Game",
+            "order": 10
+        },
+        {
+            "id": -2,
+            "abbr": "OPRK",
+            "name": "Opponent Rank",
+            "order": 20
+        }
+    ],
+    "playerGameAttributes": [],
+    "errorStatus": {}
+}

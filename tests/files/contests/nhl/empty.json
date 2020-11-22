@@ -1,0 +1,25 @@
+{
+  "SelectedSport": "NHL",
+  "SelectedSportId": null,
+  "Contests": [],
+  "DraftGroups": [],
+  "GameSets": [],
+  "GameTypes": [],
+  "MarketingOffers": [
+    "\n\n<a href=\"/offer/acceptoffer?h=%2Fleagues%2Fhome\"  data-offer-id=\"8726\" data-offer-name=\"LeaguesRND Generic WhiteBG\" data-offer-zone=\"RaptorNhlLobbyLeft\">\n    <div class=\"marquee\">\n        <div class=\"rollover\">\n            <div class=\"rollover-inner\" >\n                <div>Challenge. Win. Repeat.</div><br /><span>A new way to play with your friends!</span>\n                <span class=\"cta-link\">Create League <span class=\"icon-chevron\"></span></span>\n            </div>\n        </div>\n        <img src=\"https://s3.amazonaws.com/dkstatic/cms-zones/218-5-15-none-dkleagues-featleftrnd-marquee-336x28.png\" />\n    </div>\n</a>\n\n",
+    "\n\n<a href=\"/offer/acceptoffer?h=https%3A%2F%2Fsecure.draftkings.com%2Fapp%2Findex.html%23%2Fdeposit%3F_k%3De59e0d\"  data-offer-id=\"8728\" data-offer-name=\"Deposit Offer \" data-offer-zone=\"RaptorNhlLobbyMiddle\">\n    <div class=\"marquee\">\n        <div class=\"rollover\">\n            <div class=\"rollover-inner\" >\n                <div>Free Entry! </div><br /><span>Deposit now for a free entry into a paid contest </span>\n                <span class=\"cta-link\">Make a Deposit Now <span class=\"icon-chevron\"></span></span>\n            </div>\n        </div>\n        <img src=\"https://s3.amazonaws.com/dkstatic/cms-zones/freeentrymarquee-1.png\" />\n    </div>\n</a>\n\n",
+    "\n\n<a href=\"/offer/acceptoffer?h=%2Fmissions\"  data-offer-id=\"8729\" data-offer-name=\"Missions NHL\" data-offer-zone=\"RaptorNhlLobbyRight\">\n    <div class=\"marquee\">\n        <div class=\"rollover\">\n            <div class=\"rollover-inner\" >\n                <div>Missions</div><br /><span> Win Prizes and Rack Up Crowns</span>\n                <span class=\"cta-link\">Claim Now <span class=\"icon-chevron\"></span></span>\n            </div>\n        </div>\n        <img src=\"https://s3.amazonaws.com/dkstatic/cms-zones/217-general-mission-marquee-336x28.png\" />\n    </div>\n</a>\n\n"
+  ],
+  "DirectChallengeModal": null,
+  "DepositTransaction": null,
+  "ShowRafLink": false,
+  "PrizeRedemptionModel": null,
+  "PrizeRedemptionPop": false,
+  "UseRaptorHeadToHead": false,
+  "UseJSWebLobbyModals": false,
+  "SportMenuItems": null,
+  "UserGeoLocation": null,
+  "ShowAds": true,
+  "IsVip": null,
+  "AdsEnabled": false
+}
