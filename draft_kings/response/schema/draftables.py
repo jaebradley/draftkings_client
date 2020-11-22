@@ -1,6 +1,5 @@
 from marshmallow import Schema, fields, EXCLUDE, post_load
 
-
 from draft_kings.response.objects.draftables import Draftables, Competition, Player, PlayerCompetitionDetails, \
     CompetitionWeather, CompetitionTeam
 

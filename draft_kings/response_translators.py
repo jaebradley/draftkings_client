@@ -1,7 +1,7 @@
 from dateutil.parser import parse as parse_datetime
 
-from draft_kings.utilities import dig, translate_formatted_datetime, from_unix_milliseconds_to_datetime
 from draft_kings.data import SPORT_ID_TO_SPORT, Sport
+from draft_kings.utilities import dig, translate_formatted_datetime, from_unix_milliseconds_to_datetime
 
 """
 The API takes a sport query parameter that's different than then sports API endpoint
