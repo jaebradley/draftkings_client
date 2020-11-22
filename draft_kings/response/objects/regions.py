@@ -20,10 +20,10 @@ class Region:
 
 
 class Regions:
-    def __init__(self, regions: List[Region]):
+    def __init__(self, regions: List[Region]) -> None:
         self.regions = regions
 
-    def __eq__(self, other):
+    def __eq__(self, other) -> bool:
         if type(self) is type(other):
             return self.regions == other.regions
 
