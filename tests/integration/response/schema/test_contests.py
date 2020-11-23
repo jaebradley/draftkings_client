@@ -2,7 +2,7 @@ import os
 from unittest import TestCase
 
 from draft_kings.output.schema.contests import ContestsDetailsSchema
-from draft_kings.output.transformers.contests import ContestsDetailsResponseTransformer, ContestsResponseTransformer, \
+from draft_kings.output.transformers.contests import ContestsDetailsTransformer, ContestsResponseTransformer, \
     transform_contest, transform_draft_group, DraftGroupsTransformer
 from draft_kings.response.schema.contests import ContestsSchema
 from tests.config import ROOT_DIRECTORY
@@ -16,7 +16,7 @@ class TestContestsSchemaDeserialization(TestCase):
 
     def test_deserialization(self) -> None:
         self.assertIsNotNone(self.data)
-        transformed_data = ContestsDetailsResponseTransformer(
+        transformed_data = ContestsDetailsTransformer(
             ContestsResponseTransformer(transform_contest),
             DraftGroupsTransformer(transform_draft_group)
         ).transform(self.data)

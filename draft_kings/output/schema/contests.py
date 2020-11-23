@@ -4,25 +4,25 @@ from marshmallow_enum import EnumField
 from draft_kings.data import Sport
 
 
-class ContestEntryDetailsSchema(Schema):
-    maximum = fields.Number(missing=None)
+class EntriesDetailsSchema(Schema):
     fee = fields.Number(missing=None)
-    total = fields.Number(missing=None)
+    maximum = fields.Integer(missing=None)
+    total = fields.Integer(missing=None)
 
 
-class ContestDraftGroupSchema(Schema):
-    draft_group_id = fields.Integer(missing=None)
-    series_id = fields.Integer(missing=None)
+class DraftGroupSchema(Schema):
     contest_type_id = fields.Integer(missing=None)
+    draft_group_id = fields.Integer(missing=None)
+    games_count = fields.Integer(missing=None)
+    series_id = fields.Integer(missing=None)
     sport = EnumField(Sport, by_value=True)
     starts_at = fields.Str(missing=None)
-    games_count = fields.Integer(missing=None)
 
 
 class ContestSchema(Schema):
     contest_id = fields.Integer(missing=None)
     draft_group_id = fields.Integer(missing=None)
-    entry_details = fields.Nested(ContestEntryDetailsSchema(), missing={})
+    entries_details = fields.Nested(EntriesDetailsSchema(), required=True)
     fantasy_player_points = fields.Number(missing=None)
     is_double_up = fields.Bool(required=True, default=False)
     is_fifty_fifty = fields.Bool(required=True, default=False)
@@ -37,4 +37,4 @@ class ContestSchema(Schema):
 
 class ContestsDetailsSchema(Schema):
     contests = fields.List(fields.Nested(ContestSchema()), default=[])
-    groups = fields.List(fields.Nested(ContestDraftGroupSchema()), default=[])
+    draft_groups = fields.List(fields.Nested(DraftGroupSchema()), default=[])
