@@ -1,6 +1,6 @@
 from marshmallow import Schema, fields, EXCLUDE, post_load
 
-from draft_kings.response.objects.contests import ContestTypeAttributes, Contest, DraftGroup, Contests
+from draft_kings.response.objects.contests import ContestAttributes, Contest, DraftGroup, Contests
 
 
 class ContestAttributeSchema(Schema):
@@ -15,24 +15,24 @@ class ContestAttributeSchema(Schema):
 
     @post_load
     def make_contest_attribute(self, data, **kwargs):
-        return ContestTypeAttributes(**data)
+        return ContestAttributes(**data)
 
 
 class ContestSchema(Schema):
     class Meta:
         unknown = EXCLUDE
 
-    id = fields.Integer(missing=None, attribute="contest_id")
-    dg = fields.Integer(missing=None, attribute="draft_group_id")
-    m = fields.Number(missing=None, attribute="entry_maximum")
     a = fields.Number(missing=None, attribute="entry_fee")
-    nt = fields.Number(missing=None, attribute="entry_total")
+    attr = fields.Nested(ContestAttributeSchema(), missing={}, attribute="attributes")
+    dg = fields.Integer(missing=None, attribute="draft_group_id")
     fpp = fields.Number(missing=None, attribute="fantasy_player_points")
+    id = fields.Integer(missing=None, attribute="contest_id")
+    m = fields.Number(missing=None, attribute="entry_maximum")
     n = fields.Str(missing=None, attribute="name")
+    nt = fields.Number(missing=None, attribute="entry_total")
     po = fields.Number(missing=None, attribute="payout")
     s = fields.Integer(missing=None, attribute="sport_id")
     sd = fields.Str(missing=None, attribute="starts_at")
-    attr = fields.Nested(ContestAttributeSchema(), missing={}, attribute="attributes")
 
     @post_load
     def make_contest(self, data, **kwargs):
@@ -43,12 +43,12 @@ class DraftGroupSchema(Schema):
     class Meta:
         unknown = EXCLUDE
 
+    ContestTypeId = fields.Integer(missing=None, attribute="contest_type_id")
     DraftGroupId = fields.Integer(missing=None, attribute="draft_group_id")
     DraftGroupSeriesId = fields.Integer(missing=None, attribute="draft_group_series_id")
-    ContestTypeId = fields.Integer(missing=None, attribute="contest_type_id")
+    GameCount = fields.Integer(missing=None, attribute="game_count")
     Sport = fields.Str(missing=None, attribute="sport")
     StartDate = fields.AwareDateTime(missing=None, attribute="start_date")
-    GameCount = fields.Integer(missing=None, attribute="game_count")
 
     @post_load
     def make_draft_group(self, data, **kwargs):
