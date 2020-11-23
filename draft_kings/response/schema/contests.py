@@ -1,6 +1,6 @@
 from marshmallow import Schema, fields, EXCLUDE, post_load
 
-from draft_kings.response.objects.contests import ContestTypeAttributes, Contest, DraftGroup, Contests
+from draft_kings.response.objects.contests import ContestAttributes, Contest, DraftGroup, Contests
 
 
 class ContestAttributeSchema(Schema):
@@ -15,7 +15,7 @@ class ContestAttributeSchema(Schema):
 
     @post_load
     def make_contest_attribute(self, data, **kwargs):
-        return ContestTypeAttributes(**data)
+        return ContestAttributes(**data)
 
 
 class ContestSchema(Schema):

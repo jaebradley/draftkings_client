@@ -14,7 +14,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/jaebradley/draftkings_client",
     packages=setuptools.find_packages(exclude=["tests"]),
-    python_requires=">=3.4",
+    python_requires=">=3.7",
     install_requires=[
         "requests==2.20.0",
         "pytz==2018.7",
