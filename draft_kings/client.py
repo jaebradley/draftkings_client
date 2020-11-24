@@ -5,8 +5,7 @@ from draft_kings.output.objects.draft_group import DraftGroupDetails
 from draft_kings.output.objects.draftables import Draftables
 from draft_kings.output.objects.players import PlayersDetails
 from draft_kings.output.objects.regions import Regions
-from draft_kings.output.transformers.contests import ContestsDetailsResponseTransformer, ContestsResponseTransformer, \
-    transform_contest, transform_draft_group, DraftGroupsTransformer
+from draft_kings.output.transformers.contests import ContestsDetailsTransformer, DraftGroupTransformer, ContestTransformer
 from draft_kings.output.transformers.countries import CountriesTransformer, transform_country
 from draft_kings.output.transformers.draft_group import transform_contest as transform_draft_group_contest, \
     transform_draft_group_starts_at, \
@@ -18,7 +17,7 @@ from draft_kings.output.transformers.draftables import transform_competition_tea
 from draft_kings.output.transformers.players import transform_team_series, transform_draft_details, \
     transform_player_position, transform_player_team_series_details, PlayerDetailsTransformer, PlayersDetailsTransformer
 from draft_kings.output.transformers.regions import RegionsTransformer, transform_region
-from draft_kings.output.transformers.sports import transform_sport_id
+from draft_kings.output.transformers.sports import transform_sport_id, transform_sport_abbreviation
 from draft_kings.response.objects.countries import Countries
 from draft_kings.response.schema.contests import ContestsSchema
 from draft_kings.response.schema.countries import CountriesSchema
@@ -27,6 +26,7 @@ from draft_kings.response.schema.draftables import DraftablesSchema
 from draft_kings.response.schema.players import PlayersDetailsSchema
 from draft_kings.response.schema.regions import RegionsSchema
 from draft_kings.url_builder import URLBuilder
+from draft_kings.utilities import translate_formatted_datetime
 
 
 def contests(sport: Sport) -> ContestsDetails:
@@ -35,9 +35,14 @@ def contests(sport: Sport) -> ContestsDetails:
     schema = ContestsSchema()
     deserialized_response = schema.loads(response.text)
 
-    return ContestsDetailsResponseTransformer(
-        ContestsResponseTransformer(transform_contest),
-        DraftGroupsTransformer(transform_draft_group)
+    return ContestsDetailsTransformer(
+        contest_transformer=ContestTransformer(
+            formatted_datetime_transformer=translate_formatted_datetime,
+            sport_id_transformer=transform_sport_id,
+        ),
+        draft_group_transformer=DraftGroupTransformer(
+            sport_abbreviation_transformer=transform_sport_abbreviation,
+        )
     ).transform(deserialized_response)
 
 

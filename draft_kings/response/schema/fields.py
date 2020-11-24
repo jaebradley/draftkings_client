@@ -2,6 +2,9 @@ from marshmallow import fields
 
 
 class DictField(fields.Field):
+    """
+    https://github.com/marshmallow-code/marshmallow/issues/120#issuecomment-81382070
+    """
 
     def __init__(self, key_field, nested_field, *args, **kwargs):
         fields.Field.__init__(self, *args, **kwargs)
