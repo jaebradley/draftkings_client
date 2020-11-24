@@ -1,11 +1,13 @@
 from draft_kings.data import Sport
 from draft_kings.http_client import HTTPClient
 from draft_kings.output.objects.contests import ContestsDetails
+from draft_kings.output.objects.countries import CountriesDetails
 from draft_kings.output.objects.draft_group import DraftGroupDetails
 from draft_kings.output.objects.draftables import Draftables
 from draft_kings.output.objects.players import PlayersDetails
 from draft_kings.output.objects.regions import Regions
-from draft_kings.output.transformers.contests import ContestsDetailsTransformer, DraftGroupTransformer, ContestTransformer
+from draft_kings.output.transformers.contests import ContestsDetailsTransformer, DraftGroupTransformer, \
+    ContestTransformer
 from draft_kings.output.transformers.countries import CountriesTransformer, transform_country
 from draft_kings.output.transformers.draft_group import transform_contest as transform_draft_group_contest, \
     transform_draft_group_starts_at, \
@@ -18,7 +20,6 @@ from draft_kings.output.transformers.players import transform_team_series, trans
     transform_player_position, transform_player_team_series_details, PlayerDetailsTransformer, PlayersDetailsTransformer
 from draft_kings.output.transformers.regions import RegionsTransformer, transform_region
 from draft_kings.output.transformers.sports import transform_sport_id, transform_sport_abbreviation
-from draft_kings.response.objects.countries import Countries
 from draft_kings.response.schema.contests import ContestsSchema
 from draft_kings.response.schema.countries import CountriesSchema
 from draft_kings.response.schema.draft_group import DraftGroupResponseSchema
@@ -77,7 +78,7 @@ def draft_group_details(draft_group_id) -> DraftGroupDetails:
     ).transform(draft_group=deserialized_response.draft_group)
 
 
-def countries() -> Countries:
+def countries() -> CountriesDetails:
     response = HTTPClient(url_builder=URLBuilder()).countries()
     schema = CountriesSchema()
     deserialized_response = schema.loads(response.text)
