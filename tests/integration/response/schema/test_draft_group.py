@@ -1,5 +1,6 @@
 import os
 from unittest import TestCase
+from datetime import datetime, timezone
 
 from draft_kings.response.objects.draft_group import League, Game
 from draft_kings.response.schema.draft_group import DraftGroupResponseSchema
@@ -29,10 +30,10 @@ class TestUpcomingGolfDraftGroup(TestCase):
         self.assertEqual("Normal", self.data.draft_group.start_time_type)
 
     def test_draft_group_min_start_time(self):
-        self.assertEqual("2019-05-02T11:00:00.0000000Z", self.data.draft_group.min_start_time)
+        self.assertEqual(datetime(2019, 5, 2, 11, 0, 0, 0, tzinfo=timezone.utc), self.data.draft_group.min_start_time)
 
     def test_draft_group_max_start_time(self):
-        self.assertEqual("2019-05-02T11:00:00.0000000Z", self.data.draft_group.max_start_time)
+        self.assertEqual(datetime(2019, 5, 2, 11, 0, 0, 0, tzinfo=timezone.utc), self.data.draft_group.max_start_time)
 
     def test_draft_group_state(self):
         self.assertEqual("Upcoming", self.data.draft_group.draft_group_state)
@@ -59,7 +60,7 @@ class TestUpcomingGolfDraftGroup(TestCase):
                     home_team_id=-5,
                     location="Quail Hollow Club",
                     name="Wells Fargo Championship",
-                    start_date="2019-05-02T11:00:00.0000000Z",
+                    start_date=datetime(2019, 5, 2, 11, 0, 0, 0, tzinfo=timezone.utc),
                     status="Upcoming"
                 )
             ],
@@ -91,10 +92,10 @@ class TestHistoricalGolfDraftGroup(TestCase):
         self.assertEqual("Normal", self.data.draft_group.start_time_type)
 
     def test_draft_group_min_start_time(self):
-        self.assertEqual("2019-05-02T11:00:00.0000000Z", self.data.draft_group.min_start_time)
+        self.assertEqual(datetime(2019, 5, 2, 11, 0, 0, 0, tzinfo=timezone.utc), self.data.draft_group.min_start_time)
 
     def test_draft_group_max_start_time(self):
-        self.assertEqual("2019-05-02T11:00:00.0000000Z", self.data.draft_group.max_start_time)
+        self.assertEqual(datetime(2019, 5, 2, 11, 0, 0, 0, tzinfo=timezone.utc), self.data.draft_group.max_start_time)
 
     def test_draft_group_state(self):
         self.assertEqual("Historical", self.data.draft_group.draft_group_state)
@@ -121,7 +122,7 @@ class TestHistoricalGolfDraftGroup(TestCase):
                     home_team_id=-5,
                     location="Quail Hollow Club",
                     name="Wells Fargo Championship",
-                    start_date="2019-05-02T11:00:00.0000000Z",
+                    start_date=datetime(2019, 5, 2, 11, 0, 0, 0, tzinfo=timezone.utc),
                     status="ScoresOfficial"
                 )
             ],
@@ -153,10 +154,10 @@ class TestUpcomingNFLDraftGroup(TestCase):
         self.assertEqual("Normal", self.data.draft_group.start_time_type)
 
     def test_draft_group_min_start_time(self):
-        self.assertEqual("2020-11-17T01:15:00.0000000Z", self.data.draft_group.min_start_time)
+        self.assertEqual(datetime(2020, 11, 17, 1, 15, 0, 0, tzinfo=timezone.utc), self.data.draft_group.min_start_time)
 
     def test_draft_group_max_start_time(self):
-        self.assertEqual("2020-11-17T01:15:00.0000000Z", self.data.draft_group.max_start_time)
+        self.assertEqual(datetime(2020, 11, 17, 1, 15, 0, 0, tzinfo=timezone.utc), self.data.draft_group.max_start_time)
 
     def test_draft_group_state(self):
         self.assertEqual("Upcoming", self.data.draft_group.draft_group_state)
@@ -183,7 +184,7 @@ class TestUpcomingNFLDraftGroup(TestCase):
                     home_team_id=326,
                     location="Soldier Field",
                     name=None,
-                    start_date="2020-11-17T01:15:00.0000000Z",
+                    start_date=datetime(2020, 11, 17, 1, 15, 0, 0, tzinfo=timezone.utc),
                     status="Pre-Game"
                 )
             ],
@@ -215,10 +216,10 @@ class TestHistoricalNFLDraftGroup(TestCase):
         self.assertEqual("Normal", self.data.draft_group.start_time_type)
 
     def test_draft_group_min_start_time(self):
-        self.assertEqual("2020-11-17T01:15:00.0000000Z", self.data.draft_group.min_start_time)
+        self.assertEqual(datetime(2020, 11, 17, 1, 15, 0, 0, tzinfo=timezone.utc), self.data.draft_group.min_start_time)
 
     def test_draft_group_max_start_time(self):
-        self.assertEqual("2020-11-17T01:15:00.0000000Z", self.data.draft_group.max_start_time)
+        self.assertEqual(datetime(2020, 11, 17, 1, 15, 0, 0, tzinfo=timezone.utc), self.data.draft_group.max_start_time)
 
     def test_draft_group_state(self):
         self.assertEqual("Finalized", self.data.draft_group.draft_group_state)
@@ -245,7 +246,7 @@ class TestHistoricalNFLDraftGroup(TestCase):
                     home_team_id=326,
                     location="Soldier Field",
                     name=None,
-                    start_date="2020-11-17T01:15:00.0000000Z",
+                    start_date=datetime(2020, 11, 17, 1, 15, 0, 0, tzinfo=timezone.utc),
                     status="Final"
                 )
             ],
