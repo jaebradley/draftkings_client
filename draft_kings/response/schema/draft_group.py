@@ -38,7 +38,7 @@ class GameSchema(Schema):
     homeTeamId = fields.Int(attribute="home_team_id", missing=None)
     location = fields.Str(attribute="location", missing=None)
     name = fields.Str(attribute="name", missing=None)
-    startDate = fields.Str(attribute="start_date", missing=None)
+    startDate = fields.AwareDateTime(attribute="start_date", missing=None)
     status = fields.Str(attribute="status", missing=None)
 
     @post_load
@@ -53,10 +53,10 @@ class DraftGroupSchema(Schema):
     contestType = fields.Nested(ContestTypeSchema, attribute="contest_type", required=True)
     draftGroupId = fields.Int(attribute="draft_group_id", missing=None)
     draftGroupState = fields.Str(attribute="draft_group_state", missing=None)
-    games = fields.List(fields.Nested(GameSchema, missing={}), missing=[])
-    leagues = fields.List(fields.Nested(LeagueSchema, missing={}), missing=[])
-    maxStartTime = fields.Str(attribute="max_start_time", missing=None)
-    minStartTime = fields.Str(attribute="min_start_time", missing=None)
+    games = fields.List(fields.Nested(GameSchema, required=True), missing=[])
+    leagues = fields.List(fields.Nested(LeagueSchema, required=True), missing=[])
+    maxStartTime = fields.AwareDateTime(attribute="max_start_time", missing=None)
+    minStartTime = fields.AwareDateTime(attribute="min_start_time", missing=None)
     sportId = fields.Int(attribute="sport_id", missing=None)
     startTimeType = fields.Str(attribute="start_time_type", missing=None)
 

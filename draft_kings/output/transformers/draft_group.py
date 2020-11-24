@@ -1,7 +1,5 @@
 from typing import Callable
 
-from dateutil.parser import parse as parse_datetime
-
 from draft_kings.data import Sport
 from draft_kings.output.objects.draft_group import ContestDetails, StartTimeDetails, LeagueDetails, GameDetails, \
     DraftGroupDetails
@@ -23,9 +21,9 @@ def transform_league(response_league: ResponseLeague) -> LeagueDetails:
 
 def transform_draft_group_starts_at(response_draft_group: ResponseDraftGroup) -> StartTimeDetails:
     return StartTimeDetails(
-        maximum=parse_datetime(response_draft_group.max_start_time)
+        maximum=response_draft_group.max_start_time
         if response_draft_group.max_start_time is not None else None,
-        minimum=parse_datetime(response_draft_group.min_start_time)
+        minimum=response_draft_group.min_start_time
         if response_draft_group.min_start_time is not None else None,
         type_description=response_draft_group.start_time_type,
     )
@@ -39,7 +37,7 @@ def transform_game(response_game: ResponseGame) -> GameDetails:
         home_team_id=response_game.home_team_id,
         location=response_game.location,
         name=response_game.name,
-        starts_at=parse_datetime(response_game.start_date),
+        starts_at=response_game.start_date,
         status=response_game.status
     )
 
