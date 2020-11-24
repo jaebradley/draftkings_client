@@ -11,4 +11,4 @@ class TestCountries(TestCase):
         self.assertIsNotNone(self.result)
 
     def test_more_than_one_country_exists(self):
-        self.assertGreater(len(self.result), 0)
+        self.assertGreater(len(self.result.countries), 0)
