@@ -1,6 +1,6 @@
 from typing import Callable
 
-from draft_kings.output.objects.countries import Country, Countries
+from draft_kings.output.objects.countries import Country, CountriesDetails
 from draft_kings.response.objects.countries import Countries as ResponseCountries, Country as ResponseCountry
 
 
@@ -17,7 +17,7 @@ class CountriesTransformer:
     def __init__(self, country_transformer: Callable[[ResponseCountry], Country]):
         self.country_transformer = country_transformer
 
-    def transform(self, countries: ResponseCountries) -> Countries:
-        return Countries(
+    def transform(self, countries: ResponseCountries) -> CountriesDetails:
+        return CountriesDetails(
             countries=list(map(lambda country: self.country_transformer(country), countries.countries))
         )
