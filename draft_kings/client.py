@@ -102,6 +102,7 @@ def draftables(draft_group_id: int) -> Draftables:
         competition_transformer=CompetitionTransformer(
             team_details_transformer=transform_competition_team_details,
             weather_details_transformer=transform_competition_weather_details,
+            sport_abbreviation_transformer=transform_sport_abbreviation,
         ),
         player_transformer=PlayerTransformer(
             competition_details_transformer=transform_player_competition_details,

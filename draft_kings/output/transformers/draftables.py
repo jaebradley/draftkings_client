@@ -1,6 +1,6 @@
-from typing import Callable
+from typing import Callable, Optional
 
-from draft_kings.data import CONTEST_SPORT_ABBREVIATIONS_TO_SPORTS
+from draft_kings.data import Sport
 from draft_kings.output.objects.draftables import PlayerNameDetails, PlayerImageDetails, PlayerCompetitionDetails, \
     PlayerTeamDetails, Player, CompetitionTeam, CompetitionWeather, Competition, Draftables
 from draft_kings.response.objects.draftables import Player as ResponsePlayer, PlayerCompetitionDetails as \
@@ -25,7 +25,8 @@ def transform_player_image_details(player: ResponsePlayer) -> PlayerImageDetails
 
 
 def transform_player_competition_details(
-        response_player_competition_details: ResponsePlayerCompetitionDetails) -> PlayerCompetitionDetails:
+        response_player_competition_details: ResponsePlayerCompetitionDetails
+) -> PlayerCompetitionDetails:
     return PlayerCompetitionDetails(
         competition_id=response_player_competition_details.competition_id,
         name=response_player_competition_details.name,
@@ -55,16 +56,16 @@ class PlayerTransformer:
 
     def transform(self, response_player: ResponsePlayer) -> Player:
         return Player(
-            competition=self.competition_details_transformer(response_player.competition),
+            competition=self.competition_details_transformer(response_player.competition)
+            if response_player.competition is not None else None,
             draftable_id=response_player.draftable_id,
-            draft_alerts=response_player.draft_alerts,
             image_details=self.image_details_transformer(response_player),
             is_disabled=response_player.is_disabled,
             is_swappable=response_player.is_swappable,
             name_details=self.name_details_transformer(response_player),
-            news_status=response_player.news_status,
+            news_status_description=response_player.news_status,
             player_id=response_player.player_id,
-            position=response_player.position,
+            position_name=response_player.position,
             roster_slot_id=response_player.roster_slot_id,
             salary=response_player.salary,
             team_details=self.team_details_transformer(response_player)
@@ -80,8 +81,9 @@ def transform_competition_team_details(response_competition_team_details: Respon
     )
 
 
-def transform_competition_weather_details(response_competition_weather_details: ResponseCompetitionWeather) -> \
-        CompetitionWeather:
+def transform_competition_weather_details(
+        response_competition_weather_details: ResponseCompetitionWeather
+) -> CompetitionWeather:
     return CompetitionWeather(
         description=response_competition_weather_details.icon,
         is_in_a_dome=response_competition_weather_details.is_dome
@@ -90,39 +92,44 @@ def transform_competition_weather_details(response_competition_weather_details: 
 
 class CompetitionTransformer:
     def __init__(self, team_details_transformer: Callable[[ResponseCompetitionTeam], CompetitionTeam],
-                 weather_details_transformer: Callable[[ResponseCompetitionWeather], CompetitionWeather]):
+                 weather_details_transformer: Callable[[ResponseCompetitionWeather], CompetitionWeather],
+                 sport_abbreviation_transformer: Callable[[Optional[str]], Optional[Sport]]) -> None:
         self.team_details_transformer = team_details_transformer
         self.weather_details_transformer = weather_details_transformer
+        self.sport_abbreviation_transformer = sport_abbreviation_transformer
 
     def transform(self, response_competition: ResponseCompetition) -> Competition:
         return Competition(
             are_depth_charts_available=response_competition.are_depth_charts_available,
             are_starting_lineups_available=response_competition.are_starting_lineups_available,
-            away_team=self.team_details_transformer(response_competition.away_team),
+            away_team=self.team_details_transformer(response_competition.away_team)
+            if response_competition.away_team is not None else None,
             competition_id=response_competition.competition_id,
-            home_team=self.team_details_transformer(response_competition.home_team),
+            home_team=self.team_details_transformer(response_competition.home_team)
+            if response_competition.home_team is not None else None,
             name=response_competition.name,
-            sport=CONTEST_SPORT_ABBREVIATIONS_TO_SPORTS.get(response_competition.sport),
+            sport=self.sport_abbreviation_transformer(response_competition.sport),
             starts_at=response_competition.start_time,
-            state=response_competition.competition_state,
+            state_description=response_competition.competition_state,
             venue=response_competition.venue,
-            weather=response_competition.weather
+            weather=self.weather_details_transformer(response_competition.weather)
+            if response_competition.weather is not None else None
         )
 
 
 class DraftablesTransformer:
-    def __init__(self, competition_transformer: CompetitionTransformer, player_transformer: PlayerTransformer):
+    def __init__(self, competition_transformer: CompetitionTransformer, player_transformer: PlayerTransformer) -> None:
         self.competition_transformer = competition_transformer
         self.player_transformer = player_transformer
 
     def transform(self, response_draftables: ResponseDraftables) -> Draftables:
         return Draftables(
-            competitions=[
-                self.competition_transformer.transform(response_competition=competition)
-                for competition in response_draftables.competitions
-            ],
-            players=[
-                self.player_transformer.transform(response_player=player)
-                for player in response_draftables.draftables
-            ]
+            competitions=list(map(
+                lambda competition: self.competition_transformer.transform(response_competition=competition),
+                response_draftables.competitions
+            )),
+            players=list(map(
+                lambda player: self.player_transformer.transform(response_player=player),
+                response_draftables.draftables
+            ))
         )

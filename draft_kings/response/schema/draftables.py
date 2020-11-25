@@ -21,10 +21,9 @@ class PlayerSchema(Schema):
     class Meta:
         unknown = EXCLUDE
 
-    competition = fields.Nested(PlayerCompetitionDetailsSchema, attribute="competition", required=True)
+    competition = fields.Nested(PlayerCompetitionDetailsSchema, attribute="competition", missing=None)
     displayName = fields.Str(attribute="display_name", missing=None)
     draftableId = fields.Int(attribute="draftable_id", missing=None)
-    draftAlerts = fields.List(fields.Str(), attribute="draft_alerts", missing=[])
     firstName = fields.Str(attribute="first_name", missing=None)
     isDisabled = fields.Bool(attribute="is_disabled", missing=None)
     isSwappable = fields.Bool(attribute="is_swappable", missing=None)
@@ -75,11 +74,11 @@ class CompetitionSchema(Schema):
     class Meta:
         unknown = EXCLUDE
 
-    awayTeam = fields.Nested(CompetitionTeamSchema, attribute="away_team", required=True)
+    awayTeam = fields.Nested(CompetitionTeamSchema, attribute="away_team", missing=None)
     competitionId = fields.Int(attribute="competition_id", missing=None)
     competitionState = fields.Str(attribute="competition_state", missing=None)
     depthChartsAvailable = fields.Bool(attribute="are_depth_charts_available", missing=None)
-    homeTeam = fields.Nested(CompetitionTeamSchema, attribute="home_team", required=True)
+    homeTeam = fields.Nested(CompetitionTeamSchema, attribute="home_team", missing=None)
     name = fields.Str(attribute="name", missing=None)
     sport = fields.Str(attribute="sport", missing=None)
     startingLineupsAvailable = fields.Bool(attribute="are_starting_lineups_available", missing=None)
@@ -96,8 +95,8 @@ class DraftablesSchema(Schema):
     class Meta:
         unknown = EXCLUDE
 
-    draftables = fields.List(fields.Nested(PlayerSchema, required=True), attribute="draftables", missing=[])
-    competitions = fields.List(fields.Nested(CompetitionSchema, required=True), attribute="competitions", missing=[])
+    draftables = fields.List(fields.Nested(PlayerSchema), attribute="draftables", missing=[])
+    competitions = fields.List(fields.Nested(CompetitionSchema), attribute="competitions", missing=[])
 
     @post_load
     def make_draftables(self, data, **kwargs):
