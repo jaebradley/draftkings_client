@@ -24,7 +24,6 @@ class PlayerSchema(Schema):
     competition = fields.Nested(PlayerCompetitionDetailsSchema, attribute="competition", missing=None)
     displayName = fields.Str(attribute="display_name", missing=None)
     draftableId = fields.Int(attribute="draftable_id", missing=None)
-    draftAlerts = fields.List(fields.Str(), attribute="draft_alerts", missing=[])
     firstName = fields.Str(attribute="first_name", missing=None)
     isDisabled = fields.Bool(attribute="is_disabled", missing=None)
     isSwappable = fields.Bool(attribute="is_swappable", missing=None)

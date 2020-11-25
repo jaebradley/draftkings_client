@@ -126,7 +126,6 @@ class TestUpcomingNFLDraftables(TestCase):
                 ),
                 team_abbreviation="HOU",
                 team_id=325,
-                draft_alerts=[]
             ),
             self.data.draftables[0]
         )
@@ -164,7 +163,6 @@ class TestHistoricalDraftablesForDraftGroup11513(TestCase):
                 ),
                 display_name="LeBron James",
                 draftable_id=7771715,
-                draft_alerts=[],
                 first_name="LeBron",
                 is_disabled=False,
                 is_swappable=False,

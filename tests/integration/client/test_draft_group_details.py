@@ -1,7 +1,7 @@
 import os
 from datetime import datetime, timezone
 from unittest import TestCase
-from unittest.mock import patch
+from unittest.mock import patch, Mock
 
 from draft_kings import client
 from draft_kings.data import Sport
@@ -57,9 +57,13 @@ class TestDraftGroup11513MockedHTTPResponse(TestCase):
     def setUp(self) -> None:
         with open(os.path.join(ROOT_DIRECTORY, "tests/files/draft_group_details/11513.json")) as data_file:
             self.response_data = data_file.read()
-            mocked_draft_group_details = patch.object(HTTPClient, "draft_group_details")
-            mocked_draft_group_details.return_value = self.response_data
+            patched_method = patch.object(HTTPClient, "draft_group_details")
+            mocked_draft_group_details = patched_method.start()
+            mocked_draft_group_details.return_value = Mock(text=self.response_data)
             self.result = client.draft_group_details(draft_group_id=11513)
+
+    def tearDown(self) -> None:
+        patch.stopall()
 
     def test_draft_group_details_are_not_none(self):
         self.assertIsNotNone(self.result)

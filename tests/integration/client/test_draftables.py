@@ -1,6 +1,14 @@
+import os
+from datetime import datetime, timezone
 from unittest import TestCase
+from unittest.mock import patch, Mock
 
 from draft_kings import client
+from draft_kings.data import Sport
+from draft_kings.http_client import HTTPClient
+from draft_kings.output.objects.draftables import PlayerNameDetails, PlayerImageDetails, PlayerCompetitionDetails, \
+    PlayerTeamDetails, Player, CompetitionTeam, CompetitionWeather, Competition
+from tests.config import ROOT_DIRECTORY
 
 
 class TestDraftables(TestCase):
@@ -35,3 +43,138 @@ class TestDraftables(TestCase):
     def test_euroleague_draftables(self):
         draftables = client.draftables(draft_group_id=22916)
         self.assertIsNotNone(draftables)
+
+
+class TestMockedUpcomingNFLDraftablesResponse(TestCase):
+    def setUp(self) -> None:
+        with open(os.path.join(ROOT_DIRECTORY, "tests/files/draftables/41793/upcoming.json")) as data_file:
+            self.response_data = data_file.read()
+            patched_method = patch.object(HTTPClient, "draftables")
+            mocked_method = patched_method.start()
+            mocked_method.return_value = Mock(text=self.response_data)
+            self.result = client.draftables(draft_group_id=41793)
+
+    def tearDown(self) -> None:
+        patch.stopall()
+
+    def test_outputs_object(self):
+        self.assertIsNotNone(self.result)
+
+    def test_competitions(self):
+        self.assertListEqual(
+            [
+                Competition(
+                    are_depth_charts_available=True,
+                    are_starting_lineups_available=False,
+                    away_team=CompetitionTeam(
+                        abbreviation="HOU",
+                        city="Houston",
+                        team_id=325,
+                        name="Texans"
+                    ),
+                    competition_id=5673406,
+                    state_description="Upcoming",
+                    home_team=CompetitionTeam(
+                        abbreviation="DET",
+                        city="Detroit",
+                        team_id=334,
+                        name="Lions"
+                    ),
+                    name="HOU @ DET",
+                    sport=Sport.NFL,
+                    starts_at=datetime(2020, 11, 26, 17, 30, 0, 0, tzinfo=timezone.utc),
+                    venue="Ford Field",
+                    weather=CompetitionWeather(
+                        description="cloudy",
+                        is_in_a_dome=True
+                    )
+                ),
+                Competition(
+                    are_depth_charts_available=True,
+                    are_starting_lineups_available=False,
+                    away_team=CompetitionTeam(
+                        abbreviation="WAS",
+                        city="Washington",
+                        team_id=363,
+                        name="Football Team"
+                    ),
+                    competition_id=5673928,
+                    state_description="Upcoming",
+                    home_team=CompetitionTeam(
+                        abbreviation="DAL",
+                        city="Dallas",
+                        team_id=331,
+                        name="Cowboys"
+                    ),
+                    name="WAS @ DAL",
+                    sport=Sport.NFL,
+                    starts_at=datetime(2020, 11, 26, 21, 30, 0, 0, tzinfo=timezone.utc),
+                    venue="AT&T Stadium",
+                    weather=CompetitionWeather(
+                        description="clear-day",
+                        is_in_a_dome=False
+                    )
+                ),
+                Competition(
+                    are_depth_charts_available=True,
+                    are_starting_lineups_available=False,
+                    away_team=CompetitionTeam(
+                        abbreviation="BAL",
+                        city="Baltimore",
+                        team_id=366,
+                        name="Ravens"
+                    ),
+                    competition_id=5674018,
+                    state_description="Upcoming",
+                    home_team=CompetitionTeam(
+                        abbreviation="PIT",
+                        city="Pittsburgh",
+                        team_id=356,
+                        name="Steelers"
+                    ),
+                    name="BAL @ PIT",
+                    sport=Sport.NFL,
+                    starts_at=datetime(2020, 11, 27, 1, 20, 0, 0, tzinfo=timezone.utc),
+                    venue="Heinz Field",
+                    weather=CompetitionWeather(
+                        description="cloudy",
+                        is_in_a_dome=False
+                    )
+                ),
+            ],
+            self.result.competitions
+        )
+
+    def test_first_draftable_player(self):
+        self.assertEqual(
+            Player(
+                competition=PlayerCompetitionDetails(
+                    competition_id=5673406,
+                    name="HOU @ DET",
+                    starts_at=datetime(2020, 11, 26, 17, 30, 0, 0, tzinfo=timezone.utc),
+                ),
+                draftable_id=15819550,
+                player_id=828743,
+                position_name="QB",
+                roster_slot_id=66,
+                salary=7400,
+                is_swappable=True,
+                is_disabled=False,
+                news_status_description="Recent",
+                image_details=PlayerImageDetails(
+                    fifty_pixels_by_fifty_pixels_url="https://dkn.gs/sports/images/nfl/players/50/18229.png",
+                    one_hundred_and_sixty_pixels_by_one_hundred_pixels_url="https://dkn.gs/sports/images/nfl/players/160/18229.png",
+                ),
+                name_details=PlayerNameDetails(
+                    first="Deshaun",
+                    last="Watson",
+                    display="Deshaun Watson",
+                    short="D. Watson",
+                ),
+                team_details=PlayerTeamDetails(
+                    abbreviation="HOU",
+                    team_id=325,
+                )
+            ),
+            self.result.players[0]
+        )

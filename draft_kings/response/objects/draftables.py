@@ -15,7 +15,6 @@ class Player:
     competition: Optional[PlayerCompetitionDetails]
     display_name: Optional[str]
     draftable_id: Optional[int]
-    draft_alerts: List[str]
     first_name: Optional[str]
     is_disabled: Optional[bool]
     is_swappable: Optional[bool]
