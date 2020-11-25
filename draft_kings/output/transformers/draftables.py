@@ -55,7 +55,8 @@ class PlayerTransformer:
 
     def transform(self, response_player: ResponsePlayer) -> Player:
         return Player(
-            competition=self.competition_details_transformer(response_player.competition),
+            competition=self.competition_details_transformer(response_player.competition) if
+            response_player.competition is not None else None,
             draftable_id=response_player.draftable_id,
             draft_alerts=response_player.draft_alerts,
             image_details=self.image_details_transformer(response_player),
@@ -98,9 +99,11 @@ class CompetitionTransformer:
         return Competition(
             are_depth_charts_available=response_competition.are_depth_charts_available,
             are_starting_lineups_available=response_competition.are_starting_lineups_available,
-            away_team=self.team_details_transformer(response_competition.away_team),
+            away_team=self.team_details_transformer(response_competition.away_team) if response_competition.away_team
+                                                                                       is not None else None,
             competition_id=response_competition.competition_id,
-            home_team=self.team_details_transformer(response_competition.home_team),
+            home_team=self.team_details_transformer(response_competition.home_team) if response_competition.home_team
+                                                                                       is not None else None,
             name=response_competition.name,
             sport=CONTEST_SPORT_ABBREVIATIONS_TO_SPORTS.get(response_competition.sport),
             starts_at=response_competition.start_time,

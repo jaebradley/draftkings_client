@@ -12,7 +12,7 @@ class PlayerCompetitionDetails:
 
 @dataclass(frozen=True)
 class Player:
-    competition: PlayerCompetitionDetails
+    competition: Optional[PlayerCompetitionDetails]
     display_name: Optional[str]
     draftable_id: Optional[int]
     draft_alerts: List[str]
@@ -50,10 +50,10 @@ class CompetitionWeather:
 class Competition:
     are_depth_charts_available: Optional[bool]
     are_starting_lineups_available: Optional[bool]
-    away_team: CompetitionTeam
+    away_team: Optional[CompetitionTeam]
     competition_id: Optional[int]
     competition_state: Optional[str]
-    home_team: CompetitionTeam
+    home_team: Optional[CompetitionTeam]
     name: Optional[str]
     sport: Optional[str]
     start_time: Optional[datetime]

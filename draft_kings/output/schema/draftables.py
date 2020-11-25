@@ -43,19 +43,19 @@ class PlayerSchema(Schema):
     class Meta:
         unknown = EXCLUDE
 
-    competition_details = fields.Nested(PlayerCompetitionDetailsSchema, required=True)
+    competition_details = fields.Nested(PlayerCompetitionDetailsSchema, missing=None)
     draftable_id = fields.Int(missing=None)
     draft_alerts = fields.List(fields.Str, missing=[])
-    image_details = fields.Nested(PlayerImageDetailsSchema, required=True)
+    image_details = fields.Nested(PlayerImageDetailsSchema, missing=None)
     is_disabled = fields.Bool(missing=None)
     is_swappable = fields.Bool(missing=None)
-    name_details = fields.Nested(PlayerNameDetailsSchema, required=True)
+    name_details = fields.Nested(PlayerNameDetailsSchema, missing=None)
     news_status = fields.Str(missing=None)
     player_id = fields.Int(missing=None)
     position = fields.Str(missing=None)
     roster_slot_id = fields.Int(missing=None)
     salary = fields.Float(missing=None)
-    team_details = fields.Nested(PlayerTeamDetailsSchema, required=True)
+    team_details = fields.Nested(PlayerTeamDetailsSchema, missing=None)
 
 
 class CompetitionTeamSchema(Schema):
@@ -82,10 +82,10 @@ class CompetitionSchema(Schema):
 
     are_depth_charts_available = fields.Bool(missing=None)
     are_starting_lineups_available = fields.Bool(missing=None)
-    away_team = fields.Nested(CompetitionTeamSchema, required=True)
+    away_team = fields.Nested(CompetitionTeamSchema, missing=None)
     competition_id = fields.Int(missing=None)
     competition_state = fields.Str(missing=None)
-    home_team = fields.Nested(CompetitionTeamSchema, required=True)
+    home_team = fields.Nested(CompetitionTeamSchema, missing=None)
     name = fields.Str(missing=None)
     sport = EnumField(Sport, missing=None)
     starts_at = fields.AwareDateTime(missing=None)
