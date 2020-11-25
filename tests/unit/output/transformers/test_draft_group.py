@@ -10,13 +10,13 @@ from draft_kings.response.objects.draft_group import ContestType, League, DraftG
 class TestTransformContest(TestCase):
     def test_transform_present_values(self):
         self.assertEqual(
-            ContestDetails(game_type="jaebaebae", type_id=1),
+            ContestDetails(game_type_description="jaebaebae", type_id=1),
             transform_contest(ContestType(game_type="jaebaebae", contest_type_id=1))
         )
 
     def test_transform_none_values(self):
         self.assertEqual(
-            ContestDetails(game_type=None, type_id=None),
+            ContestDetails(game_type_description=None, type_id=None),
             transform_contest(ContestType(game_type=None, contest_type_id=None))
         )
 
@@ -148,7 +148,7 @@ class TestGameTransformer(TestCase):
                 location="some location",
                 name="some name",
                 starts_at=datetime(2020, 11, 24, 2, 0, 0, 0, tzinfo=timezone.utc),
-                status="some status"
+                status_description="some status"
             ),
             transform_game(
                 Game(
@@ -174,7 +174,7 @@ class TestGameTransformer(TestCase):
                 location=None,
                 name=None,
                 starts_at=None,
-                status=None
+                status_description=None
             ),
             transform_game(
                 Game(
