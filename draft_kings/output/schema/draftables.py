@@ -18,9 +18,7 @@ class PlayerImageDetailsSchema(Schema):
     class Meta:
         unknown = EXCLUDE
 
-    unresized_url = fields.Str(missing=None)
     fifty_pixels_by_fifty_pixels_url = fields.Str(missing=None)
-    sixty_five_pixels_by_sixty_five_pixels_url = fields.Str(missing=None)
     one_hundred_and_sixty_pixels_by_one_hundred_pixels_url = fields.Str(missing=None)
 
 

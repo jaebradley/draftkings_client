@@ -10,7 +10,7 @@ class PlayerCompetitionDetailsSchema(Schema):
 
     competitionId = fields.Int(attribute="competition_id", missing=None)
     name = fields.Str(attribute="name", missing=None)
-    startTime = fields.Str(attribute="start_time", missing=None)
+    startTime = fields.AwareDateTime(attribute="start_time", missing=None)
 
     @post_load
     def make_player_competition(self, data, **kwargs):
@@ -31,9 +31,7 @@ class PlayerSchema(Schema):
     lastName = fields.Str(attribute="last_name", missing=None)
     newsStatus = fields.Str(attribute="news_status", missing=None)
     playerId = fields.Int(attribute="player_id", missing=None)
-    playerImageFull = fields.Str(attribute="player_image_full", missing=None)
     playerImage50 = fields.Str(attribute="player_image_50", missing=None)
-    playerImage65 = fields.Str(attribute="player_image_65", missing=None)
     playerImage160 = fields.Str(attribute="player_image_160", missing=None)
     position = fields.Str(attribute="position", missing=None)
     rosterSlotId = fields.Int(attribute="roster_slot_id", missing=None)
@@ -85,7 +83,7 @@ class CompetitionSchema(Schema):
     name = fields.Str(attribute="name", missing=None)
     sport = fields.Str(attribute="sport", missing=None)
     startingLineupsAvailable = fields.Bool(attribute="are_starting_lineups_available", missing=None)
-    startTime = fields.Str(attribute="start_time", missing=None)
+    startTime = fields.AwareDateTime(attribute="start_time", missing=None)
     venue = fields.Str(attribute="venue", missing=None)
     weather = fields.Nested(CompetitionWeatherSchema, attribute="weather", missing=None)
 

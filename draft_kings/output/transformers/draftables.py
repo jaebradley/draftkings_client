@@ -1,7 +1,5 @@
 from typing import Callable
 
-from dateutil.parser import parse as parse_datetime
-
 from draft_kings.data import CONTEST_SPORT_ABBREVIATIONS_TO_SPORTS
 from draft_kings.output.objects.draftables import PlayerNameDetails, PlayerImageDetails, PlayerCompetitionDetails, \
     PlayerTeamDetails, Player, CompetitionTeam, CompetitionWeather, Competition, Draftables
@@ -21,9 +19,7 @@ def transform_player_name_details(player: ResponsePlayer) -> PlayerNameDetails:
 
 def transform_player_image_details(player: ResponsePlayer) -> PlayerImageDetails:
     return PlayerImageDetails(
-        unresized_url=player.player_image_full,
         fifty_pixels_by_fifty_pixels_url=player.player_image_50,
-        sixty_five_pixels_by_sixty_five_pixels_url=player.player_image_65,
         one_hundred_and_sixty_pixels_by_one_hundred_pixels_url=player.player_image_160
     )
 
@@ -33,7 +29,7 @@ def transform_player_competition_details(
     return PlayerCompetitionDetails(
         competition_id=response_player_competition_details.competition_id,
         name=response_player_competition_details.name,
-        starts_at=parse_datetime(response_player_competition_details.start_time)
+        starts_at=response_player_competition_details.start_time
     )
 
 
@@ -107,7 +103,7 @@ class CompetitionTransformer:
             home_team=self.team_details_transformer(response_competition.home_team),
             name=response_competition.name,
             sport=CONTEST_SPORT_ABBREVIATIONS_TO_SPORTS.get(response_competition.sport),
-            starts_at=parse_datetime(response_competition.start_time),
+            starts_at=response_competition.start_time,
             state=response_competition.competition_state,
             venue=response_competition.venue,
             weather=response_competition.weather
