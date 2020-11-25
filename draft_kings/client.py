@@ -10,7 +10,7 @@ from draft_kings.output.transformers.contests import ContestsDetailsTransformer,
     ContestTransformer
 from draft_kings.output.transformers.countries import CountriesTransformer, transform_country
 from draft_kings.output.transformers.draft_group import transform_contest as transform_draft_group_contest, \
-    transform_draft_group_starts_at, \
+    transform_draft_group_start_time_details, \
     transform_game, transform_league, DraftGroupDetailsTransformer
 from draft_kings.output.transformers.draftables import transform_competition_team_details, \
     transform_competition_weather_details, transform_player_competition_details, transform_player_image_details, \
@@ -74,7 +74,7 @@ def draft_group_details(draft_group_id) -> DraftGroupDetails:
         game_transformer=transform_game,
         league_transformer=transform_league,
         sport_id_transformer=transform_sport_id,
-        starts_at_transformer=transform_draft_group_starts_at
+        start_time_details_transformer=transform_draft_group_start_time_details
     ).transform(draft_group=deserialized_response.draft_group)
 
 
