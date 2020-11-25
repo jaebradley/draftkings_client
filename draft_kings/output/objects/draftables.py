@@ -22,19 +22,14 @@ class PlayerNameDetails:
 
 
 class PlayerImageDetails:
-    def __init__(self, unresized_url: Optional[str], fifty_pixels_by_fifty_pixels_url: Optional[str],
-                 sixty_five_pixels_by_sixty_five_pixels_url: Optional[str],
+    def __init__(self, fifty_pixels_by_fifty_pixels_url: Optional[str],
                  one_hundred_and_sixty_pixels_by_one_hundred_pixels_url: Optional[str]) -> None:
-        self.unresized_url = unresized_url
         self.fifty_pixels_by_fifty_pixels_url = fifty_pixels_by_fifty_pixels_url
-        self.sixty_five_pixels_by_sixty_five_pixels_url = sixty_five_pixels_by_sixty_five_pixels_url
         self.one_hundred_and_sixty_pixels_by_one_hundred_pixels_url = one_hundred_and_sixty_pixels_by_one_hundred_pixels_url
 
     def __eq__(self, other) -> bool:
         if type(self) is type(other):
-            return self.unresized_url == other.unresized_url \
-                   and self.fifty_pixels_by_fifty_pixels_url == other.fifty_pixels_by_fifty_pixels_url \
-                   and self.sixty_five_pixels_by_sixty_five_pixels_url == other.sixty_five_pixels_by_sixty_five_pixels_url \
+            return self.fifty_pixels_by_fifty_pixels_url == other.fifty_pixels_by_fifty_pixels_url \
                    and self.one_hundred_and_sixty_pixels_by_one_hundred_pixels_url == other.one_hundred_and_sixty_pixels_by_one_hundred_pixels_url
 
         return False
