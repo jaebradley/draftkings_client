@@ -10,7 +10,7 @@ from tests.config import ROOT_DIRECTORY
 class TestUpcomingGolfDraftGroup(TestCase):
     def setUp(self) -> None:
         with open(os.path.join(ROOT_DIRECTORY,
-                               'tests/files/draft_group_details/upcoming_golf_draft_group_response.json')) as data_file:
+                               'tests/files/draft_group_details/26545_upcoming.json')) as data_file:
             self.schema = DraftGroupResponseSchema()
             self.data = self.schema.loads(data_file.read())
 
@@ -71,7 +71,7 @@ class TestUpcomingGolfDraftGroup(TestCase):
 class TestHistoricalGolfDraftGroup(TestCase):
     def setUp(self) -> None:
         with open(os.path.join(ROOT_DIRECTORY,
-                               'tests/files/draft_group_details/historical_golf_draft_group_response.json')) as \
+                               'tests/files/draft_group_details/26545_historical.json')) as \
                 data_file:
             self.schema = DraftGroupResponseSchema()
             self.data = self.schema.loads(data_file.read())
@@ -133,7 +133,7 @@ class TestHistoricalGolfDraftGroup(TestCase):
 class TestUpcomingNFLDraftGroup(TestCase):
     def setUp(self) -> None:
         with open(os.path.join(ROOT_DIRECTORY,
-                               'tests/files/draft_group_details/upcoming_monday_night_nfl_game_draft_group.json')) as \
+                               'tests/files/draft_group_details/41409_upcoming.json')) as \
                 data_file:
             self.schema = DraftGroupResponseSchema()
             self.data = self.schema.loads(data_file.read())
@@ -195,7 +195,7 @@ class TestUpcomingNFLDraftGroup(TestCase):
 class TestHistoricalNFLDraftGroup(TestCase):
     def setUp(self) -> None:
         with open(os.path.join(ROOT_DIRECTORY,
-                               'tests/files/draft_group_details/historical_monday_night_nfl_game_draft_group.json')) \
+                               'tests/files/draft_group_details/41409_historical.json')) \
                 as data_file:
             self.schema = DraftGroupResponseSchema()
             self.data = self.schema.loads(data_file.read())
@@ -222,7 +222,7 @@ class TestHistoricalNFLDraftGroup(TestCase):
         self.assertEqual(datetime(2020, 11, 17, 1, 15, 0, 0, tzinfo=timezone.utc), self.data.draft_group.max_start_time)
 
     def test_draft_group_state(self):
-        self.assertEqual("Finalized", self.data.draft_group.draft_group_state)
+        self.assertEqual("Historical", self.data.draft_group.draft_group_state)
 
     def test_draft_group_leagues(self):
         self.assertListEqual(
