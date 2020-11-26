@@ -1,7 +1,11 @@
+import os
 from unittest import TestCase
+from unittest.mock import patch, Mock
 
 from draft_kings import client
-from draft_kings.output.objects.regions import Region
+from draft_kings.http_client import HTTPClient
+from draft_kings.output.objects.regions import RegionDetails
+from tests.config import ROOT_DIRECTORY
 
 
 class TestRegions(TestCase):
@@ -16,7 +20,7 @@ class TestRegions(TestCase):
     def test_first_american_region(self):
         regions = client.regions("US")
         self.assertEqual(
-            Region(
+            RegionDetails(
                 code="AL",
                 country_code="US",
                 iso_code="US-AL",
@@ -40,3 +44,33 @@ class TestRegions(TestCase):
     def test_canadian_regions_exist(self):
         regions = client.regions("CA")
         self.assertGreater(len(regions.regions), 0)
+
+
+class TestMockedUSResponseRegions(TestCase):
+    def setUp(self) -> None:
+        with open(os.path.join(ROOT_DIRECTORY, "tests/files/regions/us.json")) as data_file:
+            self.response_data = data_file.read()
+            patched_method = patch.object(HTTPClient, "regions")
+            mocked_method = patched_method.start()
+            mocked_method.return_value = Mock(text=self.response_data)
+            self.result = client.regions("US")
+
+    def tearDown(self) -> None:
+        patch.stopall()
+
+    def test_exists(self):
+        self.assertIsNotNone(self.result)
+
+    def test_length(self):
+        self.assertEqual(62, len(self.result.regions))
+
+    def test_first_region(self):
+        self.assertEqual(
+            RegionDetails(
+                country_code="US",
+                code="AL",
+                iso_code="US-AL",
+                name="Alabama"
+            ),
+            self.result.regions[0]
+        )

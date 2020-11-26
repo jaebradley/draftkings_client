@@ -21,7 +21,7 @@ class RegionsSchema(Schema):
     class Meta:
         unknown = EXCLUDE
 
-    regions = fields.List(fields.Nested(RegionSchema), attribute="regions", missing=None)
+    regions = fields.List(fields.Nested(RegionSchema), attribute="regions", missing=[])
 
     @post_load
     def make_regions(self, data, **kwargs):
