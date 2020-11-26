@@ -4,8 +4,8 @@ from unittest import TestCase
 import pytz
 
 from draft_kings.client import available_players
-from draft_kings.output.objects.players import Player, DraftDetails, PlayerPosition, \
-    PlayerTeamSeriesDetails, TeamSeries
+from draft_kings.output.objects.players import PlayerDetails, DraftDetails, PositionDetails, \
+    PlayerTeamSeriesDetails, TeamSeriesDetails
 
 
 class TestNBAAvailablePlayers(TestCase):
@@ -23,7 +23,7 @@ class TestNBAAvailablePlayers(TestCase):
 
     def test_nba_player_fields(self):
         self.assertEqual(
-            Player(
+            PlayerDetails(
                 draft_details=DraftDetails(
                     is_draftable=True,
                     salary=float(10300),
@@ -34,12 +34,12 @@ class TestNBAAvailablePlayers(TestCase):
                 last_name="James",
                 player_id=214152,
                 points_per_game=55.7,
-                position=PlayerPosition(
+                position_details=PositionDetails(
                     name="SF/PF",
                     position_id=27
                 ),
                 team_id=5,
-                team_series=PlayerTeamSeriesDetails(
+                team_series_details=PlayerTeamSeriesDetails(
                     away_team_id=28,
                     home_team_id=5,
                     opposition_rank=15,
@@ -52,43 +52,43 @@ class TestNBAAvailablePlayers(TestCase):
     def test_nba_team_series_fields(self):
         self.assertListEqual(
             [
-                TeamSeries(
+                TeamSeriesDetails(
                     away_team_id=28,
                     home_team_id=5,
                     starts_at=datetime.datetime(2016, 11, 16, 0, 0, 0, tzinfo=pytz.UTC),
-                    status="Final",
+                    status_description="Final",
                     team_series_id=5479720,
                     weather_description=None
                 ),
-                TeamSeries(
+                TeamSeriesDetails(
                     away_team_id=4,
                     home_team_id=22,
                     starts_at=datetime.datetime(2016, 11, 16, 3, 0, 0, tzinfo=pytz.UTC),
-                    status="Final",
+                    status_description="Final",
                     team_series_id=5479968,
                     weather_description=None
                 ),
-                TeamSeries(
+                TeamSeriesDetails(
                    away_team_id=1,
                    home_team_id=14,
                    starts_at=datetime.datetime(2016, 11, 16, 0, 30, 0, tzinfo=pytz.UTC),
-                   status="Final",
+                   status_description="Final",
                    team_series_id=5479637,
                    weather_description=None
                 ),
-                TeamSeries(
+                TeamSeriesDetails(
                     away_team_id=5312,
                     home_team_id=16,
                     starts_at=datetime.datetime(2016, 11, 16, 1, 0, 0, tzinfo=pytz.UTC),
-                    status="Final",
+                    status_description="Final",
                     team_series_id=5479280,
                     weather_description=None
                 ),
-                TeamSeries(
+                TeamSeriesDetails(
                     away_team_id=17,
                     home_team_id=13,
                     starts_at=datetime.datetime(2016, 11, 16, 3, 30, 0, tzinfo=pytz.UTC),
-                    status="Final",
+                    status_description="Final",
                     team_series_id=5480294,
                     weather_description=None
                 )
@@ -112,7 +112,7 @@ class TestLeagueOfLegendsAvailablePlayers(TestCase):
 
     def test_lol_player_fields(self):
         self.assertEqual(
-            Player(
+            PlayerDetails(
                 draft_details=DraftDetails(
                     is_draftable=True,
                     salary=float(9000),
@@ -123,12 +123,12 @@ class TestLeagueOfLegendsAvailablePlayers(TestCase):
                 last_name="BigKoro",
                 player_id=1283,
                 points_per_game=float(0),
-                position=PlayerPosition(
+                position_details=PositionDetails(
                     name="ADC",
                     position_id=155
                 ),
                 team_id=62492,
-                team_series=PlayerTeamSeriesDetails(
+                team_series_details=PlayerTeamSeriesDetails(
                     away_team_id=62492,
                     home_team_id=156847,
                     opposition_rank=None,
@@ -141,19 +141,19 @@ class TestLeagueOfLegendsAvailablePlayers(TestCase):
     def test_lol_team_series_fields(self):
         self.assertListEqual(
             [
-                TeamSeries(
+                TeamSeriesDetails(
                     away_team_id=62492,
                     home_team_id=156847,
                     starts_at=datetime.datetime(2019, 5, 1, 9, 0, 0, 0, tzinfo=pytz.UTC),
-                    status="Final",
+                    status_description="Final",
                     team_series_id=5613734,
                     weather_description=None
                 ),
-                TeamSeries(
+                TeamSeriesDetails(
                     away_team_id=58492,
                     home_team_id=45073,
                     starts_at=datetime.datetime(2019, 5, 1, 9, 55, 0, 0, tzinfo=pytz.UTC),
-                    status="Final",
+                    status_description="Final",
                     team_series_id=5613735,
                     weather_description=None
                 )

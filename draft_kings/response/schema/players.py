@@ -8,7 +8,7 @@ class TeamSeriesSchema(Schema):
     class Meta:
         unknown = EXCLUDE
 
-    atid = fields.Integer(attribute="away_team_id", missing=None)
+    atid = fields.Int(attribute="away_team_id", missing=None)
     htid = fields.Int(attribute="home_team_id", missing=None)
     status = fields.Str(attribute="status", missing=None)
     tz = fields.Str(attribute="starts_at", missing=None)
@@ -50,12 +50,12 @@ class PlayersDetailsSchema(Schema):
     class Meta:
         unknown = EXCLUDE
 
-    playerList = fields.List(fields.Nested(PlayerSchema, missing={}), attribute="players", missing=[])
+    playerList = fields.List(fields.Nested(PlayerSchema), attribute="players", missing=[])
     teamList = DictField(
         fields.Str(required=True),
         fields.Nested(TeamSeriesSchema, required=True),
-        required=True,
-        attribute="team_series"
+        attribute="team_series",
+        missing=None,
     )
 
     @post_load
