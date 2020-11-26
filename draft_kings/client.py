@@ -5,7 +5,7 @@ from draft_kings.output.objects.countries import CountriesDetails
 from draft_kings.output.objects.draft_group import DraftGroupDetails
 from draft_kings.output.objects.draftables import Draftables
 from draft_kings.output.objects.players import PlayersDetails
-from draft_kings.output.objects.regions import Regions
+from draft_kings.output.objects.regions import RegionsDetails
 from draft_kings.output.transformers.contests import ContestsDetailsTransformer, DraftGroupTransformer, \
     ContestTransformer
 from draft_kings.output.transformers.countries import CountriesTransformer, transform_country
@@ -89,7 +89,7 @@ def countries() -> CountriesDetails:
     return CountriesTransformer(country_transformer=transform_country).transform(deserialized_response)
 
 
-def regions(country_code: str) -> Regions:
+def regions(country_code: str) -> RegionsDetails:
     response = HTTPClient(url_builder=URLBuilder()).regions(country_code=country_code)
     schema = RegionsSchema()
     deserialized_response = schema.loads(response.text)

@@ -1,18 +1,12 @@
-from marshmallow import Schema, fields, EXCLUDE
+from marshmallow import Schema, fields
 
 
-class RegionSchema(Schema):
-    class Meta:
-        unknown = EXCLUDE
-
+class RegionDetailsSchema(Schema):
     code = fields.Str(missing=None)
     country_code = fields.Str(missing=None)
     iso_code = fields.Str(missing=None)
     name = fields.Str(missing=None)
 
 
-class RegionsSchema(Schema):
-    class Meta:
-        unknown = EXCLUDE
-
-    regions = fields.List(fields.Nested(RegionSchema), missing=None)
+class RegionsDetailsSchema(Schema):
+    regions = fields.List(fields.Nested(RegionDetailsSchema), missing=[])
