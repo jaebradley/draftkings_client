@@ -25,17 +25,15 @@ class TeamSeries:
 
 
 class DraftDetails:
-    def __init__(self, exceptional_messages: List[str], is_draftable: Optional[bool], salary: Optional[float],
+    def __init__(self, is_draftable: Optional[bool], salary: Optional[float],
                  starts_at: Optional[datetime]):
-        self.exceptional_messages = exceptional_messages
         self.is_draftable = is_draftable
         self.salary = salary
         self.starts_at = starts_at
 
     def __eq__(self, other):
         if type(other) is type(self):
-            return self.exceptional_messages == other.exceptional_messages \
-                and self.is_draftable == other.is_draftable \
+            return self.is_draftable == other.is_draftable \
                 and self.salary == other.salary \
                 and self.starts_at == other.starts_at
 

@@ -20,7 +20,6 @@ def transform_team_series(team_series_id: Optional[int], team_series_response: R
 
 def transform_draft_details(player_details: ResponsePlayerDetails) -> DraftDetails:
     return DraftDetails(
-        exceptional_messages=player_details.exceptional_messages,
         is_draftable=player_details.is_disabled_from_drafting is False,
         salary=player_details.salary,
         starts_at=from_unix_milliseconds_to_datetime(player_details.draft_group_start_time)
