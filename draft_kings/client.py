@@ -16,7 +16,7 @@ from draft_kings.output.transformers.draftables import transform_competition_tea
     transform_competition_weather_details, transform_player_competition_details, transform_player_image_details, \
     transform_player_name_details, transform_player_team_details, PlayerTransformer, CompetitionTransformer, \
     DraftablesTransformer
-from draft_kings.output.transformers.players import transform_team_series, transform_draft_details, \
+from draft_kings.output.transformers.players import TeamSeriesTransformer, DraftDetailsTransformer, \
     transform_player_position, transform_player_team_series_details, PlayerDetailsTransformer, PlayersDetailsTransformer
 from draft_kings.output.transformers.regions import RegionsTransformer, transform_region
 from draft_kings.output.transformers.sports import transform_sport_id, transform_sport_abbreviation
@@ -27,7 +27,7 @@ from draft_kings.response.schema.draftables import DraftablesSchema
 from draft_kings.response.schema.players import PlayersDetailsSchema
 from draft_kings.response.schema.regions import RegionsSchema
 from draft_kings.url_builder import URLBuilder
-from draft_kings.utilities import translate_formatted_datetime
+from draft_kings.utilities import translate_formatted_datetime, from_unix_milliseconds_to_datetime
 
 
 def contests(sport: Sport) -> ContestsDetails:
@@ -54,9 +54,13 @@ def available_players(draft_group_id: int) -> PlayersDetails:
     deserialized_response = schema.loads(response.text)
 
     return PlayersDetailsTransformer(
-        team_series_transformer=transform_team_series,
+        team_series_transformer=TeamSeriesTransformer(
+            formatted_datetime_translator=translate_formatted_datetime
+        ),
         player_details_transformer=PlayerDetailsTransformer(
-            draft_details_transformer=transform_draft_details,
+            draft_details_transformer=DraftDetailsTransformer(
+                unix_milliseconds_translator=from_unix_milliseconds_to_datetime
+            ),
             player_team_series_details_transformer=transform_player_team_series_details,
             player_position_transformer=transform_player_position
         )
