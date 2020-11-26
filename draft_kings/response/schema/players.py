@@ -28,7 +28,6 @@ class PlayerSchema(Schema):
 
     atid = fields.Integer(attribute="away_team_id", missing=None)
     dgst = fields.Integer(attribute="draft_group_start_time", missing=None)
-    ExceptionalMessages = fields.List(fields.Str, attribute="exceptional_messages")
     fn = fields.Str(attribute="first_name", missing=None)
     htid = fields.Int(attribute="home_team_id", missing=None)
     IsDisabledFromDrafting = fields.Bool(attribute="is_disabled_from_drafting", missing=None)

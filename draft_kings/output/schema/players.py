@@ -11,7 +11,6 @@ class TeamSeriesSchema(Schema):
 
 
 class DraftDetailsSchema(Schema):
-    exceptional_messages = fields.List(fields.Nested(fields.Str, missing=None), missing=[])
     is_draftable = fields.Bool(missing=None)
     salary = fields.Float(missing=None)
     starts_at = fields.DateTime(missing=None)

@@ -25,7 +25,6 @@ class TestNBAAvailablePlayers(TestCase):
         self.assertEqual(
             Player(
                 draft_details=DraftDetails(
-                    exceptional_messages=[],
                     is_draftable=True,
                     salary=float(10300),
                     starts_at=datetime.datetime(2016, 11, 16, 0, 0, 0, tzinfo=pytz.UTC)
@@ -115,7 +114,6 @@ class TestLeagueOfLegendsAvailablePlayers(TestCase):
         self.assertEqual(
             Player(
                 draft_details=DraftDetails(
-                    exceptional_messages=[],
                     is_draftable=True,
                     salary=float(9000),
                     starts_at=datetime.datetime(2019, 5, 1, 9, 0, 0, tzinfo=pytz.UTC)
