@@ -5,7 +5,7 @@ from unittest.mock import patch, Mock
 from draft_kings import client
 from draft_kings.http_client import HTTPClient
 from tests.config import ROOT_DIRECTORY
-from draft_kings.output.objects.countries import CountriesDetails, Country
+from draft_kings.output.objects.countries import CountriesDetails, CountryDetails
 
 
 class TestCountries(TestCase):
@@ -35,55 +35,55 @@ class TestCountiesWithMockedHTTPResponse(TestCase):
         self.assertEqual(
             CountriesDetails(
                 countries=[
-                    Country(
+                    CountryDetails(
                         country_id=1,
                         code="US",
                         name="United States",
                         is_licensed=True
                     ),
-                    Country(
+                    CountryDetails(
                         country_id=14,
                         code="AU",
                         name="Australia",
                         is_licensed=True
                     ),
-                    Country(
+                    CountryDetails(
                         country_id=15,
                         code="AT",
                         name="Austria",
                         is_licensed=True
                     ),
-                    Country(
+                    CountryDetails(
                         country_id=2,
                         code="CA",
                         name="Canada",
                         is_licensed=True
                     ),
-                    Country(
+                    CountryDetails(
                         country_id=4,
                         code="DE",
                         name="Germany",
                         is_licensed=True
                     ),
-                    Country(
+                    CountryDetails(
                         country_id=89,
                         code="IE",
                         name="Ireland",
                         is_licensed=True
                     ),
-                    Country(
+                    CountryDetails(
                         country_id=117,
                         code="MT",
                         name="Malta",
                         is_licensed=True
                     ),
-                    Country(
+                    CountryDetails(
                         country_id=132,
                         code="NL",
                         name="Netherlands",
                         is_licensed=True
                     ),
-                    Country(
+                    CountryDetails(
                         country_id=3,
                         code="GB",
                         name="United Kingdom",

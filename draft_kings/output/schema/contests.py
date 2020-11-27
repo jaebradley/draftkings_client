@@ -31,7 +31,7 @@ class DraftGroupDetailsSchema(Schema):
 class ContestDetailsSchema(Schema):
     contest_id = fields.Integer(missing=None)
     draft_group_id = fields.Integer(missing=None)
-    entries_details = fields.Nested(EntriesDetailsSchema(), missing=None)
+    entries_details = fields.Nested(EntriesDetailsSchema(), required=True)
     fantasy_player_points = fields.Number(missing=None)
     is_double_up = fields.Bool(missing=False)
     is_fifty_fifty = fields.Bool(missing=False)

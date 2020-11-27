@@ -26,7 +26,7 @@ class EntriesDetails:
 class ContestDetails:
     contest_id: Optional[int]
     draft_group_id: Optional[int]
-    entries_details: Optional[EntriesDetails]
+    entries_details: EntriesDetails
     fantasy_player_points: Optional[float]
     is_double_up: bool
     is_fifty_fifty: bool
