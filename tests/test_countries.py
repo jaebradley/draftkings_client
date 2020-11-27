@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from draft_kings.output.objects.countries import CountriesDetails, Country
+from draft_kings.output.objects.countries import CountriesDetails, CountryDetails
 from draft_kings.output.transformers.countries import CountriesTransformer, transform_country
 from draft_kings.response.objects.countries import Country as ResponseCountry, Countries as ResponseCountries
 
@@ -8,7 +8,7 @@ from draft_kings.response.objects.countries import Country as ResponseCountry, C
 class TestCountryTransformer(TestCase):
     def test_transforming_country_with_defined_values(self) -> None:
         self.assertEqual(
-            Country(
+            CountryDetails(
                 code="jaebabeae",
                 country_id=1,
                 is_licensed=True,
@@ -26,7 +26,7 @@ class TestCountryTransformer(TestCase):
 
     def test_transforming_country_with_none_values(self) -> None:
         self.assertEqual(
-            Country(
+            CountryDetails(
                 code=None,
                 country_id=None,
                 is_licensed=None,
@@ -57,13 +57,13 @@ class TestCountriesTransformer(TestCase):
         self.assertEqual(
             CountriesDetails(
                 countries=[
-                    Country(
+                    CountryDetails(
                         code="jaebabeae",
                         country_id=1,
                         is_licensed=True,
                         name="baejaejae"
                     ),
-                    Country(
+                    CountryDetails(
                         code=None,
                         country_id=None,
                         is_licensed=None,

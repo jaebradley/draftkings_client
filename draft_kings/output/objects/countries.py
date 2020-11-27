@@ -3,7 +3,7 @@ from typing import Optional, List
 
 
 @dataclass(frozen=True)
-class Country:
+class CountryDetails:
     code: Optional[str]
     country_id: Optional[int]
     is_licensed: Optional[bool]
@@ -12,4 +12,4 @@ class Country:
 
 @dataclass(frozen=True)
 class CountriesDetails:
-    countries: List[Country]
+    countries: List[CountryDetails]
