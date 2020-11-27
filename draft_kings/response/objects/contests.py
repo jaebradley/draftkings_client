@@ -14,7 +14,7 @@ class ContestAttributes:
 
 @dataclass(frozen=True)
 class Contest:
-    attributes: ContestAttributes
+    attributes: Optional[ContestAttributes]
     contest_id: Optional[int]
     draft_group_id: Optional[int]
     entry_fee: Optional[float]

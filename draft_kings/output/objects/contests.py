@@ -6,7 +6,7 @@ from draft_kings.data import Sport
 
 
 @dataclass(frozen=True)
-class DraftGroup:
+class DraftGroupDetails:
     contest_type_id: Optional[int]
     draft_group_id: Optional[int]
     games_count: Optional[int]
@@ -23,16 +23,16 @@ class EntriesDetails:
 
 
 @dataclass(frozen=True)
-class Contest:
+class ContestDetails:
     contest_id: Optional[int]
     draft_group_id: Optional[int]
-    entries_details: EntriesDetails
+    entries_details: Optional[EntriesDetails]
     fantasy_player_points: Optional[float]
-    is_double_up: Optional[bool]
-    is_fifty_fifty: Optional[bool]
-    is_guaranteed: Optional[bool]
-    is_head_to_head: Optional[bool]
-    is_starred: Optional[bool]
+    is_double_up: bool
+    is_fifty_fifty: bool
+    is_guaranteed: bool
+    is_head_to_head: bool
+    is_starred: bool
     name: Optional[str]
     payout: Optional[float]
     sport: Optional[Sport]
@@ -41,5 +41,5 @@ class Contest:
 
 @dataclass(frozen=True)
 class ContestsDetails:
-    contests: List[Contest]
-    draft_groups: List[DraftGroup]
+    contests: List[ContestDetails]
+    draft_groups: List[DraftGroupDetails]

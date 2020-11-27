@@ -23,7 +23,7 @@ class ContestSchema(Schema):
         unknown = EXCLUDE
 
     a = fields.Number(missing=None, attribute="entry_fee")
-    attr = fields.Nested(ContestAttributeSchema(), missing={}, attribute="attributes")
+    attr = fields.Nested(ContestAttributeSchema(), missing=None, attribute="attributes")
     dg = fields.Integer(missing=None, attribute="draft_group_id")
     fpp = fields.Number(missing=None, attribute="fantasy_player_points")
     id = fields.Integer(missing=None, attribute="contest_id")
@@ -59,8 +59,8 @@ class ContestsSchema(Schema):
     class Meta:
         unknown = EXCLUDE
 
-    Contests = fields.List(fields.Nested(ContestSchema(), missing={}), missing=[], attribute="contests")
-    DraftGroups = fields.List(fields.Nested(DraftGroupSchema(), missing={}), missing=[], attribute="draft_groups")
+    Contests = fields.List(fields.Nested(ContestSchema()), missing=[], attribute="contests")
+    DraftGroups = fields.List(fields.Nested(DraftGroupSchema()), missing=[], attribute="draft_groups")
 
     @post_load
     def make_contests(self, data, **kwargs):
