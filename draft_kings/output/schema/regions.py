@@ -1,12 +1,22 @@
-from marshmallow import Schema, fields
+from marshmallow import Schema, fields, post_load
+
+from draft_kings.output.objects.regions import RegionDetails, RegionsDetails
 
 
 class RegionDetailsSchema(Schema):
-    code = fields.Str(missing=None)
-    country_code = fields.Str(missing=None)
-    iso_code = fields.Str(missing=None)
-    name = fields.Str(missing=None)
+    code = fields.Str(allow_none=True, required=True)
+    country_code = fields.Str(allow_none=True, required=True)
+    iso_code = fields.Str(allow_none=True, required=True)
+    name = fields.Str(allow_none=True, required=True)
+
+    @post_load
+    def make_region_details(self, data, **kwargs):
+        return RegionDetails(**data)
 
 
 class RegionsDetailsSchema(Schema):
-    regions = fields.List(fields.Nested(RegionDetailsSchema), missing=[])
+    regions = fields.List(fields.Nested(RegionDetailsSchema()), required=True)
+
+    @post_load
+    def make_regions_details(self, data, **kwargs):
+        return RegionsDetails(**data)
