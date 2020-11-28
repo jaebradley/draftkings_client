@@ -7,7 +7,7 @@ from draft_kings import client
 from draft_kings.data import Sport
 from draft_kings.http_client import HTTPClient
 from draft_kings.output.objects.draftables import PlayerNameDetails, PlayerImageDetails, PlayerCompetitionDetails, \
-    PlayerTeamDetails, Player, CompetitionTeam, CompetitionWeather, Competition
+    PlayerTeamDetails, PlayerDetails, CompetitionTeamDetails, CompetitionWeatherDetails, CompetitionDetails
 from tests.config import ROOT_DIRECTORY
 
 
@@ -63,10 +63,10 @@ class TestMockedUpcomingNFLDraftablesResponse(TestCase):
     def test_competitions(self):
         self.assertListEqual(
             [
-                Competition(
+                CompetitionDetails(
                     are_depth_charts_available=True,
                     are_starting_lineups_available=False,
-                    away_team=CompetitionTeam(
+                    away_team=CompetitionTeamDetails(
                         abbreviation="HOU",
                         city="Houston",
                         team_id=325,
@@ -74,7 +74,7 @@ class TestMockedUpcomingNFLDraftablesResponse(TestCase):
                     ),
                     competition_id=5673406,
                     state_description="Upcoming",
-                    home_team=CompetitionTeam(
+                    home_team=CompetitionTeamDetails(
                         abbreviation="DET",
                         city="Detroit",
                         team_id=334,
@@ -84,15 +84,15 @@ class TestMockedUpcomingNFLDraftablesResponse(TestCase):
                     sport=Sport.NFL,
                     starts_at=datetime(2020, 11, 26, 17, 30, 0, 0, tzinfo=timezone.utc),
                     venue="Ford Field",
-                    weather=CompetitionWeather(
+                    weather=CompetitionWeatherDetails(
                         description="cloudy",
                         is_in_a_dome=True
                     )
                 ),
-                Competition(
+                CompetitionDetails(
                     are_depth_charts_available=True,
                     are_starting_lineups_available=False,
-                    away_team=CompetitionTeam(
+                    away_team=CompetitionTeamDetails(
                         abbreviation="WAS",
                         city="Washington",
                         team_id=363,
@@ -100,7 +100,7 @@ class TestMockedUpcomingNFLDraftablesResponse(TestCase):
                     ),
                     competition_id=5673928,
                     state_description="Upcoming",
-                    home_team=CompetitionTeam(
+                    home_team=CompetitionTeamDetails(
                         abbreviation="DAL",
                         city="Dallas",
                         team_id=331,
@@ -110,15 +110,15 @@ class TestMockedUpcomingNFLDraftablesResponse(TestCase):
                     sport=Sport.NFL,
                     starts_at=datetime(2020, 11, 26, 21, 30, 0, 0, tzinfo=timezone.utc),
                     venue="AT&T Stadium",
-                    weather=CompetitionWeather(
+                    weather=CompetitionWeatherDetails(
                         description="clear-day",
                         is_in_a_dome=False
                     )
                 ),
-                Competition(
+                CompetitionDetails(
                     are_depth_charts_available=True,
                     are_starting_lineups_available=False,
-                    away_team=CompetitionTeam(
+                    away_team=CompetitionTeamDetails(
                         abbreviation="BAL",
                         city="Baltimore",
                         team_id=366,
@@ -126,7 +126,7 @@ class TestMockedUpcomingNFLDraftablesResponse(TestCase):
                     ),
                     competition_id=5674018,
                     state_description="Upcoming",
-                    home_team=CompetitionTeam(
+                    home_team=CompetitionTeamDetails(
                         abbreviation="PIT",
                         city="Pittsburgh",
                         team_id=356,
@@ -136,7 +136,7 @@ class TestMockedUpcomingNFLDraftablesResponse(TestCase):
                     sport=Sport.NFL,
                     starts_at=datetime(2020, 11, 27, 1, 20, 0, 0, tzinfo=timezone.utc),
                     venue="Heinz Field",
-                    weather=CompetitionWeather(
+                    weather=CompetitionWeatherDetails(
                         description="cloudy",
                         is_in_a_dome=False
                     )
@@ -147,8 +147,8 @@ class TestMockedUpcomingNFLDraftablesResponse(TestCase):
 
     def test_first_draftable_player(self):
         self.assertEqual(
-            Player(
-                competition=PlayerCompetitionDetails(
+            PlayerDetails(
+                competition_details=PlayerCompetitionDetails(
                     competition_id=5673406,
                     name="HOU @ DET",
                     starts_at=datetime(2020, 11, 26, 17, 30, 0, 0, tzinfo=timezone.utc),
@@ -163,7 +163,7 @@ class TestMockedUpcomingNFLDraftablesResponse(TestCase):
                 news_status_description="Recent",
                 image_details=PlayerImageDetails(
                     fifty_pixels_by_fifty_pixels_url="https://dkn.gs/sports/images/nfl/players/50/18229.png",
-                    one_hundred_and_sixty_pixels_by_one_hundred_pixels_url="https://dkn.gs/sports/images/nfl/players/160/18229.png",
+                    one_hundred_and_sixty_pixels_by_one_hundred_and_sixty_pixels_url="https://dkn.gs/sports/images/nfl/players/160/18229.png",
                 ),
                 name_details=PlayerNameDetails(
                     first="Deshaun",

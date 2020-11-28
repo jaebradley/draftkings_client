@@ -16,7 +16,7 @@ class PlayerNameDetails:
 @dataclass(frozen=True)
 class PlayerImageDetails:
     fifty_pixels_by_fifty_pixels_url: Optional[str]
-    one_hundred_and_sixty_pixels_by_one_hundred_pixels_url: Optional[str]
+    one_hundred_and_sixty_pixels_by_one_hundred_and_sixty_pixels_url: Optional[str]
 
 
 @dataclass(frozen=True)
@@ -33,23 +33,23 @@ class PlayerTeamDetails:
 
 
 @dataclass(frozen=True)
-class Player:
-    competition: Optional[PlayerCompetitionDetails]
+class PlayerDetails:
+    competition_details: Optional[PlayerCompetitionDetails]
     draftable_id: Optional[int]
-    image_details: Optional[PlayerImageDetails]
+    image_details: PlayerImageDetails
     is_disabled: Optional[bool]
     is_swappable: Optional[bool]
-    name_details: Optional[PlayerNameDetails]
+    name_details: PlayerNameDetails
     news_status_description: Optional[str]
     player_id: Optional[int]
     position_name: Optional[str]
     roster_slot_id: Optional[int]
     salary: Optional[float]
-    team_details: Optional[PlayerTeamDetails]
+    team_details: PlayerTeamDetails
 
 
 @dataclass(frozen=True)
-class CompetitionTeam:
+class CompetitionTeamDetails:
     abbreviation: Optional[str]
     city: Optional[str]
     name: Optional[str]
@@ -57,27 +57,27 @@ class CompetitionTeam:
 
 
 @dataclass(frozen=True)
-class CompetitionWeather:
+class CompetitionWeatherDetails:
     description: Optional[str]
     is_in_a_dome: Optional[bool]
 
 
 @dataclass(frozen=True)
-class Competition:
+class CompetitionDetails:
     are_depth_charts_available: Optional[bool]
     are_starting_lineups_available: Optional[bool]
-    away_team: Optional[CompetitionTeam]
+    away_team: Optional[CompetitionTeamDetails]
     competition_id: Optional[int]
-    home_team: Optional[CompetitionTeam]
+    home_team: Optional[CompetitionTeamDetails]
     name: Optional[str]
     sport: Optional[Sport]
     starts_at: Optional[datetime]
     state_description: Optional[str]
     venue: Optional[str]
-    weather: Optional[CompetitionWeather]
+    weather: Optional[CompetitionWeatherDetails]
 
 
 @dataclass(frozen=True)
-class Draftables:
-    competitions: List[Competition]
-    players: List[Player]
+class DraftablesDetails:
+    competitions: List[CompetitionDetails]
+    players: List[PlayerDetails]
