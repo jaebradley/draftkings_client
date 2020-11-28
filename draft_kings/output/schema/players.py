@@ -65,8 +65,8 @@ class PlayerDetailsSchema(Schema):
 
 
 class PlayersDetailsSchema(Schema):
-    players: fields.List(fields.Nested(PlayerDetailsSchema()))
-    team_series: fields.List(fields.Nested(TeamSeriesDetailsSchema()))
+    players: fields.List(fields.Nested(PlayerDetailsSchema()), required=True)
+    team_series: fields.List(fields.Nested(TeamSeriesDetailsSchema()), required=True)
 
     @post_load
     def make_players_details(self, data, **kwargs):
