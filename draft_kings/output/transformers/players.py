@@ -19,7 +19,7 @@ class TeamSeriesTransformer:
             starts_at=self.formatted_datetime_translator(team_series_response.starts_at) if
             team_series_response.starts_at is not None else None,
             status_description=team_series_response.status,
-            team_series_id=int(team_series_id),
+            team_series_id=int(team_series_id) if team_series_id is not None else None,
             weather_description=team_series_response.weather
         )
 
@@ -68,7 +68,8 @@ class PlayerDetailsTransformer:
             jersey_number=player_details.jersey_number,
             last_name=player_details.last_name,
             player_id=player_details.player_id,
-            points_per_game=float(player_details.points_per_game),
+            points_per_game=float(player_details.points_per_game)
+            if player_details.points_per_game is not None else None,
             position_details=self.player_position_transformer(player_details),
             team_id=player_details.team_id,
             team_series_details=self.player_team_series_details_transformer(player_details)
