@@ -1,40 +1,73 @@
-from marshmallow import Schema, fields
+from marshmallow import Schema, fields, post_load
+
+from draft_kings.output.objects.players import TeamSeriesDetails, DraftDetails, PlayerTeamSeriesDetails, \
+    PositionDetails, PlayerDetails, PlayersDetails
+from draft_kings.output.schema.fields import CustomDateTime
 
 
 class TeamSeriesDetailsSchema(Schema):
-    away_team_id = fields.Integer(missing=None)
-    home_team_id = fields.Integer(missing=None)
-    starts_at = fields.DateTime(missing=None)
-    status_description = fields.Str(missing=None)
-    team_series_id = fields.Integer(missing=None)
-    weather_description = fields.Str(missing=None)
+    away_team_id = fields.Integer(allow_none=True, required=True)
+    home_team_id = fields.Integer(allow_none=True, required=True)
+    starts_at = CustomDateTime(allow_none=True, required=True)
+    status_description = fields.Str(allow_none=True, required=True)
+    team_series_id = fields.Integer(allow_none=True, required=True)
+    weather_description = fields.Str(allow_none=True, required=True)
+
+    @post_load
+    def make_team_series_details(self, data, **kwargs):
+        return TeamSeriesDetails(**data)
 
 
 class DraftDetailsSchema(Schema):
-    is_draftable = fields.Bool(missing=None)
-    salary = fields.Float(missing=None)
-    starts_at = fields.DateTime(missing=None)
+    is_draftable = fields.Bool(allow_none=True, required=True)
+    salary = fields.Float(allow_none=True, required=True)
+    starts_at = CustomDateTime(allow_none=True, required=True)
+
+    @post_load
+    def make_draft_details(self, data, **kwargs):
+        return DraftDetails(**data)
 
 
 class PlayerTeamSeriesDetailsSchema(Schema):
-    away_team_id = fields.Integer(missing=None)
-    home_team_id = fields.Integer(missing=None)
-    opposition_rank = fields.Integer(missing=None)
-    team_series_id = fields.Integer(missing=None)
+    away_team_id = fields.Integer(allow_none=True, required=True)
+    home_team_id = fields.Integer(allow_none=True, required=True)
+    opposition_rank = fields.Integer(allow_none=True, required=True)
+    team_series_id = fields.Integer(allow_none=True, required=True)
+
+    @post_load
+    def make_player_team_series_details(self, data, **kwargs):
+        return PlayerTeamSeriesDetails(**data)
 
 
 class PlayerPositionDetailsSchema(Schema):
-    name = fields.Str(missing=None)
-    position_id = fields.Integer(missing=None)
+    name = fields.Str(allow_none=True, required=True)
+    position_id = fields.Integer(allow_none=True, required=True)
+
+    @post_load
+    def make_player_position_details(self, data, **kwargs):
+        return PositionDetails(**data)
 
 
-class PlayerSchema(Schema):
-    draft_details = fields.Nested(DraftDetailsSchema, required=True)
-    first_name = fields.Str(missing=None)
-    jersey_number = fields.Integer(missing=None)
-    last_name = fields.Str(missing=None)
-    player_id = fields.Integer(missing=None)
-    points_per_game = fields.Float(missing=None)
-    position_details = fields.Nested(PlayerPositionDetailsSchema, required=True)
-    team_id = fields.Integer(missing=None)
-    team_series_details = fields.Nested(PlayerTeamSeriesDetailsSchema, required=True)
+class PlayerDetailsSchema(Schema):
+    draft_details = fields.Nested(DraftDetailsSchema(), required=True)
+    first_name = fields.Str(allow_none=True, required=True)
+    jersey_number = fields.Integer(allow_none=True, required=True)
+    last_name = fields.Str(allow_none=True, required=True)
+    player_id = fields.Integer(allow_none=True, required=True)
+    points_per_game = fields.Float(allow_none=True, required=True)
+    position_details = fields.Nested(PlayerPositionDetailsSchema(), required=True)
+    team_id = fields.Integer(allow_none=True, required=True)
+    team_series_details = fields.Nested(PlayerTeamSeriesDetailsSchema(), required=True)
+
+    @post_load
+    def make_player(self, data, **kwargs):
+        return PlayerDetails(**data)
+
+
+class PlayersDetailsSchema(Schema):
+    players: fields.List(fields.Nested(PlayerDetailsSchema()))
+    team_series: fields.List(fields.Nested(TeamSeriesDetailsSchema()))
+
+    @post_load
+    def make_players_details(self, data, **kwargs):
+        return PlayersDetails(**data)

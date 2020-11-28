@@ -36,15 +36,15 @@ class PositionDetails:
 
 @dataclass(frozen=True)
 class PlayerDetails:
-    draft_details:DraftDetails
+    draft_details: DraftDetails
     first_name: Optional[str]
     jersey_number: Optional[int]
     last_name: Optional[str]
     player_id: Optional[int]
     points_per_game: Optional[float]
-    position_details:PositionDetails
+    position_details: PositionDetails
     team_id: Optional[int]
-    team_series_details:PlayerTeamSeriesDetails
+    team_series_details: PlayerTeamSeriesDetails
 
 
 @dataclass(frozen=True)
