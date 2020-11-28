@@ -1,100 +1,113 @@
-from marshmallow import Schema, fields, EXCLUDE
+from marshmallow import Schema, fields, post_load
 from marshmallow_enum import EnumField
 
 from draft_kings.data import Sport
+from draft_kings.output.objects.draftables import PlayerNameDetails, PlayerImageDetails, PlayerCompetitionDetails, \
+    PlayerTeamDetails, PlayerDetails, CompetitionTeamDetails, CompetitionWeatherDetails, CompetitionDetails, \
+    DraftablesDetails
+from draft_kings.output.schema.fields import CustomAwareDateTime
 
 
 class PlayerNameDetailsSchema(Schema):
-    class Meta:
-        unknown = EXCLUDE
+    display = fields.Str(allow_none=True, required=True)
+    first = fields.Str(allow_none=True, required=True)
+    last = fields.Str(allow_none=True, required=True)
+    short = fields.Str(allow_none=True, required=True)
 
-    display = fields.Str(missing=None)
-    first = fields.Str(missing=None)
-    last = fields.Str(missing=None)
-    short = fields.Str(missing=None)
+    @post_load
+    def make_player_name_details(self, data, **kwargs):
+        return PlayerNameDetails(**data)
 
 
 class PlayerImageDetailsSchema(Schema):
-    class Meta:
-        unknown = EXCLUDE
+    fifty_pixels_by_fifty_pixels_url = fields.Str(allow_none=True, required=True)
+    one_hundred_and_sixty_pixels_by_one_hundred_and_sixty_pixels_url = fields.Str(allow_none=True, required=True)
 
-    fifty_pixels_by_fifty_pixels_url = fields.Str(missing=None)
-    one_hundred_and_sixty_pixels_by_one_hundred_pixels_url = fields.Str(missing=None)
+    @post_load
+    def make_player_image_details(self, data, **kwargs):
+        return PlayerImageDetails(**data)
 
 
 class PlayerCompetitionDetailsSchema(Schema):
-    class Meta:
-        unknown = EXCLUDE
+    competition_id = fields.Int(allow_none=True, required=True)
+    name = fields.Str(allow_none=True, required=True)
+    starts_at = CustomAwareDateTime(allow_none=True, required=True)
 
-    competition_id = fields.Int(missing=None)
-    name = fields.Str(missing=None)
-    starts_at = fields.AwareDateTime(missing=None)
+    @post_load
+    def make_player_competition_details(self, data, **kwargs):
+        return PlayerCompetitionDetails(**data)
 
 
 class PlayerTeamDetailsSchema(Schema):
-    class Meta:
-        unknown = EXCLUDE
+    abbreviation = fields.Str(allow_none=True, required=True)
+    team_id = fields.Int(allow_none=True, required=True)
 
-    abbreviation = fields.Str(missing=None)
-    team_id = fields.Int(missing=None)
-
-
-class PlayerSchema(Schema):
-    class Meta:
-        unknown = EXCLUDE
-
-    competition_details = fields.Nested(PlayerCompetitionDetailsSchema, missing=None)
-    draftable_id = fields.Int(missing=None)
-    image_details = fields.Nested(PlayerImageDetailsSchema, missing=None)
-    is_disabled = fields.Bool(missing=None)
-    is_swappable = fields.Bool(missing=None)
-    name_details = fields.Nested(PlayerNameDetailsSchema, missing=None)
-    news_status_description = fields.Str(missing=None)
-    player_id = fields.Int(missing=None)
-    position_name = fields.Str(missing=None)
-    roster_slot_id = fields.Int(missing=None)
-    salary = fields.Float(missing=None)
-    team_details = fields.Nested(PlayerTeamDetailsSchema, missing=None)
+    @post_load
+    def make_player_team_details(self, data, **kwargs):
+        return PlayerTeamDetails(**data)
 
 
-class CompetitionTeamSchema(Schema):
-    class Meta:
-        unknown = EXCLUDE
+class PlayerDetailsSchema(Schema):
+    competition_details = fields.Nested(PlayerCompetitionDetailsSchema(), allow_none=True, required=True)
+    draftable_id = fields.Int(allow_none=True, required=True)
+    image_details = fields.Nested(PlayerImageDetailsSchema(), required=True)
+    is_disabled = fields.Bool(allow_none=True, required=True)
+    is_swappable = fields.Bool(allow_none=True, required=True)
+    name_details = fields.Nested(PlayerNameDetailsSchema(), required=True)
+    news_status_description = fields.Str(allow_none=True, required=True)
+    player_id = fields.Int(allow_none=True, required=True)
+    position_name = fields.Str(allow_none=True, required=True)
+    roster_slot_id = fields.Int(allow_none=True, required=True)
+    salary = fields.Float(allow_none=True, required=True)
+    team_details = fields.Nested(PlayerTeamDetailsSchema(), required=True)
 
-    abbreviation = fields.Str(missing=None)
-    city = fields.Str(missing=None)
-    name = fields.Str(missing=None)
-    team_id = fields.Int(missing=None)
-
-
-class CompetitionWeatherSchema(Schema):
-    class Meta:
-        unknown = EXCLUDE
-
-    description = fields.Str(missing=None)
-    is_in_a_dome = fields.Bool(missing=None)
-
-
-class CompetitionSchema(Schema):
-    class Meta:
-        unknown = EXCLUDE
-
-    are_depth_charts_available = fields.Bool(missing=None)
-    are_starting_lineups_available = fields.Bool(missing=None)
-    away_team = fields.Nested(CompetitionTeamSchema, missing=None)
-    competition_id = fields.Int(missing=None)
-    home_team = fields.Nested(CompetitionTeamSchema, missing=None)
-    name = fields.Str(missing=None)
-    sport = EnumField(Sport, missing=None)
-    starts_at = fields.AwareDateTime(missing=None)
-    state_description = fields.Str(missing=None)
-    venue = fields.Str(missing=None)
-    weather = fields.Nested(CompetitionWeatherSchema, missing=None)
+    @post_load
+    def make_player_details(self, data, **kwargs):
+        return PlayerDetails(**data)
 
 
-class DraftablesSchema(Schema):
-    class Meta:
-        unknown = EXCLUDE
+class CompetitionTeamDetailsSchema(Schema):
+    abbreviation = fields.Str(allow_none=True, required=True)
+    city = fields.Str(allow_none=True, required=True)
+    name = fields.Str(allow_none=True, required=True)
+    team_id = fields.Int(allow_none=True, required=True)
 
-    players = fields.List(fields.Nested(PlayerSchema), missing=[])
-    competitions = fields.List(fields.Nested(CompetitionSchema), missing=[])
+    @post_load
+    def make_competition_team_details(self, data, **kwargs):
+        return CompetitionTeamDetails(**data)
+
+
+class CompetitionWeatherDetailsSchema(Schema):
+    description = fields.Str(allow_none=True, required=True)
+    is_in_a_dome = fields.Bool(allow_none=True, required=True)
+
+    @post_load
+    def make_competition_weather_details(self, data, **kwargs):
+        return CompetitionWeatherDetails(**data)
+
+
+class CompetitionDetailsSchema(Schema):
+    are_depth_charts_available = fields.Bool(allow_none=True, required=True)
+    are_starting_lineups_available = fields.Bool(allow_none=True, required=True)
+    away_team = fields.Nested(CompetitionTeamDetailsSchema(), allow_none=True, required=True)
+    competition_id = fields.Int(allow_none=True, required=True)
+    home_team = fields.Nested(CompetitionTeamDetailsSchema(), allow_none=True, required=True)
+    name = fields.Str(allow_none=True, required=True)
+    sport = EnumField(Sport, by_value=True, allow_none=True, required=True)
+    starts_at = CustomAwareDateTime(allow_none=True, required=True)
+    state_description = fields.Str(allow_none=True, required=True)
+    venue = fields.Str(allow_none=True, required=True)
+    weather = fields.Nested(CompetitionWeatherDetailsSchema(), allow_none=True, required=True)
+
+    @post_load
+    def make_competition_details(self, data, **kwargs):
+        return CompetitionDetails(**data)
+
+
+class DraftablesDetailsSchema(Schema):
+    players = fields.List(fields.Nested(PlayerDetailsSchema()), required=True)
+    competitions = fields.List(fields.Nested(CompetitionDetailsSchema()), required=True)
+
+    @post_load
+    def make_draftables_details(self, data, **kwargs):
+        return DraftablesDetails(**data)
