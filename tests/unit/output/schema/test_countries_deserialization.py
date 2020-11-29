@@ -8,14 +8,10 @@ from draft_kings.output.schema.countries import CountryDetailsSchema
 
 class TestCountryDetailsSchemaLoading(TestCase):
     def test_loading_empty_object(self):
-        self.assertEqual(
-            CountryDetails(
-                code=None,
-                country_id=None,
-                is_licensed=None,
-                name=None
-            ),
-            CountryDetailsSchema().load({})
+        self.assertRaises(
+            marshmallow.ValidationError,
+            CountryDetailsSchema().load,
+            {}
         )
 
     def test_validation_error_when_invalid_value_is_loaded(self):

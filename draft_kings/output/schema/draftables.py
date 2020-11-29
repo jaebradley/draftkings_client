@@ -48,18 +48,18 @@ class PlayerTeamDetailsSchema(Schema):
 
 
 class PlayerDetailsSchema(Schema):
-    competition_details = fields.Nested(PlayerCompetitionDetailsSchema(), allow_none=True, required=True)
+    competition_details = fields.Nested(PlayerCompetitionDetailsSchema, allow_none=True, required=True)
     draftable_id = fields.Int(allow_none=True, required=True)
-    image_details = fields.Nested(PlayerImageDetailsSchema(), required=True)
+    image_details = fields.Nested(PlayerImageDetailsSchema, required=True)
     is_disabled = fields.Bool(allow_none=True, required=True)
     is_swappable = fields.Bool(allow_none=True, required=True)
-    name_details = fields.Nested(PlayerNameDetailsSchema(), required=True)
+    name_details = fields.Nested(PlayerNameDetailsSchema, required=True)
     news_status_description = fields.Str(allow_none=True, required=True)
     player_id = fields.Int(allow_none=True, required=True)
     position_name = fields.Str(allow_none=True, required=True)
     roster_slot_id = fields.Int(allow_none=True, required=True)
     salary = fields.Float(allow_none=True, required=True)
-    team_details = fields.Nested(PlayerTeamDetailsSchema(), required=True)
+    team_details = fields.Nested(PlayerTeamDetailsSchema, required=True)
 
     @post_load
     def make_player_details(self, data, **kwargs):
@@ -89,15 +89,15 @@ class CompetitionWeatherDetailsSchema(Schema):
 class CompetitionDetailsSchema(Schema):
     are_depth_charts_available = fields.Bool(allow_none=True, required=True)
     are_starting_lineups_available = fields.Bool(allow_none=True, required=True)
-    away_team = fields.Nested(CompetitionTeamDetailsSchema(), allow_none=True, required=True)
+    away_team = fields.Nested(CompetitionTeamDetailsSchema, allow_none=True, required=True)
     competition_id = fields.Int(allow_none=True, required=True)
-    home_team = fields.Nested(CompetitionTeamDetailsSchema(), allow_none=True, required=True)
+    home_team = fields.Nested(CompetitionTeamDetailsSchema, allow_none=True, required=True)
     name = fields.Str(allow_none=True, required=True)
     sport = EnumField(Sport, by_value=True, allow_none=True, required=True)
     starts_at = CustomAwareDateTime(allow_none=True, required=True)
     state_description = fields.Str(allow_none=True, required=True)
     venue = fields.Str(allow_none=True, required=True)
-    weather = fields.Nested(CompetitionWeatherDetailsSchema(), allow_none=True, required=True)
+    weather = fields.Nested(CompetitionWeatherDetailsSchema, allow_none=True, required=True)
 
     @post_load
     def make_competition_details(self, data, **kwargs):
@@ -105,8 +105,8 @@ class CompetitionDetailsSchema(Schema):
 
 
 class DraftablesDetailsSchema(Schema):
-    players = fields.List(fields.Nested(PlayerDetailsSchema()), required=True)
-    competitions = fields.List(fields.Nested(CompetitionDetailsSchema()), required=True)
+    players = fields.List(fields.Nested(PlayerDetailsSchema, required=True), required=True)
+    competitions = fields.List(fields.Nested(CompetitionDetailsSchema, required=True), required=True)
 
     @post_load
     def make_draftables_details(self, data, **kwargs):

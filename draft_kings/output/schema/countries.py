@@ -4,10 +4,10 @@ from draft_kings.output.objects.countries import CountryDetails, CountriesDetail
 
 
 class CountryDetailsSchema(Schema):
-    code = fields.Str(missing=None)
-    country_id = fields.Int(missing=None)
-    is_licensed = fields.Bool(missing=None)
-    name = fields.Str(missing=None)
+    code = fields.Str(allow_none=True, required=True)
+    country_id = fields.Int(allow_none=True, required=True)
+    is_licensed = fields.Bool(allow_none=True, required=True)
+    name = fields.Str(allow_none=True, required=True)
 
     @post_load
     def make_country_details(self, data, **kwargs):
@@ -15,7 +15,7 @@ class CountryDetailsSchema(Schema):
 
 
 class CountriesDetailsSchema(Schema):
-    countries = fields.List(fields.Nested(CountryDetailsSchema), missing=[])
+    countries = fields.List(fields.Nested(CountryDetailsSchema, required=True), required=True)
 
     @post_load
     def make_countries_details(self, data, **kwargs):

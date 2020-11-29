@@ -32,7 +32,7 @@ class DraftGroupDetailsSchema(Schema):
 class ContestDetailsSchema(Schema):
     contest_id = fields.Integer(allow_none=True, required=True)
     draft_group_id = fields.Integer(allow_none=True, required=True)
-    entries_details = fields.Nested(EntriesDetailsSchema(), required=True)
+    entries_details = fields.Nested(EntriesDetailsSchema, required=True)
     fantasy_player_points = fields.Number(allow_none=True, required=True)
     is_double_up = fields.Bool(allow_none=False, required=True)
     is_fifty_fifty = fields.Bool(allow_none=False, required=True)
@@ -50,8 +50,8 @@ class ContestDetailsSchema(Schema):
 
 
 class ContestsDetailsSchema(Schema):
-    contests = fields.List(fields.Nested(ContestDetailsSchema()), required=True)
-    draft_groups = fields.List(fields.Nested(DraftGroupDetailsSchema()), required=True)
+    contests = fields.List(fields.Nested(ContestDetailsSchema, required=True), required=True)
+    draft_groups = fields.List(fields.Nested(DraftGroupDetailsSchema, required=True), required=True)
 
     @post_load
     def make_contests_details(self, data, **kwargs):
