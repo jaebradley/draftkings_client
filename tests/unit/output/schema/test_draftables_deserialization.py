@@ -111,6 +111,7 @@ class TestPlayerDetails(TestCase):
             {
                 "competition_details": None,
                 "draftable_id": None,
+                "draftables": None,
                 "image_details": None,
                 "is_disabled": None,
                 "is_swappable": None,
@@ -129,6 +130,7 @@ class TestPlayerDetails(TestCase):
             PlayerDetails(
                 competition_details=None,
                 draftable_id=None,
+                draft_alerts=[],
                 image_details=PlayerImageDetails(
                     fifty_pixels_by_fifty_pixels_url="50x50 url",
                     one_hundred_and_sixty_pixels_by_one_hundred_and_sixty_pixels_url="160x160 url",
@@ -154,6 +156,7 @@ class TestPlayerDetails(TestCase):
             self.schema.load({
                 "competition_details": None,
                 "draftable_id": None,
+                "draft_alerts": [],
                 "image_details": {
                     "fifty_pixels_by_fifty_pixels_url": "50x50 url",
                     "one_hundred_and_sixty_pixels_by_one_hundred_and_sixty_pixels_url": "160x160 url"

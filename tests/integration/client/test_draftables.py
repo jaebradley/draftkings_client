@@ -7,7 +7,8 @@ from draft_kings import client
 from draft_kings.data import Sport
 from draft_kings.http_client import HTTPClient
 from draft_kings.output.objects.draftables import PlayerNameDetails, PlayerImageDetails, PlayerCompetitionDetails, \
-    PlayerTeamDetails, PlayerDetails, CompetitionTeamDetails, CompetitionWeatherDetails, CompetitionDetails
+    PlayerTeamDetails, PlayerDetails, CompetitionTeamDetails, CompetitionWeatherDetails, CompetitionDetails, \
+    PlayerDraftAlertDetails
 from tests.config import ROOT_DIRECTORY
 
 
@@ -154,6 +155,7 @@ class TestMockedUpcomingNFLDraftablesResponse(TestCase):
                     starts_at=datetime(2020, 11, 26, 17, 30, 0, 0, tzinfo=timezone.utc),
                 ),
                 draftable_id=15819550,
+                draft_alerts=[],
                 player_id=828743,
                 position_name="QB",
                 roster_slot_id=66,
@@ -177,4 +179,28 @@ class TestMockedUpcomingNFLDraftablesResponse(TestCase):
                 )
             ),
             self.result.players[0]
+        )
+
+
+class TestDraftablesWithDraftAlerts(TestCase):
+    def setUp(self) -> None:
+        with open(os.path.join(ROOT_DIRECTORY, "tests/files/draftables/41793/postponed.json")) as data_file:
+            self.response_data = data_file.read()
+            patched_method = patch.object(HTTPClient, "draftables")
+            mocked_method = patched_method.start()
+            mocked_method.return_value = Mock(text=self.response_data)
+            self.result = client.draftables(draft_group_id=41793)
+
+    def test_player_with_draft_alerts(self):
+        self.assertListEqual(
+            [
+                PlayerDraftAlertDetails(
+                    alert_description="Postponed Game Alert",
+                    message="The Ravens vs. Steelers game has been postponed. Players will NOT receive fantasy points"
+                            " in Thursday (11/26) MAIN and TIERS contests, please check your lineups!",
+                    updated_at=datetime(2020, 11, 25, 18, 51, 42, 0, tzinfo=timezone.utc),
+                    priority_value=100
+                ),
+            ],
+            self.result.players[5].draft_alerts
         )

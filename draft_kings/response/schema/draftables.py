@@ -1,7 +1,7 @@
 from marshmallow import Schema, fields, EXCLUDE, post_load
 
 from draft_kings.response.objects.draftables import Draftables, Competition, Player, PlayerCompetitionDetails, \
-    CompetitionWeather, CompetitionTeam
+    CompetitionWeather, CompetitionTeam, DraftAlert
 
 
 class PlayerCompetitionDetailsSchema(Schema):
@@ -17,6 +17,20 @@ class PlayerCompetitionDetailsSchema(Schema):
         return PlayerCompetitionDetails(**data)
 
 
+class PlayerDraftAlertSchema(Schema):
+    class Meta:
+        unknown = EXCLUDE
+
+    alertType = fields.Str(attribute="alert_type", missing=None)
+    message = fields.Str(attribute="message", missing=None)
+    updatedDate = fields.AwareDateTime(attribute="updated_date", missing=None)
+    priority = fields.Int(attribute="priority", missing=None)
+
+    @post_load
+    def make_player_draft_alert(self, data, **kwargs):
+        return DraftAlert(**data)
+
+
 class PlayerSchema(Schema):
     class Meta:
         unknown = EXCLUDE
@@ -24,6 +38,7 @@ class PlayerSchema(Schema):
     competition = fields.Nested(PlayerCompetitionDetailsSchema, attribute="competition", missing=None)
     displayName = fields.Str(attribute="display_name", missing=None)
     draftableId = fields.Int(attribute="draftable_id", missing=None)
+    draftAlerts = fields.List(fields.Nested(PlayerDraftAlertSchema), attribute="draft_alerts", missing=[])
     firstName = fields.Str(attribute="first_name", missing=None)
     isDisabled = fields.Bool(attribute="is_disabled", missing=None)
     isSwappable = fields.Bool(attribute="is_swappable", missing=None)

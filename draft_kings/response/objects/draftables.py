@@ -11,10 +11,19 @@ class PlayerCompetitionDetails:
 
 
 @dataclass(frozen=True)
+class DraftAlert:
+    alert_type: Optional[str]
+    message: Optional[str]
+    priority: Optional[int]
+    updated_date: Optional[datetime]
+
+
+@dataclass(frozen=True)
 class Player:
     competition: Optional[PlayerCompetitionDetails]
     display_name: Optional[str]
     draftable_id: Optional[int]
+    draft_alerts: List[DraftAlert]
     first_name: Optional[str]
     is_disabled: Optional[bool]
     is_swappable: Optional[bool]
