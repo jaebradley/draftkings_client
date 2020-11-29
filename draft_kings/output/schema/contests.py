@@ -3,6 +3,7 @@ from marshmallow_enum import EnumField
 
 from draft_kings.data import Sport
 from draft_kings.output.objects.contests import EntriesDetails, DraftGroupDetails, ContestDetails, ContestsDetails
+from draft_kings.output.schema.fields import CustomDateTime, CustomAwareDateTime
 
 
 class EntriesDetailsSchema(Schema):
@@ -21,7 +22,7 @@ class DraftGroupDetailsSchema(Schema):
     games_count = fields.Integer(allow_none=True, required=True)
     series_id = fields.Integer(allow_none=True, required=True)
     sport = EnumField(Sport, allow_none=True, required=True, by_value=True)
-    starts_at = fields.Str(allow_none=True, required=True)
+    starts_at = CustomAwareDateTime(allow_none=True, required=True)
 
     @post_load
     def make_draft_group_details(self, data, **kwargs):
@@ -41,7 +42,7 @@ class ContestDetailsSchema(Schema):
     name = fields.Str(allow_none=True, required=True)
     payout = fields.Number(allow_none=True, required=True)
     sport = EnumField(Sport, by_value=True, allow_none=True, required=True)
-    starts_at = fields.DateTime(allow_none=True, required=True)
+    starts_at = CustomDateTime(allow_none=True, required=True)
 
     @post_load
     def make_contest_details(self, data, **kwargs):
