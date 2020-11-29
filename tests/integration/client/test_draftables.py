@@ -202,5 +202,5 @@ class TestDraftablesWithDraftAlerts(TestCase):
                     priority_value=100
                 ),
             ],
-            self.data.players[5].draft_alerts
+            self.result.players[5].draft_alerts
         )
