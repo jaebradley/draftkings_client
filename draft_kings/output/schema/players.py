@@ -49,15 +49,15 @@ class PlayerPositionDetailsSchema(Schema):
 
 
 class PlayerDetailsSchema(Schema):
-    draft_details = fields.Nested(DraftDetailsSchema(), required=True)
+    draft_details = fields.Nested(DraftDetailsSchema, required=True)
     first_name = fields.Str(allow_none=True, required=True)
     jersey_number = fields.Integer(allow_none=True, required=True)
     last_name = fields.Str(allow_none=True, required=True)
     player_id = fields.Integer(allow_none=True, required=True)
     points_per_game = fields.Float(allow_none=True, required=True)
-    position_details = fields.Nested(PlayerPositionDetailsSchema(), required=True)
+    position_details = fields.Nested(PlayerPositionDetailsSchema, required=True)
     team_id = fields.Integer(allow_none=True, required=True)
-    team_series_details = fields.Nested(PlayerTeamSeriesDetailsSchema(), required=True)
+    team_series_details = fields.Nested(PlayerTeamSeriesDetailsSchema, required=True)
 
     @post_load
     def make_player(self, data, **kwargs):
@@ -65,8 +65,8 @@ class PlayerDetailsSchema(Schema):
 
 
 class PlayersDetailsSchema(Schema):
-    players = fields.List(fields.Nested(PlayerDetailsSchema()), required=True)
-    team_series = fields.List(fields.Nested(TeamSeriesDetailsSchema()), required=True)
+    players = fields.List(fields.Nested(PlayerDetailsSchema, required=True), required=True)
+    team_series = fields.List(fields.Nested(TeamSeriesDetailsSchema, required=True), required=True)
 
     @post_load
     def make_players_details(self, data, **kwargs):

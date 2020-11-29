@@ -15,7 +15,7 @@ class RegionDetailsSchema(Schema):
 
 
 class RegionsDetailsSchema(Schema):
-    regions = fields.List(fields.Nested(RegionDetailsSchema()), required=True)
+    regions = fields.List(fields.Nested(RegionDetailsSchema, required=True), required=True)
 
     @post_load
     def make_regions_details(self, data, **kwargs):
