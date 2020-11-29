@@ -1,6 +1,6 @@
-from datetime import datetime
 from dataclasses import dataclass
-from typing import Optional, Dict, List
+from datetime import datetime
+from typing import Optional, List
 
 
 @dataclass(frozen=True)
@@ -35,8 +35,21 @@ class PositionDetails:
 
 
 @dataclass(frozen=True)
+class ExceptionalMessageTypeDetails:
+    name: Optional[str]
+
+
+@dataclass(frozen=True)
+class ExceptionalMessageDetails:
+    message: Optional[str]
+    priority_value: Optional[int]
+    type_details: Optional[ExceptionalMessageTypeDetails]
+
+
+@dataclass(frozen=True)
 class PlayerDetails:
     draft_details: DraftDetails
+    exceptional_messages: List[ExceptionalMessageDetails]
     first_name: Optional[str]
     jersey_number: Optional[int]
     last_name: Optional[str]

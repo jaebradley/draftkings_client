@@ -1,8 +1,8 @@
 import os
 from unittest import TestCase
 
-from draft_kings.response.objects.players import TeamSeries, PlayerDetails
-from draft_kings.response.schema.players import PlayersDetailsSchema
+from draft_kings.response.objects.players import TeamSeries, Player, ExceptionalMessage, ExceptionalMessageType
+from draft_kings.response.schema.players import PlayersDetailsSchema, ExceptionalMessageSchema
 from tests.config import ROOT_DIRECTORY
 
 
@@ -17,10 +17,10 @@ class TestSoccerPlayers(TestCase):
 
     def test_first_player_details(self):
         self.assertEqual(
-            PlayerDetails(away_team_id=40551, draft_group_start_time=None,
-                          first_name="Eden", home_team_id=40813, is_disabled_from_drafting=False, jersey_number=7,
-                          last_name="Hazard", opposition_rank=1, player_id=42786, position_id=182, position_name="M/F",
-                          points_per_game="0.0", salary=10400, team_id=40551, team_series_id=5527123),
+            Player(away_team_id=40551, draft_group_start_time=None, exceptional_messages=[],
+                   first_name="Eden", home_team_id=40813, is_disabled_from_drafting=False, jersey_number=7,
+                   last_name="Hazard", opposition_rank=1, player_id=42786, position_id=182, position_name="M/F",
+                   points_per_game="0.0", salary=10400, team_id=40551, team_series_id=5527123),
             self.data.players[0]
         )
 
@@ -71,4 +71,26 @@ class TestSoccerPlayers(TestCase):
             TeamSeries(away_team_id=40818, home_team_id=53577, starts_at="/Date(1543071600000)/",
                        status="Final", weather=None),
             self.data.team_series["5527121"],
+        )
+
+
+class TestNFLPlayersWithExceptionalMessages(TestCase):
+    def setUp(self) -> None:
+        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/available_players/41793.json')) as data_file:
+            self.schema = PlayersDetailsSchema()
+            self.data = self.schema.loads(data_file.read())
+
+    def test_exceptional_messages(self):
+        self.assertListEqual(
+            [
+                ExceptionalMessage(
+                    message="The Ravens vs. Steelers game has been postponed. Players will NOT receive fantasy points "
+                            "in Thursday (11/26) MAIN and TIERS contests, please check your lineups!",
+                    priority=100,
+                    message_type=ExceptionalMessageType(
+                        name="player"
+                    )
+                )
+            ],
+            self.data.players[3].exceptional_messages
         )

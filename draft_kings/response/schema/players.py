@@ -1,6 +1,7 @@
 from marshmallow import Schema, fields, EXCLUDE, post_load
 
-from draft_kings.response.objects.players import TeamSeries, PlayerDetails, PlayersDetails
+from draft_kings.response.objects.players import TeamSeries, Player, PlayersDetails, ExceptionalMessage, \
+    ExceptionalMessageType
 from draft_kings.response.schema.fields import DictField
 
 
@@ -19,6 +20,30 @@ class TeamSeriesSchema(Schema):
         return TeamSeries(**data)
 
 
+class ExceptionalMessageTypeSchema(Schema):
+    class Meta:
+        unknown = EXCLUDE
+
+    Name = fields.Str(attribute="name", missing=None)
+
+    @post_load
+    def make_exceptional_message_type(self, data, **kwargs):
+        return ExceptionalMessageType(**data)
+
+
+class ExceptionalMessageSchema(Schema):
+    class Meta:
+        unknown = EXCLUDE
+
+    Message = fields.Str(attribute="message", missing=None)
+    MessageType = fields.Nested(ExceptionalMessageTypeSchema, attribute="message_type", missing=None)
+    Priority = fields.Int(attribute="priority", missing=None)
+
+    @post_load
+    def make_exceptional_message(self, data, **kwargs):
+        return ExceptionalMessage(**data)
+
+
 class PlayerSchema(Schema):
     class Meta:
         unknown = EXCLUDE
@@ -28,6 +53,11 @@ class PlayerSchema(Schema):
 
     atid = fields.Integer(attribute="away_team_id", missing=None)
     dgst = fields.Integer(attribute="draft_group_start_time", missing=None)
+    ExceptionalMessages = fields.List(
+        fields.Nested(ExceptionalMessageSchema),
+        attribute="exceptional_messages",
+        missing=None
+    )
     fn = fields.Str(attribute="first_name", missing=None)
     htid = fields.Int(attribute="home_team_id", missing=None)
     IsDisabledFromDrafting = fields.Bool(attribute="is_disabled_from_drafting", missing=None)
@@ -43,7 +73,7 @@ class PlayerSchema(Schema):
 
     @post_load
     def make_player_detail(self, data, **kwargs):
-        return PlayerDetails(**data)
+        return Player(**data)
 
 
 class PlayersDetailsSchema(Schema):
