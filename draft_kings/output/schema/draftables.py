@@ -4,7 +4,7 @@ from marshmallow_enum import EnumField
 from draft_kings.data import Sport
 from draft_kings.output.objects.draftables import PlayerNameDetails, PlayerImageDetails, PlayerCompetitionDetails, \
     PlayerTeamDetails, PlayerDetails, CompetitionTeamDetails, CompetitionWeatherDetails, CompetitionDetails, \
-    DraftablesDetails
+    DraftablesDetails, PlayerDraftAlertDetails
 from draft_kings.output.schema.fields import CustomAwareDateTime
 
 
@@ -47,9 +47,21 @@ class PlayerTeamDetailsSchema(Schema):
         return PlayerTeamDetails(**data)
 
 
+class PlayerDraftAlertDetailsSchema(Schema):
+    alert_description = fields.Str(allow_none=True, required=True)
+    message = fields.Str(allow_none=True, required=True)
+    priority_value = fields.Int(allow_none=True, required=True)
+    updated_at = CustomAwareDateTime(allow_none=True, required=True)
+
+    @post_load
+    def make_player_draft_alert_details(self, data, **kwargs):
+        return PlayerDraftAlertDetails(**data)
+
+
 class PlayerDetailsSchema(Schema):
     competition_details = fields.Nested(PlayerCompetitionDetailsSchema, allow_none=True, required=True)
     draftable_id = fields.Int(allow_none=True, required=True)
+    draft_alerts = fields.List(fields.Nested(PlayerDraftAlertDetailsSchema, required=True), required=True)
     image_details = fields.Nested(PlayerImageDetailsSchema, required=True)
     is_disabled = fields.Bool(allow_none=True, required=True)
     is_swappable = fields.Bool(allow_none=True, required=True)

@@ -3,10 +3,11 @@ from typing import Callable, Optional
 from draft_kings.data import Sport
 from draft_kings.output.objects.draftables import PlayerNameDetails, PlayerImageDetails, PlayerCompetitionDetails, \
     PlayerTeamDetails, PlayerDetails, CompetitionTeamDetails, CompetitionWeatherDetails, CompetitionDetails, \
-    DraftablesDetails
+    DraftablesDetails, PlayerDraftAlertDetails
 from draft_kings.response.objects.draftables import Player as ResponsePlayer, PlayerCompetitionDetails as \
     ResponsePlayerCompetitionDetails, CompetitionTeam as ResponseCompetitionTeam, CompetitionWeather as \
-    ResponseCompetitionWeather, Competition as ResponseCompetition, Draftables as ResponseDraftables
+    ResponseCompetitionWeather, Competition as ResponseCompetition, Draftables as ResponseDraftables, \
+    DraftAlert as ResponseDraftAlert
 
 
 def transform_player_name_details(player: ResponsePlayer) -> PlayerNameDetails:
@@ -42,24 +43,38 @@ def transform_player_team_details(player: ResponsePlayer) -> PlayerTeamDetails:
     )
 
 
+def transform_draft_alert(draft_alert: ResponseDraftAlert) -> PlayerDraftAlertDetails:
+    return PlayerDraftAlertDetails(
+        alert_description=draft_alert.alert_type,
+        message=draft_alert.message,
+        updated_at=draft_alert.updated_date,
+        priority_value=draft_alert.priority
+    )
+
+
 class PlayerTransformer:
     def __init__(self, name_details_transformer: Callable[[ResponsePlayer], PlayerNameDetails],
                  image_details_transformer: Callable[[ResponsePlayer], PlayerImageDetails],
                  competition_details_transformer: Callable[
                      [ResponsePlayerCompetitionDetails], PlayerCompetitionDetails
                  ],
-                 team_details_transformer: Callable[[ResponsePlayer], PlayerTeamDetails]
+                 team_details_transformer: Callable[[ResponsePlayer], PlayerTeamDetails],
+                 draft_alert_transformer: Callable[[ResponseDraftAlert], PlayerDraftAlertDetails]
                  ) -> None:
         self.name_details_transformer = name_details_transformer
         self.image_details_transformer = image_details_transformer
         self.competition_details_transformer = competition_details_transformer
         self.team_details_transformer = team_details_transformer
+        self.draft_alert_transformer = draft_alert_transformer
 
     def transform(self, response_player: ResponsePlayer) -> PlayerDetails:
         return PlayerDetails(
             competition_details=self.competition_details_transformer(response_player.competition)
             if response_player.competition is not None else None,
             draftable_id=response_player.draftable_id,
+            draft_alerts=list(
+                map(lambda draft_alert: self.draft_alert_transformer(draft_alert), response_player.draft_alerts)
+            ),
             image_details=self.image_details_transformer(response_player),
             is_disabled=response_player.is_disabled,
             is_swappable=response_player.is_swappable,

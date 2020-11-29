@@ -3,8 +3,8 @@ from datetime import datetime, timezone
 from unittest import TestCase
 
 from draft_kings.response.objects.draftables import Competition, Player, PlayerCompetitionDetails, \
-    CompetitionWeather, CompetitionTeam
-from draft_kings.response.schema.draftables import DraftablesSchema
+    CompetitionWeather, CompetitionTeam, DraftAlert
+from draft_kings.response.schema.draftables import DraftablesSchema, PlayerSchema
 from tests.config import ROOT_DIRECTORY
 
 
@@ -109,6 +109,7 @@ class TestUpcomingNFLDraftables(TestCase):
                 first_name="Deshaun",
                 last_name="Watson",
                 display_name="Deshaun Watson",
+                draft_alerts=[],
                 short_name="D. Watson",
                 player_id=828743,
                 position="QB",
@@ -163,6 +164,7 @@ class TestHistoricalDraftablesForDraftGroup11513(TestCase):
                 ),
                 display_name="LeBron James",
                 draftable_id=7771715,
+                draft_alerts=[],
                 first_name="LeBron",
                 is_disabled=False,
                 is_swappable=False,
@@ -309,3 +311,23 @@ class TestHistoricalDraftablesForDraftGroup11513(TestCase):
             self.data.competitions
         )
 
+
+class TestPostponedPlayer(TestCase):
+    def setUp(self) -> None:
+        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/draftables/postponed_player.json')) as data_file:
+            self.schema = PlayerSchema()
+            self.data = self.schema.loads(data_file.read())
+
+    def test_draft_alerts(self):
+        self.assertListEqual(
+            [
+                DraftAlert(
+                    alert_type="Postponed Game Alert",
+                    message="The Ravens vs. Steelers game has been postponed. Players will NOT receive fantasy points"
+                            " in Thursday (11/26) MAIN and TIERS contests, please check your lineups!",
+                    updated_date=datetime(2020, 11, 25, 18, 51, 42, 0, tzinfo=timezone.utc),
+                    priority=100
+                ),
+            ],
+            self.data.draft_alerts
+        )

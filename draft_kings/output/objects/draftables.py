@@ -33,9 +33,18 @@ class PlayerTeamDetails:
 
 
 @dataclass(frozen=True)
+class PlayerDraftAlertDetails:
+    alert_description: Optional[str]
+    message: Optional[str]
+    priority_value: Optional[int]
+    updated_at: Optional[datetime]
+
+
+@dataclass(frozen=True)
 class PlayerDetails:
     competition_details: Optional[PlayerCompetitionDetails]
     draftable_id: Optional[int]
+    draft_alerts: List[PlayerDraftAlertDetails]
     image_details: PlayerImageDetails
     is_disabled: Optional[bool]
     is_swappable: Optional[bool]

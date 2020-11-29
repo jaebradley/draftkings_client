@@ -15,7 +15,7 @@ from draft_kings.output.transformers.draft_group import transform_contest as tra
 from draft_kings.output.transformers.draftables import transform_competition_team_details, \
     transform_competition_weather_details, transform_player_competition_details, transform_player_image_details, \
     transform_player_name_details, transform_player_team_details, PlayerTransformer, CompetitionTransformer, \
-    DraftablesTransformer
+    DraftablesTransformer, transform_draft_alert
 from draft_kings.output.transformers.players import TeamSeriesTransformer, DraftDetailsTransformer, \
     transform_player_position, transform_player_team_series_details, PlayerDetailsTransformer, PlayersDetailsTransformer
 from draft_kings.output.transformers.regions import RegionsTransformer, transform_region
@@ -113,5 +113,6 @@ def draftables(draft_group_id: int) -> DraftablesDetails:
             name_details_transformer=transform_player_name_details,
             image_details_transformer=transform_player_image_details,
             team_details_transformer=transform_player_team_details,
+            draft_alert_transformer=transform_draft_alert,
         )
     ).transform(response_draftables=deserialized_response)
