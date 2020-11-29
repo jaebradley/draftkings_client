@@ -17,7 +17,8 @@ from draft_kings.output.transformers.draftables import transform_competition_tea
     transform_player_name_details, transform_player_team_details, PlayerTransformer, CompetitionTransformer, \
     DraftablesTransformer, transform_draft_alert
 from draft_kings.output.transformers.players import TeamSeriesTransformer, DraftDetailsTransformer, \
-    transform_player_position, transform_player_team_series_details, PlayerDetailsTransformer, PlayersDetailsTransformer
+    transform_player_position, transform_player_team_series_details, PlayerDetailsTransformer, \
+    PlayersDetailsTransformer, ExceptionalMessageTransformer, transform_exceptional_message_type
 from draft_kings.output.transformers.regions import RegionsTransformer, transform_region
 from draft_kings.output.transformers.sports import transform_sport_id, transform_sport_abbreviation
 from draft_kings.response.schema.contests import ContestsSchema
@@ -62,7 +63,10 @@ def available_players(draft_group_id: int) -> PlayersDetails:
                 unix_milliseconds_translator=from_unix_milliseconds_to_datetime
             ),
             player_team_series_details_transformer=transform_player_team_series_details,
-            player_position_transformer=transform_player_position
+            player_position_transformer=transform_player_position,
+            exceptional_message_transformer=ExceptionalMessageTransformer(
+                message_type_transformer=transform_exceptional_message_type
+            )
         )
     ).transform(deserialized_response)
 

@@ -2,9 +2,30 @@ from datetime import datetime
 from typing import Callable, Optional
 
 from draft_kings.output.objects.players import TeamSeriesDetails, PlayersDetails, DraftDetails, PlayerTeamSeriesDetails, \
-    PositionDetails, PlayerDetails
+    PositionDetails, PlayerDetails, ExceptionalMessageDetails, ExceptionalMessageTypeDetails
 from draft_kings.response.objects.players import TeamSeries as ResponsePlayerTeamSeries, PlayersDetails as \
-    ResponsePlayersDetails, PlayerDetails as ResponsePlayerDetails
+    ResponsePlayersDetails, Player as ResponsePlayerDetails, ExceptionalMessage as ResponseExceptionalMessage, \
+    ExceptionalMessageType as ResponseExceptionalMessageType
+
+
+def transform_exceptional_message_type(
+        exceptional_message_type: ResponseExceptionalMessageType
+) -> ExceptionalMessageTypeDetails:
+    return ExceptionalMessageTypeDetails(name=exceptional_message_type.name)
+
+
+class ExceptionalMessageTransformer:
+    def __init__(self, message_type_transformer: Callable[[ResponseExceptionalMessageType],
+                                                          ExceptionalMessageTypeDetails]):
+        self.message_type_transformer = message_type_transformer
+
+    def transform(self, exception_message: ResponseExceptionalMessage) -> ExceptionalMessageDetails:
+        return ExceptionalMessageDetails(
+            message=exception_message.message,
+            priority_value=exception_message.priority,
+            type_details=self.message_type_transformer(exception_message.message_type) if
+            exception_message.message_type is not None else None
+        )
 
 
 class TeamSeriesTransformer:
@@ -56,14 +77,22 @@ def transform_player_position(player_details: ResponsePlayerDetails) -> Position
 class PlayerDetailsTransformer:
     def __init__(self, draft_details_transformer: DraftDetailsTransformer,
                  player_team_series_details_transformer: Callable[[ResponsePlayerDetails], PlayerTeamSeriesDetails],
-                 player_position_transformer: Callable[[ResponsePlayerDetails], PositionDetails]):
+                 player_position_transformer: Callable[[ResponsePlayerDetails], PositionDetails],
+                 exceptional_message_transformer: ExceptionalMessageTransformer):
         self.draft_details_transformer = draft_details_transformer
         self.player_team_series_details_transformer = player_team_series_details_transformer
         self.player_position_transformer = player_position_transformer
+        self.exceptional_message_transformer = exceptional_message_transformer
 
     def transform(self, player_details: ResponsePlayerDetails) -> PlayerDetails:
         return PlayerDetails(
             draft_details=self.draft_details_transformer.transform(player_details),
+            exceptional_messages=list(
+                map(
+                    lambda message: self.exceptional_message_transformer.transform(message),
+                    player_details.exceptional_messages
+                )
+            ),
             first_name=player_details.first_name,
             jersey_number=player_details.jersey_number,
             last_name=player_details.last_name,

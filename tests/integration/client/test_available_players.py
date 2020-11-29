@@ -1,11 +1,15 @@
 import datetime
+import os
 from unittest import TestCase
+from unittest.mock import patch, Mock
 
 import pytz
 
 from draft_kings.client import available_players
+from draft_kings.http_client import HTTPClient
 from draft_kings.output.objects.players import PlayerDetails, DraftDetails, PositionDetails, \
-    PlayerTeamSeriesDetails, TeamSeriesDetails
+    PlayerTeamSeriesDetails, TeamSeriesDetails, ExceptionalMessageDetails, ExceptionalMessageTypeDetails
+from tests.config import ROOT_DIRECTORY
 
 
 class TestNBAAvailablePlayers(TestCase):
@@ -29,6 +33,7 @@ class TestNBAAvailablePlayers(TestCase):
                     salary=float(10300),
                     starts_at=datetime.datetime(2016, 11, 16, 0, 0, 0, tzinfo=pytz.UTC)
                 ),
+                exceptional_messages=[],
                 first_name="LeBron",
                 jersey_number=23,
                 last_name="James",
@@ -118,6 +123,7 @@ class TestLeagueOfLegendsAvailablePlayers(TestCase):
                     salary=float(9000),
                     starts_at=datetime.datetime(2019, 5, 1, 9, 0, 0, tzinfo=pytz.UTC)
                 ),
+                exceptional_messages=[],
                 first_name="",
                 jersey_number=None,
                 last_name="BigKoro",
@@ -159,4 +165,29 @@ class TestLeagueOfLegendsAvailablePlayers(TestCase):
                 )
             ],
             self.result.team_series
+        )
+
+
+class TestPlayersWithExceptionalMessages(TestCase):
+    def setUp(self) -> None:
+        with open(os.path.join(ROOT_DIRECTORY, "tests/files/available_players/41793.json")) as data_file:
+            self.response_data = data_file.read()
+            patched_method = patch.object(HTTPClient, "available_players")
+            mocked_method = patched_method.start()
+            mocked_method.return_value = Mock(text=self.response_data)
+            self.result = available_players(draft_group_id=41793)
+
+    def test_exceptional_messages(self):
+        self.assertListEqual(
+            [
+                ExceptionalMessageDetails(
+                    message="The Ravens vs. Steelers game has been postponed. Players will NOT receive fantasy points "
+                            "in Thursday (11/26) MAIN and TIERS contests, please check your lineups!",
+                    priority_value=100,
+                    type_details=ExceptionalMessageTypeDetails(
+                        name="player"
+                    )
+                )
+            ],
+            self.result.players[3].exceptional_messages
         )

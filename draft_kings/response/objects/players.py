@@ -12,9 +12,22 @@ class TeamSeries:
 
 
 @dataclass(frozen=True)
-class PlayerDetails:
+class ExceptionalMessageType:
+    name: Optional[str]
+
+
+@dataclass(frozen=True)
+class ExceptionalMessage:
+    message: Optional[str]
+    message_type: Optional[ExceptionalMessageType]
+    priority: Optional[int]
+
+
+@dataclass(frozen=True)
+class Player:
     away_team_id: Optional[int]
     draft_group_start_time: Optional[int]
+    exceptional_messages: List[ExceptionalMessage]
     first_name: Optional[str]
     home_team_id: Optional[int]
     is_disabled_from_drafting: Optional[bool]
@@ -32,5 +45,5 @@ class PlayerDetails:
 
 @dataclass(frozen=True)
 class PlayersDetails:
-    players: List[PlayerDetails]
+    players: List[Player]
     team_series: Dict[str, TeamSeries]
