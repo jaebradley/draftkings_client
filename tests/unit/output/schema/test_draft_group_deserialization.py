@@ -11,9 +11,10 @@ from draft_kings.output.schema.draft_group import ContestDetailsSchema, StartTim
 
 class TestContestDetailsSerialization(TestCase):
     def test_when_empty_object(self):
-        self.assertEqual(
-            ContestDetails(game_type_description=None, type_id=None),
-            ContestDetailsSchema().load({})
+        self.assertRaises(
+            marshmallow.ValidationError,
+            ContestDetailsSchema().load,
+            {}
         )
 
     def test_when_object_with_none_values(self):
