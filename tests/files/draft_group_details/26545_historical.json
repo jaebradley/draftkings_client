@@ -1,0 +1,54 @@
+{
+  "draftGroup": {
+    "draftGroupId": 26545,
+    "contestType": {
+      "contestTypeId": 29,
+      "sport": "GOLF",
+      "gameType": "SalaryCap"
+    },
+    "sportId": 13,
+    "startTimeSuffix": " (PGA)",
+    "startTimeType": "Normal",
+    "minStartTime": "2019-05-02T11:00:00.0000000Z",
+    "maxStartTime": "2019-05-02T11:00:00.0000000Z",
+    "draftGroupState": "Historical",
+    "allowUgc": true,
+    "leagues": [
+      {
+        "leagueId": 26,
+        "leagueName": "Professional Golf Association",
+        "leagueAbbreviation": "PGA"
+      }
+    ],
+    "games": [
+      {
+        "gameId": 5559805,
+        "awayTeamId": -5,
+        "homeTeamId": -5,
+        "startDate": "2019-05-02T11:00:00.0000000Z",
+        "location": "Quail Hollow Club",
+        "timeRemainingStatus": "ScoresOfficial",
+        "sport": "GOLF",
+        "status": "ScoresOfficial",
+        "description": "Wells Fargo Championship",
+        "sportSpecificData": {},
+        "league": "PGA",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "name": "Wells Fargo Championship",
+        "gameAttributes": [
+          {
+            "typeId": 24,
+            "value": "1"
+          }
+        ]
+      }
+    ],
+    "gameTypeId": 6,
+    "allTags": [
+      "Featured"
+    ]
+  },
+  "responseStatus": {},
+  "errorStatus": {}
+}
