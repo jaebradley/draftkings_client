@@ -30,6 +30,11 @@ jobs:
           python_version: ${{ matrix.python-version }}
           poetry_version: 1.0.9
           args: install
+      - name: Cache Dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}-${{ hashFiles('**/pyproject.toml') }}
       - name: Test
         uses: abatilo/actions-poetry@v1.5.0
         with:
