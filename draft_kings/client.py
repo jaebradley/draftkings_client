@@ -32,7 +32,21 @@ from draft_kings.utilities import translate_formatted_datetime, from_unix_millis
 
 
 class Client:
-    contest_details_transformer = ContestsDetailsTransformer
+    contest_details_transformer: ContestsDetailsTransformer
+    players_details_transformer: PlayersDetailsTransformer
+    draft_group_details_transformer: DraftGroupDetailsTransformer
+    countries_transformer: CountriesTransformer
+    regions_transformer: RegionsTransformer
+    draftables_transformer: DraftablesTransformer
+
+    contests_schema: ContestsSchema
+    players_schema: PlayersDetailsSchema
+    draft_group_schema: DraftGroupResponseSchema
+    countries_schema: CountriesSchema
+    regions_schema: RegionsSchema
+    draftables_schema: DraftablesSchema
+
+    http_client: HTTPClient
 
     def __init__(self):
         self.contest_details_transformer = ContestsDetailsTransformer(
@@ -82,7 +96,7 @@ class Client:
                 draft_alert_transformer=transform_draft_alert,
             )
         )
-        self.contest_schema = ContestsSchema()
+        self.contests_schema = ContestsSchema()
         self.players_schema = PlayersDetailsSchema()
         self.draft_group_schema = DraftGroupResponseSchema()
         self.countries_schema = CountriesSchema()
@@ -92,7 +106,7 @@ class Client:
 
     def contests(self, sport: Sport) -> ContestsDetails:
         response = self.http_client.contests(sport=sport)
-        deserialized_response = self.contest_schema.loads(response.text)
+        deserialized_response = self.contests_schema.loads(response.text)
         return self.contest_details_transformer.transform(deserialized_response)
 
     def available_players(self, draft_group_id: int) -> PlayersDetails:
