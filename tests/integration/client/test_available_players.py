@@ -5,7 +5,7 @@ from unittest.mock import patch, Mock
 
 import pytz
 
-from draft_kings.client import available_players
+from draft_kings import Client
 from draft_kings.http_client import HTTPClient
 from draft_kings.output.objects.players import PlayerDetails, DraftDetails, PositionDetails, \
     PlayerTeamSeriesDetails, TeamSeriesDetails, ExceptionalMessageDetails, ExceptionalMessageTypeDetails
@@ -14,7 +14,7 @@ from tests.config import ROOT_DIRECTORY
 
 class TestNBAAvailablePlayers(TestCase):
     def setUp(self) -> None:
-        self.result = available_players(draft_group_id=11513)
+        self.result = Client().available_players(draft_group_id=11513)
 
     def test_get_available_players(self):
         self.assertIsNotNone(self.result)
@@ -104,7 +104,7 @@ class TestNBAAvailablePlayers(TestCase):
 
 class TestLeagueOfLegendsAvailablePlayers(TestCase):
     def setUp(self) -> None:
-        self.result = available_players(draft_group_id=26691)
+        self.result = Client().available_players(draft_group_id=26691)
 
     def test_get_available_players_league_of_legends(self):
         self.assertIsNotNone(self.result)
@@ -175,7 +175,7 @@ class TestPlayersWithExceptionalMessages(TestCase):
             patched_method = patch.object(HTTPClient, "available_players")
             mocked_method = patched_method.start()
             mocked_method.return_value = Mock(text=self.response_data)
-            self.result = available_players(draft_group_id=41793)
+            self.result = Client().available_players(draft_group_id=41793)
 
     def test_exceptional_messages(self):
         self.assertListEqual(

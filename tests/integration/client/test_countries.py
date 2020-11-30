@@ -2,7 +2,7 @@ import os
 from unittest import TestCase
 from unittest.mock import patch, Mock
 
-from draft_kings import client
+from draft_kings import Client
 from draft_kings.http_client import HTTPClient
 from tests.config import ROOT_DIRECTORY
 from draft_kings.output.objects.countries import CountriesDetails, CountryDetails
@@ -10,7 +10,7 @@ from draft_kings.output.objects.countries import CountriesDetails, CountryDetail
 
 class TestCountries(TestCase):
     def setUp(self) -> None:
-        self.result = client.countries()
+        self.result = Client().countries()
 
     def test_countries_are_not_none(self):
         self.assertIsNotNone(self.result)
@@ -27,7 +27,7 @@ class TestCountiesWithMockedHTTPResponse(TestCase):
     @patch.object(HTTPClient, "countries")
     def test_countries_are_not_none(self, mocked_countries):
         mocked_countries.return_value = Mock(name="countries_response", text=self.response_data)
-        self.assertIsNotNone(client.countries())
+        self.assertIsNotNone(Client().countries())
 
     @patch.object(HTTPClient, "countries")
     def test_translated_country_details(self, mocked_countries):
@@ -91,6 +91,6 @@ class TestCountiesWithMockedHTTPResponse(TestCase):
                     )
                 ]
             ),
-            client.countries()
+            Client().countries()
         )
 
