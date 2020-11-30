@@ -31,92 +31,91 @@ from draft_kings.url_builder import URLBuilder
 from draft_kings.utilities import translate_formatted_datetime, from_unix_milliseconds_to_datetime
 
 
-def contests(sport: Sport) -> ContestsDetails:
-    response = HTTPClient(url_builder=URLBuilder()).contests(sport)
+class Client:
+    contest_details_transformer = ContestsDetailsTransformer
 
-    schema = ContestsSchema()
-    deserialized_response = schema.loads(response.text)
-
-    return ContestsDetailsTransformer(
-        contest_transformer=ContestTransformer(
-            formatted_datetime_transformer=translate_formatted_datetime,
-            sport_id_transformer=transform_sport_id,
-        ),
-        draft_group_transformer=DraftGroupTransformer(
-            sport_abbreviation_transformer=transform_sport_abbreviation,
-        )
-    ).transform(deserialized_response)
-
-
-def available_players(draft_group_id: int) -> PlayersDetails:
-    response = HTTPClient(url_builder=URLBuilder()).available_players(draft_group_id)
-
-    schema = PlayersDetailsSchema()
-    deserialized_response = schema.loads(response.text)
-
-    return PlayersDetailsTransformer(
-        team_series_transformer=TeamSeriesTransformer(
-            formatted_datetime_translator=translate_formatted_datetime
-        ),
-        player_details_transformer=PlayerDetailsTransformer(
-            draft_details_transformer=DraftDetailsTransformer(
-                unix_milliseconds_translator=from_unix_milliseconds_to_datetime
+    def __init__(self):
+        self.contest_details_transformer = ContestsDetailsTransformer(
+            contest_transformer=ContestTransformer(
+                formatted_datetime_transformer=translate_formatted_datetime,
+                sport_id_transformer=transform_sport_id,
             ),
-            player_team_series_details_transformer=transform_player_team_series_details,
-            player_position_transformer=transform_player_position,
-            exceptional_message_transformer=ExceptionalMessageTransformer(
-                message_type_transformer=transform_exceptional_message_type
+            draft_group_transformer=DraftGroupTransformer(
+                sport_abbreviation_transformer=transform_sport_abbreviation,
             )
         )
-    ).transform(deserialized_response)
-
-
-def draft_group_details(draft_group_id) -> DraftGroupDetails:
-    response = HTTPClient(url_builder=URLBuilder()).draft_group_details(draft_group_id=draft_group_id)
-
-    schema = DraftGroupResponseSchema()
-    deserialized_response = schema.loads(response.text)
-
-    return DraftGroupDetailsTransformer(
-        contest_transformer=transform_draft_group_contest,
-        game_transformer=transform_game,
-        league_transformer=transform_league,
-        sport_id_transformer=transform_sport_id,
-        start_time_details_transformer=transform_draft_group_start_time_details
-    ).transform(draft_group=deserialized_response.draft_group)
-
-
-def countries() -> CountriesDetails:
-    response = HTTPClient(url_builder=URLBuilder()).countries()
-    schema = CountriesSchema()
-    deserialized_response = schema.loads(response.text)
-    return CountriesTransformer(country_transformer=transform_country).transform(deserialized_response)
-
-
-def regions(country_code: str) -> RegionsDetails:
-    response = HTTPClient(url_builder=URLBuilder()).regions(country_code=country_code)
-    schema = RegionsSchema()
-    deserialized_response = schema.loads(response.text)
-    return RegionsTransformer(region_transformer=transform_region).transform(deserialized_response)
-
-
-def draftables(draft_group_id: int) -> DraftablesDetails:
-    response = HTTPClient(url_builder=URLBuilder()).draftables(draft_group_id=draft_group_id)
-
-    schema = DraftablesSchema()
-    deserialized_response = schema.loads(response.text)
-
-    return DraftablesTransformer(
-        competition_transformer=CompetitionTransformer(
-            team_details_transformer=transform_competition_team_details,
-            weather_details_transformer=transform_competition_weather_details,
-            sport_abbreviation_transformer=transform_sport_abbreviation,
-        ),
-        player_transformer=PlayerTransformer(
-            competition_details_transformer=transform_player_competition_details,
-            name_details_transformer=transform_player_name_details,
-            image_details_transformer=transform_player_image_details,
-            team_details_transformer=transform_player_team_details,
-            draft_alert_transformer=transform_draft_alert,
+        self.players_details_transformer = PlayersDetailsTransformer(
+            team_series_transformer=TeamSeriesTransformer(
+                formatted_datetime_translator=translate_formatted_datetime
+            ),
+            player_details_transformer=PlayerDetailsTransformer(
+                draft_details_transformer=DraftDetailsTransformer(
+                    unix_milliseconds_translator=from_unix_milliseconds_to_datetime
+                ),
+                player_team_series_details_transformer=transform_player_team_series_details,
+                player_position_transformer=transform_player_position,
+                exceptional_message_transformer=ExceptionalMessageTransformer(
+                    message_type_transformer=transform_exceptional_message_type
+                )
+            )
         )
-    ).transform(response_draftables=deserialized_response)
+        self.draft_group_details_transformer = DraftGroupDetailsTransformer(
+            contest_transformer=transform_draft_group_contest,
+            game_transformer=transform_game,
+            league_transformer=transform_league,
+            sport_id_transformer=transform_sport_id,
+            start_time_details_transformer=transform_draft_group_start_time_details
+        )
+        self.countries_transformer = CountriesTransformer(country_transformer=transform_country)
+        self.regions_transformer = RegionsTransformer(region_transformer=transform_region)
+        self.draftables_transformer = DraftablesTransformer(
+            competition_transformer=CompetitionTransformer(
+                team_details_transformer=transform_competition_team_details,
+                weather_details_transformer=transform_competition_weather_details,
+                sport_abbreviation_transformer=transform_sport_abbreviation,
+            ),
+            player_transformer=PlayerTransformer(
+                competition_details_transformer=transform_player_competition_details,
+                name_details_transformer=transform_player_name_details,
+                image_details_transformer=transform_player_image_details,
+                team_details_transformer=transform_player_team_details,
+                draft_alert_transformer=transform_draft_alert,
+            )
+        )
+        self.contest_schema = ContestsSchema()
+        self.players_schema = PlayersDetailsSchema()
+        self.draft_group_schema = DraftGroupResponseSchema()
+        self.countries_schema = CountriesSchema()
+        self.regions_schema = RegionsSchema()
+        self.draftables_schema = DraftablesSchema()
+        self.http_client = HTTPClient(url_builder=URLBuilder())
+
+    def contests(self, sport: Sport) -> ContestsDetails:
+        response = self.http_client.contests(sport=sport)
+        deserialized_response = self.contest_schema.loads(response.text)
+        return self.contest_details_transformer.transform(deserialized_response)
+
+    def available_players(self, draft_group_id: int) -> PlayersDetails:
+        response = self.http_client.available_players(draft_group_id=draft_group_id)
+        deserialized_response = self.players_schema.loads(response.text)
+        return self.players_details_transformer.transform(deserialized_response)
+
+    def draft_group_details(self, draft_group_id: int) -> DraftGroupDetails:
+        response = self.http_client.draft_group_details(draft_group_id=draft_group_id)
+        deserialized_response = self.draft_group_schema.loads(response.text)
+        return self.draft_group_details_transformer.transform(draft_group=deserialized_response.draft_group)
+
+    def countries(self) -> CountriesDetails:
+        response = self.http_client.countries()
+        deserialized_response = self.countries_schema.loads(response.text)
+        return self.countries_transformer.transform(deserialized_response)
+
+    def regions(self, country_code: str) -> RegionsDetails:
+        response = self.http_client.regions(country_code=country_code)
+        deserialized_response = self.regions_schema.loads(response.text)
+        return self.regions_transformer.transform(deserialized_response)
+
+    def draftables(self, draft_group_id: int) -> DraftablesDetails:
+        response = self.http_client.draftables(draft_group_id=draft_group_id)
+        deserialized_response = self.draftables_schema.loads(response.text)
+        return self.draftables_transformer.transform(response_draftables=deserialized_response)

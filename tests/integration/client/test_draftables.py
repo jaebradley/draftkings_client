@@ -3,7 +3,7 @@ from datetime import datetime, timezone
 from unittest import TestCase
 from unittest.mock import patch, Mock
 
-from draft_kings import client
+from draft_kings import Client
 from draft_kings.data import Sport
 from draft_kings.http_client import HTTPClient
 from draft_kings.output.objects.draftables import PlayerNameDetails, PlayerImageDetails, PlayerCompetitionDetails, \
@@ -13,36 +13,39 @@ from tests.config import ROOT_DIRECTORY
 
 
 class TestDraftables(TestCase):
+    def setUp(self) -> None:
+        self.client = Client()
+
     def test_nba_draftables(self):
-        draftables = client.draftables(draft_group_id=11513)
+        draftables = self.client.draftables(draft_group_id=11513)
         self.assertIsNotNone(draftables)
 
     def test_nhl_draftables(self):
-        draftables = client.draftables(draft_group_id=22953)
+        draftables = self.client.draftables(draft_group_id=22953)
         self.assertIsNotNone(draftables)
 
     def test_nfl_draftables(self):
-        draftables = client.draftables(draft_group_id=22927)
+        draftables = self.client.draftables(draft_group_id=22927)
         self.assertIsNotNone(draftables)
 
     def test_cfb_draftables(self):
-        draftables = client.draftables(draft_group_id=22952)
+        draftables = self.client.draftables(draft_group_id=22952)
         self.assertIsNotNone(draftables)
 
     def test_cbb_draftables(self):
-        draftables = client.draftables(draft_group_id=22958)
+        draftables = self.client.draftables(draft_group_id=22958)
         self.assertIsNotNone(draftables)
 
     def test_soccer_uefa_national_league_draftables(self):
-        draftables = client.draftables(draft_group_id=22855)
+        draftables = self.client.draftables(draft_group_id=22855)
         self.assertIsNotNone(draftables)
 
     def test_soccer_epl_draftables(self):
-        draftables = client.draftables(draft_group_id=22831)
+        draftables = self.client.draftables(draft_group_id=22831)
         self.assertIsNotNone(draftables)
 
     def test_euroleague_draftables(self):
-        draftables = client.draftables(draft_group_id=22916)
+        draftables = self.client.draftables(draft_group_id=22916)
         self.assertIsNotNone(draftables)
 
 
@@ -53,7 +56,7 @@ class TestMockedUpcomingNFLDraftablesResponse(TestCase):
             patched_method = patch.object(HTTPClient, "draftables")
             mocked_method = patched_method.start()
             mocked_method.return_value = Mock(text=self.response_data)
-            self.result = client.draftables(draft_group_id=41793)
+            self.result = Client().draftables(draft_group_id=41793)
 
     def tearDown(self) -> None:
         patch.stopall()
@@ -189,7 +192,7 @@ class TestDraftablesWithDraftAlerts(TestCase):
             patched_method = patch.object(HTTPClient, "draftables")
             mocked_method = patched_method.start()
             mocked_method.return_value = Mock(text=self.response_data)
-            self.result = client.draftables(draft_group_id=41793)
+            self.result = Client().draftables(draft_group_id=41793)
 
     def test_player_with_draft_alerts(self):
         self.assertListEqual(
