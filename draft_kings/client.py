@@ -1,3 +1,5 @@
+from typing import AnyStr
+
 from draft_kings.data import Sport
 from draft_kings.http_client import HTTPClient
 from draft_kings.output.objects.contests import ContestsDetails
@@ -110,7 +112,7 @@ class Client:
         deserialized_response = self.countries_schema.loads(response.text)
         return self.countries_transformer.transform(deserialized_response)
 
-    def regions(self, country_code: str) -> RegionsDetails:
+    def regions(self, country_code: AnyStr) -> RegionsDetails:
         response = self.http_client.regions(country_code=country_code)
         deserialized_response = self.regions_schema.loads(response.text)
         return self.regions_transformer.transform(deserialized_response)
