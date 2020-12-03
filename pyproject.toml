@@ -9,6 +9,7 @@ keywords = ["Daily Fantasy Sports", "DraftKings"]
 classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Operating System :: OS Independent"]
 repository = "https://github.com/jaebradley/draftkings_client"
 homepage = "https://jaebradley.github.io/draftkings_client"
+documentation= "https://jaebradley.github.io/draftkings_client"
 readme = "README.md"
 exclude = [
     "tests",
