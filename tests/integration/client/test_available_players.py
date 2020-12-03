@@ -3,8 +3,6 @@ import os
 from unittest import TestCase
 from unittest.mock import patch, Mock
 
-import pytz
-
 from draft_kings import Client
 from draft_kings.http_client import HTTPClient
 from draft_kings.output.objects.players import PlayerDetails, DraftDetails, PositionDetails, \
@@ -31,7 +29,7 @@ class TestNBAAvailablePlayers(TestCase):
                 draft_details=DraftDetails(
                     is_draftable=True,
                     salary=float(10300),
-                    starts_at=datetime.datetime(2016, 11, 16, 0, 0, 0, tzinfo=pytz.UTC)
+                    starts_at=datetime.datetime(2016, 11, 16, 0, 0, 0, tzinfo=datetime.timezone.utc)
                 ),
                 exceptional_messages=[],
                 first_name="LeBron",
@@ -60,7 +58,7 @@ class TestNBAAvailablePlayers(TestCase):
                 TeamSeriesDetails(
                     away_team_id=28,
                     home_team_id=5,
-                    starts_at=datetime.datetime(2016, 11, 16, 0, 0, 0, tzinfo=pytz.UTC),
+                    starts_at=datetime.datetime(2016, 11, 16, 0, 0, 0, tzinfo=datetime.timezone.utc),
                     status_description="Final",
                     team_series_id=5479720,
                     weather_description=None
@@ -68,7 +66,7 @@ class TestNBAAvailablePlayers(TestCase):
                 TeamSeriesDetails(
                     away_team_id=4,
                     home_team_id=22,
-                    starts_at=datetime.datetime(2016, 11, 16, 3, 0, 0, tzinfo=pytz.UTC),
+                    starts_at=datetime.datetime(2016, 11, 16, 3, 0, 0, tzinfo=datetime.timezone.utc),
                     status_description="Final",
                     team_series_id=5479968,
                     weather_description=None
@@ -76,7 +74,7 @@ class TestNBAAvailablePlayers(TestCase):
                 TeamSeriesDetails(
                    away_team_id=1,
                    home_team_id=14,
-                   starts_at=datetime.datetime(2016, 11, 16, 0, 30, 0, tzinfo=pytz.UTC),
+                   starts_at=datetime.datetime(2016, 11, 16, 0, 30, 0, tzinfo=datetime.timezone.utc),
                    status_description="Final",
                    team_series_id=5479637,
                    weather_description=None
@@ -84,7 +82,7 @@ class TestNBAAvailablePlayers(TestCase):
                 TeamSeriesDetails(
                     away_team_id=5312,
                     home_team_id=16,
-                    starts_at=datetime.datetime(2016, 11, 16, 1, 0, 0, tzinfo=pytz.UTC),
+                    starts_at=datetime.datetime(2016, 11, 16, 1, 0, 0, tzinfo=datetime.timezone.utc),
                     status_description="Final",
                     team_series_id=5479280,
                     weather_description=None
@@ -92,7 +90,7 @@ class TestNBAAvailablePlayers(TestCase):
                 TeamSeriesDetails(
                     away_team_id=17,
                     home_team_id=13,
-                    starts_at=datetime.datetime(2016, 11, 16, 3, 30, 0, tzinfo=pytz.UTC),
+                    starts_at=datetime.datetime(2016, 11, 16, 3, 30, 0, tzinfo=datetime.timezone.utc),
                     status_description="Final",
                     team_series_id=5480294,
                     weather_description=None
@@ -121,7 +119,7 @@ class TestLeagueOfLegendsAvailablePlayers(TestCase):
                 draft_details=DraftDetails(
                     is_draftable=True,
                     salary=float(9000),
-                    starts_at=datetime.datetime(2019, 5, 1, 9, 0, 0, tzinfo=pytz.UTC)
+                    starts_at=datetime.datetime(2019, 5, 1, 9, 0, 0, tzinfo=datetime.timezone.utc)
                 ),
                 exceptional_messages=[],
                 first_name="",
@@ -150,7 +148,7 @@ class TestLeagueOfLegendsAvailablePlayers(TestCase):
                 TeamSeriesDetails(
                     away_team_id=62492,
                     home_team_id=156847,
-                    starts_at=datetime.datetime(2019, 5, 1, 9, 0, 0, 0, tzinfo=pytz.UTC),
+                    starts_at=datetime.datetime(2019, 5, 1, 9, 0, 0, 0, tzinfo=datetime.timezone.utc),
                     status_description="Final",
                     team_series_id=5613734,
                     weather_description=None
@@ -158,7 +156,7 @@ class TestLeagueOfLegendsAvailablePlayers(TestCase):
                 TeamSeriesDetails(
                     away_team_id=58492,
                     home_team_id=45073,
-                    starts_at=datetime.datetime(2019, 5, 1, 9, 55, 0, 0, tzinfo=pytz.UTC),
+                    starts_at=datetime.datetime(2019, 5, 1, 9, 55, 0, 0, tzinfo=datetime.timezone.utc),
                     status_description="Final",
                     team_series_id=5613735,
                     weather_description=None
