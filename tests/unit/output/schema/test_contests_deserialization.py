@@ -1,41 +1,30 @@
 from unittest import TestCase
+from datetime import datetime, timezone
 
 from marshmallow import ValidationError
 
-from draft_kings.output.objects.contests import EntriesDetails, ContestDetails
-from draft_kings.output.schema.contests import EntriesDetailsSchema, ContestDetailsSchema
+from draft_kings.output.objects.contests import EntriesDetails, ContestDetails, ContestsDetails
+from draft_kings.output.schema.contests import EntriesDetailsSchema, ContestDetailsSchema, ContestsDetailsSchema
 from draft_kings.data import Sport
 
 
 class TestLoadingEntriesDetailsSchema(TestCase):
-    def test_when_empty_object_it_deserializes_with_missing_values(self):
-        self.assertRaises(
-            ValidationError,
-            EntriesDetailsSchema().load,
-            {},
-        )
+    def setUp(self) -> None:
+        self.schema = EntriesDetailsSchema()
 
-    def test_invalid_object_value_raises_validation_error(self):
-        self.assertRaises(ValidationError, EntriesDetailsSchema().load, {"fee": "jaebaebae"})
+    def test_empty_object_raises_validation_error(self):
+        self.assertRaises(ValidationError, self.schema.load, {})
 
-
-class TestDumpingEntriesDetailsSchema(TestCase):
-    def test_object_with_none_values(self):
-        self.assertEqual(
-            {"fee": None, "maximum": None, "total": None},
-            EntriesDetailsSchema().dump(EntriesDetails(fee=None, maximum=None, total=None))
-        )
-
-    def test_invalid_object_value_raises_value_error(self):
-        self.assertRaises(
-            ValueError,
-            EntriesDetailsSchema().dump, {"fee": "jaebaebae", "maximum": None, "total": None}
-        )
+    def test_incomplete_object_raises_validation_error(self):
+        self.assertRaises(ValidationError, self.schema.load, {"fee": "jaebaebae"})
 
 
 class TestLoadingContestDetailsSchema(TestCase):
-    def test_when_empty_object_it_raises_validation_error(self):
-        self.assertRaises(ValidationError, ContestDetailsSchema().load, {})
+    def setUp(self) -> None:
+        self.schema = ContestDetailsSchema()
+
+    def test_empty_object_raises_validation_error(self):
+        self.assertRaises(ValidationError, self.schema.load, {})
 
     def test_when_only_entries_details_object_is_specified_it_loads_appropriately(self):
         self.assertEqual(
@@ -58,7 +47,7 @@ class TestLoadingContestDetailsSchema(TestCase):
                 sport=None,
                 starts_at=None
             ),
-            ContestDetailsSchema().load({
+            self.schema.load({
                 "contest_id": None,
                 "draft_group_id": None,
                 "entries_details": {
@@ -100,7 +89,7 @@ class TestLoadingContestDetailsSchema(TestCase):
                 sport=Sport.NFL,
                 starts_at=None
             ),
-            ContestDetailsSchema().load({
+            self.schema.load({
                 "contest_id": None,
                 "draft_group_id": None,
                 "entries_details": {
@@ -142,7 +131,7 @@ class TestLoadingContestDetailsSchema(TestCase):
                 sport=Sport.NFL,
                 starts_at=None
             ),
-            ContestDetailsSchema().load({
+            self.schema.load({
                 "contest_id": None,
                 "draft_group_id": None,
                 "entries_details": {
@@ -162,3 +151,64 @@ class TestLoadingContestDetailsSchema(TestCase):
                 "starts_at": None
             })
         )
+
+    def test_non_optional_values(self):
+        self.assertEqual(
+            ContestDetails(
+                contest_id=1,
+                draft_group_id=2,
+                entries_details=EntriesDetails(
+                    fee=3,
+                    maximum=4,
+                    total=5,
+                ),
+                fantasy_player_points=6,
+                is_double_up=True,
+                is_fifty_fifty=True,
+                is_guaranteed=True,
+                is_head_to_head=True,
+                is_starred=True,
+                name="jaebaebae",
+                payout=7,
+                sport=Sport.NFL,
+                starts_at=datetime(2020, 12, 1, 0, 0, 0, 0, tzinfo=timezone.utc)
+            ),
+            self.schema.load(
+                {
+                    "contest_id": 1,
+                    "draft_group_id": 2,
+                    "entries_details": {
+                        "fee": 3.0,
+                        "maximum": 4,
+                        "total": 5
+                    },
+                    "fantasy_player_points": 6.0,
+                    "is_double_up": True,
+                    "is_fifty_fifty": True,
+                    "is_guaranteed": True,
+                    "is_head_to_head": True,
+                    "is_starred": True,
+                    "name": "jaebaebae",
+                    "payout": 7.0,
+                    "sport": "NFL",
+                    "starts_at": "2020-12-01T00:00:00+00:00"
+                }
+            )
+        )
+
+
+class TestContestsDetailsSchema(TestCase):
+    def setUp(self) -> None:
+        self.schema = ContestsDetailsSchema()
+
+    def test_none_values_raise_validation_error(self):
+        self.assertRaises(ValidationError, self.schema.load, {"contests": None, "draft_groups": None})
+
+    def test_empty_lists(self):
+        self.assertEqual(
+            ContestsDetails(contests=[], draft_groups=[]),
+            self.schema.load({"contests": [], "draft_groups": []})
+        )
+
+    def test_list_with_none_values_raise_validation_error(self):
+        self.assertRaises(ValidationError, self.schema.load, {"contests": [None], "draft_groups": [None]})
