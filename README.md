@@ -1,8 +1,8 @@
-# DraftKings Python Client
-
-[![Build Status](https://travis-ci.org/jaebradley/draftkings_client.svg?branch=v3)](https://travis-ci.org/jaebradley/draftkings_client)
-[![codecov](https://codecov.io/gh/jaebradley/draftkings_client/branch/v3/graph/badge.svg)](https://codecov.io/gh/jaebradley/draftkings_client)
+![GitHub Actions](https://github.com/jaebradley/draftkings_client/workflows/DraftKings%20Client/badge.svg?branch=v3)
+![codecov](https://codecov.io/gh/jaebradley/draftkings_client/branch/v3/graph/badge.svg)
 ![PyPI](https://img.shields.io/pypi/v/draft_kings.svg)
+
+# DraftKings Python Client
 
 ## Introduction
 
