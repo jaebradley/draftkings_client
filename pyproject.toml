@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "draft_kings"
-version = "2.0.2"
-description = "A Basketball Reference client that generates data by scraping the website"
+version = "3.0.0"
+description = "A client to access data on draftkings.com"
 authors = ["Jae Bradley <jae.b.bradley@gmail.com>"]
 maintainers = ["Jae Bradley <jae.b.bradley@gmail.com>"]
 license = "MIT"
@@ -10,14 +10,18 @@ classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :
 repository = "https://github.com/jaebradley/draftkings_client"
 homepage = "https://jaebradley.github.io/draftkings_client"
 readme = "README.md"
-exclude = ["tests", "docs"]
+exclude = [
+    "tests",
+    "docs",
+    "mkdocs.yml",
+    ".github",
+    ".pytest_cache",
+    ".coveragerc",
+]
 
 [tool.poetry.dependencies]
 python = "^3.7"
 requests = "^2.20.0"
-pytz = "^2018.7"
-python-dateutil = "^2.8.0"
-urllib3 = "^1.24.3"
 marshmallow = "^3.9.1"
 marshmallow-enum = "^1.5.1"
 
