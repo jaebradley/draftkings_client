@@ -56,8 +56,8 @@ class DraftGroupDetailsTransformer:
         return DraftGroupDetails(
             contest_details=self.contest_transformer(draft_group.contest_type),
             draft_group_id=draft_group.draft_group_id,
-            games=list(map(lambda game: self.game_transformer(game), draft_group.games)),
-            leagues=list(map(lambda league: self.league_transformer(league), draft_group.leagues)),
+            games=list(map(self.game_transformer, draft_group.games)),
+            leagues=list(map(self.league_transformer, draft_group.leagues)),
             sport=self.sport_id_transformer(draft_group.sport_id),
             start_time_details=self.start_time_details_transformer(draft_group),
             state_description=draft_group.draft_group_state

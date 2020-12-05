@@ -1,6 +1,6 @@
 import os
-from unittest import TestCase
 from datetime import datetime, timezone
+from unittest import TestCase
 
 from draft_kings.response.objects.draft_group import League, Game
 from draft_kings.response.schema.draft_group import DraftGroupResponseSchema

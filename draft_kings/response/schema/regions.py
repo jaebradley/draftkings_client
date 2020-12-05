@@ -1,3 +1,5 @@
+# pylint: disable=unused-argument, no-self-use
+
 from marshmallow import Schema, fields, post_load, EXCLUDE
 
 from draft_kings.response.objects.regions import Region, Regions
@@ -26,3 +28,5 @@ class RegionsSchema(Schema):
     @post_load
     def make_regions(self, data, **kwargs):
         return Regions(**data)
+
+# pylint: enable=unused-argument, no-self-use

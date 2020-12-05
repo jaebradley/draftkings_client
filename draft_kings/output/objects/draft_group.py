@@ -46,4 +46,3 @@ class DraftGroupDetails:
     sport: Optional[Sport]
     start_time_details: StartTimeDetails
     state_description: Optional[str]
-

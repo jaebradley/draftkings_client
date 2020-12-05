@@ -2,7 +2,7 @@ import os
 from unittest import TestCase
 
 from draft_kings.response.objects.players import TeamSeries, Player, ExceptionalMessage, ExceptionalMessageType
-from draft_kings.response.schema.players import PlayersDetailsSchema, ExceptionalMessageSchema
+from draft_kings.response.schema.players import PlayersDetailsSchema
 from tests.config import ROOT_DIRECTORY
 
 

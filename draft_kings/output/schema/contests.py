@@ -1,3 +1,5 @@
+# pylint: disable=unused-argument, no-self-use
+
 from marshmallow import Schema, fields, post_load
 from marshmallow_enum import EnumField
 
@@ -56,3 +58,5 @@ class ContestsDetailsSchema(Schema):
     @post_load
     def make_contests_details(self, data, **kwargs):
         return ContestsDetails(**data)
+
+# pylint: enable=unused-argument, no-self-use

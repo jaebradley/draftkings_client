@@ -168,7 +168,8 @@ class TestMockedUpcomingNFLDraftablesResponse(TestCase):
                 news_status_description="Recent",
                 image_details=PlayerImageDetails(
                     fifty_pixels_by_fifty_pixels_url="https://dkn.gs/sports/images/nfl/players/50/18229.png",
-                    one_hundred_and_sixty_pixels_by_one_hundred_and_sixty_pixels_url="https://dkn.gs/sports/images/nfl/players/160/18229.png",
+                    one_hundred_and_sixty_pixels_by_one_hundred_and_sixty_pixels_url
+                    ="https://dkn.gs/sports/images/nfl/players/160/18229.png",
                 ),
                 name_details=PlayerNameDetails(
                     first="Deshaun",

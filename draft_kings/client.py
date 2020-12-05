@@ -1,3 +1,4 @@
+# pylint: disable=too-many-instance-attributes
 from typing import AnyStr
 
 from draft_kings.data import Sport
@@ -135,3 +136,5 @@ class Client:
         response = self.http_client.draftables(draft_group_id=draft_group_id)
         deserialized_response = self.draftables_schema.loads(response.text)
         return self.draftables_transformer.transform(response_draftables=deserialized_response)
+
+# pylint: enable=too-many-instance-attributes

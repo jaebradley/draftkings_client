@@ -19,5 +19,5 @@ class CountriesTransformer:
 
     def transform(self, countries: ResponseCountries) -> CountriesDetails:
         return CountriesDetails(
-            countries=list(map(lambda country: self.country_transformer(country), countries.countries))
+            countries=list(map(self.country_transformer, countries.countries))
         )

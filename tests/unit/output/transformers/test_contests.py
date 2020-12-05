@@ -194,7 +194,6 @@ class TestContestTransformerWhenSportAndFormattedDateTimeAreIdentifiable(TestCas
             )
         )
 
-
     def test_when_contest_attributes_exist_and_are_true(self):
         self.assertEqual(
             ContestDetails(
@@ -238,4 +237,3 @@ class TestContestTransformerWhenSportAndFormattedDateTimeAreIdentifiable(TestCas
                 )
             )
         )
-

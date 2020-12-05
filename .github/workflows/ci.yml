@@ -29,9 +29,10 @@ jobs:
         uses: abatilo/actions-poetry@v2.0.0
         with:
           poetry-version: ${{ matrix.poetry-version }}
-      - name: Install dependencies
+      - name: Install dependencies, run linting, run tests, and generate code coverage
         run: |
           poetry install
+          poetry run pylint -j 4 draft_kings tests
           poetry run coverage run -m pytest
           poetry run coverage xml
       - name: Upload Coverage To Codecov

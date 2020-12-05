@@ -4,8 +4,8 @@ from unittest.mock import patch, Mock
 
 from draft_kings import Client
 from draft_kings.http_client import HTTPClient
-from tests.config import ROOT_DIRECTORY
 from draft_kings.output.objects.countries import CountriesDetails, CountryDetails
+from tests.config import ROOT_DIRECTORY
 
 
 class TestCountries(TestCase):
@@ -93,4 +93,3 @@ class TestCountiesWithMockedHTTPResponse(TestCase):
             ),
             Client().countries()
         )
-

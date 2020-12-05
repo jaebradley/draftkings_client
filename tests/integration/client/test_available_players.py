@@ -72,12 +72,12 @@ class TestNBAAvailablePlayers(TestCase):
                     weather_description=None
                 ),
                 TeamSeriesDetails(
-                   away_team_id=1,
-                   home_team_id=14,
-                   starts_at=datetime.datetime(2016, 11, 16, 0, 30, 0, tzinfo=datetime.timezone.utc),
-                   status_description="Final",
-                   team_series_id=5479637,
-                   weather_description=None
+                    away_team_id=1,
+                    home_team_id=14,
+                    starts_at=datetime.datetime(2016, 11, 16, 0, 30, 0, tzinfo=datetime.timezone.utc),
+                    status_description="Final",
+                    team_series_id=5479637,
+                    weather_description=None
                 ),
                 TeamSeriesDetails(
                     away_team_id=5312,
