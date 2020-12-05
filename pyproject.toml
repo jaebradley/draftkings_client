@@ -13,12 +13,13 @@ documentation= "https://jaebradley.github.io/draftkings_client"
 readme = "README.md"
 exclude = [
     "tests",
+    "dist",
     "docs",
     "mkdocs.yml",
     ".github",
     ".pytest_cache",
     ".coveragerc",
-    ".pylintrc"
+    ".pylintrc",
 ]
 
 [tool.poetry.dependencies]
