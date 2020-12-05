@@ -18,14 +18,14 @@ This project is published to [`PyPi`](https://pypi.org/project/draft-kings/).
 It can be installed via `pip` like so
 
 ```bash
-pip install draft_kings
+pip install draft-kings
 ```
 
 !!! note
   This library **requires `Python 3.7+`**
   
 !!! note
-  This library has two major versions - `2.0` (which is being **deprecated**), and `3.0` (which is being actively developed)
+  This library has two major versions - `2.x` (which is being **deprecated**), and `3.x` (which is being actively developed)
 
 
 ## Contributions
