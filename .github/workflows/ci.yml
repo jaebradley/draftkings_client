@@ -5,7 +5,7 @@ on:
     types: [published]
   push:
     branches:
-      - v4
+      - v3
   pull_request:
   schedule:
     - cron: '0 22 * * *'
