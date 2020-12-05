@@ -1,8 +1,8 @@
 from datetime import datetime
 from typing import Callable, Optional
 
-from draft_kings.output.objects.players import TeamSeriesDetails, PlayersDetails, DraftDetails, PlayerTeamSeriesDetails, \
-    PositionDetails, PlayerDetails, ExceptionalMessageDetails, ExceptionalMessageTypeDetails
+from draft_kings.output.objects.players import TeamSeriesDetails, PlayersDetails, DraftDetails, \
+    PlayerTeamSeriesDetails, PositionDetails, PlayerDetails, ExceptionalMessageDetails, ExceptionalMessageTypeDetails
 from draft_kings.response.objects.players import TeamSeries as ResponsePlayerTeamSeries, PlayersDetails as \
     ResponsePlayersDetails, Player as ResponsePlayerDetails, ExceptionalMessage as ResponseExceptionalMessage, \
     ExceptionalMessageType as ResponseExceptionalMessageType
@@ -89,7 +89,7 @@ class PlayerDetailsTransformer:
             draft_details=self.draft_details_transformer.transform(player_details),
             exceptional_messages=list(
                 map(
-                    lambda message: self.exceptional_message_transformer.transform(message),
+                    self.exceptional_message_transformer.transform,
                     player_details.exceptional_messages
                 )
             ),
@@ -114,7 +114,7 @@ class PlayersDetailsTransformer:
     def transform(self, players_details_response: ResponsePlayersDetails) -> PlayersDetails:
         return PlayersDetails(
             players=list(map(
-                lambda player_details: self.player_details_transformer.transform(player_details),
+                self.player_details_transformer.transform,
                 players_details_response.players
             )),
             team_series=list(map(

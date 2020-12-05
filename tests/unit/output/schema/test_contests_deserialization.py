@@ -1,11 +1,11 @@
-from unittest import TestCase
 from datetime import datetime, timezone
+from unittest import TestCase
 
 from marshmallow import ValidationError
 
+from draft_kings.data import Sport
 from draft_kings.output.objects.contests import EntriesDetails, ContestDetails, ContestsDetails
 from draft_kings.output.schema.contests import EntriesDetailsSchema, ContestDetailsSchema, ContestsDetailsSchema
-from draft_kings.data import Sport
 
 
 class TestLoadingEntriesDetailsSchema(TestCase):

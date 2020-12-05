@@ -1,11 +1,10 @@
-from unittest import TestCase
-import marshmallow
 from datetime import datetime, timezone
+from unittest import TestCase
 
-from draft_kings.output.objects.draft_group import ContestDetails, StartTimeDetails, LeagueDetails, GameDetails, \
-    DraftGroupDetails
-from draft_kings.output.schema.draft_group import ContestDetailsSchema, StartTimeDetailsSchema, LeagueDetailsSchema, \
-    GameDetailsSchema, DraftGroupDetailsSchema
+import marshmallow
+
+from draft_kings.output.objects.draft_group import StartTimeDetails
+from draft_kings.output.schema.draft_group import StartTimeDetailsSchema
 
 
 class TestStartTimeDetailsSerialization(TestCase):

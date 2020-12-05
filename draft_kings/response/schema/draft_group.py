@@ -1,3 +1,5 @@
+# pylint: disable=unused-argument, no-self-use
+
 from marshmallow import Schema, fields, EXCLUDE, post_load
 
 from draft_kings.response.objects.draft_group import ContestType, League, Game, DraftGroup, DraftGroupResponse
@@ -74,3 +76,5 @@ class DraftGroupResponseSchema(Schema):
     @post_load
     def make_draft_group_response(self, data, **kwargs):
         return DraftGroupResponse(**data)
+
+# pylint: enable=unused-argument, no-self-use

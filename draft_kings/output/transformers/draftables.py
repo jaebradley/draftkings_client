@@ -57,10 +57,10 @@ class PlayerTransformer:
                  image_details_transformer: Callable[[ResponsePlayer], PlayerImageDetails],
                  competition_details_transformer: Callable[
                      [ResponsePlayerCompetitionDetails], PlayerCompetitionDetails
-                 ],
-                 team_details_transformer: Callable[[ResponsePlayer], PlayerTeamDetails],
-                 draft_alert_transformer: Callable[[ResponseDraftAlert], PlayerDraftAlertDetails]
-                 ) -> None:
+    ],
+        team_details_transformer: Callable[[ResponsePlayer], PlayerTeamDetails],
+        draft_alert_transformer: Callable[[ResponseDraftAlert], PlayerDraftAlertDetails]
+    ) -> None:
         self.name_details_transformer = name_details_transformer
         self.image_details_transformer = image_details_transformer
         self.competition_details_transformer = competition_details_transformer
@@ -72,9 +72,7 @@ class PlayerTransformer:
             competition_details=self.competition_details_transformer(response_player.competition)
             if response_player.competition is not None else None,
             draftable_id=response_player.draftable_id,
-            draft_alerts=list(
-                map(lambda draft_alert: self.draft_alert_transformer(draft_alert), response_player.draft_alerts)
-            ),
+            draft_alerts=list(map(self.draft_alert_transformer, response_player.draft_alerts)),
             image_details=self.image_details_transformer(response_player),
             is_disabled=response_player.is_disabled,
             is_swappable=response_player.is_swappable,
@@ -88,7 +86,8 @@ class PlayerTransformer:
         )
 
 
-def transform_competition_team_details(response_competition_team_details: ResponseCompetitionTeam) -> CompetitionTeamDetails:
+def transform_competition_team_details(
+        response_competition_team_details: ResponseCompetitionTeam) -> CompetitionTeamDetails:
     return CompetitionTeamDetails(
         abbreviation=response_competition_team_details.abbreviation,
         city=response_competition_team_details.city,

@@ -1,3 +1,5 @@
+# pylint: disable=unused-argument, no-self-use
+
 from marshmallow import Schema, fields, EXCLUDE, post_load
 
 from draft_kings.response.objects.draftables import Draftables, Competition, Player, PlayerCompetitionDetails, \
@@ -116,3 +118,5 @@ class DraftablesSchema(Schema):
     @post_load
     def make_draftables(self, data, **kwargs):
         return Draftables(**data)
+
+# pylint: enable=unused-argument, no-self-use

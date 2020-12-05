@@ -18,9 +18,8 @@ class Sport(Enum):
     LEAGUE_OF_LEGENDS = "LEAGUE OF LEGENDS"
     ARENA_FOOTBALL_LEAGUE = "ARENA FOOTBALL LEAGUE"
 
-"""
-https://api.draftkings.com/sites/US-DK/sports/v1/sports?format=json
-"""
+
+# https://api.draftkings.com/sites/US-DK/sports/v1/sports?format=json
 SPORT_ID_TO_SPORT = {
     1: Sport.NFL,
     2: Sport.MLB,

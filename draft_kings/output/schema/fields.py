@@ -1,6 +1,6 @@
-from marshmallow import fields
-
 from datetime import datetime
+
+from marshmallow import fields
 
 
 class CustomAwareDateTime(fields.AwareDateTime):

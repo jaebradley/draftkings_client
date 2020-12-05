@@ -9,4 +9,3 @@ class TestTranslateDatetime(TestCase):
         timestamp = translate_formatted_datetime("/Date(1479258000000)/")
         self.assertIsNotNone(timestamp)
         self.assertEqual(timestamp, datetime.fromtimestamp(1479258000000 / 1e3, tz=timezone.utc))
-

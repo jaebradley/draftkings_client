@@ -19,5 +19,5 @@ class RegionsTransformer:
 
     def transform(self, response_regions: ResponseRegions) -> RegionsDetails:
         return RegionsDetails(
-            regions=list(map(lambda region: self.region_transformer(region), response_regions.regions))
+            regions=list(map(self.region_transformer, response_regions.regions))
         )

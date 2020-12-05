@@ -40,7 +40,7 @@ class ContestTransformer:
             fantasy_player_points=contest_response.fantasy_player_points,
             is_double_up=contest_response.attributes is not None and contest_response.attributes.is_double_up is True,
             is_fifty_fifty=contest_response.attributes is not None
-                           and contest_response.attributes.is_fifty_fifty is True,
+            and contest_response.attributes.is_fifty_fifty is True,
             is_guaranteed=contest_response.attributes is not None and contest_response.attributes.is_guaranteed is True,
             is_head_to_head=contest_response.attributes is not None and contest_response.attributes.is_h2h is True,
             is_starred=contest_response.attributes is not None and contest_response.attributes.is_starred is True,
@@ -59,13 +59,6 @@ class ContestsDetailsTransformer:
 
     def transform(self, response: ResponseContests) -> ContestsDetails:
         return ContestsDetails(
-            contests=list(
-                map(lambda contest_data: self.contest_transformer.transform(contest_data), response.contests)
-            ),
-            draft_groups=list(
-                map(
-                    lambda draft_group_data: self.draft_group_transformer.transform(draft_group_data),
-                    response.draft_groups
-                )
-            )
+            contests=list(map(self.contest_transformer.transform, response.contests)),
+            draft_groups=list(map(self.draft_group_transformer.transform, response.draft_groups))
         )

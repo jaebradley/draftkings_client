@@ -1,3 +1,5 @@
+# pylint: disable=unused-argument, no-self-use
+
 from marshmallow import Schema, fields, post_load
 
 from draft_kings.output.objects.countries import CountryDetails, CountriesDetails
@@ -20,3 +22,5 @@ class CountriesDetailsSchema(Schema):
     @post_load
     def make_countries_details(self, data, **kwargs):
         return CountriesDetails(**data)
+
+# pylint: enable=unused-argument, no-self-use

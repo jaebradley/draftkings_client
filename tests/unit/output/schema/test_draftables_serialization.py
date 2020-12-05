@@ -1,10 +1,6 @@
 from unittest import TestCase
 
-import marshmallow
-from draft_kings.data import Sport
-from draft_kings.output.objects.draftables import PlayerNameDetails, PlayerImageDetails, PlayerCompetitionDetails, \
-    PlayerTeamDetails, PlayerDetails, CompetitionTeamDetails, CompetitionWeatherDetails, CompetitionDetails, \
-    DraftablesDetails
+from draft_kings.output.objects.draftables import PlayerNameDetails, PlayerImageDetails
 from draft_kings.output.schema.draftables import PlayerNameDetailsSchema, PlayerImageDetailsSchema
 
 

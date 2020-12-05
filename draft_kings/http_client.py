@@ -54,4 +54,3 @@ class HTTPClient:
         response.raise_for_status()
 
         return response
-

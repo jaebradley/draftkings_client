@@ -1,3 +1,5 @@
+# pylint: disable=unused-argument, no-self-use, invalid-name, protected-access
+
 from marshmallow import fields
 
 
@@ -21,8 +23,10 @@ class DictField(fields.Field):
 
     def _serialize(self, value, attr, obj, **kwargs):
         ret = {}
-        for key, val in value.items():
+        for key, _ in value.items():
             k = self.key_field._serialize(key, attr, obj)
             v = self.nested_field.serialize(key, self.get_value(attr, obj))
             ret[k] = v
         return ret
+
+# pylint: enable=unused-argument, no-self-use, invalid-name, protected-access

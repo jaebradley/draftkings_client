@@ -1,7 +1,6 @@
+from datetime import datetime
 from unittest import TestCase
 from unittest.mock import MagicMock
-
-from datetime import datetime
 
 from draft_kings.response.objects.contests import ContestAttributes, Contest, DraftGroup, Contests
 
@@ -354,4 +353,3 @@ class TestContests(TestCase):
             ),
             Contests(contests=[], draft_groups=[])
         )
-
