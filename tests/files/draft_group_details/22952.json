@@ -1,0 +1,406 @@
+{
+  "draftGroup": {
+    "draftGroupId": 22952,
+    "contestType": {
+      "contestTypeId": 94,
+      "sport": "CFB",
+      "gameType": "SalaryCap",
+      "allowLateSwap": true
+    },
+    "sportId": 5,
+    "startTimeType": "Normal",
+    "minStartTime": "2018-11-24T17:00:00.0000000Z",
+    "maxStartTime": "2018-11-24T20:30:00.0000000Z",
+    "draftGroupState": "Historical",
+    "allowUgc": true,
+    "leagues": [
+      {
+        "leagueId": 5,
+        "leagueName": "College Football",
+        "leagueAbbreviation": "CFB"
+      }
+    ],
+    "games": [
+      {
+        "gameId": 5549233,
+        "awayTeamId": 3480,
+        "homeTeamId": 3478,
+        "startDate": "2018-11-24T20:30:00.0000000Z",
+        "location": "Bryant-Denny Stadium",
+        "timeRemainingStatus": "Final",
+        "sport": "CFB",
+        "status": "Final",
+        "description": "AUB @ BAMA",
+        "sportSpecificData": {
+          "quarter": "4",
+          "timeRemaining": "Final",
+          "homeTeamScore": "52",
+          "awayTeamScore": "21"
+        },
+        "league": "CFB",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 2,
+            "value": "1"
+          },
+          {
+            "typeId": 8,
+            "value": "4"
+          },
+          {
+            "typeId": 9,
+            "value": "Final"
+          }
+        ]
+      },
+      {
+        "gameId": 5549266,
+        "awayTeamId": 3472,
+        "homeTeamId": 3409,
+        "startDate": "2018-11-24T17:00:00.0000000Z",
+        "location": "Bobby Bowden Field at Doak Campbell Stadium",
+        "timeRemainingStatus": "Final",
+        "sport": "CFB",
+        "status": "Final",
+        "description": "UF @ FSU",
+        "sportSpecificData": {
+          "quarter": "4",
+          "timeRemaining": "Final",
+          "homeTeamScore": "14",
+          "awayTeamScore": "41"
+        },
+        "league": "CFB",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 2,
+            "value": "1"
+          },
+          {
+            "typeId": 8,
+            "value": "4"
+          },
+          {
+            "typeId": 9,
+            "value": "Final"
+          }
+        ]
+      },
+      {
+        "gameId": 5549276,
+        "awayTeamId": 3410,
+        "homeTeamId": 3473,
+        "startDate": "2018-11-24T17:00:00.0000000Z",
+        "location": "Sanford Stadium",
+        "timeRemainingStatus": "Final",
+        "sport": "CFB",
+        "status": "Final",
+        "description": "GT @ UGA",
+        "sportSpecificData": {
+          "quarter": "4",
+          "timeRemaining": "Final",
+          "homeTeamScore": "45",
+          "awayTeamScore": "21"
+        },
+        "league": "CFB",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 2,
+            "value": "1"
+          },
+          {
+            "typeId": 8,
+            "value": "4"
+          },
+          {
+            "typeId": 9,
+            "value": "Final"
+          }
+        ]
+      },
+      {
+        "gameId": 5549345,
+        "awayTeamId": 3463,
+        "homeTeamId": 3462,
+        "startDate": "2018-11-24T20:30:00.0000000Z",
+        "location": "Arizona Stadium",
+        "timeRemainingStatus": "Final",
+        "sport": "CFB",
+        "status": "Final",
+        "description": "ASU @ ARIZ",
+        "sportSpecificData": {
+          "quarter": "4",
+          "timeRemaining": "Final",
+          "homeTeamScore": "40",
+          "awayTeamScore": "41"
+        },
+        "league": "CFB",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 2,
+            "value": "1"
+          },
+          {
+            "typeId": 8,
+            "value": "4"
+          },
+          {
+            "typeId": 9,
+            "value": "Final"
+          }
+        ]
+      },
+      {
+        "gameId": 5549434,
+        "awayTeamId": 3484,
+        "homeTeamId": 3491,
+        "startDate": "2018-11-24T17:00:00.0000000Z",
+        "location": "AT&T Stadium",
+        "timeRemainingStatus": "Final",
+        "sport": "CFB",
+        "status": "Final",
+        "description": "BAY @ TTU",
+        "sportSpecificData": {
+          "quarter": "4",
+          "timeRemaining": "Final",
+          "homeTeamScore": "24",
+          "awayTeamScore": "35"
+        },
+        "league": "CFB",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 2,
+            "value": "1"
+          },
+          {
+            "typeId": 8,
+            "value": "4"
+          },
+          {
+            "typeId": 9,
+            "value": "Final"
+          }
+        ]
+      },
+      {
+        "gameId": 5549491,
+        "awayTeamId": 3420,
+        "homeTeamId": 3416,
+        "startDate": "2018-11-24T17:00:00.0000000Z",
+        "location": "Alumni Stadium",
+        "timeRemainingStatus": "Final",
+        "sport": "CFB",
+        "status": "Final",
+        "description": "SYR @ BC",
+        "sportSpecificData": {
+          "quarter": "4",
+          "timeRemaining": "Final",
+          "homeTeamScore": "21",
+          "awayTeamScore": "42"
+        },
+        "league": "CFB",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 2,
+            "value": "1"
+          },
+          {
+            "typeId": 8,
+            "value": "4"
+          },
+          {
+            "typeId": 9,
+            "value": "Final"
+          }
+        ]
+      },
+      {
+        "gameId": 5549554,
+        "awayTeamId": 3418,
+        "homeTeamId": 3417,
+        "startDate": "2018-11-24T20:30:00.0000000Z",
+        "location": "Sun Life Stadium",
+        "timeRemainingStatus": "Final",
+        "sport": "CFB",
+        "status": "Final",
+        "description": "PITT @ MIA",
+        "sportSpecificData": {
+          "quarter": "4",
+          "timeRemaining": "Final",
+          "homeTeamScore": "24",
+          "awayTeamScore": "3"
+        },
+        "league": "CFB",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 2,
+            "value": "1"
+          },
+          {
+            "typeId": 8,
+            "value": "4"
+          },
+          {
+            "typeId": 9,
+            "value": "Final"
+          }
+        ]
+      },
+      {
+        "gameId": 5549648,
+        "awayTeamId": 3441,
+        "homeTeamId": 3433,
+        "startDate": "2018-11-24T17:00:00.0000000Z",
+        "location": "Memorial Stadium",
+        "timeRemainingStatus": "Final",
+        "sport": "CFB",
+        "status": "Final",
+        "description": "PUR @ IU",
+        "sportSpecificData": {
+          "quarter": "4",
+          "timeRemaining": "Final",
+          "homeTeamScore": "21",
+          "awayTeamScore": "28"
+        },
+        "league": "CFB",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 2,
+            "value": "1"
+          },
+          {
+            "typeId": 8,
+            "value": "4"
+          },
+          {
+            "typeId": 9,
+            "value": "Final"
+          }
+        ]
+      },
+      {
+        "gameId": 5549665,
+        "awayTeamId": 3411,
+        "homeTeamId": 3440,
+        "startDate": "2018-11-24T20:30:00.0000000Z",
+        "location": "Beaver Stadium",
+        "timeRemainingStatus": "Final",
+        "sport": "CFB",
+        "status": "Final",
+        "description": "UMD @ PSU",
+        "sportSpecificData": {
+          "quarter": "4",
+          "timeRemaining": "Final",
+          "homeTeamScore": "38",
+          "awayTeamScore": "3"
+        },
+        "league": "CFB",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 2,
+            "value": "1"
+          },
+          {
+            "typeId": 8,
+            "value": "4"
+          },
+          {
+            "typeId": 9,
+            "value": "Final"
+          }
+        ]
+      },
+      {
+        "gameId": 5549685,
+        "awayTeamId": 3435,
+        "homeTeamId": 3439,
+        "startDate": "2018-11-24T17:00:00.0000000Z",
+        "location": "Ohio Stadium",
+        "timeRemainingStatus": "Final",
+        "sport": "CFB",
+        "status": "Final",
+        "description": "MICH @ OSU",
+        "sportSpecificData": {
+          "quarter": "4",
+          "timeRemaining": "Final",
+          "homeTeamScore": "62",
+          "awayTeamScore": "39"
+        },
+        "league": "CFB",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 2,
+            "value": "1"
+          },
+          {
+            "typeId": 8,
+            "value": "4"
+          },
+          {
+            "typeId": 9,
+            "value": "Final"
+          }
+        ]
+      },
+      {
+        "gameId": 5549698,
+        "awayTeamId": 3437,
+        "homeTeamId": 3442,
+        "startDate": "2018-11-24T20:30:00.0000000Z",
+        "location": "Camp Randall Stadium",
+        "timeRemainingStatus": "Final",
+        "sport": "CFB",
+        "status": "Final",
+        "description": "MINN @ WISC",
+        "sportSpecificData": {
+          "quarter": "4",
+          "timeRemaining": "Final",
+          "homeTeamScore": "15",
+          "awayTeamScore": "37"
+        },
+        "league": "CFB",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": [
+          {
+            "typeId": 2,
+            "value": "1"
+          },
+          {
+            "typeId": 8,
+            "value": "4"
+          },
+          {
+            "typeId": 9,
+            "value": "Final"
+          }
+        ]
+      }
+    ],
+    "gameTypeId": 94,
+    "allTags": [
+      "Featured"
+    ]
+  },
+  "responseStatus": {},
+  "errorStatus": {}
+}

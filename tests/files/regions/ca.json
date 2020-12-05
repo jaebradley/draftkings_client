@@ -1,0 +1,83 @@
+{
+  "regions": [
+    {
+      "countryCode": "CA",
+      "regionCode": "AB",
+      "isoRegionCode": "CA-AB",
+      "name": "Alberta"
+    },
+    {
+      "countryCode": "CA",
+      "regionCode": "BC",
+      "isoRegionCode": "CA-BC",
+      "name": "British Columbia"
+    },
+    {
+      "countryCode": "CA",
+      "regionCode": "MB",
+      "isoRegionCode": "CA-MB",
+      "name": "Manitoba"
+    },
+    {
+      "countryCode": "CA",
+      "regionCode": "NB",
+      "isoRegionCode": "CA-NB",
+      "name": "New Brunswick"
+    },
+    {
+      "countryCode": "CA",
+      "regionCode": "NL",
+      "isoRegionCode": "CA-NL",
+      "name": "Newfoundland"
+    },
+    {
+      "countryCode": "CA",
+      "regionCode": "NT",
+      "isoRegionCode": "CA-NT",
+      "name": "Northwest Territories"
+    },
+    {
+      "countryCode": "CA",
+      "regionCode": "NS",
+      "isoRegionCode": "CA-NS",
+      "name": "Nova Scotia"
+    },
+    {
+      "countryCode": "CA",
+      "regionCode": "NU",
+      "isoRegionCode": "CA-NU",
+      "name": "Nunavut"
+    },
+    {
+      "countryCode": "CA",
+      "regionCode": "ON",
+      "isoRegionCode": "CA-ON",
+      "name": "Ontario"
+    },
+    {
+      "countryCode": "CA",
+      "regionCode": "PE",
+      "isoRegionCode": "CA-PE",
+      "name": "Prince Edward Island"
+    },
+    {
+      "countryCode": "CA",
+      "regionCode": "QC",
+      "isoRegionCode": "CA-QC",
+      "name": "Quebec"
+    },
+    {
+      "countryCode": "CA",
+      "regionCode": "SK",
+      "isoRegionCode": "CA-SK",
+      "name": "Saskatchewan"
+    },
+    {
+      "countryCode": "CA",
+      "regionCode": "YT",
+      "isoRegionCode": "CA-YT",
+      "name": "Yukon"
+    }
+  ],
+  "note": null
+}

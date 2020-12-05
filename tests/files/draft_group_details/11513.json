@@ -1,0 +1,134 @@
+{
+  "draftGroup": {
+    "draftGroupId": 11513,
+    "contestType": {
+      "contestTypeId": 5,
+      "sport": "NBA",
+      "gameType": "SalaryCap"
+    },
+    "sportId": 4,
+    "startTimeType": "Normal",
+    "minStartTime": "2016-11-16T00:00:00.0000000Z",
+    "maxStartTime": "2016-11-16T03:30:00.0000000Z",
+    "draftGroupState": "Historical",
+    "allowUgc": true,
+    "leagues": [
+      {
+        "leagueId": 4,
+        "leagueName": "National Basketball Association",
+        "leagueAbbreviation": "NBA"
+      }
+    ],
+    "games": [
+      {
+        "gameId": 5479280,
+        "awayTeamId": 5312,
+        "homeTeamId": 16,
+        "startDate": "2016-11-16T01:00:00.0000000Z",
+        "location": "Target Center",
+        "timeRemainingStatus": "ScoresOfficial",
+        "sport": "NBA",
+        "status": "ScoresOfficial",
+        "description": "CHA @ MIN",
+        "sportSpecificData": {
+          "homeTeamScore": "108",
+          "awayTeamScore": "115",
+          "period": "0",
+          "timeRemaining": "ScoresOfficial"
+        },
+        "league": "NBA",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": []
+      },
+      {
+        "gameId": 5479637,
+        "awayTeamId": 1,
+        "homeTeamId": 14,
+        "startDate": "2016-11-16T00:30:00.0000000Z",
+        "location": "AmericanAirlines Arena",
+        "timeRemainingStatus": "ScoresOfficial",
+        "sport": "NBA",
+        "status": "ScoresOfficial",
+        "description": "ATL @ MIA",
+        "sportSpecificData": {
+          "homeTeamScore": "90",
+          "awayTeamScore": "93",
+          "period": "0",
+          "timeRemaining": "ScoresOfficial"
+        },
+        "league": "NBA",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": []
+      },
+      {
+        "gameId": 5479720,
+        "awayTeamId": 28,
+        "homeTeamId": 5,
+        "startDate": "2016-11-16T00:00:00.0000000Z",
+        "location": "Quicken Loans Arena",
+        "timeRemainingStatus": "ScoresOfficial",
+        "sport": "NBA",
+        "status": "ScoresOfficial",
+        "description": "TOR @ CLE",
+        "sportSpecificData": {
+          "homeTeamScore": "121",
+          "awayTeamScore": "117",
+          "period": "0",
+          "timeRemaining": "ScoresOfficial"
+        },
+        "league": "NBA",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": []
+      },
+      {
+        "gameId": 5479968,
+        "awayTeamId": 4,
+        "homeTeamId": 22,
+        "startDate": "2016-11-16T03:00:00.0000000Z",
+        "location": "Moda Center at the Rose Quarter",
+        "timeRemainingStatus": "ScoresOfficial",
+        "sport": "NBA",
+        "status": "ScoresOfficial",
+        "description": "CHI @ POR",
+        "sportSpecificData": {
+          "homeTeamScore": "88",
+          "awayTeamScore": "113",
+          "period": "0",
+          "timeRemaining": "ScoresOfficial"
+        },
+        "league": "NBA",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": []
+      },
+      {
+        "gameId": 5480294,
+        "awayTeamId": 17,
+        "homeTeamId": 13,
+        "startDate": "2016-11-16T03:30:00.0000000Z",
+        "location": "Staples Center",
+        "timeRemainingStatus": "ScoresOfficial",
+        "sport": "NBA",
+        "status": "ScoresOfficial",
+        "description": "BKN @ LAL",
+        "sportSpecificData": {
+          "homeTeamScore": "125",
+          "awayTeamScore": "118",
+          "period": "0",
+          "timeRemaining": "ScoresOfficial"
+        },
+        "league": "NBA",
+        "competitionStatus": "ScoresOfficial",
+        "competitionStatusDetail": "",
+        "gameAttributes": []
+      }
+    ],
+    "gameTypeId": 3,
+    "allTags": []
+  },
+  "responseStatus": {},
+  "errorStatus": {}
+}

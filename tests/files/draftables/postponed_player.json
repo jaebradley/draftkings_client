@@ -1,0 +1,94 @@
+{
+  "draftableId": 15819552,
+  "firstName": "Ben",
+  "lastName": "Roethlisberger",
+  "displayName": "Ben Roethlisberger",
+  "shortName": "B. Roethlisberger",
+  "playerId": 246061,
+  "playerDkId": 18782,
+  "position": "QB",
+  "rosterSlotId": 66,
+  "salary": 6600,
+  "status": "Q",
+  "isSwappable": true,
+  "isDisabled": true,
+  "newsStatus": "Recent",
+  "playerImage50": "https://dkn.gs/sports/images/nfl/players/50/18782.png",
+  "playerImage160": "https://dkn.gs/sports/images/nfl/players/160/18782.png",
+  "altPlayerImage50": "",
+  "altPlayerImage160": "",
+  "competition": {
+    "competitionId": 5674018,
+    "name": "BAL @ PIT",
+    "nameDisplay": [
+      {
+        "value": "BAL"
+      },
+      {
+        "value": " @ "
+      },
+      {
+        "value": "PIT",
+        "isEmphasized": true
+      }
+    ],
+    "startTime": "2020-11-26T21:30:00.0000000Z"
+  },
+  "competitions": [
+    {
+      "competitionId": 5674018,
+      "name": "BAL @ PIT",
+      "nameDisplay": [
+        {
+          "value": "BAL"
+        },
+        {
+          "value": " @ "
+        },
+        {
+          "value": "PIT",
+          "isEmphasized": true
+        }
+      ],
+      "startTime": "2020-11-26T21:30:00.0000000Z"
+    }
+  ],
+  "draftStatAttributes": [
+    {
+      "id": 90,
+      "value": "20.5",
+      "sortValue": "20.5"
+    },
+    {
+      "id": -2,
+      "value": "11th",
+      "sortValue": "11",
+      "quality": "Medium"
+    }
+  ],
+  "playerAttributes": [
+    {
+      "name": "ByeWeek",
+      "value": "4"
+    }
+  ],
+  "teamLeagueSeasonAttributes": [
+    {
+      "attributeId": 1,
+      "description": "Bye Week",
+      "value": "4"
+    }
+  ],
+  "playerGameAttributes": [],
+  "teamId": 356,
+  "teamAbbreviation": "PIT",
+  "draftAlerts": [
+    {
+      "alertType": "Postponed Game Alert",
+      "message": "The Ravens vs. Steelers game has been postponed. Players will NOT receive fantasy points in Thursday (11/26) MAIN and TIERS contests, please check your lineups!",
+      "updatedDate": "2020-11-25T18:51:42.0000000Z",
+      "priority": 100
+    }
+  ],
+  "playerGameHash": "246061-5674018"
+}
