@@ -33,3 +33,9 @@ class URLBuilder:
             API_BASE_URL=self.api_base_path,
             draft_group_id=draft_group_id
         )
+
+    def build_game_type_rules_url(self, game_type_id: int) -> str:
+        return "{API_BASE_URL}/lineups/v1/gametypes/{game_type_id}/rules".format(
+            API_BASE_URL=self.api_base_path,
+            game_type_id=game_type_id,
+        )

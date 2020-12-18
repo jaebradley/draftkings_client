@@ -54,3 +54,11 @@ class HTTPClient:
         response.raise_for_status()
 
         return response
+
+    def game_type_rules(self, game_type_id: int) -> Response:
+        response = requests.get(url=self.url_builder.build_game_type_rules_url(game_type_id=game_type_id),
+                                params={'format': 'json'})
+
+        response.raise_for_status()
+
+        return response
