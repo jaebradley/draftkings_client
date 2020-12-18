@@ -32,6 +32,10 @@ from draft_kings.response.schema.players import PlayersDetailsSchema
 from draft_kings.response.schema.regions import RegionsSchema
 from draft_kings.url_builder import URLBuilder
 from draft_kings.utilities import translate_formatted_datetime, from_unix_milliseconds_to_datetime
+from draft_kings.response.schema.game_type_rules import GameTypeRulesSchema
+from draft_kings.output.transformers.game_type_rules import transform_roster_slot, transform_salary_cap, \
+    LineupTemplateTransformer, GameTypeRulesTransformer
+from draft_kings.output.objects.game_type_rules import GameTypeRulesDetails
 
 
 class Client:
@@ -41,6 +45,7 @@ class Client:
     countries_transformer: CountriesTransformer
     regions_transformer: RegionsTransformer
     draftables_transformer: DraftablesTransformer
+    game_type_rules_transformer: GameTypeRulesTransformer
 
     contests_schema: ContestsSchema
     players_schema: PlayersDetailsSchema
@@ -48,6 +53,7 @@ class Client:
     countries_schema: CountriesSchema
     regions_schema: RegionsSchema
     draftables_schema: DraftablesSchema
+    game_type_rules_schema: GameTypeRulesSchema
 
     http_client: HTTPClient
 
@@ -99,12 +105,20 @@ class Client:
                 draft_alert_transformer=transform_draft_alert,
             )
         )
+        self.game_type_rules_transformer=GameTypeRulesTransformer(
+            salary_cap_transformer=transform_salary_cap,
+            lineup_template_transformer=LineupTemplateTransformer(
+                roster_slot_transformer=transform_roster_slot,
+            )
+        )
         self.contests_schema = ContestsSchema()
         self.players_schema = PlayersDetailsSchema()
         self.draft_group_schema = DraftGroupResponseSchema()
         self.countries_schema = CountriesSchema()
         self.regions_schema = RegionsSchema()
         self.draftables_schema = DraftablesSchema()
+        self.game_type_rules_schema = GameTypeRulesSchema()
+
         self.http_client = HTTPClient(url_builder=URLBuilder())
 
     def contests(self, sport: Sport) -> ContestsDetails:
@@ -136,5 +150,10 @@ class Client:
         response = self.http_client.draftables(draft_group_id=draft_group_id)
         deserialized_response = self.draftables_schema.loads(response.text)
         return self.draftables_transformer.transform(response_draftables=deserialized_response)
+
+    def game_type_rules(self, game_type_id: int) -> GameTypeRulesDetails:
+        response = self.http_client.game_type_rules(game_type_id=game_type_id)
+        deserialized_response = self.game_type_rules_schema.loads(response.text)
+        return self.game_type_rules_transformer.transform(game_type_rules=deserialized_response)
 
 # pylint: enable=too-many-instance-attributes

@@ -105,6 +105,14 @@ from draft_kings import Client
 Client().draftables(draft_group_id=41793)
 ```
 
+### Get Rules For A Game Type
+
+```python
+from draft_kings import Client
+
+Client().game_type_rules(game_type_id=1)
+```
+
 ### Usage
 
 To the best of my knowledge, I have not identified an endpoint that delivers data for a window of time. 

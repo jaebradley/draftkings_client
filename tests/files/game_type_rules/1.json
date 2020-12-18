@@ -1,0 +1,338 @@
+{
+    "gameTypeId": 1,
+    "gameTypeName": "Classic",
+    "gameTypeDescription": "Create a 9-player lineup while staying under the $50,000 salary cap",
+    "lineupConfigurationId": 1,
+    "salaryCap": {
+        "isEnabled": true,
+        "minValue": 0,
+        "maxValue": 50000
+    },
+    "gameCount": {
+        "isEnabled": true,
+        "minValue": 2,
+        "maxValue": null
+    },
+    "teamCount": {
+        "isEnabled": true,
+        "minValue": 2,
+        "maxValue": null
+    },
+    "uniquePlayers": true,
+    "allowLateSwap": true,
+    "lineupTemplate": [
+        {
+            "rosterSlot": {
+                "id": 66,
+                "name": "QB",
+                "description": "Quarterback",
+                "positionTip": null,
+                "positionTipSubtext": null,
+                "notScoring": false
+            },
+            "order": 1,
+            "scoringOrder": 0
+        },
+        {
+            "rosterSlot": {
+                "id": 67,
+                "name": "RB",
+                "description": "Running Back",
+                "positionTip": null,
+                "positionTipSubtext": null,
+                "notScoring": false
+            },
+            "order": 2,
+            "scoringOrder": 0
+        },
+        {
+            "rosterSlot": {
+                "id": 67,
+                "name": "RB",
+                "description": "Running Back",
+                "positionTip": null,
+                "positionTipSubtext": null,
+                "notScoring": false
+            },
+            "order": 3,
+            "scoringOrder": 0
+        },
+        {
+            "rosterSlot": {
+                "id": 68,
+                "name": "WR",
+                "description": "Wide Receiver",
+                "positionTip": null,
+                "positionTipSubtext": null,
+                "notScoring": false
+            },
+            "order": 4,
+            "scoringOrder": 0
+        },
+        {
+            "rosterSlot": {
+                "id": 68,
+                "name": "WR",
+                "description": "Wide Receiver",
+                "positionTip": null,
+                "positionTipSubtext": null,
+                "notScoring": false
+            },
+            "order": 5,
+            "scoringOrder": 0
+        },
+        {
+            "rosterSlot": {
+                "id": 68,
+                "name": "WR",
+                "description": "Wide Receiver",
+                "positionTip": null,
+                "positionTipSubtext": null,
+                "notScoring": false
+            },
+            "order": 6,
+            "scoringOrder": 0
+        },
+        {
+            "rosterSlot": {
+                "id": 69,
+                "name": "TE",
+                "description": "Tight End",
+                "positionTip": null,
+                "positionTipSubtext": null,
+                "notScoring": false
+            },
+            "order": 7,
+            "scoringOrder": 0
+        },
+        {
+            "rosterSlot": {
+                "id": 70,
+                "name": "FLEX",
+                "description": "Flex",
+                "positionTip": null,
+                "positionTipSubtext": null,
+                "notScoring": false
+            },
+            "order": 8,
+            "scoringOrder": 0
+        },
+        {
+            "rosterSlot": {
+                "id": 71,
+                "name": "DST",
+                "description": "Defense/Special Teams",
+                "positionTip": null,
+                "positionTipSubtext": null,
+                "notScoring": false
+            },
+            "order": 9,
+            "scoringOrder": 0
+        }
+    ],
+    "errorStatus": null,
+    "rulesUrl": "/help/rules/1/1",
+    "draftType": "SalaryCap",
+    "allowedCompetitionAttributes": null,
+    "scoringDivider": null,
+    "useOptimalLineups": false,
+    "supportsPlayersTab": false,
+    "showByeWeekInfo": false,
+    "glossaryTerms": [
+        {
+            "id": 1,
+            "title": "Fantasy Points per Game",
+            "description": "",
+            "icon": {
+                "iconUrl": "",
+                "iconArenaUrl": "",
+                "iconArenaUrlNight": "",
+                "textLayout": {
+                    "text": "FPPG",
+                    "fontColor": "#000000",
+                    "fontArenaColor": "#4D4D4D",
+                    "fontArenaColorNight": "#C5C5C5",
+                    "backgroundColor": "",
+                    "backgroundArenaColor": "",
+                    "backgroundArenaColorNight": ""
+                }
+            },
+            "sortOrder": 1,
+            "status": ""
+        },
+        {
+            "id": 3,
+            "title": "Opponent Rank",
+            "description": "",
+            "icon": {
+                "iconUrl": "",
+                "iconArenaUrl": "",
+                "iconArenaUrlNight": "",
+                "textLayout": {
+                    "text": "OPRK",
+                    "fontColor": "#000000",
+                    "fontArenaColor": "#4D4D4D",
+                    "fontArenaColorNight": "#C5C5C5",
+                    "backgroundColor": "",
+                    "backgroundArenaColor": "",
+                    "backgroundArenaColorNight": ""
+                }
+            },
+            "sortOrder": 2,
+            "status": ""
+        },
+        {
+            "id": 5,
+            "title": "Questionable",
+            "description": "",
+            "icon": {
+                "iconUrl": "",
+                "iconArenaUrl": "",
+                "iconArenaUrlNight": "",
+                "textLayout": {
+                    "text": "Q",
+                    "fontColor": "#FFFFFF",
+                    "fontArenaColor": "#FFFFFF",
+                    "fontArenaColorNight": "#121212",
+                    "backgroundColor": "#F3B700",
+                    "backgroundArenaColor": "#B81427",
+                    "backgroundArenaColorNight": "#E9344A"
+                }
+            },
+            "sortOrder": 3,
+            "status": ""
+        },
+        {
+            "id": 6,
+            "title": "Out",
+            "description": "",
+            "icon": {
+                "iconUrl": "",
+                "iconArenaUrl": "",
+                "iconArenaUrlNight": "",
+                "textLayout": {
+                    "text": "O",
+                    "fontColor": "#FFFFFF",
+                    "fontArenaColor": "#FFFFFF",
+                    "fontArenaColorNight": "#121212",
+                    "backgroundColor": "#D0021B",
+                    "backgroundArenaColor": "#B81427",
+                    "backgroundArenaColorNight": "#E9344A"
+                }
+            },
+            "sortOrder": 4,
+            "status": ""
+        },
+        {
+            "id": 9,
+            "title": "Doubtful",
+            "description": "",
+            "icon": {
+                "iconUrl": "",
+                "iconArenaUrl": "",
+                "iconArenaUrlNight": "",
+                "textLayout": {
+                    "text": "D",
+                    "fontColor": "#FFFFFF",
+                    "fontArenaColor": "#FFFFFF",
+                    "fontArenaColorNight": "#121212",
+                    "backgroundColor": "#D0021B",
+                    "backgroundArenaColor": "#B81427",
+                    "backgroundArenaColorNight": "#E9344A"
+                }
+            },
+            "sortOrder": 5,
+            "status": ""
+        },
+        {
+            "id": 10,
+            "title": "Injured Reserve",
+            "description": "",
+            "icon": {
+                "iconUrl": "",
+                "iconArenaUrl": "",
+                "iconArenaUrlNight": "",
+                "textLayout": {
+                    "text": "IR",
+                    "fontColor": "#FFFFFF",
+                    "fontArenaColor": "#FFFFFF",
+                    "fontArenaColorNight": "#121212",
+                    "backgroundColor": "#D0021B",
+                    "backgroundArenaColor": "#B81427",
+                    "backgroundArenaColorNight": "#E9344A"
+                }
+            },
+            "sortOrder": 6,
+            "status": ""
+        },
+        {
+            "id": 11,
+            "title": "Physically Unable to Perform",
+            "description": "",
+            "icon": {
+                "iconUrl": "",
+                "iconArenaUrl": "",
+                "iconArenaUrlNight": "",
+                "textLayout": {
+                    "text": "PUP",
+                    "fontColor": "#FFFFFF",
+                    "fontArenaColor": "#FFFFFF",
+                    "fontArenaColorNight": "#121212",
+                    "backgroundColor": "#D0021B",
+                    "backgroundArenaColor": "#B81427",
+                    "backgroundArenaColorNight": "#E9344A"
+                }
+            },
+            "sortOrder": 7,
+            "status": ""
+        },
+        {
+            "id": 8,
+            "title": "Postponed Game",
+            "description": "",
+            "icon": {
+                "iconUrl": "",
+                "iconArenaUrl": "",
+                "iconArenaUrlNight": "",
+                "textLayout": {
+                    "text": "PPD",
+                    "fontColor": "#FFFFFF",
+                    "fontArenaColor": "#FFFFFF",
+                    "fontArenaColorNight": "#121212",
+                    "backgroundColor": "#D0021B",
+                    "backgroundArenaColor": "#B81427",
+                    "backgroundArenaColorNight": "#E9344A"
+                }
+            },
+            "sortOrder": 8,
+            "status": ""
+        }
+    ],
+    "originalDraftType": null,
+    "errorCodes": [
+        {
+            "errorCode": "EXCEEDS_SALARY",
+            "defaultMessage": "Lineup exceeds salary limit."
+        },
+        {
+            "errorCode": "INVALID_TEAM_COUNT",
+            "defaultMessage": "Lineups for this game style must include players from at least two different teams. Please fix before continuing."
+        },
+        {
+            "errorCode": "MULTIPLE_GAMES",
+            "defaultMessage": "Lineup needs to contain players spanning multiple games."
+        },
+        {
+            "errorCode": "INVALID_PLAYER_COUNT",
+            "defaultMessage": "Lineup does not meet the required number of players."
+        },
+        {
+            "errorCode": "DUPLICATE_PLAYER",
+            "defaultMessage": "Lineup includes a player that is used more than once."
+        },
+        {
+            "errorCode": "INVALID_POSITION",
+            "defaultMessage": "Lineup contains invalid roster positions or players are not in the correct position."
+        }
+    ]
+}

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "draft_kings"
-version = "3.0.0"
+version = "3.1.0"
 description = "A client to access data on draftkings.com"
 authors = ["Jae Bradley <jae.b.bradley@gmail.com>"]
 maintainers = ["Jae Bradley <jae.b.bradley@gmail.com>"]
