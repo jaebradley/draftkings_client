@@ -45,7 +45,7 @@ class TestNBAAvailablePlayers(TestCase):
                 team_series_details=PlayerTeamSeriesDetails(
                     away_team_id=12,
                     home_team_id=13,
-                    opposition_rank=13,
+                    opposition_rank=11,
                     team_series_id=5713406
                 )
             ),
