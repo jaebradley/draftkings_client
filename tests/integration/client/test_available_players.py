@@ -36,7 +36,7 @@ class TestNBAAvailablePlayers(TestCase):
                 jersey_number=3,
                 last_name="Davis",
                 player_id=603096,
-                points_per_game=50.3,
+                points_per_game=38.9,
                 position_details=PositionDetails(
                     name="PF/C",
                     position_id=28
@@ -45,7 +45,7 @@ class TestNBAAvailablePlayers(TestCase):
                 team_series_details=PlayerTeamSeriesDetails(
                     away_team_id=12,
                     home_team_id=13,
-                    opposition_rank=11,
+                    opposition_rank=7,
                     team_series_id=5713406
                 )
             ),
@@ -59,7 +59,7 @@ class TestNBAAvailablePlayers(TestCase):
                     away_team_id=12,
                     home_team_id=13,
                     starts_at=datetime.datetime(2020, 12, 23, 3, 0, 0, tzinfo=datetime.timezone.utc),
-                    status_description="Pre-Game",
+                    status_description="Final",
                     team_series_id=5713406,
                     weather_description=None
                 ),
@@ -67,7 +67,7 @@ class TestNBAAvailablePlayers(TestCase):
                     away_team_id=9,
                     home_team_id=17,
                     starts_at=datetime.datetime(2020, 12, 23, 0, 0, 0, tzinfo=datetime.timezone.utc),
-                    status_description="Pre-Game",
+                    status_description="Final",
                     team_series_id=5713400,
                     weather_description=None
                 ),
