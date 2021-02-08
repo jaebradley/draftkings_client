@@ -10,6 +10,7 @@ from draft_kings.output.objects.players import PlayerDetails, DraftDetails, Posi
 from tests.config import ROOT_DIRECTORY
 
 
+@skip(reason="draftkings seems to deprecate draft groups after a couple weeks")
 class TestNBAAvailablePlayers(TestCase):
     def setUp(self) -> None:
         self.result = Client().available_players(draft_group_id=42463)
