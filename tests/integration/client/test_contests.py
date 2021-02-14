@@ -8,80 +8,9 @@ class TestContests(TestCase):
     def setUp(self) -> None:
         self.client = Client()
 
-    def test_nba_contests(self):
-        result = self.client.contests(Sport.NBA)
-        self.assertIsNotNone(result)
-        self.assertIsNotNone(result.contests)
-        self.assertIsNotNone(result.draft_groups)
-
-    def test_nfl_contests(self):
-        result = self.client.contests(Sport.NFL)
-        self.assertIsNotNone(result)
-        self.assertIsNotNone(result.contests)
-        self.assertIsNotNone(result.draft_groups)
-
-    def test_mlb_contests(self):
-        result = self.client.contests(Sport.MLB)
-        self.assertIsNotNone(result)
-        self.assertIsNotNone(result.contests)
-        self.assertIsNotNone(result.draft_groups)
-
-    def test_nhl_contests(self):
-        result = self.client.contests(Sport.NHL)
-        self.assertIsNotNone(result)
-        self.assertIsNotNone(result.contests)
-        self.assertIsNotNone(result.draft_groups)
-
-    def test_nascar_contests(self):
-        result = self.client.contests(Sport.NASCAR)
-        self.assertIsNotNone(result)
-        self.assertIsNotNone(result.contests)
-        self.assertIsNotNone(result.draft_groups)
-
-    def test_golf_contests(self):
-        result = self.client.contests(Sport.GOLF)
-        self.assertIsNotNone(result)
-        self.assertIsNotNone(result.contests)
-        self.assertIsNotNone(result.draft_groups)
-
-    def test_cfl_contests(self):
-        result = self.client.contests(Sport.CFL)
-        self.assertIsNotNone(result)
-        self.assertIsNotNone(result.contests)
-        self.assertIsNotNone(result.draft_groups)
-
-    def test_college_football_contests(self):
-        result = self.client.contests(Sport.COLLEGE_FOOTBALL)
-        self.assertIsNotNone(result)
-        self.assertIsNotNone(result.contests)
-        self.assertIsNotNone(result.draft_groups)
-
-    def test_college_basketball_contests(self):
-        result = self.client.contests(Sport.COLLEGE_BASKETBALL)
-        self.assertIsNotNone(result)
-        self.assertIsNotNone(result.contests)
-        self.assertIsNotNone(result.draft_groups)
-
-    def test_mma_contests(self):
-        result = self.client.contests(Sport.MIXED_MARTIAL_ARTS)
-        self.assertIsNotNone(result)
-        self.assertIsNotNone(result.contests)
-        self.assertIsNotNone(result.draft_groups)
-
-    def test_eurloeage_basketball_contests(self):
-        result = self.client.contests(Sport.EUROLEAGUE_BASKETBALL)
-        self.assertIsNotNone(result)
-        self.assertIsNotNone(result.contests)
-        self.assertIsNotNone(result.draft_groups)
-
-    def test_tennis_contests(self):
-        result = self.client.contests(Sport.TENNIS)
-        self.assertIsNotNone(result)
-        self.assertIsNotNone(result.contests)
-        self.assertIsNotNone(result.draft_groups)
-
-    def test_league_of_legends_contests(self):
-        result = self.client.contests(Sport.LEAGUE_OF_LEGENDS)
-        self.assertIsNotNone(result)
-        self.assertIsNotNone(result.contests)
-        self.assertIsNotNone(result.draft_groups)
+    def test_contest(self):
+        for sport in Sport:
+            result = self.client.contests(sport=sport)
+            self.assertIsNotNone(result)
+            self.assertIsNotNone(result.contests)
+            self.assertIsNotNone(result.draft_groups)
