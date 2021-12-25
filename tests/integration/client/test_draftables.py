@@ -51,7 +51,10 @@ class TestDraftables(TestCase):
 
 class TestMockedUpcomingNFLDraftablesResponse(TestCase):
     def setUp(self) -> None:
-        with open(os.path.join(ROOT_DIRECTORY, "tests/files/draftables/41793/upcoming.json")) as data_file:
+        with open(
+                os.path.join(ROOT_DIRECTORY, "tests/files/draftables/41793/upcoming.json"),
+                encoding="utf-8"
+        ) as data_file:
             self.response_data = data_file.read()
             patched_method = patch.object(HTTPClient, "draftables")
             mocked_method = patched_method.start()
@@ -188,7 +191,10 @@ class TestMockedUpcomingNFLDraftablesResponse(TestCase):
 
 class TestDraftablesWithDraftAlerts(TestCase):
     def setUp(self) -> None:
-        with open(os.path.join(ROOT_DIRECTORY, "tests/files/draftables/41793/postponed.json")) as data_file:
+        with open(
+                os.path.join(ROOT_DIRECTORY, "tests/files/draftables/41793/postponed.json"),
+                encoding="utf-8"
+        ) as data_file:
             self.response_data = data_file.read()
             patched_method = patch.object(HTTPClient, "draftables")
             mocked_method = patched_method.start()

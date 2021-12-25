@@ -8,7 +8,7 @@ from tests.config import ROOT_DIRECTORY
 
 class TestUSRegions(TestCase):
     def setUp(self) -> None:
-        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/regions/us.json')) as data_file:
+        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/regions/us.json'), encoding="utf-8") as data_file:
             self.schema = RegionsSchema()
             self.data = self.schema.loads(data_file.read())
 
@@ -32,7 +32,7 @@ class TestUSRegions(TestCase):
 
 class TestCanadianRegions(TestCase):
     def setUp(self) -> None:
-        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/regions/ca.json')) as data_file:
+        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/regions/ca.json'), encoding="utf-8") as data_file:
             self.schema = RegionsSchema()
             self.data = self.schema.loads(data_file.read())
 
@@ -56,7 +56,7 @@ class TestCanadianRegions(TestCase):
 
 class TestGBRegions(TestCase):
     def setUp(self) -> None:
-        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/regions/gb.json')) as data_file:
+        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/regions/gb.json'), encoding="utf-8") as data_file:
             self.schema = RegionsSchema()
             self.data = self.schema.loads(data_file.read())
 

@@ -8,7 +8,10 @@ from tests.config import ROOT_DIRECTORY
 
 class TestSoccerPlayers(TestCase):
     def setUp(self) -> None:
-        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/available_players/22831.json')) as data_file:
+        with open(
+                os.path.join(ROOT_DIRECTORY, 'tests/files/available_players/22831.json'),
+                encoding="utf-8"
+        ) as data_file:
             self.schema = PlayersDetailsSchema()
             self.data = self.schema.loads(data_file.read())
 
@@ -76,7 +79,10 @@ class TestSoccerPlayers(TestCase):
 
 class TestNFLPlayersWithExceptionalMessages(TestCase):
     def setUp(self) -> None:
-        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/available_players/41793.json')) as data_file:
+        with open(
+                os.path.join(ROOT_DIRECTORY, 'tests/files/available_players/41793.json'),
+                encoding="utf-8"
+        ) as data_file:
             self.schema = PlayersDetailsSchema()
             self.data = self.schema.loads(data_file.read())
 

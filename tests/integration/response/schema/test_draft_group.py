@@ -10,7 +10,9 @@ from tests.config import ROOT_DIRECTORY
 class TestUpcomingGolfDraftGroup(TestCase):
     def setUp(self) -> None:
         with open(os.path.join(ROOT_DIRECTORY,
-                               'tests/files/draft_group_details/26545_upcoming.json')) as data_file:
+                               'tests/files/draft_group_details/26545_upcoming.json'),
+                  encoding="utf-8"
+                  ) as data_file:
             self.schema = DraftGroupResponseSchema()
             self.data = self.schema.loads(data_file.read())
 
@@ -71,7 +73,8 @@ class TestUpcomingGolfDraftGroup(TestCase):
 class TestHistoricalGolfDraftGroup(TestCase):
     def setUp(self) -> None:
         with open(os.path.join(ROOT_DIRECTORY,
-                               'tests/files/draft_group_details/26545_historical.json')) as \
+                               'tests/files/draft_group_details/26545_historical.json'),
+                  encoding="utf-8") as \
                 data_file:
             self.schema = DraftGroupResponseSchema()
             self.data = self.schema.loads(data_file.read())
@@ -133,7 +136,8 @@ class TestHistoricalGolfDraftGroup(TestCase):
 class TestUpcomingNFLDraftGroup(TestCase):
     def setUp(self) -> None:
         with open(os.path.join(ROOT_DIRECTORY,
-                               'tests/files/draft_group_details/41409_upcoming.json')) as \
+                               'tests/files/draft_group_details/41409_upcoming.json'),
+                  encoding="utf-8") as \
                 data_file:
             self.schema = DraftGroupResponseSchema()
             self.data = self.schema.loads(data_file.read())
@@ -195,7 +199,8 @@ class TestUpcomingNFLDraftGroup(TestCase):
 class TestHistoricalNFLDraftGroup(TestCase):
     def setUp(self) -> None:
         with open(os.path.join(ROOT_DIRECTORY,
-                               'tests/files/draft_group_details/41409_historical.json')) \
+                               'tests/files/draft_group_details/41409_historical.json'),
+                  encoding="utf-8") \
                 as data_file:
             self.schema = DraftGroupResponseSchema()
             self.data = self.schema.loads(data_file.read())

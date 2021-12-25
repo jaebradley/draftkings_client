@@ -8,7 +8,7 @@ from tests.config import ROOT_DIRECTORY
 
 class TestCountries(TestCase):
     def setUp(self) -> None:
-        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/countries.json')) as data_file:
+        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/countries.json'), encoding="utf-8") as data_file:
             self.schema = CountriesSchema()
             self.data = self.schema.loads(data_file.read())
 
