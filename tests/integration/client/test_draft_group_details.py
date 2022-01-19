@@ -58,7 +58,10 @@ class TestDraftGroupDetails(TestCase):
 
 class TestDraftGroup11513MockedHTTPResponse(TestCase):
     def setUp(self) -> None:
-        with open(os.path.join(ROOT_DIRECTORY, "tests/files/draft_group_details/11513.json")) as data_file:
+        with open(
+                os.path.join(ROOT_DIRECTORY, "tests/files/draft_group_details/11513.json"),
+                encoding="utf-8"
+        ) as data_file:
             self.response_data = data_file.read()
             patched_method = patch.object(HTTPClient, "draft_group_details")
             mocked_draft_group_details = patched_method.start()

@@ -21,7 +21,7 @@ class TestCountries(TestCase):
 
 class TestCountiesWithMockedHTTPResponse(TestCase):
     def setUp(self) -> None:
-        with open(os.path.join(ROOT_DIRECTORY, "tests/files/countries.json")) as data_file:
+        with open(os.path.join(ROOT_DIRECTORY, "tests/files/countries.json"), encoding="utf-8") as data_file:
             self.response_data = data_file.read()
 
     @patch.object(HTTPClient, "countries")

@@ -11,14 +11,10 @@ The `v2` branch (as well as the `2.0.0+` version) will be deprecated in the near
 
 ## Local
 
-Install dependencies using [`poetry`](https://python-poetry.org/) - for installation directions, see 
-[the documentation](https://python-poetry.org/docs/).
+There is a build script written in Bash named `build.sh` that checks if `Python 3` is installed, installs a specific version of [`Poetry`](https://python-poetry.org/).
 
-Once `poetry` has been installed, dependencies can be installed using the `install` command like
-
-```bash
-poetry install
-```
+After the `build.sh` script finishes executing, there will be instructions printed to standard output that give context
+around the location of `Poetry`'s `bin` directory and how to add this directory to the `PATH` environment variable.
 
 !!! note
     The `pyproject.toml` file is used to describe the project's requirements and relevant metadata including both the

@@ -19,7 +19,7 @@ class TestGameTypeRules(TestCase):
 
 class TestMockedUpcomingNFLDraftablesResponse(TestCase):
     def setUp(self) -> None:
-        with open(os.path.join(ROOT_DIRECTORY, "tests/files/game_type_rules/1.json")) as data_file:
+        with open(os.path.join(ROOT_DIRECTORY, "tests/files/game_type_rules/1.json"), encoding="utf-8") as data_file:
             self.response_data = data_file.read()
             patched_method = patch.object(HTTPClient, "game_type_rules")
             mocked_method = patched_method.start()

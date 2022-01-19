@@ -51,7 +51,7 @@ class TestRegions(TestCase):
 
 class TestMockedUSResponseRegions(TestCase):
     def setUp(self) -> None:
-        with open(os.path.join(ROOT_DIRECTORY, "tests/files/regions/us.json")) as data_file:
+        with open(os.path.join(ROOT_DIRECTORY, "tests/files/regions/us.json"), encoding="utf-8") as data_file:
             self.response_data = data_file.read()
             patched_method = patch.object(HTTPClient, "regions")
             mocked_method = patched_method.start()

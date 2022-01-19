@@ -9,7 +9,10 @@ from tests.config import ROOT_DIRECTORY
 
 class TestUpcomingNFLContests(TestCase):
     def setUp(self) -> None:
-        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/contests/nfl/2020_10_22.json')) as data_file:
+        with open(
+                os.path.join(ROOT_DIRECTORY, 'tests/files/contests/nfl/2020_10_22.json'),
+                encoding="utf-8"
+        ) as data_file:
             self.schema = ContestsSchema()
             self.data = self.schema.loads(data_file.read())
 

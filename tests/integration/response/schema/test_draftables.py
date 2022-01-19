@@ -10,7 +10,10 @@ from tests.config import ROOT_DIRECTORY
 
 class TestUpcomingNFLDraftables(TestCase):
     def setUp(self) -> None:
-        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/draftables/41793/upcoming.json')) as data_file:
+        with open(
+                os.path.join(ROOT_DIRECTORY, 'tests/files/draftables/41793/upcoming.json'),
+                encoding="utf-8"
+        ) as data_file:
             self.schema = DraftablesSchema()
             self.data = self.schema.loads(data_file.read())
 
@@ -134,7 +137,10 @@ class TestUpcomingNFLDraftables(TestCase):
 
 class TestHistoricalGolfDraftables(TestCase):
     def setUp(self) -> None:
-        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/draftables/historical_golf_draftables.json')) as data_file:
+        with open(
+                os.path.join(ROOT_DIRECTORY, 'tests/files/draftables/historical_golf_draftables.json'),
+                encoding="utf-8"
+        ) as data_file:
             self.schema = DraftablesSchema()
             self.data = self.schema.loads(data_file.read())
 
@@ -144,7 +150,10 @@ class TestHistoricalGolfDraftables(TestCase):
 
 class TestHistoricalDraftablesForDraftGroup11513(TestCase):
     def setUp(self) -> None:
-        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/draftables/11513.json')) as data_file:
+        with open(
+                os.path.join(ROOT_DIRECTORY, 'tests/files/draftables/11513.json'),
+                encoding="utf-8"
+        ) as data_file:
             self.schema = DraftablesSchema()
             self.data = self.schema.loads(data_file.read())
 
@@ -314,7 +323,10 @@ class TestHistoricalDraftablesForDraftGroup11513(TestCase):
 
 class TestPostponedPlayer(TestCase):
     def setUp(self) -> None:
-        with open(os.path.join(ROOT_DIRECTORY, 'tests/files/draftables/postponed_player.json')) as data_file:
+        with open(
+                os.path.join(ROOT_DIRECTORY, 'tests/files/draftables/postponed_player.json'),
+                encoding="utf-8"
+        ) as data_file:
             self.schema = PlayerSchema()
             self.data = self.schema.loads(data_file.read())
 

@@ -8,34 +8,22 @@ class URLBuilder:
         self.api_base_path = api_base_path
 
     def build_draft_group_url(self, draft_group_id: int) -> str:
-        return "{API_BASE_URL}/draftgroups/v1/{draft_group_id}".format(
-            API_BASE_URL=self.api_base_path,
-            draft_group_id=draft_group_id
-        )
+        return f"{self.api_base_path}/draftgroups/v1/{draft_group_id}"
 
     def build_countries_url(self) -> str:
-        return "{API_BASE_URL}/addresses/v1/countries".format(API_BASE_URL=self.api_base_path)
+        return f"{self.api_base_path}/addresses/v1/countries"
 
     def build_regions_url(self, country_code: str) -> str:
-        return "{API_BASE_URL}/addresses/v1/countries/{country_code}/regions".format(
-            API_BASE_URL=self.api_base_path,
-            country_code=country_code,
-        )
+        return f"{self.api_base_path}/addresses/v1/countries/{country_code}/regions"
 
     def build_contests_url(self) -> str:
-        return "{BASE_URL}/lobby/getcontests".format(BASE_URL=self.base_path)
+        return f"{self.base_path}/lobby/getcontests"
 
     def build_available_players_url(self) -> str:
-        return "{BASE_URL}/lineup/getavailableplayers".format(BASE_URL=self.base_path)
+        return f"{self.base_path}/lineup/getavailableplayers"
 
     def build_draftables_url(self, draft_group_id: int) -> str:
-        return "{API_BASE_URL}/draftgroups/v1/draftgroups/{draft_group_id}/draftables".format(
-            API_BASE_URL=self.api_base_path,
-            draft_group_id=draft_group_id
-        )
+        return f"{self.api_base_path}/draftgroups/v1/draftgroups/{draft_group_id}/draftables"
 
     def build_game_type_rules_url(self, game_type_id: int) -> str:
-        return "{API_BASE_URL}/lineups/v1/gametypes/{game_type_id}/rules".format(
-            API_BASE_URL=self.api_base_path,
-            game_type_id=game_type_id,
-        )
+        return f"{self.api_base_path}/lineups/v1/gametypes/{game_type_id}/rules"
