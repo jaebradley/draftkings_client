@@ -9,7 +9,7 @@ class HTTPClient:
     def __init__(self, url_builder: URLBuilder) -> None:
         self.url_builder = url_builder
 
-    def countries(self):
+    def countries(self) -> Response:
         response = requests.get(url=self.url_builder.build_countries_url(),
                                 params={'format': 'json'})
 
@@ -17,7 +17,7 @@ class HTTPClient:
 
         return response
 
-    def regions(self, country_code):
+    def regions(self, country_code) -> Response:
         response = requests.get(url=self.url_builder.build_regions_url(country_code=country_code),
                                 params={'format': 'json'})
 

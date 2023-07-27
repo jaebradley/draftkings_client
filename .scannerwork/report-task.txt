@@ -1,0 +1,6 @@
+projectKey=trackness.draftkings_client
+serverUrl=https://sonarqube.trackness.net
+serverVersion=9.9.0.65466
+dashboardUrl=https://sonarqube.trackness.net/dashboard?id=trackness.draftkings_client
+ceTaskId=AYmZQDlvAd1JT5KZR3F3
+ceTaskUrl=https://sonarqube.trackness.net/api/ce/task?id=AYmZQDlvAd1JT5KZR3F3
