@@ -1,16 +1,14 @@
 [tool.poetry]
 name = "draft_kings"
-version = "3.1.0"
+version = "3.2.0"
 description = "A client to access data on draftkings.com"
-authors = ["Jae Bradley <jae.b.bradley@gmail.com>"]
+authors = ["James Cunningham <j.cunnez@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.13"
 requests = "^2.20.0"
 pydantic = "^2.0.3"
-marshmallow = "^3.20.1"
-marshmallow-enum = "^1.5.1"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^6.0.0"

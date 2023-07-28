@@ -1,6 +1,16 @@
 from unittest import TestCase
 
+import pytest
+
 from draft_kings.url_builder import URLBuilder
+
+
+@pytest.mark.parametrize("under_test, param, expected", [
+    (URLBuilder().build_countries_url(), None, "https://api.draftkings.com/addresses/v1/countries"),
+])
+def test_multiplication_11(under_test: callable, param: str, expected: str):
+    # under_test = URLBuilder()
+    assert under_test(param) == expected
 
 
 class TestURLBuilder(TestCase):
