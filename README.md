@@ -19,4 +19,4 @@ methods will work consistently.
 ## Documentation
 
 For documentation about package installation as well as the client's API, please see 
-[the documentation site](https://jaebradley.github.io/draftkings_client).
+[the documentation site](https://trackness.github.io/draftkings_client).
