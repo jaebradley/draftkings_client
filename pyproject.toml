@@ -9,6 +9,8 @@ readme = "README.md"
 python = ">=3.9,<3.13"
 requests = "^2.20.0"
 pydantic = "^2.0.3"
+pytest = "^7.4.0"
+pathlib = "^1.0.1"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^6.0.0"

@@ -12,3 +12,6 @@ coverage.*
 
 # Ignore pytests droppings
 .pytest_cache/*
+
+*/.pytest_cache
+*/.mypy_cache
