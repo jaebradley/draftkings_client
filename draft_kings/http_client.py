@@ -7,58 +7,47 @@ from draft_kings.url_builder import URLBuilder
 
 class HTTPClient:
     def __init__(self, url_builder: URLBuilder) -> None:
-        self.url_builder = url_builder
+        self.url_builder: URLBuilder = url_builder
 
     def countries(self) -> Response:
-        response = requests.get(url=self.url_builder.build_countries_url(),
-                                params={'format': 'json'})
-
+        response: Response = requests.get(url=self.url_builder.countries(), params={"format": "json"})
         response.raise_for_status()
-
         return response
 
-    def regions(self, country_code) -> Response:
-        response = requests.get(url=self.url_builder.build_regions_url(country_code=country_code),
-                                params={'format': 'json'})
-
+    def regions(self, country_code: str) -> Response:
+        response: Response = requests.get(
+            url=self.url_builder.regions(country_code=country_code), params={"format": "json"}
+        )
         response.raise_for_status()
-
         return response
 
     def contests(self, sport: Sport) -> Response:
-        response = requests.get(url=self.url_builder.build_contests_url(),
-                                params={'sport': SPORT_TO_CONTESTS_ABBREVIATION.get(sport)})
-
+        response: Response = requests.get(
+            url=self.url_builder.contests(), params={"sport": SPORT_TO_CONTESTS_ABBREVIATION.get(sport)}
+        )
         response.raise_for_status()
-
         return response
 
     def available_players(self, draft_group_id: int) -> Response:
-        response = requests.get(url=self.url_builder.build_available_players_url(),
-                                params={'draftGroupId': draft_group_id})
-
+        response: Response = requests.get(
+            url=self.url_builder.available_players(), params={"draftGroupId": draft_group_id}
+        )
         response.raise_for_status()
-
         return response
 
     def draft_group_details(self, draft_group_id: int) -> Response:
-        response = requests.get(url=self.url_builder.build_draft_group_url(draft_group_id=draft_group_id))
-
+        response: Response = requests.get(url=self.url_builder.draft_groups(draft_group_id=draft_group_id))
         response.raise_for_status()
-
         return response
 
     def draftables(self, draft_group_id: int) -> Response:
-        response = requests.get(url=self.url_builder.build_draftables_url(draft_group_id=draft_group_id))
-
+        response: Response = requests.get(url=self.url_builder.draftables(draft_group_id=draft_group_id))
         response.raise_for_status()
-
         return response
 
     def game_type_rules(self, game_type_id: int) -> Response:
-        response = requests.get(url=self.url_builder.build_game_type_rules_url(game_type_id=game_type_id),
-                                params={'format': 'json'})
-
+        response: Response = requests.get(
+            url=self.url_builder.game_type_rules(game_type_id=game_type_id), params={"format": "json"}
+        )
         response.raise_for_status()
-
         return response

@@ -21,13 +21,13 @@ def translate_formatted_datetime(formatted_datetime: str) -> datetime:
     return datetime.fromtimestamp(int(formatted_datetime[6:-2]) / 1e3, tz=timezone.utc)
 
 
-def flatten(obj: dict, old_key: str):
+def flatten(obj: dict, old_key: str) -> None:
     if k := obj.pop(old_key, None):
         for k, v in k.items():
             obj[k] = v
 
 
-def collect(obj: dict, new_key: str, candidates: list[str]):
+def collect(obj: dict, new_key: str, candidates: list[str]) -> None:
     obj[new_key] = {}
     for k in candidates:
         if v := obj.pop(k, None):
@@ -35,8 +35,8 @@ def collect(obj: dict, new_key: str, candidates: list[str]):
 
 
 def transform_sport_id(sport_id: int | None) -> Sport | None:
-    return SPORT_ID_TO_SPORT.get(sport_id)
+    return SPORT_ID_TO_SPORT.get(sport_id) if sport_id else None
 
 
 def transform_sport_abbreviation(sport_abbreviation: str | None) -> Sport | None:
-    return CONTEST_SPORT_ABBREVIATIONS_TO_SPORTS.get(sport_abbreviation)
+    return CONTEST_SPORT_ABBREVIATIONS_TO_SPORTS.get(sport_abbreviation) if sport_abbreviation else None
