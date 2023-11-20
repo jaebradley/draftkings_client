@@ -14,7 +14,7 @@ pathlib = "^1.0.1"
 [tool.poetry.group.dev.dependencies]
 flake8 = "^6.0.0"
 black = {extras = ["d"], version = "^23.7.0"}
-pytest = "^7.4.0"
+pytest = "^7.4.3"
 pytest-cov = "^4.1.0"
 mypy = "^1.4.1"
 pytest-mock = "^3.12.0"
