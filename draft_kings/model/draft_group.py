@@ -44,18 +44,19 @@ class DraftGroup(BaseModel):
     games: list[Game] = Field(validation_alias="games")
     leagues: list[League] = Field(validation_alias="leagues")
     sport: Sport | None = Field(validation_alias="sportId", default=None)
-    start_time: StartTime = Field(validation_alias="start_time_details", default=None)
+    start_time: StartTime | None = Field(validation_alias="start_time_details", default=None)
     draft_group_state: str | None = Field(validation_alias="draftGroupState", default=None)
 
     @model_validator(mode="before")
     def set_entries(cls, data: dict) -> dict:
-        data: dict = data.get("draftGroup")
-        # move relevant items to 'start_time_details' parent key
-        data["start_time_details"] = {}
-        for k in ["maxStartTime", "minStartTime", "startTimeType"]:
-            if v := data.pop(k, None):
-                data["start_time_details"][k] = v
-        return data
+        if draft_group := data.get("draftGroup"):
+            # move relevant items to 'start_time_details' parent key
+            draft_group["start_time_details"] = {}
+            for k in ["maxStartTime", "minStartTime", "startTimeType"]:
+                if v := draft_group.pop(k, None):
+                    draft_group["start_time_details"][k] = v
+            return draft_group
+        return {}
 
     @field_validator("sport", mode="before")
     def check_datetime(cls, v: int | None) -> Sport | None:

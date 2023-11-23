@@ -10,6 +10,7 @@ python = ">=3.9,<3.13"
 requests = "^2.20.0"
 pydantic = "^2.0.3"
 pathlib = "^1.0.1"
+pytest = "^7.4.3"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^6.0.0"

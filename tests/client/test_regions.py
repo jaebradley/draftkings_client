@@ -1,68 +1,49 @@
-import os
-from unittest import TestCase
-from unittest.mock import patch, Mock
+import pytest
+from pytest import param
+from requests_mock import mock
 
 from draft_kings import Client
-from draft_kings.http_client import HTTPClient
-from draft_kings.model.regions import Region
-from tests.config import ROOT_DIRECTORY
+from draft_kings.model.regions import Region, Regions
+from draft_kings.url_builder import URLBuilder
+from tests.utilities import read_fixture
 
 
-class TestRegions(TestCase):
-    def setUp(self) -> None:
-        self.client = Client()
+class TestRegions:
+    @pytest.fixture
+    def under_test(self) -> Client:
+        return Client()
 
-    def test_american_regions_is_not_none(self):
-        regions = self.client.regions("US")
-        self.assertIsNotNone(regions)
+    @pytest.mark.parametrize(
+        "region, first_region",
+        [
+            param(
+                "US",
+                Region.model_construct(code="AL", country_code="US", iso_code="US-AL", name="Alabama"),
+                id="US",
+            ),
+            param(
+                "GB",
+                Region.model_construct(code="ABE", country_code="GB", iso_code="GB-ABE", name="Aberdeen City"),
+                id="GB",
+            ),
+            param(
+                "CA",
+                Region.model_construct(code="AB", country_code="CA", iso_code="CA-AB", name="Alberta"),
+                id="CA",
+            ),
+        ],
+    )
+    def test_integration(self, under_test: Client, region: str, first_region: Region) -> None:
+        response = under_test.regions(region)
+        assert response is not None
+        assert len(response.regions) > 0
+        assert response.regions[0] == first_region
 
-    def test_american_regions_exist(self):
-        regions = self.client.regions("US")
-        self.assertGreater(len(regions.regions), 0)
-
-    def test_first_american_region(self):
-        regions = self.client.regions("US")
-        self.assertEqual(
-            Region.model_construct(code="AL", country_code="US", iso_code="US-AL", name="Alabama"), regions.regions[0]
-        )
-
-    def test_british_regions_is_not_none(self):
-        regions = self.client.regions("GB")
-        self.assertIsNotNone(regions)
-
-    def test_british_regions_exist(self):
-        regions = self.client.regions("GB")
-        self.assertGreater(len(regions.regions), 0)
-
-    def test_canadian_regions_is_not_none(self):
-        regions = self.client.regions("CA")
-        self.assertIsNotNone(regions)
-
-    def test_canadian_regions_exist(self):
-        regions = self.client.regions("CA")
-        self.assertGreater(len(regions.regions), 0)
-
-
-class TestMockedUSResponseRegions(TestCase):
-    def setUp(self) -> None:
-        with open(os.path.join(ROOT_DIRECTORY, "tests/files/regions/us.json"), encoding="utf-8") as data_file:
-            self.response_data = data_file.read()
-            patched_method = patch.object(HTTPClient, "regions")
-            mocked_method = patched_method.start()
-            mocked_method.return_value = Mock(text=self.response_data)
-            self.result = Client().regions("US")
-
-    def tearDown(self) -> None:
-        patch.stopall()
-
-    def test_exists(self):
-        self.assertIsNotNone(self.result)
-
-    def test_length(self):
-        self.assertEqual(62, len(self.result.regions))
-
-    def test_first_region(self):
-        self.assertEqual(
-            Region.model_construct(country_code="US", code="AL", iso_code="US-AL", name="Alabama"),
-            self.result.regions[0],
-        )
+    @pytest.mark.parametrize("region", [param("US"), param("GB"), param("CA")])
+    def test_unit(self, under_test: Client, region: str, requests_mock: mock) -> None:
+        fixture: str = read_fixture(f"regions/{region.lower()}")
+        expected = Regions.model_validate_json(fixture)
+        requests_mock.get(URLBuilder.regions(region), text=fixture)
+        actual: Regions = under_test.regions(region)
+        assert actual is not None
+        assert actual == expected

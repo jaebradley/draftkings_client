@@ -55,16 +55,16 @@ class ExceptionalMessage(BaseModel):
 
 
 class Player(BaseModel):
-    draft_details: DraftDetails = Field(validation_alias="draft_details", default=None)
+    draft_details: DraftDetails | None = Field(validation_alias="draft_details", default=None)
     exceptional_messages: list[ExceptionalMessage] = Field(validation_alias="ExceptionalMessages")
     first_name: str | None = Field(validation_alias="fn", default=None)
     jersey_number: int | None = Field(validation_alias="jn", default=None)
     last_name: str | None = Field(validation_alias="ln", default=None)
     player_id: int | None = Field(validation_alias="pid", default=None)
     points_per_game: float | None = Field(validation_alias="ppg", default=None)
-    position: Position = Field(validation_alias="position", default=None)
+    position: Position | None = Field(validation_alias="position", default=None)
     team_id: int | None = Field(validation_alias="tid", default=None)
-    team_series_details: PlayerTeamSeries = Field(validation_alias="team_series_details", default=None)
+    team_series_details: PlayerTeamSeries | None = Field(validation_alias="team_series_details", default=None)
 
     @model_validator(mode="before")
     def set_entries(cls, data: dict) -> dict:

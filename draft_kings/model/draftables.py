@@ -40,16 +40,16 @@ class Player(BaseModel):
     competition_details: PlayerCompetitionDetails | None = Field(validation_alias="competition", default=None)
     draftable_id: int | None = Field(validation_alias="draftableId", default=None)
     draft_alerts: list[DraftAlert] = Field(validation_alias="draftAlerts", default=[])
-    image: Image = Field(validation_alias="image", default=None)
+    image: Image | None = Field(validation_alias="image", default=None)
     is_disabled: bool | None = Field(validation_alias="isDisabled", default=None)
     is_swappable: bool | None = Field(validation_alias="isSwappable", default=None)
-    name: Name = Field(validation_alias="name", default=None)
+    name: Name | None = Field(validation_alias="name", default=None)
     news_status_description: str | None = Field(validation_alias="newsStatus", default=None)
     player_id: int | None = Field(validation_alias="playerId", default=None)
     position_name: str | None = Field(validation_alias="position", default=None)
     roster_slot_id: int | None = Field(validation_alias="rosterSlotId", default=None)
     salary: float | None = Field(validation_alias="salary", default=None)
-    team: Team = Field(validation_alias="team", default=None)
+    team: Team | None = Field(validation_alias="team", default=None)
 
     @model_validator(mode="before")
     def set_data(cls, data: dict) -> dict:
@@ -85,7 +85,7 @@ class Competition(BaseModel):
     weather: CompetitionWeather | None = Field(validation_alias="weather", default=None)  #
 
     @field_validator("sport", mode="before")
-    def transform_sport_abbreviation(cls, v: str) -> Sport:
+    def transform_sport_abbreviation(cls, v: str) -> Sport | None:
         return transform_sport_abbreviation(v)
 
 

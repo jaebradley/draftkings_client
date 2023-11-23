@@ -1,11 +1,10 @@
 from datetime import datetime, timezone
-from unittest import TestCase
 
 from draft_kings.utilities import translate_formatted_datetime
 
 
-class TestTranslateDatetime(TestCase):
-    def test_translate_datetime_string(self):
-        timestamp = translate_formatted_datetime("/Date(1479258000000)/")
-        self.assertIsNotNone(timestamp)
-        self.assertEqual(timestamp, datetime.fromtimestamp(1479258000000 / 1e3, tz=timezone.utc))
+class TestUtilities:
+    def test_translate_datetime_string(self) -> None:
+        actual = translate_formatted_datetime("/Date(1479258000000)/")
+        assert None is not actual
+        assert datetime(2016, 11, 16, 1, 0, tzinfo=timezone.utc) == actual

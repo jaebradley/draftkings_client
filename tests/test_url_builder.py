@@ -1,46 +1,28 @@
-from unittest import TestCase
-
-import pytest
-
 from draft_kings.url_builder import URLBuilder
 
 
-@pytest.mark.parametrize("under_test, param, expected", [
-    (URLBuilder().build_countries_url(), None, "https://api.draftkings.com/addresses/v1/countries"),
-])
-def test_multiplication_11(under_test: callable, param: str, expected: str):
-    # under_test = URLBuilder()
-    assert under_test(param) == expected
-
-
-class TestURLBuilder(TestCase):
-    def setUp(self) -> None:
-        self.builder = URLBuilder()
+class TestUrlBuilder:
+    under_test = URLBuilder()
 
     def test_build_countries_url(self) -> None:
-        self.assertEqual("https://api.draftkings.com/addresses/v1/countries", self.builder.build_countries_url())
+        assert "https://api.draftkings.com/addresses/v1/countries" == self.under_test.countries()
 
     def test_build_regions_url(self) -> None:
-        self.assertEqual(
-            "https://api.draftkings.com/addresses/v1/countries/example/regions",
-            self.builder.build_regions_url(country_code="example")
-        )
+        assert "https://api.draftkings.com/addresses/v1/countries/example/regions" == self.under_test.regions("example")
 
     def test_contests_url(self) -> None:
-        self.assertEqual("https://www.draftkings.com/lobby/getcontests", self.builder.build_contests_url())
+        assert "https://www.draftkings.com/lobby/getcontests" == self.under_test.contests()
 
     def test_available_players_url(self) -> None:
-        self.assertEqual(
-            "https://www.draftkings.com/lineup/getavailableplayers",
-            self.builder.build_available_players_url()
-        )
+        assert "https://www.draftkings.com/lineup/getavailableplayers" == self.under_test.available_players()
 
     def test_draft_group_url(self) -> None:
-        self.assertEqual(
-            "https://api.draftkings.com/draftgroups/v1/jaebaebae",
-            self.builder.build_draft_group_url(draft_group_id="jaebaebae")
-        )
+        assert "https://api.draftkings.com/draftgroups/v1/12345" == self.under_test.draft_groups(12345)
 
     def test_draftables_url(self) -> None:
-        self.assertEqual("https://api.draftkings.com/draftgroups/v1/draftgroups/jaebaebae/draftables",
-                         self.builder.build_draftables_url("jaebaebae"))
+        assert "https://api.draftkings.com/draftgroups/v1/draftgroups/12345/draftables" == self.under_test.draftables(
+            12345)
+
+    def test_game_type_rules_url(self) -> None:
+        assert "https://api.draftkings.com/lineups/v1/gametypes/12345/rules" == self.under_test.game_type_rules(
+            12345)
